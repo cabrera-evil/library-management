@@ -9,3 +9,6 @@ C:\Users\Douglas\git\POO-BD\BINAES\BINAES\bin\Debug\BINAES.exe
 C:\Users\Douglas\git\POO-BD\BINAES\BINAES\bin\Debug\BINAES.pdb
 C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.exe
 C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.pdb
+C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.Resources.db.resources
+C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_register.resources
+C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_home.resources

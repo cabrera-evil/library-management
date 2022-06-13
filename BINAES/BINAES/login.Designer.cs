@@ -28,19 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_login));
             this.pnl_left = new System.Windows.Forms.Panel();
+            this.pct_logo = new System.Windows.Forms.PictureBox();
             this.txt_user = new System.Windows.Forms.TextBox();
             this.txt_password = new System.Windows.Forms.TextBox();
             this.btn_login = new System.Windows.Forms.Button();
             this.lbl_login = new System.Windows.Forms.Label();
-            this.lnk_forgot = new System.Windows.Forms.LinkLabel();
             this.btn_close = new System.Windows.Forms.PictureBox();
             this.btn_minimize = new System.Windows.Forms.PictureBox();
-            this.pct_logo = new System.Windows.Forms.PictureBox();
+            this.lnk_forgot = new System.Windows.Forms.LinkLabel();
+            this.lnk_register = new System.Windows.Forms.LinkLabel();
             this.pnl_left.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pct_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pct_logo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_left
@@ -52,6 +54,17 @@
             this.pnl_left.Name = "pnl_left";
             this.pnl_left.Size = new System.Drawing.Size(250, 330);
             this.pnl_left.TabIndex = 0;
+            // 
+            // pct_logo
+            // 
+            this.pct_logo.Image = global::BINAES.Properties.Resources.BINAES_LOGO;
+            this.pct_logo.Location = new System.Drawing.Point(0, 0);
+            this.pct_logo.Name = "pct_logo";
+            this.pct_logo.Size = new System.Drawing.Size(250, 330);
+            this.pct_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pct_logo.TabIndex = 8;
+            this.pct_logo.TabStop = false;
+            this.pct_logo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pct_logo_MouseDown);
             // 
             // txt_user
             // 
@@ -97,6 +110,7 @@
             this.btn_login.TabIndex = 3;
             this.btn_login.Text = "Login";
             this.btn_login.UseVisualStyleBackColor = false;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // lbl_login
             // 
@@ -108,19 +122,6 @@
             this.lbl_login.Size = new System.Drawing.Size(62, 21);
             this.lbl_login.TabIndex = 4;
             this.lbl_login.Text = "LOGIN";
-            // 
-            // lnk_forgot
-            // 
-            this.lnk_forgot.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.lnk_forgot.AutoSize = true;
-            this.lnk_forgot.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnk_forgot.LinkColor = System.Drawing.Color.LightGray;
-            this.lnk_forgot.Location = new System.Drawing.Point(463, 287);
-            this.lnk_forgot.Name = "lnk_forgot";
-            this.lnk_forgot.Size = new System.Drawing.Size(105, 17);
-            this.lnk_forgot.TabIndex = 0;
-            this.lnk_forgot.TabStop = true;
-            this.lnk_forgot.Text = "Forgot Password";
             // 
             // btn_close
             // 
@@ -146,16 +147,32 @@
             this.btn_minimize.TabStop = false;
             this.btn_minimize.Click += new System.EventHandler(this.btn_minimize_Click);
             // 
-            // pct_logo
+            // lnk_forgot
             // 
-            this.pct_logo.Image = global::BINAES.Properties.Resources.BINAES_LOGO;
-            this.pct_logo.Location = new System.Drawing.Point(0, 0);
-            this.pct_logo.Name = "pct_logo";
-            this.pct_logo.Size = new System.Drawing.Size(250, 330);
-            this.pct_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pct_logo.TabIndex = 8;
-            this.pct_logo.TabStop = false;
-            this.pct_logo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pct_logo_MouseDown);
+            this.lnk_forgot.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lnk_forgot.AutoSize = true;
+            this.lnk_forgot.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnk_forgot.LinkColor = System.Drawing.Color.LightGray;
+            this.lnk_forgot.Location = new System.Drawing.Point(378, 288);
+            this.lnk_forgot.Name = "lnk_forgot";
+            this.lnk_forgot.Size = new System.Drawing.Size(105, 17);
+            this.lnk_forgot.TabIndex = 0;
+            this.lnk_forgot.TabStop = true;
+            this.lnk_forgot.Text = "Forgot Password";
+            // 
+            // lnk_register
+            // 
+            this.lnk_register.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lnk_register.AutoSize = true;
+            this.lnk_register.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnk_register.LinkColor = System.Drawing.Color.LightGray;
+            this.lnk_register.Location = new System.Drawing.Point(547, 288);
+            this.lnk_register.Name = "lnk_register";
+            this.lnk_register.Size = new System.Drawing.Size(56, 17);
+            this.lnk_register.TabIndex = 8;
+            this.lnk_register.TabStop = true;
+            this.lnk_register.Text = "Register";
+            this.lnk_register.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_register_LinkClicked);
             // 
             // frm_login
             // 
@@ -163,6 +180,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(780, 330);
+            this.Controls.Add(this.lnk_register);
             this.Controls.Add(this.btn_minimize);
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.lnk_forgot);
@@ -172,15 +190,16 @@
             this.Controls.Add(this.txt_user);
             this.Controls.Add(this.pnl_left);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_login";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "login";
+            this.Text = "BINAES - LOGIN";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frm_login_MouseDown);
             this.pnl_left.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pct_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pct_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,9 +212,10 @@
         private System.Windows.Forms.TextBox txt_password;
         private System.Windows.Forms.Button btn_login;
         private System.Windows.Forms.Label lbl_login;
-        private System.Windows.Forms.LinkLabel lnk_forgot;
         private System.Windows.Forms.PictureBox btn_close;
         private System.Windows.Forms.PictureBox btn_minimize;
         private System.Windows.Forms.PictureBox pct_logo;
+        private System.Windows.Forms.LinkLabel lnk_forgot;
+        private System.Windows.Forms.LinkLabel lnk_register;
     }
 }
