@@ -73,6 +73,16 @@ namespace BINAES.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BINAES_LOGO_V2 {
+            get {
+                object obj = ResourceManager.GetObject("BINAES_LOGO_V2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Close_Icon {
             get {
                 object obj = ResourceManager.GetObject("Close_Icon", resourceCulture);

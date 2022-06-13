@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using BINAES.Resources;
+using BINAES.Clases;
+using QRCoder;
 
 namespace BINAES
 {
@@ -90,7 +92,27 @@ namespace BINAES
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Connection: " + chain);
+            /*MessageBox.Show("Connection: " + chain);
+            string name = txt_user.Text;
+            string contraseña = txt_password.Text;
+            User login = UserDAO.Exist(name, contraseña);
+
+            if (login.name.Length > 0)
+            {
+                MessageBox.Show("Bienvenido!", "Blockbuster",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //Home Menu
+                frm_home home = new frm_home();
+                this.Hide();
+                home.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Wrong user or password!", "BINAES",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }*/
+            //Home Menu
             frm_home home = new frm_home();
             this.Hide();
             home.ShowDialog();

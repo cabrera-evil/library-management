@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace BINAES.Clases
 {
-    internal class Usuario
+    internal class User
     {
-        public string nombre { get; set; }
-        public string contraseña { get; set; }
+        public string name { get; set; }
+        public string password { get; set; }
         public string rol { get; set; }
     }
 }

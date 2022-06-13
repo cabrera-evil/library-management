@@ -31,7 +31,7 @@ namespace BINAES
 
         private void btn_close_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Application.Exit();
         }
 
         private void lnk_login_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

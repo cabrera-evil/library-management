@@ -12,3 +12,8 @@ C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.pdb
 C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.Resources.db.resources
 C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_register.resources
 C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_home.resources
+C:\Users\Douglas\git\POO-BD\BINAES\BINAES\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Douglas\git\POO-BD\BINAES\BINAES\bin\Debug\itextsharp.dll
+C:\Users\Douglas\git\POO-BD\BINAES\BINAES\bin\Debug\itextsharp.xml
+C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.csproj.CopyComplete
+C:\Users\Douglas\git\POO-BD\BINAES\BINAES\bin\Debug\QRCoder.dll
