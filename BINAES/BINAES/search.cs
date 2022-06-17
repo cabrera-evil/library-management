@@ -14,7 +14,7 @@ namespace BINAES
     {
         // ComboBox Data Sources
         string[] categoryFilters = new string[] { "Title", "Key words", "Author", "Format" };
-        string[] searchingFormat = new string[] { "Some words", "Full entence" }; 
+        string[] searchingFormat = new string[] { "Some words", "Full entence" };
         public frmSearch()
         {
             InitializeComponent();
@@ -22,39 +22,41 @@ namespace BINAES
 
         private void frmSearch_Load(object sender, EventArgs e)
         {
-            cmbFilter.DataSource = categoryFilters;
-            cmbFilter2.DataSource = searchingFormat; 
+            //cmbFilter.DataSource = categoryFilters;
+            //cmbFilter2.DataSource = searchingFormat; 
         }
 
         private void btnSearch1_Click(object sender, EventArgs e)
         {
-            // Information display
-            label1.Visible = true; 
-            label2.Visible = true;
+            if (txtSearch.Text.Length == 0)
+            {
 
-            // Searching parameters
-            if (cmbFilter2.SelectedIndex == 0) 
-            {
-                if (cmbFilter.SelectedIndex == 0) // Search by Title
-                    MessageBox.Show("Search by title");
-                else if (cmbFilter.SelectedIndex == 1) // Search by Key Words
-                    MessageBox.Show("Search by key words");
-                else if (cmbFilter.SelectedIndex == 2) // Search by Author
-                    MessageBox.Show("Search by author");
-                else if (cmbFilter.SelectedIndex == 3) // Search by Format
-                    MessageBox.Show("Search by format");
+                label1.Visible = false;
+                label2.Visible = false;
+                lblWarning.Visible = true;
             }
-            else if (cmbFilter2.SelectedIndex == 1) 
+            else if (txtSearch.Text.Length > 0)
             {
-                if (cmbFilter.SelectedIndex == 0) // Search by Title
-                    MessageBox.Show("Search by title");
-                else if (cmbFilter.SelectedIndex == 1) // Search by Key Words
-                    MessageBox.Show("Search by key words");
-                else if (cmbFilter.SelectedIndex == 2) // Search by Author
-                    MessageBox.Show("Search by author");
-                else if (cmbFilter.SelectedIndex == 3) // Search by Format
-                    MessageBox.Show("Search by format");
-            }            
+                // Information display
+                label1.Visible = true;
+                label2.Visible = true;
+                lblWarning.Visible = false;
+
+                // Search default parameters
+                // Both format: physical and digital
+                // Search by some words
+                // Not search by author
+            } 
+        }
+
+        private void btnAdvancedTools_Click(object sender, EventArgs e)
+        {
+            using (frmAdvancedSearch window = new frmAdvancedSearch())
+            {
+                window.ShowDialog();
+                // Depending on DialogResult we will create a specific query for it or execute a default search
+
+            }
         }
     }
 }

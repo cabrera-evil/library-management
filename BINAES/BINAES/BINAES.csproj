@@ -58,6 +58,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="advancedSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="advancedSearch.Designer.cs">
+      <DependentUpon>advancedSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clases\User.cs" />
     <Compile Include="Clases\UserDAO.cs" />
     <Compile Include="home.cs">
@@ -91,6 +97,9 @@
     <Compile Include="search.Designer.cs">
       <DependentUpon>search.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="advancedSearch.resx">
+      <DependentUpon>advancedSearch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="home.resx">
       <DependentUpon>home.cs</DependentUpon>
     </EmbeddedResource>
