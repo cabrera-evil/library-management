@@ -24,6 +24,7 @@ namespace BINAES
         public frm_home()
         {
             InitializeComponent();
+            open_form<frm_welcome>();
             QRGenerator();
         }
 
@@ -39,7 +40,7 @@ namespace BINAES
             pct_qr.Image = qr_image;
         }
 
-        private void open_form<selected_form>() where selected_form : Form, new()
+        public void open_form<selected_form>() where selected_form : Form, new()
         {
             Form myForm;
             myForm = pnl_form.Controls.OfType<selected_form>().FirstOrDefault();//Busca en la colecion el formulario
@@ -80,12 +81,7 @@ namespace BINAES
 
         private void btn_home_Click(object sender, EventArgs e)
         {
-            //open_form<frm_login>();
-        }
-
-        private void btn_edit_Click(object sender, EventArgs e)
-        {
-
+            open_form<frm_welcome>();
         }
 
         private void btn_search_Click(object sender, EventArgs e)
@@ -95,12 +91,17 @@ namespace BINAES
 
         private void btn_loans_Click(object sender, EventArgs e)
         {
-
+            open_form<frm_users>();
         }
 
-        private void btn_reserves_Click(object sender, EventArgs e)
+        private void btn_booking_Click(object sender, EventArgs e)
         {
+            open_form<frm_collections>();
+        }
 
+        private void btn_management_Click(object sender, EventArgs e)
+        {
+            open_form<frm_events>();
         }
 
         private void btn_logout_Click(object sender, EventArgs e)

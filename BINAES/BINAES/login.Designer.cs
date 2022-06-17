@@ -38,7 +38,6 @@
             this.btn_close = new System.Windows.Forms.PictureBox();
             this.btn_minimize = new System.Windows.Forms.PictureBox();
             this.lnk_forgot = new System.Windows.Forms.LinkLabel();
-            this.lnk_register = new System.Windows.Forms.LinkLabel();
             this.pnl_left.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pct_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
@@ -153,26 +152,13 @@
             this.lnk_forgot.AutoSize = true;
             this.lnk_forgot.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnk_forgot.LinkColor = System.Drawing.Color.LightGray;
-            this.lnk_forgot.Location = new System.Drawing.Point(378, 288);
+            this.lnk_forgot.Location = new System.Drawing.Point(458, 291);
             this.lnk_forgot.Name = "lnk_forgot";
             this.lnk_forgot.Size = new System.Drawing.Size(105, 17);
             this.lnk_forgot.TabIndex = 0;
             this.lnk_forgot.TabStop = true;
             this.lnk_forgot.Text = "Forgot Password";
-            // 
-            // lnk_register
-            // 
-            this.lnk_register.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.lnk_register.AutoSize = true;
-            this.lnk_register.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnk_register.LinkColor = System.Drawing.Color.LightGray;
-            this.lnk_register.Location = new System.Drawing.Point(547, 288);
-            this.lnk_register.Name = "lnk_register";
-            this.lnk_register.Size = new System.Drawing.Size(56, 17);
-            this.lnk_register.TabIndex = 8;
-            this.lnk_register.TabStop = true;
-            this.lnk_register.Text = "Register";
-            this.lnk_register.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_register_LinkClicked);
+            this.lnk_forgot.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_forgot_LinkClicked);
             // 
             // frm_login
             // 
@@ -180,7 +166,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(780, 330);
-            this.Controls.Add(this.lnk_register);
             this.Controls.Add(this.btn_minimize);
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.lnk_forgot);
@@ -216,6 +201,5 @@
         private System.Windows.Forms.PictureBox btn_minimize;
         private System.Windows.Forms.PictureBox pct_logo;
         private System.Windows.Forms.LinkLabel lnk_forgot;
-        private System.Windows.Forms.LinkLabel lnk_register;
     }
 }
