@@ -10,13 +10,13 @@ C:\Users\Douglas\git\POO-BD\BINAES\BINAES\bin\Debug\BINAES.pdb
 C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.exe
 C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.pdb
 C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.Resources.db.resources
-C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_register.resources
 C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_home.resources
 C:\Users\Douglas\git\POO-BD\BINAES\BINAES\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\Douglas\git\POO-BD\BINAES\BINAES\bin\Debug\itextsharp.dll
 C:\Users\Douglas\git\POO-BD\BINAES\BINAES\bin\Debug\itextsharp.xml
 C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.csproj.CopyComplete
 C:\Users\Douglas\git\POO-BD\BINAES\BINAES\bin\Debug\QRCoder.dll
+<<<<<<< HEAD
 C:\Users\monic\OneDrive\Documentos\UNIVERSIDAD\proyectos\POO-BD\BINAES\BINAES\bin\Debug\BINAES.exe.config
 C:\Users\monic\OneDrive\Documentos\UNIVERSIDAD\proyectos\POO-BD\BINAES\BINAES\bin\Debug\BINAES.exe
 C:\Users\monic\OneDrive\Documentos\UNIVERSIDAD\proyectos\POO-BD\BINAES\BINAES\bin\Debug\BINAES.pdb
@@ -38,3 +38,30 @@ C:\Users\monic\OneDrive\Documentos\UNIVERSIDAD\proyectos\POO-BD\BINAES\BINAES\ob
 C:\Users\monic\OneDrive\Documentos\UNIVERSIDAD\proyectos\POO-BD\BINAES\BINAES\obj\Debug\BINAES.pdb
 C:\Users\monic\OneDrive\Documentos\UNIVERSIDAD\proyectos\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frmSearch.resources
 C:\Users\monic\OneDrive\Documentos\UNIVERSIDAD\proyectos\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frmAdvancedSearch.resources
+=======
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\bin\Debug\BINAES.exe.config
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\bin\Debug\BINAES.exe
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\bin\Debug\BINAES.pdb
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\bin\Debug\itextsharp.dll
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\bin\Debug\QRCoder.dll
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\bin\Debug\itextsharp.xml
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.csproj.AssemblyReference.cache
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.csproj.SuggestedBindingRedirects.cache
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_home.resources
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_login.resources
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.Properties.Resources.resources
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.Resources.db.resources
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.csproj.GenerateResource.cache
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.csproj.CoreCompileInputs.cache
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.csproj.CopyComplete
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.exe
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.pdb
+C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_collections.resources
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_collections.resources
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_events.resources
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_users.resources
+C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_events.resources
+C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_users.resources
+C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_welcome.resources
+>>>>>>> 6849aface68f8fbaf7a442f44a3a3a13e52521e0
