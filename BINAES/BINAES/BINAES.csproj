@@ -58,12 +58,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="advancedSearch.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="advancedSearch.Designer.cs">
-      <DependentUpon>advancedSearch.cs</DependentUpon>
-    </Compile>
     <Compile Include="Clases\User.cs" />
     <Compile Include="Clases\UserDAO.cs" />
     <Compile Include="collections.cs">
@@ -98,6 +92,7 @@
       <DependentUpon>db.resx</DependentUpon>
     </Compile>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="search.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +102,8 @@
     <EmbeddedResource Include="advancedSearch.resx">
       <DependentUpon>advancedSearch.cs</DependentUpon>
 =======
+=======
+>>>>>>> 13f1924628582b12312272ff15de98863c1951d3
     <Compile Include="users.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,7 +124,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="users.resx">
       <DependentUpon>users.cs</DependentUpon>
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 13f1924628582b12312272ff15de98863c1951d3
     </EmbeddedResource>
     <EmbeddedResource Include="home.resx">
       <DependentUpon>home.cs</DependentUpon>
@@ -150,12 +150,17 @@
       <LastGenOutput>db.Designer.cs</LastGenOutput>
     </EmbeddedResource>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <EmbeddedResource Include="search.resx">
       <DependentUpon>search.cs</DependentUpon>
 =======
     <EmbeddedResource Include="welcome.resx">
       <DependentUpon>welcome.cs</DependentUpon>
 >>>>>>> master
+=======
+    <EmbeddedResource Include="welcome.resx">
+      <DependentUpon>welcome.cs</DependentUpon>
+>>>>>>> 13f1924628582b12312272ff15de98863c1951d3
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

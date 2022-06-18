@@ -64,4 +64,8 @@ C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_users.reso
 C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_events.resources
 C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_users.resources
 C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_welcome.resources
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> 6849aface68f8fbaf7a442f44a3a3a13e52521e0
+>>>>>>> 13f1924628582b12312272ff15de98863c1951d3

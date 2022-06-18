@@ -61,7 +61,7 @@
             this.pnl_title.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_title.Location = new System.Drawing.Point(0, 0);
             this.pnl_title.Name = "pnl_title";
-            this.pnl_title.Size = new System.Drawing.Size(1167, 40);
+            this.pnl_title.Size = new System.Drawing.Size(1280, 40);
             this.pnl_title.TabIndex = 0;
             this.pnl_title.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_title_MouseDown);
             // 
@@ -70,7 +70,7 @@
             this.btn_minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_minimize.Image = global::BINAES.Properties.Resources.Minimize_Icon;
-            this.btn_minimize.Location = new System.Drawing.Point(1117, 12);
+            this.btn_minimize.Location = new System.Drawing.Point(1230, 12);
             this.btn_minimize.Name = "btn_minimize";
             this.btn_minimize.Size = new System.Drawing.Size(16, 16);
             this.btn_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -83,7 +83,7 @@
             this.btn_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_close.Image = global::BINAES.Properties.Resources.Close_Icon;
-            this.btn_close.Location = new System.Drawing.Point(1139, 12);
+            this.btn_close.Location = new System.Drawing.Point(1252, 12);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(16, 16);
             this.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -108,7 +108,7 @@
             this.pnl_menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnl_menu.Location = new System.Drawing.Point(0, 40);
             this.pnl_menu.Name = "pnl_menu";
-            this.pnl_menu.Size = new System.Drawing.Size(240, 678);
+            this.pnl_menu.Size = new System.Drawing.Size(240, 680);
             this.pnl_menu.TabIndex = 1;
             // 
             // pct_qr
@@ -137,9 +137,9 @@
             this.label2.ForeColor = System.Drawing.Color.LightGray;
             this.label2.Location = new System.Drawing.Point(88, 65);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 16);
+            this.label2.Size = new System.Drawing.Size(23, 16);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Role";
+            this.label2.Text = "Rol";
             // 
             // label1
             // 
@@ -180,6 +180,7 @@
             this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             // btn_reserves
             // 
             this.btn_reserves.FlatAppearance.BorderSize = 0;
@@ -198,6 +199,8 @@
             // 
 =======
 >>>>>>> master
+=======
+>>>>>>> 13f1924628582b12312272ff15de98863c1951d3
             // btn_loans
             // 
             this.btn_loans.FlatAppearance.BorderSize = 0;
@@ -252,7 +255,7 @@
             this.pnl_form.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_form.Location = new System.Drawing.Point(240, 40);
             this.pnl_form.Name = "pnl_form";
-            this.pnl_form.Size = new System.Drawing.Size(927, 678);
+            this.pnl_form.Size = new System.Drawing.Size(1040, 680);
             this.pnl_form.TabIndex = 2;
             // 
             // btn_booking
@@ -292,7 +295,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(1167, 718);
+            this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.pnl_form);
             this.Controls.Add(this.pnl_menu);
             this.Controls.Add(this.pnl_title);

@@ -86,10 +86,7 @@ namespace BINAES
 
         private void btn_search_Click(object sender, EventArgs e)
         {
-            using (frmSearch window = new frmSearch()) 
-            { 
-                window.ShowDialog();
-            }
+
         }
 
         private void btn_loans_Click(object sender, EventArgs e)
