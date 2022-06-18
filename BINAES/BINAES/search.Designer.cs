@@ -1,6 +1,6 @@
 ﻿namespace BINAES
 {
-    partial class search
+    partial class frm_search
     {
         /// <summary>
         /// Required designer variable.
@@ -167,7 +167,7 @@
             this.txtSearch.TabIndex = 14;
             this.txtSearch.Text = "\r\n";
             // 
-            // search
+            // frm_search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -184,7 +184,7 @@
             this.Controls.Add(this.dgvSearchResult);
             this.Controls.Add(this.txtSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "search";
+            this.Name = "frm_search";
             this.Text = "search";
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearchResult)).EndInit();
             this.ResumeLayout(false);

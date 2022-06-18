@@ -86,7 +86,7 @@ namespace BINAES
 
         private void btn_search_Click(object sender, EventArgs e)
         {
-
+            open_form<frm_search>();
         }
 
         private void btn_loans_Click(object sender, EventArgs e)

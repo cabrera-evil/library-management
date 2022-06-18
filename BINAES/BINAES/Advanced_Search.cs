@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BINAES
 {
-    public partial class frm_search : Form
+    public partial class frm_advanced_search : Form
     {
-        public frm_search()
+        public frm_advanced_search()
         {
             InitializeComponent();
         }

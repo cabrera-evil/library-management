@@ -41,3 +41,5 @@ C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_users.reso
 C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_events.resources
 C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_users.resources
 C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_welcome.resources
+C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_advanced_search.resources
+C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_search.resources
