@@ -119,12 +119,9 @@ namespace BINAES
             this.Show();
         }
 
-        private void lnk_register_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void lnk_forgot_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frm_register register = new frm_register();
-            this.Hide();
-            register.ShowDialog();
-            this.Show();
+
         }
     }
 }
