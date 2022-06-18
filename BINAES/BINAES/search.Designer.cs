@@ -38,6 +38,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgv_search_result = new System.Windows.Forms.DataGridView();
             this.txt_search = new System.Windows.Forms.TextBox();
+            this.btn_reserve = new System.Windows.Forms.Button();
+            this.btn_borrow = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_search_result)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,7 +94,7 @@
             this.btn_advanced_tools.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_advanced_tools.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.btn_advanced_tools.Location = new System.Drawing.Point(90, 64);
-            this.btn_advanced_tools.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_advanced_tools.Margin = new System.Windows.Forms.Padding(4);
             this.btn_advanced_tools.Name = "btn_advanced_tools";
             this.btn_advanced_tools.Size = new System.Drawing.Size(205, 28);
             this.btn_advanced_tools.TabIndex = 20;
@@ -118,12 +120,13 @@
             this.btn_search1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_search1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.btn_search1.Location = new System.Drawing.Point(1155, 65);
-            this.btn_search1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_search1.Margin = new System.Windows.Forms.Padding(4);
             this.btn_search1.Name = "btn_search1";
             this.btn_search1.Size = new System.Drawing.Size(99, 28);
             this.btn_search1.TabIndex = 18;
             this.btn_search1.Text = "Search";
             this.btn_search1.UseVisualStyleBackColor = false;
+            this.btn_search1.Click += new System.EventHandler(this.btn_search1_Click);
             // 
             // lbl_counter
             // 
@@ -155,11 +158,11 @@
             // 
             this.dgv_search_result.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.dgv_search_result.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_search_result.Location = new System.Drawing.Point(90, 239);
-            this.dgv_search_result.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_search_result.Location = new System.Drawing.Point(90, 202);
+            this.dgv_search_result.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_search_result.Name = "dgv_search_result";
             this.dgv_search_result.RowHeadersWidth = 51;
-            this.dgv_search_result.Size = new System.Drawing.Size(1164, 488);
+            this.dgv_search_result.Size = new System.Drawing.Size(1164, 479);
             this.dgv_search_result.TabIndex = 15;
             // 
             // txt_search
@@ -167,11 +170,38 @@
             this.txt_search.BackColor = System.Drawing.Color.LightGray;
             this.txt_search.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txt_search.Location = new System.Drawing.Point(303, 65);
-            this.txt_search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_search.Margin = new System.Windows.Forms.Padding(4);
             this.txt_search.Name = "txt_search";
             this.txt_search.Size = new System.Drawing.Size(844, 27);
             this.txt_search.TabIndex = 14;
-            this.txt_search.Text = "\r\n";
+            // 
+            // btn_reserve
+            // 
+            this.btn_reserve.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btn_reserve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_reserve.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.btn_reserve.Location = new System.Drawing.Point(452, 716);
+            this.btn_reserve.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_reserve.Name = "btn_reserve";
+            this.btn_reserve.Size = new System.Drawing.Size(167, 28);
+            this.btn_reserve.TabIndex = 25;
+            this.btn_reserve.Text = "Reserve";
+            this.btn_reserve.UseVisualStyleBackColor = false;
+            this.btn_reserve.Click += new System.EventHandler(this.btn_reserve_Click);
+            // 
+            // btn_borrow
+            // 
+            this.btn_borrow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btn_borrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_borrow.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.btn_borrow.Location = new System.Drawing.Point(743, 716);
+            this.btn_borrow.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_borrow.Name = "btn_borrow";
+            this.btn_borrow.Size = new System.Drawing.Size(167, 28);
+            this.btn_borrow.TabIndex = 26;
+            this.btn_borrow.Text = "Borrow";
+            this.btn_borrow.UseVisualStyleBackColor = false;
+            this.btn_borrow.Click += new System.EventHandler(this.btn_borrow_Click);
             // 
             // frm_search
             // 
@@ -179,6 +209,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(1365, 789);
+            this.Controls.Add(this.btn_borrow);
+            this.Controls.Add(this.btn_reserve);
             this.Controls.Add(this.rdb_both);
             this.Controls.Add(this.rdb_physical);
             this.Controls.Add(this.rdb_digital);
@@ -190,7 +222,7 @@
             this.Controls.Add(this.dgv_search_result);
             this.Controls.Add(this.txt_search);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_search";
             this.Text = "search";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_search_result)).EndInit();
@@ -211,5 +243,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgv_search_result;
         private System.Windows.Forms.TextBox txt_search;
+        private System.Windows.Forms.Button btn_reserve;
+        private System.Windows.Forms.Button btn_borrow;
     }
 }

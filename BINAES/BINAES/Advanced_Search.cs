@@ -12,6 +12,12 @@ namespace BINAES
 {
     public partial class frm_advanced_search : Form
     {
+        public string title;
+        public string someWords;
+        public string keyWords;
+        public string author;
+        public bool both;
+        public bool digital;
         public frm_advanced_search()
         {
             InitializeComponent();
@@ -25,6 +31,12 @@ namespace BINAES
 
         private void btn_search_Click(object sender, EventArgs e)
         {
+            this.title = txt_title.Text;
+            this.someWords = txt_some_words.Text;
+            this.keyWords = txt_key_words.Text;
+            this.author = txt_author.Text;
+            this.both = rdb_both.Checked;
+            this.digital = rdb_digital.Checked;
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
