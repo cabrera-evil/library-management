@@ -28,165 +28,172 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.rdbBoth = new System.Windows.Forms.RadioButton();
-            this.rdbPhysical = new System.Windows.Forms.RadioButton();
-            this.rdbDigital = new System.Windows.Forms.RadioButton();
-            this.btnAdvancedTools = new System.Windows.Forms.Button();
-            this.lblWarning = new System.Windows.Forms.Label();
-            this.btnSearch1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.rdb_both = new System.Windows.Forms.RadioButton();
+            this.rdb_physical = new System.Windows.Forms.RadioButton();
+            this.rdb_digital = new System.Windows.Forms.RadioButton();
+            this.btn_advanced_tools = new System.Windows.Forms.Button();
+            this.lbl_warning = new System.Windows.Forms.Label();
+            this.btn_search1 = new System.Windows.Forms.Button();
+            this.lbl_counter = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvSearchResult = new System.Windows.Forms.DataGridView();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSearchResult)).BeginInit();
+            this.dgv_search_result = new System.Windows.Forms.DataGridView();
+            this.txt_search = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_search_result)).BeginInit();
             this.SuspendLayout();
             // 
-            // rdbBoth
+            // rdb_both
             // 
-            this.rdbBoth.AutoSize = true;
-            this.rdbBoth.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.rdbBoth.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbBoth.ForeColor = System.Drawing.Color.LightGray;
-            this.rdbBoth.Location = new System.Drawing.Point(557, 133);
-            this.rdbBoth.Margin = new System.Windows.Forms.Padding(2);
-            this.rdbBoth.Name = "rdbBoth";
-            this.rdbBoth.Size = new System.Drawing.Size(49, 20);
-            this.rdbBoth.TabIndex = 23;
-            this.rdbBoth.TabStop = true;
-            this.rdbBoth.Text = "Both";
-            this.rdbBoth.UseVisualStyleBackColor = true;
+            this.rdb_both.AutoSize = true;
+            this.rdb_both.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.rdb_both.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdb_both.ForeColor = System.Drawing.Color.LightGray;
+            this.rdb_both.Location = new System.Drawing.Point(743, 110);
+            this.rdb_both.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdb_both.Name = "rdb_both";
+            this.rdb_both.Size = new System.Drawing.Size(58, 21);
+            this.rdb_both.TabIndex = 23;
+            this.rdb_both.TabStop = true;
+            this.rdb_both.Text = "Both";
+            this.rdb_both.UseVisualStyleBackColor = true;
             // 
-            // rdbPhysical
+            // rdb_physical
             // 
-            this.rdbPhysical.AutoSize = true;
-            this.rdbPhysical.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.rdbPhysical.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbPhysical.ForeColor = System.Drawing.Color.LightGray;
-            this.rdbPhysical.Location = new System.Drawing.Point(462, 133);
-            this.rdbPhysical.Margin = new System.Windows.Forms.Padding(2);
-            this.rdbPhysical.Name = "rdbPhysical";
-            this.rdbPhysical.Size = new System.Drawing.Size(93, 20);
-            this.rdbPhysical.TabIndex = 22;
-            this.rdbPhysical.TabStop = true;
-            this.rdbPhysical.Text = "Physical only";
-            this.rdbPhysical.UseVisualStyleBackColor = true;
+            this.rdb_physical.AutoSize = true;
+            this.rdb_physical.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.rdb_physical.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdb_physical.ForeColor = System.Drawing.Color.LightGray;
+            this.rdb_physical.Location = new System.Drawing.Point(616, 110);
+            this.rdb_physical.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdb_physical.Name = "rdb_physical";
+            this.rdb_physical.Size = new System.Drawing.Size(109, 21);
+            this.rdb_physical.TabIndex = 22;
+            this.rdb_physical.TabStop = true;
+            this.rdb_physical.Text = "Physical only";
+            this.rdb_physical.UseVisualStyleBackColor = true;
             // 
-            // rdbDigital
+            // rdb_digital
             // 
-            this.rdbDigital.AutoSize = true;
-            this.rdbDigital.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.rdbDigital.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbDigital.ForeColor = System.Drawing.Color.LightGray;
-            this.rdbDigital.Location = new System.Drawing.Point(372, 133);
-            this.rdbDigital.Margin = new System.Windows.Forms.Padding(2);
-            this.rdbDigital.Name = "rdbDigital";
-            this.rdbDigital.Size = new System.Drawing.Size(83, 20);
-            this.rdbDigital.TabIndex = 21;
-            this.rdbDigital.TabStop = true;
-            this.rdbDigital.Text = "Digital only";
-            this.rdbDigital.UseVisualStyleBackColor = true;
+            this.rdb_digital.AutoSize = true;
+            this.rdb_digital.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.rdb_digital.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdb_digital.ForeColor = System.Drawing.Color.LightGray;
+            this.rdb_digital.Location = new System.Drawing.Point(496, 110);
+            this.rdb_digital.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdb_digital.Name = "rdb_digital";
+            this.rdb_digital.Size = new System.Drawing.Size(101, 21);
+            this.rdb_digital.TabIndex = 21;
+            this.rdb_digital.TabStop = true;
+            this.rdb_digital.Text = "Digital only";
+            this.rdb_digital.UseVisualStyleBackColor = true;
             // 
-            // btnAdvancedTools
+            // btn_advanced_tools
             // 
-            this.btnAdvancedTools.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnAdvancedTools.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdvancedTools.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.btnAdvancedTools.Location = new System.Drawing.Point(154, 105);
-            this.btnAdvancedTools.Name = "btnAdvancedTools";
-            this.btnAdvancedTools.Size = new System.Drawing.Size(154, 23);
-            this.btnAdvancedTools.TabIndex = 20;
-            this.btnAdvancedTools.Text = "Advanced Tools";
-            this.btnAdvancedTools.UseVisualStyleBackColor = false;
+            this.btn_advanced_tools.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btn_advanced_tools.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_advanced_tools.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.btn_advanced_tools.Location = new System.Drawing.Point(90, 64);
+            this.btn_advanced_tools.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_advanced_tools.Name = "btn_advanced_tools";
+            this.btn_advanced_tools.Size = new System.Drawing.Size(205, 28);
+            this.btn_advanced_tools.TabIndex = 20;
+            this.btn_advanced_tools.Text = "Advanced Tools";
+            this.btn_advanced_tools.UseVisualStyleBackColor = false;
+            this.btn_advanced_tools.Click += new System.EventHandler(this.btn_advanced_tools_Click);
             // 
-            // lblWarning
+            // lbl_warning
             // 
-            this.lblWarning.AutoSize = true;
-            this.lblWarning.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWarning.ForeColor = System.Drawing.Color.LightGray;
-            this.lblWarning.Location = new System.Drawing.Point(424, 174);
-            this.lblWarning.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblWarning.Name = "lblWarning";
-            this.lblWarning.Size = new System.Drawing.Size(173, 17);
-            this.lblWarning.TabIndex = 19;
-            this.lblWarning.Text = "Type a sentence to search...";
-            this.lblWarning.Visible = false;
+            this.lbl_warning.AutoSize = true;
+            this.lbl_warning.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_warning.ForeColor = System.Drawing.Color.LightGray;
+            this.lbl_warning.Location = new System.Drawing.Point(565, 160);
+            this.lbl_warning.Name = "lbl_warning";
+            this.lbl_warning.Size = new System.Drawing.Size(214, 20);
+            this.lbl_warning.TabIndex = 19;
+            this.lbl_warning.Text = "Type a sentence to search...";
+            this.lbl_warning.Visible = false;
             // 
-            // btnSearch1
+            // btn_search1
             // 
-            this.btnSearch1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnSearch1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.btnSearch1.Location = new System.Drawing.Point(767, 105);
-            this.btnSearch1.Name = "btnSearch1";
-            this.btnSearch1.Size = new System.Drawing.Size(74, 23);
-            this.btnSearch1.TabIndex = 18;
-            this.btnSearch1.Text = "Search";
-            this.btnSearch1.UseVisualStyleBackColor = false;
+            this.btn_search1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btn_search1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_search1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.btn_search1.Location = new System.Drawing.Point(1155, 65);
+            this.btn_search1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_search1.Name = "btn_search1";
+            this.btn_search1.Size = new System.Drawing.Size(99, 28);
+            this.btn_search1.TabIndex = 18;
+            this.btn_search1.Text = "Search";
+            this.btn_search1.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // lbl_counter
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(567, 153);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(15, 17);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "0";
-            this.label2.Visible = false;
+            this.lbl_counter.AutoSize = true;
+            this.lbl_counter.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_counter.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbl_counter.Location = new System.Drawing.Point(756, 134);
+            this.lbl_counter.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_counter.Name = "lbl_counter";
+            this.lbl_counter.Size = new System.Drawing.Size(17, 20);
+            this.lbl_counter.TabIndex = 17;
+            this.lbl_counter.Text = "0";
+            this.lbl_counter.Visible = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(424, 153);
+            this.label1.Location = new System.Drawing.Point(565, 134);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 17);
+            this.label1.Size = new System.Drawing.Size(152, 20);
             this.label1.TabIndex = 16;
             this.label1.Text = "Total de resultados: ";
             this.label1.Visible = false;
             // 
-            // dgvSearchResult
+            // dgv_search_result
             // 
-            this.dgvSearchResult.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.dgvSearchResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSearchResult.Location = new System.Drawing.Point(154, 194);
-            this.dgvSearchResult.Name = "dgvSearchResult";
-            this.dgvSearchResult.RowHeadersWidth = 51;
-            this.dgvSearchResult.Size = new System.Drawing.Size(687, 323);
-            this.dgvSearchResult.TabIndex = 15;
+            this.dgv_search_result.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.dgv_search_result.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_search_result.Location = new System.Drawing.Point(90, 239);
+            this.dgv_search_result.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_search_result.Name = "dgv_search_result";
+            this.dgv_search_result.RowHeadersWidth = 51;
+            this.dgv_search_result.Size = new System.Drawing.Size(1164, 488);
+            this.dgv_search_result.TabIndex = 15;
             // 
-            // txtSearch
+            // txt_search
             // 
-            this.txtSearch.BackColor = System.Drawing.Color.LightGray;
-            this.txtSearch.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtSearch.Location = new System.Drawing.Point(315, 106);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(447, 23);
-            this.txtSearch.TabIndex = 14;
-            this.txtSearch.Text = "\r\n";
+            this.txt_search.BackColor = System.Drawing.Color.LightGray;
+            this.txt_search.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txt_search.Location = new System.Drawing.Point(303, 65);
+            this.txt_search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_search.Name = "txt_search";
+            this.txt_search.Size = new System.Drawing.Size(844, 27);
+            this.txt_search.TabIndex = 14;
+            this.txt_search.Text = "\r\n";
             // 
             // frm_search
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(1024, 641);
-            this.Controls.Add(this.rdbBoth);
-            this.Controls.Add(this.rdbPhysical);
-            this.Controls.Add(this.rdbDigital);
-            this.Controls.Add(this.btnAdvancedTools);
-            this.Controls.Add(this.lblWarning);
-            this.Controls.Add(this.btnSearch1);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(1365, 789);
+            this.Controls.Add(this.rdb_both);
+            this.Controls.Add(this.rdb_physical);
+            this.Controls.Add(this.rdb_digital);
+            this.Controls.Add(this.btn_advanced_tools);
+            this.Controls.Add(this.lbl_warning);
+            this.Controls.Add(this.btn_search1);
+            this.Controls.Add(this.lbl_counter);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgvSearchResult);
-            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.dgv_search_result);
+            this.Controls.Add(this.txt_search);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_search";
             this.Text = "search";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSearchResult)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_search_result)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,15 +201,15 @@
 
         #endregion
 
-        private System.Windows.Forms.RadioButton rdbBoth;
-        private System.Windows.Forms.RadioButton rdbPhysical;
-        private System.Windows.Forms.RadioButton rdbDigital;
-        private System.Windows.Forms.Button btnAdvancedTools;
-        private System.Windows.Forms.Label lblWarning;
-        private System.Windows.Forms.Button btnSearch1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RadioButton rdb_both;
+        private System.Windows.Forms.RadioButton rdb_physical;
+        private System.Windows.Forms.RadioButton rdb_digital;
+        private System.Windows.Forms.Button btn_advanced_tools;
+        private System.Windows.Forms.Label lbl_warning;
+        private System.Windows.Forms.Button btn_search1;
+        private System.Windows.Forms.Label lbl_counter;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvSearchResult;
-        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.DataGridView dgv_search_result;
+        private System.Windows.Forms.TextBox txt_search;
     }
 }

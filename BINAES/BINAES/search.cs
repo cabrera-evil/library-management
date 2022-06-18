@@ -16,5 +16,13 @@ namespace BINAES
         {
             InitializeComponent();
         }
+
+        private void btn_advanced_tools_Click(object sender, EventArgs e)
+        {
+            using (frm_advanced_search window = new frm_advanced_search())
+            {
+                window.ShowDialog();
+            }
+        }
     }
 }
