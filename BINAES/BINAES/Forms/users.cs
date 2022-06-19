@@ -49,7 +49,7 @@ namespace BINAES
 
         private void btn_edit_Click(object sender, System.EventArgs e)
         {
-            USER_ user = new USER_();''
+            USER_ user = new USER_();
         }
     }
 }
