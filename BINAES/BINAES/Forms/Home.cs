@@ -46,7 +46,6 @@ namespace BINAES
             myForm = pnl_form.Controls.OfType<selected_form>().FirstOrDefault();
             if (myForm == null)
             {
-                MessageBox.Show("ok");
                 myForm = new selected_form();
                 myForm.TopLevel = false;
                 myForm.FormBorderStyle = FormBorderStyle.None;

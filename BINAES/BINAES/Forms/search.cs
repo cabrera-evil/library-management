@@ -19,8 +19,7 @@ namespace BINAES
 
         private void btn_advanced_tools_Click(object sender, EventArgs e)
         {
-            frm_home home = new frm_home();
-            home.open_form<frm_advanced_search>();
+            
         }
 
         private void btn_search1_Click(object sender, EventArgs e)
