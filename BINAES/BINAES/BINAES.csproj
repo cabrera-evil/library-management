@@ -167,11 +167,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>db.resx</DependentUpon>
     </Compile>
-    <Compile Include="Resources\db.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>db.resx</DependentUpon>
-    </Compile>
     <Compile Include="ROLE_.cs">
       <DependentUpon>connection.tt</DependentUpon>
     </Compile>
@@ -237,10 +232,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Resources\db.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>db.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\welcome.resx">
       <DependentUpon>welcome.cs</DependentUpon>
     </EmbeddedResource>
