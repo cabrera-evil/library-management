@@ -1,0 +1,586 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BINAESModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ACTIVITY">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="beginning_hour" Type="DateTime" Precision="3" />
+    <Property Name="finishing_hour" Type="DateTime" Precision="3" />
+    <Property Name="beginning_date" Type="DateTime" Precision="3" />
+    <Property Name="finishing_date" Type="DateTime" Precision="3" />
+    <Property Name="id_area" Type="Int32" Nullable="false" />
+    <Property Name="id_celebration" Type="Int32" Nullable="false" />
+    <Property Name="id_attendance" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="AREA" Relationship="Self.fk_activity_area" FromRole="ACTIVITY" ToRole="AREA" />
+    <NavigationProperty Name="ATTENDANCE" Relationship="Self.fk_activity_attendance" FromRole="ACTIVITY" ToRole="ATTENDANCE" />
+    <NavigationProperty Name="CELEBRATION" Relationship="Self.fk_celebration_activity" FromRole="ACTIVITY" ToRole="CELEBRATION" />
+  </EntityType>
+  <EntityType Name="AREA">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="area_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="area_description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="schedule" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="id_manager" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ACTIVITY" Relationship="Self.fk_activity_area" FromRole="AREA" ToRole="ACTIVITY" />
+    <NavigationProperty Name="MANAGER" Relationship="Self.fk_area_manager" FromRole="AREA" ToRole="MANAGER" />
+  </EntityType>
+  <EntityType Name="ATTENDANCE">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="entrance_date" Type="DateTime" Precision="3" />
+    <Property Name="exit_date" Type="DateTime" Precision="3" />
+    <Property Name="entarance_hour" Type="DateTime" Precision="3" />
+    <Property Name="exit_hour" Type="DateTime" Precision="3" />
+    <Property Name="id_user" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ACTIVITY" Relationship="Self.fk_activity_attendance" FromRole="ATTENDANCE" ToRole="ACTIVITY" />
+    <NavigationProperty Name="USER_" Relationship="Self.fk_attendance_user" FromRole="ATTENDANCE" ToRole="USER_" />
+  </EntityType>
+  <EntityType Name="AUTHOR">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="author_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_copy" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="COPY_" Relationship="Self.fk_copy_author" FromRole="AUTHOR" ToRole="COPY_" />
+  </EntityType>
+  <EntityType Name="CELEBRATION">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="picture" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="attendance" Type="Int32" />
+    <Property Name="beginning_hour" Type="DateTime" Precision="3" />
+    <Property Name="finishing_hour" Type="DateTime" Precision="3" />
+    <Property Name="beginning_date" Type="DateTime" Precision="3" />
+    <Property Name="finishing_date" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="ACTIVITY" Relationship="Self.fk_celebration_activity" FromRole="CELEBRATION" ToRole="ACTIVITY" />
+    <NavigationProperty Name="GOAL" Relationship="Self.fk_celebration_goal" FromRole="CELEBRATION" ToRole="GOAL" />
+  </EntityType>
+  <EntityType Name="COLLECTION_">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="collection_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_type" Type="Int32" Nullable="false" />
+    <Property Name="id_genre" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="COPY_" Relationship="Self.fk_collection_copy" FromRole="COLLECTION_" ToRole="COPY_" />
+    <NavigationProperty Name="GENRE" Relationship="Self.fk_collection_genre" FromRole="COLLECTION_" ToRole="GENRE" />
+    <NavigationProperty Name="TYPE_" Relationship="Self.fk_collection_type" FromRole="COLLECTION_" ToRole="TYPE_" />
+  </EntityType>
+  <EntityType Name="COPY_">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="copy_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="picture" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="release_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="id_collection" Type="Int32" Nullable="false" />
+    <Property Name="id_language" Type="Int32" Nullable="false" />
+    <Property Name="id_format" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="AUTHOR" Relationship="Self.fk_copy_author" FromRole="COPY_" ToRole="AUTHOR" />
+    <NavigationProperty Name="COLLECTION_" Relationship="Self.fk_collection_copy" FromRole="COPY_" ToRole="COLLECTION_" />
+    <NavigationProperty Name="FORMAT_" Relationship="Self.fk_copy_format" FromRole="COPY_" ToRole="FORMAT_" />
+    <NavigationProperty Name="LABEL_" Relationship="Self.fk_copy_label" FromRole="COPY_" ToRole="LABEL_" />
+    <NavigationProperty Name="LANGUAGE_" Relationship="Self.fk_copy_language" FromRole="COPY_" ToRole="LANGUAGE_" />
+    <NavigationProperty Name="WORDS_LIST" Relationship="Self.fk_copy_list" FromRole="COPY_" ToRole="WORDS_LIST" />
+    <NavigationProperty Name="LOAN_BOOKING" Relationship="Self.fk_copy_lxb" FromRole="COPY_" ToRole="LOAN_BOOKING" />
+  </EntityType>
+  <EntityType Name="FORMAT_">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="format_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="COPY_" Relationship="Self.fk_copy_format" FromRole="FORMAT_" ToRole="COPY_" />
+  </EntityType>
+  <EntityType Name="GENRE">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="genre_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="COLLECTION_" Relationship="Self.fk_collection_genre" FromRole="GENRE" ToRole="COLLECTION_" />
+  </EntityType>
+  <EntityType Name="GOAL">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="goal_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_celebration" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CELEBRATION" Relationship="Self.fk_celebration_goal" FromRole="GOAL" ToRole="CELEBRATION" />
+  </EntityType>
+  <EntityType Name="INSTITUTION">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="institution_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="USER_" Relationship="Self.fk_user_intitution" FromRole="INSTITUTION" ToRole="USER_" />
+  </EntityType>
+  <EntityType Name="LABEL_">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="label_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id_copy" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="COPY_" Relationship="Self.fk_copy_label" FromRole="LABEL_" ToRole="COPY_" />
+  </EntityType>
+  <EntityType Name="LANGUAGE_">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="language_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="COPY_" Relationship="Self.fk_copy_language" FromRole="LANGUAGE_" ToRole="COPY_" />
+  </EntityType>
+  <EntityType Name="LOAN_BOOKING">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="booking_date" Type="DateTime" Precision="3" />
+    <Property Name="booking_hour" Type="DateTime" Precision="3" />
+    <Property Name="return_date" Type="DateTime" Precision="3" />
+    <Property Name="return_hour" Type="DateTime" Precision="3" />
+    <Property Name="loan_date" Type="DateTime" Precision="3" />
+    <Property Name="loan_hour" Type="DateTime" Precision="3" />
+    <Property Name="id_user" Type="Int32" Nullable="false" />
+    <Property Name="id_copy" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="COPY_" Relationship="Self.fk_copy_lxb" FromRole="LOAN_BOOKING" ToRole="COPY_" />
+    <NavigationProperty Name="USER_" Relationship="Self.fk_user_lxb" FromRole="LOAN_BOOKING" ToRole="USER_" />
+  </EntityType>
+  <EntityType Name="MANAGER">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="manager_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="AREA" Relationship="Self.fk_area_manager" FromRole="MANAGER" ToRole="AREA" />
+  </EntityType>
+  <EntityType Name="OCCUPANCY">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="occupancy_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="USER_" Relationship="Self.fk_user_occupancy" FromRole="OCCUPANCY" ToRole="USER_" />
+  </EntityType>
+  <EntityType Name="ROLE_">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="role_type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="USER_" Relationship="Self.fk_user_role" FromRole="ROLE_" ToRole="USER_" />
+  </EntityType>
+  <EntityType Name="TYPE_">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="type_name_" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="COLLECTION_" Relationship="Self.fk_collection_type" FromRole="TYPE_" ToRole="COLLECTION_" />
+  </EntityType>
+  <EntityType Name="USER_">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="user_address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="String" MaxLength="12" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="picture" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_occupancy" Type="Int32" Nullable="false" />
+    <Property Name="id_institution" Type="Int32" Nullable="false" />
+    <Property Name="id_role" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ATTENDANCE" Relationship="Self.fk_attendance_user" FromRole="USER_" ToRole="ATTENDANCE" />
+    <NavigationProperty Name="INSTITUTION" Relationship="Self.fk_user_intitution" FromRole="USER_" ToRole="INSTITUTION" />
+    <NavigationProperty Name="LOAN_BOOKING" Relationship="Self.fk_user_lxb" FromRole="USER_" ToRole="LOAN_BOOKING" />
+    <NavigationProperty Name="OCCUPANCY" Relationship="Self.fk_user_occupancy" FromRole="USER_" ToRole="OCCUPANCY" />
+    <NavigationProperty Name="ROLE_" Relationship="Self.fk_user_role" FromRole="USER_" ToRole="ROLE_" />
+  </EntityType>
+  <EntityType Name="WORDS_LIST">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="word" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_copy" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="COPY_" Relationship="Self.fk_copy_list" FromRole="WORDS_LIST" ToRole="COPY_" />
+  </EntityType>
+  <Association Name="fk_activity_area">
+    <End Role="AREA" Type="Self.AREA" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ACTIVITY" Type="Self.ACTIVITY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AREA">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ACTIVITY">
+        <PropertyRef Name="id_area" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_activity_attendance">
+    <End Role="ATTENDANCE" Type="Self.ATTENDANCE" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ACTIVITY" Type="Self.ACTIVITY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ATTENDANCE">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ACTIVITY">
+        <PropertyRef Name="id_attendance" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_celebration_activity">
+    <End Role="CELEBRATION" Type="Self.CELEBRATION" Multiplicity="1" />
+    <End Role="ACTIVITY" Type="Self.ACTIVITY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CELEBRATION">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ACTIVITY">
+        <PropertyRef Name="id_celebration" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_area_manager">
+    <End Role="MANAGER" Type="Self.MANAGER" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AREA" Type="Self.AREA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MANAGER">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="AREA">
+        <PropertyRef Name="id_manager" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_attendance_user">
+    <End Role="USER_" Type="Self.USER_" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ATTENDANCE" Type="Self.ATTENDANCE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USER_">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ATTENDANCE">
+        <PropertyRef Name="id_user" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_copy_author">
+    <End Role="COPY_" Type="Self.COPY_" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AUTHOR" Type="Self.AUTHOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COPY_">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="AUTHOR">
+        <PropertyRef Name="id_copy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_celebration_goal">
+    <End Role="CELEBRATION" Type="Self.CELEBRATION" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="GOAL" Type="Self.GOAL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CELEBRATION">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="GOAL">
+        <PropertyRef Name="id_celebration" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_collection_copy">
+    <End Role="COLLECTION_" Type="Self.COLLECTION_" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="COPY_" Type="Self.COPY_" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COLLECTION_">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="COPY_">
+        <PropertyRef Name="id_collection" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_collection_genre">
+    <End Role="GENRE" Type="Self.GENRE" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="COLLECTION_" Type="Self.COLLECTION_" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GENRE">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="COLLECTION_">
+        <PropertyRef Name="id_genre" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_collection_type">
+    <End Role="TYPE_" Type="Self.TYPE_" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="COLLECTION_" Type="Self.COLLECTION_" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TYPE_">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="COLLECTION_">
+        <PropertyRef Name="id_type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_copy_format">
+    <End Role="FORMAT_" Type="Self.FORMAT_" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="COPY_" Type="Self.COPY_" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FORMAT_">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="COPY_">
+        <PropertyRef Name="id_format" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_copy_label">
+    <End Role="COPY_" Type="Self.COPY_" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="LABEL_" Type="Self.LABEL_" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COPY_">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="LABEL_">
+        <PropertyRef Name="id_copy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_copy_language">
+    <End Role="LANGUAGE_" Type="Self.LANGUAGE_" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="COPY_" Type="Self.COPY_" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LANGUAGE_">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="COPY_">
+        <PropertyRef Name="id_language" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_copy_list">
+    <End Role="COPY_" Type="Self.COPY_" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="WORDS_LIST" Type="Self.WORDS_LIST" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COPY_">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="WORDS_LIST">
+        <PropertyRef Name="id_copy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_copy_lxb">
+    <End Role="COPY_" Type="Self.COPY_" Multiplicity="1" />
+    <End Role="LOAN_BOOKING" Type="Self.LOAN_BOOKING" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COPY_">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="LOAN_BOOKING">
+        <PropertyRef Name="id_copy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_user_intitution">
+    <End Role="INSTITUTION" Type="Self.INSTITUTION" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="USER_" Type="Self.USER_" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="INSTITUTION">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="USER_">
+        <PropertyRef Name="id_institution" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_user_lxb">
+    <End Role="USER_" Type="Self.USER_" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="LOAN_BOOKING" Type="Self.LOAN_BOOKING" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USER_">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="LOAN_BOOKING">
+        <PropertyRef Name="id_user" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_user_occupancy">
+    <End Role="OCCUPANCY" Type="Self.OCCUPANCY" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="USER_" Type="Self.USER_" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OCCUPANCY">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="USER_">
+        <PropertyRef Name="id_occupancy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_user_role">
+    <End Role="ROLE_" Type="Self.ROLE_" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="USER_" Type="Self.USER_" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ROLE_">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="USER_">
+        <PropertyRef Name="id_role" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BINAES_Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ACTIVITY" EntityType="Self.ACTIVITY" />
+    <EntitySet Name="AREA" EntityType="Self.AREA" />
+    <EntitySet Name="ATTENDANCE" EntityType="Self.ATTENDANCE" />
+    <EntitySet Name="AUTHOR" EntityType="Self.AUTHOR" />
+    <EntitySet Name="CELEBRATION" EntityType="Self.CELEBRATION" />
+    <EntitySet Name="COLLECTION_" EntityType="Self.COLLECTION_" />
+    <EntitySet Name="COPY_" EntityType="Self.COPY_" />
+    <EntitySet Name="FORMAT_" EntityType="Self.FORMAT_" />
+    <EntitySet Name="GENRE" EntityType="Self.GENRE" />
+    <EntitySet Name="GOAL" EntityType="Self.GOAL" />
+    <EntitySet Name="INSTITUTION" EntityType="Self.INSTITUTION" />
+    <EntitySet Name="LABEL_" EntityType="Self.LABEL_" />
+    <EntitySet Name="LANGUAGE_" EntityType="Self.LANGUAGE_" />
+    <EntitySet Name="LOAN_BOOKING" EntityType="Self.LOAN_BOOKING" />
+    <EntitySet Name="MANAGER" EntityType="Self.MANAGER" />
+    <EntitySet Name="OCCUPANCY" EntityType="Self.OCCUPANCY" />
+    <EntitySet Name="ROLE_" EntityType="Self.ROLE_" />
+    <EntitySet Name="TYPE_" EntityType="Self.TYPE_" />
+    <EntitySet Name="USER_" EntityType="Self.USER_" />
+    <EntitySet Name="WORDS_LIST" EntityType="Self.WORDS_LIST" />
+    <AssociationSet Name="fk_activity_area" Association="Self.fk_activity_area">
+      <End Role="AREA" EntitySet="AREA" />
+      <End Role="ACTIVITY" EntitySet="ACTIVITY" />
+    </AssociationSet>
+    <AssociationSet Name="fk_activity_attendance" Association="Self.fk_activity_attendance">
+      <End Role="ATTENDANCE" EntitySet="ATTENDANCE" />
+      <End Role="ACTIVITY" EntitySet="ACTIVITY" />
+    </AssociationSet>
+    <AssociationSet Name="fk_celebration_activity" Association="Self.fk_celebration_activity">
+      <End Role="CELEBRATION" EntitySet="CELEBRATION" />
+      <End Role="ACTIVITY" EntitySet="ACTIVITY" />
+    </AssociationSet>
+    <AssociationSet Name="fk_area_manager" Association="Self.fk_area_manager">
+      <End Role="MANAGER" EntitySet="MANAGER" />
+      <End Role="AREA" EntitySet="AREA" />
+    </AssociationSet>
+    <AssociationSet Name="fk_attendance_user" Association="Self.fk_attendance_user">
+      <End Role="USER_" EntitySet="USER_" />
+      <End Role="ATTENDANCE" EntitySet="ATTENDANCE" />
+    </AssociationSet>
+    <AssociationSet Name="fk_copy_author" Association="Self.fk_copy_author">
+      <End Role="COPY_" EntitySet="COPY_" />
+      <End Role="AUTHOR" EntitySet="AUTHOR" />
+    </AssociationSet>
+    <AssociationSet Name="fk_celebration_goal" Association="Self.fk_celebration_goal">
+      <End Role="CELEBRATION" EntitySet="CELEBRATION" />
+      <End Role="GOAL" EntitySet="GOAL" />
+    </AssociationSet>
+    <AssociationSet Name="fk_collection_copy" Association="Self.fk_collection_copy">
+      <End Role="COLLECTION_" EntitySet="COLLECTION_" />
+      <End Role="COPY_" EntitySet="COPY_" />
+    </AssociationSet>
+    <AssociationSet Name="fk_collection_genre" Association="Self.fk_collection_genre">
+      <End Role="GENRE" EntitySet="GENRE" />
+      <End Role="COLLECTION_" EntitySet="COLLECTION_" />
+    </AssociationSet>
+    <AssociationSet Name="fk_collection_type" Association="Self.fk_collection_type">
+      <End Role="TYPE_" EntitySet="TYPE_" />
+      <End Role="COLLECTION_" EntitySet="COLLECTION_" />
+    </AssociationSet>
+    <AssociationSet Name="fk_copy_format" Association="Self.fk_copy_format">
+      <End Role="FORMAT_" EntitySet="FORMAT_" />
+      <End Role="COPY_" EntitySet="COPY_" />
+    </AssociationSet>
+    <AssociationSet Name="fk_copy_label" Association="Self.fk_copy_label">
+      <End Role="COPY_" EntitySet="COPY_" />
+      <End Role="LABEL_" EntitySet="LABEL_" />
+    </AssociationSet>
+    <AssociationSet Name="fk_copy_language" Association="Self.fk_copy_language">
+      <End Role="LANGUAGE_" EntitySet="LANGUAGE_" />
+      <End Role="COPY_" EntitySet="COPY_" />
+    </AssociationSet>
+    <AssociationSet Name="fk_copy_list" Association="Self.fk_copy_list">
+      <End Role="COPY_" EntitySet="COPY_" />
+      <End Role="WORDS_LIST" EntitySet="WORDS_LIST" />
+    </AssociationSet>
+    <AssociationSet Name="fk_copy_lxb" Association="Self.fk_copy_lxb">
+      <End Role="COPY_" EntitySet="COPY_" />
+      <End Role="LOAN_BOOKING" EntitySet="LOAN_BOOKING" />
+    </AssociationSet>
+    <AssociationSet Name="fk_user_intitution" Association="Self.fk_user_intitution">
+      <End Role="INSTITUTION" EntitySet="INSTITUTION" />
+      <End Role="USER_" EntitySet="USER_" />
+    </AssociationSet>
+    <AssociationSet Name="fk_user_lxb" Association="Self.fk_user_lxb">
+      <End Role="USER_" EntitySet="USER_" />
+      <End Role="LOAN_BOOKING" EntitySet="LOAN_BOOKING" />
+    </AssociationSet>
+    <AssociationSet Name="fk_user_occupancy" Association="Self.fk_user_occupancy">
+      <End Role="OCCUPANCY" EntitySet="OCCUPANCY" />
+      <End Role="USER_" EntitySet="USER_" />
+    </AssociationSet>
+    <AssociationSet Name="fk_user_role" Association="Self.fk_user_role">
+      <End Role="ROLE_" EntitySet="ROLE_" />
+      <End Role="USER_" EntitySet="USER_" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

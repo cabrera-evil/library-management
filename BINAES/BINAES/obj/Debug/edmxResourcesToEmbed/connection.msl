@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BINAES_ModelStoreContainer" CdmEntityContainer="db_BINAES">
+    <EntitySetMapping Name="ACTIVITY">
+      <EntityTypeMapping TypeName="BINAES_Model.ACTIVITY">
+        <MappingFragment StoreEntitySet="ACTIVITY">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="beginning_hour" ColumnName="beginning_hour" />
+          <ScalarProperty Name="finishing_hour" ColumnName="finishing_hour" />
+          <ScalarProperty Name="beginning_date" ColumnName="beginning_date" />
+          <ScalarProperty Name="finishing_date" ColumnName="finishing_date" />
+          <ScalarProperty Name="id_area" ColumnName="id_area" />
+          <ScalarProperty Name="id_celebration" ColumnName="id_celebration" />
+          <ScalarProperty Name="id_attendance" ColumnName="id_attendance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AREA">
+      <EntityTypeMapping TypeName="BINAES_Model.AREA">
+        <MappingFragment StoreEntitySet="AREA">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="area_name" ColumnName="area_name" />
+          <ScalarProperty Name="area_description" ColumnName="area_description" />
+          <ScalarProperty Name="schedule" ColumnName="schedule" />
+          <ScalarProperty Name="id_manager" ColumnName="id_manager" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ATTENDANCE">
+      <EntityTypeMapping TypeName="BINAES_Model.ATTENDANCE">
+        <MappingFragment StoreEntitySet="ATTENDANCE">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="entrance_date" ColumnName="entrance_date" />
+          <ScalarProperty Name="exit_date" ColumnName="exit_date" />
+          <ScalarProperty Name="entarance_hour" ColumnName="entarance_hour" />
+          <ScalarProperty Name="exit_hour" ColumnName="exit_hour" />
+          <ScalarProperty Name="id_user" ColumnName="id_user" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AUTHOR">
+      <EntityTypeMapping TypeName="BINAES_Model.AUTHOR">
+        <MappingFragment StoreEntitySet="AUTHOR">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="author_name" ColumnName="author_name" />
+          <ScalarProperty Name="id_copy" ColumnName="id_copy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CELEBRATION">
+      <EntityTypeMapping TypeName="BINAES_Model.CELEBRATION">
+        <MappingFragment StoreEntitySet="CELEBRATION">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="picture" ColumnName="picture" />
+          <ScalarProperty Name="attendance" ColumnName="attendance" />
+          <ScalarProperty Name="beginning_hour" ColumnName="beginning_hour" />
+          <ScalarProperty Name="finishing_hour" ColumnName="finishing_hour" />
+          <ScalarProperty Name="beginning_date" ColumnName="beginning_date" />
+          <ScalarProperty Name="finishing_date" ColumnName="finishing_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COLLECTION_">
+      <EntityTypeMapping TypeName="BINAES_Model.COLLECTION_">
+        <MappingFragment StoreEntitySet="COLLECTION_">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="collection_name" ColumnName="collection_name" />
+          <ScalarProperty Name="id_type" ColumnName="id_type" />
+          <ScalarProperty Name="id_genre" ColumnName="id_genre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COPY_">
+      <EntityTypeMapping TypeName="BINAES_Model.COPY_">
+        <MappingFragment StoreEntitySet="COPY_">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="copy_name" ColumnName="copy_name" />
+          <ScalarProperty Name="picture" ColumnName="picture" />
+          <ScalarProperty Name="release_date" ColumnName="release_date" />
+          <ScalarProperty Name="id_collection" ColumnName="id_collection" />
+          <ScalarProperty Name="id_language" ColumnName="id_language" />
+          <ScalarProperty Name="id_format" ColumnName="id_format" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FORMAT_">
+      <EntityTypeMapping TypeName="BINAES_Model.FORMAT_">
+        <MappingFragment StoreEntitySet="FORMAT_">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="format_name" ColumnName="format_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GENRE">
+      <EntityTypeMapping TypeName="BINAES_Model.GENRE">
+        <MappingFragment StoreEntitySet="GENRE">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="genre_name" ColumnName="genre_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GOAL">
+      <EntityTypeMapping TypeName="BINAES_Model.GOAL">
+        <MappingFragment StoreEntitySet="GOAL">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="goal_name" ColumnName="goal_name" />
+          <ScalarProperty Name="id_celebration" ColumnName="id_celebration" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INSTITUTION">
+      <EntityTypeMapping TypeName="BINAES_Model.INSTITUTION">
+        <MappingFragment StoreEntitySet="INSTITUTION">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="institution_name" ColumnName="institution_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LABEL_">
+      <EntityTypeMapping TypeName="BINAES_Model.LABEL_">
+        <MappingFragment StoreEntitySet="LABEL_">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="label_name" ColumnName="label_name" />
+          <ScalarProperty Name="id_copy" ColumnName="id_copy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LANGUAGE_">
+      <EntityTypeMapping TypeName="BINAES_Model.LANGUAGE_">
+        <MappingFragment StoreEntitySet="LANGUAGE_">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="language_name" ColumnName="language_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOAN_BOOKING">
+      <EntityTypeMapping TypeName="BINAES_Model.LOAN_BOOKING">
+        <MappingFragment StoreEntitySet="LOAN_BOOKING">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="booking_date" ColumnName="booking_date" />
+          <ScalarProperty Name="booking_hour" ColumnName="booking_hour" />
+          <ScalarProperty Name="return_date" ColumnName="return_date" />
+          <ScalarProperty Name="return_hour" ColumnName="return_hour" />
+          <ScalarProperty Name="loan_date" ColumnName="loan_date" />
+          <ScalarProperty Name="loan_hour" ColumnName="loan_hour" />
+          <ScalarProperty Name="id_user" ColumnName="id_user" />
+          <ScalarProperty Name="id_copy" ColumnName="id_copy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MANAGER">
+      <EntityTypeMapping TypeName="BINAES_Model.MANAGER">
+        <MappingFragment StoreEntitySet="MANAGER">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="manager_name" ColumnName="manager_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OCCUPANCY">
+      <EntityTypeMapping TypeName="BINAES_Model.OCCUPANCY">
+        <MappingFragment StoreEntitySet="OCCUPANCY">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="occupancy_name" ColumnName="occupancy_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROLE_">
+      <EntityTypeMapping TypeName="BINAES_Model.ROLE_">
+        <MappingFragment StoreEntitySet="ROLE_">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="role_type" ColumnName="role_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TYPE_">
+      <EntityTypeMapping TypeName="BINAES_Model.TYPE_">
+        <MappingFragment StoreEntitySet="TYPE_">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="type_name_" ColumnName="type_name_" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USER_">
+      <EntityTypeMapping TypeName="BINAES_Model.USER_">
+        <MappingFragment StoreEntitySet="USER_">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="user_address" ColumnName="user_address" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="picture" ColumnName="picture" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="id_occupancy" ColumnName="id_occupancy" />
+          <ScalarProperty Name="id_institution" ColumnName="id_institution" />
+          <ScalarProperty Name="id_role" ColumnName="id_role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WORDS_LIST">
+      <EntityTypeMapping TypeName="BINAES_Model.WORDS_LIST">
+        <MappingFragment StoreEntitySet="WORDS_LIST">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="word" ColumnName="word" />
+          <ScalarProperty Name="id_copy" ColumnName="id_copy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

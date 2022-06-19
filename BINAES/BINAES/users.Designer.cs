@@ -38,7 +38,7 @@ namespace BINAES
             this.lbl_usersDataTable = new System.Windows.Forms.Label();
             this.pnl_usersDataTableBar = new System.Windows.Forms.Panel();
             this.pnl_userDataBar = new System.Windows.Forms.Panel();
-            this.cmb_roll = new System.Windows.Forms.ComboBox();
+            this.cmb_role = new System.Windows.Forms.ComboBox();
             this.lbl_roll = new System.Windows.Forms.Label();
             this.txt_email = new System.Windows.Forms.TextBox();
             this.lbl_email = new System.Windows.Forms.Label();
@@ -144,7 +144,7 @@ namespace BINAES
             // pnl_userDataBar
             // 
             this.pnl_userDataBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
-            this.pnl_userDataBar.Controls.Add(this.cmb_roll);
+            this.pnl_userDataBar.Controls.Add(this.cmb_role);
             this.pnl_userDataBar.Controls.Add(this.lbl_roll);
             this.pnl_userDataBar.Controls.Add(this.txt_email);
             this.pnl_userDataBar.Controls.Add(this.lbl_email);
@@ -166,16 +166,16 @@ namespace BINAES
             this.pnl_userDataBar.Location = new System.Drawing.Point(685, 0);
             this.pnl_userDataBar.Name = "pnl_userDataBar";
             this.pnl_userDataBar.Size = new System.Drawing.Size(355, 680);
-            this.pnl_userDataBar.TabIndex = 22;
+            this.pnl_userDataBar.TabIndex = 23;
             // 
-            // cmb_roll
+            // cmb_role
             // 
-            this.cmb_roll.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_roll.FormattingEnabled = true;
-            this.cmb_roll.Location = new System.Drawing.Point(125, 211);
-            this.cmb_roll.Name = "cmb_roll";
-            this.cmb_roll.Size = new System.Drawing.Size(204, 25);
-            this.cmb_roll.TabIndex = 30;
+            this.cmb_role.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_role.FormattingEnabled = true;
+            this.cmb_role.Location = new System.Drawing.Point(125, 211);
+            this.cmb_role.Name = "cmb_role";
+            this.cmb_role.Size = new System.Drawing.Size(204, 25);
+            this.cmb_role.TabIndex = 30;
             // 
             // lbl_roll
             // 
@@ -366,6 +366,7 @@ namespace BINAES
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_users";
             this.Text = "users";
+            this.Load += new System.EventHandler(this.frm_users_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dg_usersDataTable)).EndInit();
             this.pnl_usersDataTableBar.ResumeLayout(false);
             this.pnl_userDataBar.ResumeLayout(false);
@@ -383,7 +384,7 @@ namespace BINAES
         #endregion
 
         private System.Windows.Forms.Panel pnl_userDataBar;
-        private System.Windows.Forms.ComboBox cmb_roll;
+        private System.Windows.Forms.ComboBox cmb_role;
         private System.Windows.Forms.Label lbl_roll;
         private System.Windows.Forms.TextBox txt_email;
         private System.Windows.Forms.Label lbl_email;

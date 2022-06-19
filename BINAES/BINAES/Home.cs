@@ -43,10 +43,10 @@ namespace BINAES
         public void open_form<selected_form>() where selected_form : Form, new()
         {
             Form myForm;
-            myForm = pnl_form.Controls.OfType<selected_form>().FirstOrDefault();//Busca en la colecion el formulario
-                                                                                     //si el formulario/instancia no existe
+            myForm = pnl_form.Controls.OfType<selected_form>().FirstOrDefault();
             if (myForm == null)
             {
+                MessageBox.Show("ok");
                 myForm = new selected_form();
                 myForm.TopLevel = false;
                 myForm.FormBorderStyle = FormBorderStyle.None;
@@ -56,7 +56,6 @@ namespace BINAES
                 myForm.Show();
                 myForm.BringToFront();
             }
-            //si el formulario/instancia existe
             else
             {
                 myForm.BringToFront();
@@ -91,7 +90,7 @@ namespace BINAES
 
         private void btn_loans_Click(object sender, EventArgs e)
         {
-            open_form<frm_users>();
+           open_form<frm_users>();
         }
 
         private void btn_booking_Click(object sender, EventArgs e)

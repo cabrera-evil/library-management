@@ -10,6 +10,6 @@ namespace BINAES.Clases
     {
         public string name { get; set; }
         public string password { get; set; }
-        public string rol { get; set; }
+        public string role { get; set; }
     }
 }
