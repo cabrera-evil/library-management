@@ -86,7 +86,6 @@
       <DependentUpon>connection.tt</DependentUpon>
     </Compile>
     <Compile Include="Clases\Encrypt.cs" />
-    <Compile Include="Clases\User.cs" />
     <Compile Include="Clases\UserDAO.cs" />
     <Compile Include="Forms\collections.cs">
       <SubType>Form</SubType>
@@ -276,8 +275,8 @@
       <DependentUpon>connection.edmx</DependentUpon>
       <LastGenOutput>connection.cs</LastGenOutput>
     </Content>
-    <Content Include="SQL Server\BINAES_CONNECTION.sql" />
     <Content Include="SQL Server\BINAES_POPULATE.sql" />
+    <Content Include="SQL Server\BINAES_STRUCT.sql" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />

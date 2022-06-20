@@ -37,8 +37,8 @@
             this.btn_booking = new System.Windows.Forms.Button();
             this.pct_qr = new System.Windows.Forms.PictureBox();
             this.pct_user = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_role = new System.Windows.Forms.Label();
+            this.lbl_email = new System.Windows.Forms.Label();
             this.lbl_name = new System.Windows.Forms.Label();
             this.btn_logout = new System.Windows.Forms.Button();
             this.btn_loans = new System.Windows.Forms.Button();
@@ -98,8 +98,8 @@
             this.pnl_menu.Controls.Add(this.btn_booking);
             this.pnl_menu.Controls.Add(this.pct_qr);
             this.pnl_menu.Controls.Add(this.pct_user);
-            this.pnl_menu.Controls.Add(this.label2);
-            this.pnl_menu.Controls.Add(this.label1);
+            this.pnl_menu.Controls.Add(this.lbl_role);
+            this.pnl_menu.Controls.Add(this.lbl_email);
             this.pnl_menu.Controls.Add(this.lbl_name);
             this.pnl_menu.Controls.Add(this.btn_logout);
             this.pnl_menu.Controls.Add(this.btn_loans);
@@ -114,8 +114,8 @@
             // btn_management
             // 
             this.btn_management.FlatAppearance.BorderSize = 0;
-            this.btn_management.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btn_management.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btn_management.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btn_management.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.btn_management.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_management.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_management.ForeColor = System.Drawing.Color.LightGray;
@@ -130,8 +130,8 @@
             // btn_booking
             // 
             this.btn_booking.FlatAppearance.BorderSize = 0;
-            this.btn_booking.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btn_booking.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btn_booking.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btn_booking.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.btn_booking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_booking.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_booking.ForeColor = System.Drawing.Color.LightGray;
@@ -162,27 +162,27 @@
             this.pct_user.TabIndex = 8;
             this.pct_user.TabStop = false;
             // 
-            // label2
+            // lbl_role
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.LightGray;
-            this.label2.Location = new System.Drawing.Point(88, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(23, 16);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Rol";
+            this.lbl_role.AutoSize = true;
+            this.lbl_role.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_role.ForeColor = System.Drawing.Color.LightGray;
+            this.lbl_role.Location = new System.Drawing.Point(88, 65);
+            this.lbl_role.Name = "lbl_role";
+            this.lbl_role.Size = new System.Drawing.Size(30, 16);
+            this.lbl_role.TabIndex = 7;
+            this.lbl_role.Text = "Role";
             // 
-            // label1
+            // lbl_email
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(88, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 16);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Email";
+            this.lbl_email.AutoSize = true;
+            this.lbl_email.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_email.ForeColor = System.Drawing.Color.LightGray;
+            this.lbl_email.Location = new System.Drawing.Point(88, 35);
+            this.lbl_email.Name = "lbl_email";
+            this.lbl_email.Size = new System.Drawing.Size(35, 16);
+            this.lbl_email.TabIndex = 6;
+            this.lbl_email.Text = "Email";
             // 
             // lbl_name
             // 
@@ -198,8 +198,8 @@
             // btn_logout
             // 
             this.btn_logout.FlatAppearance.BorderSize = 0;
-            this.btn_logout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btn_logout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btn_logout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btn_logout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_logout.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_logout.ForeColor = System.Drawing.Color.LightGray;
@@ -214,8 +214,8 @@
             // btn_loans
             // 
             this.btn_loans.FlatAppearance.BorderSize = 0;
-            this.btn_loans.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btn_loans.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btn_loans.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btn_loans.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.btn_loans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_loans.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_loans.ForeColor = System.Drawing.Color.LightGray;
@@ -230,8 +230,8 @@
             // btn_search
             // 
             this.btn_search.FlatAppearance.BorderSize = 0;
-            this.btn_search.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btn_search.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btn_search.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btn_search.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_search.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_search.ForeColor = System.Drawing.Color.LightGray;
@@ -246,8 +246,8 @@
             // btn_home
             // 
             this.btn_home.FlatAppearance.BorderSize = 0;
-            this.btn_home.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btn_home.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btn_home.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btn_home.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.btn_home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_home.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_home.ForeColor = System.Drawing.Color.LightGray;
@@ -266,7 +266,7 @@
             this.pnl_form.Location = new System.Drawing.Point(240, 40);
             this.pnl_form.Name = "pnl_form";
             this.pnl_form.Size = new System.Drawing.Size(1040, 680);
-            this.pnl_form.TabIndex = 3;
+            this.pnl_form.TabIndex = 4;
             // 
             // frm_home
             // 
@@ -282,6 +282,7 @@
             this.Name = "frm_home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " BINAES - HOME";
+            this.Load += new System.EventHandler(this.frm_home_Load);
             this.pnl_title.ResumeLayout(false);
             this.pnl_title.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).EndInit();
@@ -304,13 +305,13 @@
         private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.Button btn_loans;
         private System.Windows.Forms.Button btn_logout;
-        private System.Windows.Forms.Label lbl_name;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pct_user;
         private System.Windows.Forms.PictureBox pct_qr;
         private System.Windows.Forms.Button btn_booking;
         private System.Windows.Forms.Button btn_management;
         private System.Windows.Forms.Panel pnl_form;
+        private System.Windows.Forms.PictureBox pct_user;
+        private System.Windows.Forms.Label lbl_role;
+        private System.Windows.Forms.Label lbl_email;
+        private System.Windows.Forms.Label lbl_name;
     }
 }

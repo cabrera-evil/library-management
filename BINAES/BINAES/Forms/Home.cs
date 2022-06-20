@@ -106,5 +106,10 @@ namespace BINAES
         {
             this.Hide();
         }
+
+        private void frm_home_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
