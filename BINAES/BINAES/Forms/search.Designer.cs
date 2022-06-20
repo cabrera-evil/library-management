@@ -50,7 +50,7 @@
             this.rdb_both.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdb_both.ForeColor = System.Drawing.Color.LightGray;
             this.rdb_both.Location = new System.Drawing.Point(557, 89);
-            this.rdb_both.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdb_both.Margin = new System.Windows.Forms.Padding(2);
             this.rdb_both.Name = "rdb_both";
             this.rdb_both.Size = new System.Drawing.Size(49, 20);
             this.rdb_both.TabIndex = 23;
@@ -65,7 +65,7 @@
             this.rdb_physical.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdb_physical.ForeColor = System.Drawing.Color.LightGray;
             this.rdb_physical.Location = new System.Drawing.Point(462, 89);
-            this.rdb_physical.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdb_physical.Margin = new System.Windows.Forms.Padding(2);
             this.rdb_physical.Name = "rdb_physical";
             this.rdb_physical.Size = new System.Drawing.Size(93, 20);
             this.rdb_physical.TabIndex = 22;
@@ -80,7 +80,7 @@
             this.rdb_digital.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdb_digital.ForeColor = System.Drawing.Color.LightGray;
             this.rdb_digital.Location = new System.Drawing.Point(372, 89);
-            this.rdb_digital.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdb_digital.Margin = new System.Windows.Forms.Padding(2);
             this.rdb_digital.Name = "rdb_digital";
             this.rdb_digital.Size = new System.Drawing.Size(83, 20);
             this.rdb_digital.TabIndex = 21;
@@ -153,7 +153,6 @@
             // 
             // dgv_search_result
             // 
-            this.dgv_search_result.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.dgv_search_result.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_search_result.Location = new System.Drawing.Point(68, 164);
             this.dgv_search_result.Name = "dgv_search_result";
@@ -200,7 +199,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1024, 641);
             this.Controls.Add(this.btn_borrow);
             this.Controls.Add(this.btn_reserve);

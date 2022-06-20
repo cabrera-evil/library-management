@@ -122,7 +122,7 @@ namespace BINAES
             // 
             // pnl_usersDataTableBar
             // 
-            this.pnl_usersDataTableBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(81)))));
+            this.pnl_usersDataTableBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pnl_usersDataTableBar.Controls.Add(this.lbl_usersDataTable);
             this.pnl_usersDataTableBar.Controls.Add(this.btn_insertRows);
             this.pnl_usersDataTableBar.Controls.Add(this.btn_remove);
@@ -144,7 +144,7 @@ namespace BINAES
             // 
             // pnl_userDataBar
             // 
-            this.pnl_userDataBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.pnl_userDataBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.pnl_userDataBar.Controls.Add(this.cmb_role);
             this.pnl_userDataBar.Controls.Add(this.lbl_roll);
             this.pnl_userDataBar.Controls.Add(this.txt_email);

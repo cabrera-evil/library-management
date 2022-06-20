@@ -33,6 +33,8 @@
             this.btn_minimize = new System.Windows.Forms.PictureBox();
             this.btn_close = new System.Windows.Forms.PictureBox();
             this.pnl_menu = new System.Windows.Forms.Panel();
+            this.btn_management = new System.Windows.Forms.Button();
+            this.btn_booking = new System.Windows.Forms.Button();
             this.pct_qr = new System.Windows.Forms.PictureBox();
             this.pct_user = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,8 +45,6 @@
             this.btn_search = new System.Windows.Forms.Button();
             this.btn_home = new System.Windows.Forms.Button();
             this.pnl_form = new System.Windows.Forms.Panel();
-            this.btn_booking = new System.Windows.Forms.Button();
-            this.btn_management = new System.Windows.Forms.Button();
             this.pnl_title.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
@@ -55,7 +55,7 @@
             // 
             // pnl_title
             // 
-            this.pnl_title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
+            this.pnl_title.BackColor = System.Drawing.Color.Teal;
             this.pnl_title.Controls.Add(this.btn_minimize);
             this.pnl_title.Controls.Add(this.btn_close);
             this.pnl_title.Dock = System.Windows.Forms.DockStyle.Top;
@@ -93,7 +93,7 @@
             // 
             // pnl_menu
             // 
-            this.pnl_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(75)))));
+            this.pnl_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.pnl_menu.Controls.Add(this.btn_management);
             this.pnl_menu.Controls.Add(this.btn_booking);
             this.pnl_menu.Controls.Add(this.pct_qr);
@@ -110,6 +110,38 @@
             this.pnl_menu.Name = "pnl_menu";
             this.pnl_menu.Size = new System.Drawing.Size(240, 680);
             this.pnl_menu.TabIndex = 1;
+            // 
+            // btn_management
+            // 
+            this.btn_management.FlatAppearance.BorderSize = 0;
+            this.btn_management.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.btn_management.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btn_management.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_management.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_management.ForeColor = System.Drawing.Color.LightGray;
+            this.btn_management.Location = new System.Drawing.Point(4, 327);
+            this.btn_management.Name = "btn_management";
+            this.btn_management.Size = new System.Drawing.Size(230, 45);
+            this.btn_management.TabIndex = 10;
+            this.btn_management.Text = "Management";
+            this.btn_management.UseVisualStyleBackColor = true;
+            this.btn_management.Click += new System.EventHandler(this.btn_management_Click);
+            // 
+            // btn_booking
+            // 
+            this.btn_booking.FlatAppearance.BorderSize = 0;
+            this.btn_booking.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.btn_booking.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btn_booking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_booking.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_booking.ForeColor = System.Drawing.Color.LightGray;
+            this.btn_booking.Location = new System.Drawing.Point(4, 276);
+            this.btn_booking.Name = "btn_booking";
+            this.btn_booking.Size = new System.Drawing.Size(230, 45);
+            this.btn_booking.TabIndex = 9;
+            this.btn_booking.Text = "Booking";
+            this.btn_booking.UseVisualStyleBackColor = true;
+            this.btn_booking.Click += new System.EventHandler(this.btn_booking_Click);
             // 
             // pct_qr
             // 
@@ -234,39 +266,7 @@
             this.pnl_form.Location = new System.Drawing.Point(240, 40);
             this.pnl_form.Name = "pnl_form";
             this.pnl_form.Size = new System.Drawing.Size(1040, 680);
-            this.pnl_form.TabIndex = 2;
-            // 
-            // btn_booking
-            // 
-            this.btn_booking.FlatAppearance.BorderSize = 0;
-            this.btn_booking.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btn_booking.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
-            this.btn_booking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_booking.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_booking.ForeColor = System.Drawing.Color.LightGray;
-            this.btn_booking.Location = new System.Drawing.Point(4, 276);
-            this.btn_booking.Name = "btn_booking";
-            this.btn_booking.Size = new System.Drawing.Size(230, 45);
-            this.btn_booking.TabIndex = 9;
-            this.btn_booking.Text = "Booking";
-            this.btn_booking.UseVisualStyleBackColor = true;
-            this.btn_booking.Click += new System.EventHandler(this.btn_booking_Click);
-            // 
-            // btn_management
-            // 
-            this.btn_management.FlatAppearance.BorderSize = 0;
-            this.btn_management.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btn_management.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
-            this.btn_management.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_management.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_management.ForeColor = System.Drawing.Color.LightGray;
-            this.btn_management.Location = new System.Drawing.Point(4, 327);
-            this.btn_management.Name = "btn_management";
-            this.btn_management.Size = new System.Drawing.Size(230, 45);
-            this.btn_management.TabIndex = 10;
-            this.btn_management.Text = "Management";
-            this.btn_management.UseVisualStyleBackColor = true;
-            this.btn_management.Click += new System.EventHandler(this.btn_management_Click);
+            this.pnl_form.TabIndex = 3;
             // 
             // frm_home
             // 
@@ -280,7 +280,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_home";
-            this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " BINAES - HOME";
             this.pnl_title.ResumeLayout(false);
@@ -301,7 +300,6 @@
         private System.Windows.Forms.Panel pnl_menu;
         private System.Windows.Forms.PictureBox btn_minimize;
         private System.Windows.Forms.PictureBox btn_close;
-        private System.Windows.Forms.Panel pnl_form;
         private System.Windows.Forms.Button btn_home;
         private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.Button btn_loans;
@@ -313,5 +311,6 @@
         private System.Windows.Forms.PictureBox pct_qr;
         private System.Windows.Forms.Button btn_booking;
         private System.Windows.Forms.Button btn_management;
+        private System.Windows.Forms.Panel pnl_form;
     }
 }

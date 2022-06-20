@@ -86,7 +86,7 @@ namespace BINAES
             // 
             // pnl_collectionsDataTableBar
             // 
-            this.pnl_collectionsDataTableBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(81)))));
+            this.pnl_collectionsDataTableBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pnl_collectionsDataTableBar.Controls.Add(this.lbl_collectionsDataTable);
             this.pnl_collectionsDataTableBar.Controls.Add(this.btn_insertRows);
             this.pnl_collectionsDataTableBar.Controls.Add(this.btn_remove);
@@ -143,7 +143,7 @@ namespace BINAES
             // 
             // pnl_collectionsDataBar
             // 
-            this.pnl_collectionsDataBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.pnl_collectionsDataBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.pnl_collectionsDataBar.Controls.Add(this.cmb_gender);
             this.pnl_collectionsDataBar.Controls.Add(this.lbl_gender);
             this.pnl_collectionsDataBar.Controls.Add(this.txt_type);

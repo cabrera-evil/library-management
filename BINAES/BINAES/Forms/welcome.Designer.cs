@@ -40,7 +40,7 @@
             this.lbl_time.AutoSize = true;
             this.lbl_time.Font = new System.Drawing.Font("Century Gothic", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_time.ForeColor = System.Drawing.Color.Transparent;
-            this.lbl_time.Location = new System.Drawing.Point(290, 286);
+            this.lbl_time.Location = new System.Drawing.Point(291, 293);
             this.lbl_time.Name = "lbl_time";
             this.lbl_time.Size = new System.Drawing.Size(261, 112);
             this.lbl_time.TabIndex = 0;
@@ -51,7 +51,7 @@
             this.lbl_date.AutoSize = true;
             this.lbl_date.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_date.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(62)))), ((int)(((byte)(63)))));
-            this.lbl_date.Location = new System.Drawing.Point(296, 398);
+            this.lbl_date.Location = new System.Drawing.Point(297, 405);
             this.lbl_date.Name = "lbl_date";
             this.lbl_date.Size = new System.Drawing.Size(180, 77);
             this.lbl_date.TabIndex = 1;
@@ -67,7 +67,7 @@
             this.lbl_welcome.AutoSize = true;
             this.lbl_welcome.Font = new System.Drawing.Font("Century Gothic", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_welcome.ForeColor = System.Drawing.Color.Transparent;
-            this.lbl_welcome.Location = new System.Drawing.Point(33, 115);
+            this.lbl_welcome.Location = new System.Drawing.Point(37, 164);
             this.lbl_welcome.Name = "lbl_welcome";
             this.lbl_welcome.Size = new System.Drawing.Size(959, 112);
             this.lbl_welcome.TabIndex = 2;
@@ -77,7 +77,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(81)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1024, 641);
             this.Controls.Add(this.lbl_welcome);
             this.Controls.Add(this.lbl_date);

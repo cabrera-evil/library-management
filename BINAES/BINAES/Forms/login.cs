@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-using BINAES.Resources;
 using BINAES.Clases;
 
 namespace BINAES
@@ -20,7 +19,6 @@ namespace BINAES
 
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-        string chain = db.connection_chain;
         
         public frm_login()
         {

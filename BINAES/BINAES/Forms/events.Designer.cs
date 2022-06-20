@@ -104,7 +104,7 @@ namespace BINAES
             // 
             // pnl_eventsDataTableBar
             // 
-            this.pnl_eventsDataTableBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(81)))));
+            this.pnl_eventsDataTableBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pnl_eventsDataTableBar.Controls.Add(this.lbl_eventTableData);
             this.pnl_eventsDataTableBar.Controls.Add(this.btn_insertRows);
             this.pnl_eventsDataTableBar.Controls.Add(this.btn_remove);
@@ -144,7 +144,7 @@ namespace BINAES
             // 
             // pnl_eventsDataBar
             // 
-            this.pnl_eventsDataBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(49)))), ((int)(((byte)(67)))));
+            this.pnl_eventsDataBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.pnl_eventsDataBar.Controls.Add(this.grp_eventDate);
             this.pnl_eventsDataBar.Controls.Add(this.grp_eventTime);
             this.pnl_eventsDataBar.Controls.Add(this.lbl_addEvent);
