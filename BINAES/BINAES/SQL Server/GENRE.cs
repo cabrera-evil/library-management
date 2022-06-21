@@ -7,28 +7,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BINAES
+namespace BINAES.SQL_Server
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class ATTENDANCE
+    public partial class GENRE
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public ATTENDANCE()
+        public GENRE()
         {
-            this.ACTIVITY = new HashSet<ACTIVITY>();
+            this.COLLECTION_ = new HashSet<COLLECTION_>();
         }
     
         public int id { get; set; }
-        public Nullable<System.DateTime> entrance_date { get; set; }
-        public Nullable<System.DateTime> exit_date { get; set; }
-        public Nullable<System.DateTime> entarance_hour { get; set; }
-        public Nullable<System.DateTime> exit_hour { get; set; }
-        public int id_user { get; set; }
+        public string genre_name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ACTIVITY> ACTIVITY { get; set; }
-        public virtual USER_ USER_ { get; set; }
+        public virtual ICollection<COLLECTION_> COLLECTION_ { get; set; }
     }
 }

@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="2b0f39dbab514c1b96aa050682baae85" Name="Diagram1">
+      <Diagram DiagramId="ba5b408d17a04fb49c8f1c8f684f86ec" Name="Diagram1">
         <EntityTypeShape EntityType="BINAES_Model.ACTIVITY" Width="1.5" PointX="13" PointY="12" IsExpanded="true" />
         <EntityTypeShape EntityType="BINAES_Model.AREA" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BINAES_Model.ATTENDANCE" Width="1.5" PointX="10.75" PointY="15.875" IsExpanded="true" />

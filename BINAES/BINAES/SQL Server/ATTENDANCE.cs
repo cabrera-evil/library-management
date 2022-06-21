@@ -7,32 +7,28 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BINAES
+namespace BINAES.SQL_Server
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class CELEBRATION
+    public partial class ATTENDANCE
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public CELEBRATION()
+        public ATTENDANCE()
         {
             this.ACTIVITY = new HashSet<ACTIVITY>();
-            this.GOAL = new HashSet<GOAL>();
         }
     
         public int id { get; set; }
-        public string title { get; set; }
-        public string picture { get; set; }
-        public Nullable<int> attendance { get; set; }
-        public Nullable<System.DateTime> beginning_hour { get; set; }
-        public Nullable<System.DateTime> finishing_hour { get; set; }
-        public Nullable<System.DateTime> beginning_date { get; set; }
-        public Nullable<System.DateTime> finishing_date { get; set; }
+        public Nullable<System.DateTime> entrance_date { get; set; }
+        public Nullable<System.DateTime> exit_date { get; set; }
+        public Nullable<System.DateTime> entarance_hour { get; set; }
+        public Nullable<System.DateTime> exit_hour { get; set; }
+        public int id_user { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ACTIVITY> ACTIVITY { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<GOAL> GOAL { get; set; }
+        public virtual USER_ USER_ { get; set; }
     }
 }

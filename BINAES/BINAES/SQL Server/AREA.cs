@@ -7,23 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BINAES
+namespace BINAES.SQL_Server
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class ROLE_
+    public partial class AREA
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public ROLE_()
+        public AREA()
         {
-            this.USER_ = new HashSet<USER_>();
+            this.ACTIVITY = new HashSet<ACTIVITY>();
         }
     
         public int id { get; set; }
-        public string role_type { get; set; }
+        public string area_name { get; set; }
+        public string area_description { get; set; }
+        public System.DateTime schedule { get; set; }
+        public int id_manager { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<USER_> USER_ { get; set; }
+        public virtual ICollection<ACTIVITY> ACTIVITY { get; set; }
+        public virtual MANAGER MANAGER { get; set; }
     }
 }

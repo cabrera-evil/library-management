@@ -7,23 +7,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BINAES
+namespace BINAES.SQL_Server
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class FORMAT_
+    public partial class WORDS_LIST
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public FORMAT_()
-        {
-            this.COPY_ = new HashSet<COPY_>();
-        }
-    
         public int id { get; set; }
-        public string format_name { get; set; }
+        public string word { get; set; }
+        public int id_copy { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<COPY_> COPY_ { get; set; }
+        public virtual COPY_ COPY_ { get; set; }
     }
 }

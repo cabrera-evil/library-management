@@ -7,15 +7,15 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BINAES
+namespace BINAES.SQL_Server
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class WORDS_LIST
+    public partial class AUTHOR
     {
         public int id { get; set; }
-        public string word { get; set; }
+        public string author_name { get; set; }
         public int id_copy { get; set; }
     
         public virtual COPY_ COPY_ { get; set; }

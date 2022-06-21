@@ -7,24 +7,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BINAES
+namespace BINAES.SQL_Server
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class ACTIVITY
+    public partial class GOAL
     {
         public int id { get; set; }
-        public Nullable<System.DateTime> beginning_hour { get; set; }
-        public Nullable<System.DateTime> finishing_hour { get; set; }
-        public Nullable<System.DateTime> beginning_date { get; set; }
-        public Nullable<System.DateTime> finishing_date { get; set; }
-        public int id_area { get; set; }
+        public string goal_name { get; set; }
         public int id_celebration { get; set; }
-        public int id_attendance { get; set; }
     
-        public virtual AREA AREA { get; set; }
-        public virtual ATTENDANCE ATTENDANCE { get; set; }
         public virtual CELEBRATION CELEBRATION { get; set; }
     }
 }

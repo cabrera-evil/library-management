@@ -7,21 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BINAES
+namespace BINAES.SQL_Server
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class GENRE
+    public partial class TYPE_
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public GENRE()
+        public TYPE_()
         {
             this.COLLECTION_ = new HashSet<COLLECTION_>();
         }
     
         public int id { get; set; }
-        public string genre_name { get; set; }
+        public string type_name_ { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<COLLECTION_> COLLECTION_ { get; set; }
