@@ -130,6 +130,7 @@ namespace BINAES
                     db.SaveChanges();
                 }
             }
+            load_grid();
         }
 
         private void btn_edit_Click(object sender, System.EventArgs e)
