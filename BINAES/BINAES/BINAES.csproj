@@ -67,6 +67,7 @@
   <ItemGroup>
     <Compile Include="Clases\celebrationDAO.cs" />
     <Compile Include="Clases\collectionsDAO.cs" />
+    <Compile Include="Clases\user_cache.cs" />
     <Compile Include="Forms\Advanced_Search.cs">
       <SubType>Form</SubType>
     </Compile>

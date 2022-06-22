@@ -99,7 +99,7 @@ namespace BINAES
                           select d;
                 if (lst.Count() > 0)
                 {
-                    frm_home home = new frm_home();
+                    frm_home home = new frm_home(txt_user.Text, txt_password.Text);
                     this.Hide();
                     home.ShowDialog();
                     this.Show();

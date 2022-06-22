@@ -10,19 +10,27 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Drawing.Drawing2D;
 using QRCoder;
+using BINAES.Clases;
+using BINAES.SQL_Server;
 
 namespace BINAES
 {
     public partial class frm_home : Form
     {
+        private string username;
+        private string password;
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
 
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
-        public frm_home()
+        public frm_home(string username, string password)
         {
+            this.username = username;
+            this.password = password;
+
             InitializeComponent();
             open_form<frm_welcome>();
             QRGenerator();
@@ -31,8 +39,7 @@ namespace BINAES
         public void QRGenerator()
         {
             //Generate QR
-            string content = "Douglas Cabrera";
-            QRCodeGenerator qr_user = new QRCodeGenerator();
+            string content = username;
             QRCodeData qr_data = QRCodeGenerator.GenerateQrCode(content, QRCodeGenerator.ECCLevel.H);
             QRCode qr_code = new QRCode(qr_data);
 
@@ -104,12 +111,25 @@ namespace BINAES
 
         private void btn_logout_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
         private void frm_home_Load(object sender, EventArgs e)
         {
-            
+            lbl_name.Text = username;
+            using(db_BINAES db = new db_BINAES())
+            {
+                var lst = from d in db.USER_
+                          where d.username == username
+                          && d.password == password
+                          select d;
+                //MessageBox.Show(user.email);
+                if (lst.Count() > 0)
+                {
+                    //lbl_email.Text = ;
+                    //lbl_role.Text = user.id_role.ToString();
+                }
+            }
         }
     }
 }
