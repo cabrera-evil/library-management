@@ -9,13 +9,16 @@ namespace BINAES
 {
     public partial class frm_users : Form
     {
+        bool edit = false;
+        bool add = false;
         public frm_users()
         {
             InitializeComponent();
         }
 
-        private void edit_data(int id)
+        private void search_data(int id)
         {
+            unlock_controllers();
             try
             {
                 using(db_BINAES db = new db_BINAES())
@@ -45,6 +48,7 @@ namespace BINAES
 
         private void remove_data(int id)
         {
+            unlock_controllers();
             try
             {
                 using (db_BINAES db = new db_BINAES())
@@ -52,29 +56,6 @@ namespace BINAES
                     db.USER_.Remove(db.USER_.Single(p => p.id == id));
                     db.SaveChanges();
                     MessageBox.Show("Data deleted successfully");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void add_data()
-        {
-            try
-            {
-                using(db_BINAES db = new db_BINAES())
-                {
-                    USER_ user = new USER_();
-                    user.username = txt_name.Text;
-                    user.user_address = txt_address.Text;
-                    user.phone = txt_phone.Text;
-                    user.email = txt_email.Text;
-                    user.password = Encrypt.GetSHA256(txt_password.Text.Trim());
-                    user.id_occupancy = ((OCCUPANCY)cmb_occupancy.SelectedItem).id;
-                    user.id_institution = ((INSTITUTION)cmb_institution.SelectedItem).id;
-                    user.id_role = ((ROLE_)cmb_role.SelectedItem).id;
                 }
             }
             catch (Exception ex)
@@ -129,38 +110,75 @@ namespace BINAES
             {
                 MessageBox.Show(ex.Message);
             }
+            lock_controllers();
+        }
+
+        private void unlock_controllers()
+        {
+            txt_name.Enabled = true;
+            txt_address.Enabled = true;
+            txt_phone.Enabled = true;
+            txt_email.Enabled = true;
+            txt_password.Enabled = true;
+            cmb_occupancy.Enabled = true;
+            cmb_institution.Enabled = true;
+            cmb_role.Enabled = true;
+        }
+
+        private void lock_controllers()
+        {
+            txt_name.Enabled = false;
+            txt_address.Enabled = false;
+            txt_phone.Enabled = false;
+            txt_email.Enabled = false;
+            txt_password.Enabled = false;
+            cmb_occupancy.Enabled = false;
+            cmb_institution.Enabled = false;
+            cmb_role.Enabled = false;
         }
 
         private void btn_save_Click(object sender, System.EventArgs e)
         {
-            using (db_BINAES db = new db_BINAES())
+            try
             {
-                USER_ user = new USER_();
-                user.username = txt_name.Text;
-                user.user_address = txt_address.Text;
-                user.phone = txt_phone.Text;
-                user.email = txt_email.Text;
-                user.password = Encrypt.GetSHA256(txt_password.Text.Trim());
-                user.id_occupancy = ((OCCUPANCY)cmb_occupancy.SelectedItem).id;
-                user.id_institution = ((INSTITUTION)cmb_institution.SelectedItem).id;
-                user.id_role = ((ROLE_)cmb_role.SelectedItem).id;
-                
-                //ADD NEW DATA
-                db.USER_.Add(user);
-                db.SaveChanges();
-                MessageBox.Show("Data saved successfully");
-                //SAVE EDITED DATA
-                db.Entry(user).State = System.Data.Entity.EntityState.Modified;
-                db.SaveChanges();
-                MessageBox.Show("Data modified successfully");
+                using (db_BINAES db = new db_BINAES())
+                {
+                    USER_ user = new USER_();
+                    user.username = txt_name.Text;
+                    user.user_address = txt_address.Text;
+                    user.phone = txt_phone.Text;
+                    user.email = txt_email.Text;
+                    user.password = Encrypt.GetSHA256(txt_password.Text.Trim());
+                    user.id_occupancy = ((OCCUPANCY)cmb_occupancy.SelectedItem).id;
+                    user.id_institution = ((INSTITUTION)cmb_institution.SelectedItem).id;
+                    user.id_role = ((ROLE_)cmb_role.SelectedItem).id;
+
+                    if (add)
+                    {
+                        //ADD NEW DATA
+                        db.USER_.Add(user);
+                        db.SaveChanges();
+                        MessageBox.Show("Data saved successfully");
+                    }
+                    if (edit)
+                    {
+                        //SAVE EDITED DATA
+                        db.Entry(user).State = System.Data.Entity.EntityState.Modified;
+                        db.SaveChanges();
+                        MessageBox.Show("Data modified successfully");
+                    }
+                }
+                load_grid();
             }
-            load_grid();
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btn_edit_Click(object sender, System.EventArgs e)
         {
-            int id = 0;
-            edit_data(id);
+            edit = true;
             btn_edit.BackColor = Color.FromArgb(101, 154, 140);
             btn_remove.BackColor = Color.FromArgb(38, 109, 83);
             btn_insertRows.BackColor = Color.FromArgb(38, 109, 83);
@@ -168,8 +186,6 @@ namespace BINAES
 
         private void btn_remove_Click(object sender, System.EventArgs e)
         {
-            int id = 0;
-            remove_data(id);
             btn_edit.BackColor = Color.FromArgb(38, 109, 83);
             btn_remove.BackColor = Color.FromArgb(101, 154, 140);
             btn_insertRows.BackColor = Color.FromArgb(38, 109, 83);
@@ -177,7 +193,8 @@ namespace BINAES
 
         private void btn_insertRows_Click(object sender, System.EventArgs e)
         {
-            add_data();
+            add = true;
+            unlock_controllers();
             btn_edit.BackColor = Color.FromArgb(38, 109, 83);
             btn_remove.BackColor = Color.FromArgb(38, 109, 83);
             btn_insertRows.BackColor = Color.FromArgb(38, 109, 83);

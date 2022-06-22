@@ -141,6 +141,7 @@ namespace BINAES
             this.dg_usersDataTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dg_usersDataTable.Location = new System.Drawing.Point(23, 56);
             this.dg_usersDataTable.Name = "dg_usersDataTable";
+            this.dg_usersDataTable.ReadOnly = true;
             this.dg_usersDataTable.Size = new System.Drawing.Size(620, 514);
             this.dg_usersDataTable.TabIndex = 0;
             // 
@@ -173,6 +174,8 @@ namespace BINAES
             // 
             // cmb_role
             // 
+            this.cmb_role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_role.Enabled = false;
             this.cmb_role.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_role.FormattingEnabled = true;
             this.cmb_role.Location = new System.Drawing.Point(125, 268);
@@ -193,6 +196,7 @@ namespace BINAES
             // 
             // txt_email
             // 
+            this.txt_email.Enabled = false;
             this.txt_email.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_email.Location = new System.Drawing.Point(125, 148);
             this.txt_email.Multiline = true;
@@ -213,6 +217,7 @@ namespace BINAES
             // 
             // txt_password
             // 
+            this.txt_password.Enabled = false;
             this.txt_password.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_password.Location = new System.Drawing.Point(125, 177);
             this.txt_password.Multiline = true;
@@ -234,6 +239,7 @@ namespace BINAES
             // 
             // txt_phone
             // 
+            this.txt_phone.Enabled = false;
             this.txt_phone.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_phone.Location = new System.Drawing.Point(125, 119);
             this.txt_phone.Multiline = true;
@@ -254,6 +260,8 @@ namespace BINAES
             // 
             // cmb_institution
             // 
+            this.cmb_institution.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_institution.Enabled = false;
             this.cmb_institution.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_institution.FormattingEnabled = true;
             this.cmb_institution.Location = new System.Drawing.Point(125, 237);
@@ -274,6 +282,8 @@ namespace BINAES
             // 
             // cmb_occupancy
             // 
+            this.cmb_occupancy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_occupancy.Enabled = false;
             this.cmb_occupancy.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_occupancy.FormattingEnabled = true;
             this.cmb_occupancy.Location = new System.Drawing.Point(125, 206);
@@ -283,6 +293,7 @@ namespace BINAES
             // 
             // txt_address
             // 
+            this.txt_address.Enabled = false;
             this.txt_address.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_address.Location = new System.Drawing.Point(125, 90);
             this.txt_address.Multiline = true;
@@ -314,6 +325,7 @@ namespace BINAES
             // 
             // txt_name
             // 
+            this.txt_name.Enabled = false;
             this.txt_name.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_name.Location = new System.Drawing.Point(125, 61);
             this.txt_name.Multiline = true;

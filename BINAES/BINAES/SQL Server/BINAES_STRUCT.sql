@@ -24,6 +24,9 @@ CREATE TABLE CELEBRATION(
     beginning_date DATETIME,
     finishing_date DATETIME,
 );
+
+DBCC CHECKIDENT(USER_, reeseed, 2);
+
 GO
 
 CREATE TABLE GOAL(
