@@ -30,13 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_home));
             this.pnl_title = new System.Windows.Forms.Panel();
-            this.btn_minimize = new System.Windows.Forms.PictureBox();
-            this.btn_close = new System.Windows.Forms.PictureBox();
             this.pnl_menu = new System.Windows.Forms.Panel();
             this.btn_management = new System.Windows.Forms.Button();
             this.btn_booking = new System.Windows.Forms.Button();
-            this.pct_qr = new System.Windows.Forms.PictureBox();
-            this.pct_user = new System.Windows.Forms.PictureBox();
             this.lbl_role = new System.Windows.Forms.Label();
             this.lbl_email = new System.Windows.Forms.Label();
             this.lbl_name = new System.Windows.Forms.Label();
@@ -45,12 +41,16 @@
             this.btn_search = new System.Windows.Forms.Button();
             this.btn_home = new System.Windows.Forms.Button();
             this.pnl_form = new System.Windows.Forms.Panel();
+            this.pct_qr = new System.Windows.Forms.PictureBox();
+            this.pct_user = new System.Windows.Forms.PictureBox();
+            this.btn_minimize = new System.Windows.Forms.PictureBox();
+            this.btn_close = new System.Windows.Forms.PictureBox();
             this.pnl_title.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
             this.pnl_menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pct_qr)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pct_user)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_title
@@ -64,32 +64,6 @@
             this.pnl_title.Size = new System.Drawing.Size(1280, 40);
             this.pnl_title.TabIndex = 0;
             this.pnl_title.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_title_MouseDown);
-            // 
-            // btn_minimize
-            // 
-            this.btn_minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_minimize.Image = global::BINAES.Properties.Resources.Minimize_Icon;
-            this.btn_minimize.Location = new System.Drawing.Point(1230, 12);
-            this.btn_minimize.Name = "btn_minimize";
-            this.btn_minimize.Size = new System.Drawing.Size(16, 16);
-            this.btn_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btn_minimize.TabIndex = 21;
-            this.btn_minimize.TabStop = false;
-            this.btn_minimize.Click += new System.EventHandler(this.btn_minimize_Click);
-            // 
-            // btn_close
-            // 
-            this.btn_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_close.Image = global::BINAES.Properties.Resources.Close_Icon;
-            this.btn_close.Location = new System.Drawing.Point(1252, 12);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(16, 16);
-            this.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btn_close.TabIndex = 20;
-            this.btn_close.TabStop = false;
-            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
             // pnl_menu
             // 
@@ -143,31 +117,12 @@
             this.btn_booking.UseVisualStyleBackColor = true;
             this.btn_booking.Click += new System.EventHandler(this.btn_booking_Click);
             // 
-            // pct_qr
-            // 
-            this.pct_qr.Location = new System.Drawing.Point(45, 421);
-            this.pct_qr.Name = "pct_qr";
-            this.pct_qr.Size = new System.Drawing.Size(150, 144);
-            this.pct_qr.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pct_qr.TabIndex = 0;
-            this.pct_qr.TabStop = false;
-            // 
-            // pct_user
-            // 
-            this.pct_user.Image = global::BINAES.Properties.Resources.BINAES_LOGO_V2;
-            this.pct_user.Location = new System.Drawing.Point(7, 6);
-            this.pct_user.Name = "pct_user";
-            this.pct_user.Size = new System.Drawing.Size(75, 75);
-            this.pct_user.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pct_user.TabIndex = 8;
-            this.pct_user.TabStop = false;
-            // 
             // lbl_role
             // 
             this.lbl_role.AutoSize = true;
             this.lbl_role.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_role.ForeColor = System.Drawing.Color.LightGray;
-            this.lbl_role.Location = new System.Drawing.Point(88, 65);
+            this.lbl_role.Location = new System.Drawing.Point(115, 60);
             this.lbl_role.Name = "lbl_role";
             this.lbl_role.Size = new System.Drawing.Size(30, 16);
             this.lbl_role.TabIndex = 7;
@@ -178,7 +133,7 @@
             this.lbl_email.AutoSize = true;
             this.lbl_email.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_email.ForeColor = System.Drawing.Color.LightGray;
-            this.lbl_email.Location = new System.Drawing.Point(88, 35);
+            this.lbl_email.Location = new System.Drawing.Point(115, 44);
             this.lbl_email.Name = "lbl_email";
             this.lbl_email.Size = new System.Drawing.Size(35, 16);
             this.lbl_email.TabIndex = 6;
@@ -189,7 +144,7 @@
             this.lbl_name.AutoSize = true;
             this.lbl_name.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_name.ForeColor = System.Drawing.Color.LightGray;
-            this.lbl_name.Location = new System.Drawing.Point(88, 6);
+            this.lbl_name.Location = new System.Drawing.Point(115, 28);
             this.lbl_name.Name = "lbl_name";
             this.lbl_name.Size = new System.Drawing.Size(40, 16);
             this.lbl_name.TabIndex = 0;
@@ -268,6 +223,51 @@
             this.pnl_form.Size = new System.Drawing.Size(1040, 680);
             this.pnl_form.TabIndex = 4;
             // 
+            // pct_qr
+            // 
+            this.pct_qr.Location = new System.Drawing.Point(45, 421);
+            this.pct_qr.Name = "pct_qr";
+            this.pct_qr.Size = new System.Drawing.Size(150, 144);
+            this.pct_qr.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pct_qr.TabIndex = 0;
+            this.pct_qr.TabStop = false;
+            // 
+            // pct_user
+            // 
+            this.pct_user.Image = global::BINAES.Properties.Resources.user__1_;
+            this.pct_user.Location = new System.Drawing.Point(27, 16);
+            this.pct_user.Name = "pct_user";
+            this.pct_user.Size = new System.Drawing.Size(82, 66);
+            this.pct_user.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pct_user.TabIndex = 8;
+            this.pct_user.TabStop = false;
+            // 
+            // btn_minimize
+            // 
+            this.btn_minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_minimize.Image = global::BINAES.Properties.Resources.Minimize_Icon;
+            this.btn_minimize.Location = new System.Drawing.Point(1230, 12);
+            this.btn_minimize.Name = "btn_minimize";
+            this.btn_minimize.Size = new System.Drawing.Size(16, 16);
+            this.btn_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btn_minimize.TabIndex = 21;
+            this.btn_minimize.TabStop = false;
+            this.btn_minimize.Click += new System.EventHandler(this.btn_minimize_Click);
+            // 
+            // btn_close
+            // 
+            this.btn_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_close.Image = global::BINAES.Properties.Resources.Close_Icon;
+            this.btn_close.Location = new System.Drawing.Point(1252, 12);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(16, 16);
+            this.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btn_close.TabIndex = 20;
+            this.btn_close.TabStop = false;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
+            // 
             // frm_home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,12 +285,12 @@
             this.Load += new System.EventHandler(this.frm_home_Load);
             this.pnl_title.ResumeLayout(false);
             this.pnl_title.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_close)).EndInit();
             this.pnl_menu.ResumeLayout(false);
             this.pnl_menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pct_qr)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pct_user)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_close)).EndInit();
             this.ResumeLayout(false);
 
         }

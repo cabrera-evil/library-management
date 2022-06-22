@@ -143,7 +143,6 @@ namespace BINAES
             this.dg_usersDataTable.Name = "dg_usersDataTable";
             this.dg_usersDataTable.Size = new System.Drawing.Size(620, 514);
             this.dg_usersDataTable.TabIndex = 0;
-            this.dg_usersDataTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_usersDataTable_CellClick);
             // 
             // pnl_userDataBar
             // 
@@ -179,7 +178,7 @@ namespace BINAES
             this.cmb_role.Location = new System.Drawing.Point(125, 268);
             this.cmb_role.Name = "cmb_role";
             this.cmb_role.Size = new System.Drawing.Size(204, 25);
-            this.cmb_role.TabIndex = 30;
+            this.cmb_role.TabIndex = 7;
             // 
             // lbl_roll
             // 
@@ -199,7 +198,7 @@ namespace BINAES
             this.txt_email.Multiline = true;
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(204, 23);
-            this.txt_email.TabIndex = 28;
+            this.txt_email.TabIndex = 3;
             // 
             // lbl_email
             // 
@@ -218,8 +217,9 @@ namespace BINAES
             this.txt_password.Location = new System.Drawing.Point(125, 177);
             this.txt_password.Multiline = true;
             this.txt_password.Name = "txt_password";
+            this.txt_password.PasswordChar = '*';
             this.txt_password.Size = new System.Drawing.Size(204, 23);
-            this.txt_password.TabIndex = 26;
+            this.txt_password.TabIndex = 4;
             // 
             // lbl_password
             // 
@@ -239,7 +239,7 @@ namespace BINAES
             this.txt_phone.Multiline = true;
             this.txt_phone.Name = "txt_phone";
             this.txt_phone.Size = new System.Drawing.Size(204, 23);
-            this.txt_phone.TabIndex = 24;
+            this.txt_phone.TabIndex = 2;
             // 
             // lbl_phoneNumber
             // 
@@ -259,7 +259,7 @@ namespace BINAES
             this.cmb_institution.Location = new System.Drawing.Point(125, 237);
             this.cmb_institution.Name = "cmb_institution";
             this.cmb_institution.Size = new System.Drawing.Size(204, 25);
-            this.cmb_institution.TabIndex = 22;
+            this.cmb_institution.TabIndex = 6;
             // 
             // lbl_institution
             // 
@@ -279,7 +279,7 @@ namespace BINAES
             this.cmb_occupancy.Location = new System.Drawing.Point(125, 206);
             this.cmb_occupancy.Name = "cmb_occupancy";
             this.cmb_occupancy.Size = new System.Drawing.Size(204, 25);
-            this.cmb_occupancy.TabIndex = 20;
+            this.cmb_occupancy.TabIndex = 5;
             // 
             // txt_address
             // 
@@ -288,7 +288,7 @@ namespace BINAES
             this.txt_address.Multiline = true;
             this.txt_address.Name = "txt_address";
             this.txt_address.Size = new System.Drawing.Size(204, 23);
-            this.txt_address.TabIndex = 7;
+            this.txt_address.TabIndex = 1;
             // 
             // lbl_address
             // 
@@ -319,7 +319,7 @@ namespace BINAES
             this.txt_name.Multiline = true;
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(204, 23);
-            this.txt_name.TabIndex = 3;
+            this.txt_name.TabIndex = 0;
             // 
             // lbl_name
             // 
@@ -345,7 +345,7 @@ namespace BINAES
             this.btn_save.Location = new System.Drawing.Point(24, 307);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(305, 45);
-            this.btn_save.TabIndex = 1;
+            this.btn_save.TabIndex = 8;
             this.btn_save.Text = "Save";
             this.btn_save.UseVisualStyleBackColor = false;
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
