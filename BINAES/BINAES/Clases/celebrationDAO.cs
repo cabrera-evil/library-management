@@ -14,7 +14,13 @@ namespace BINAES.Clases
                 return db.CELEBRATION.ToList();
             }
         }
-        
-        
+
+        public List<GOAL> set_goal()
+        {
+            using (db_BINAES db = new db_BINAES())
+            {
+                return db.GOAL.ToList();
+            }
+        }
     }
 }

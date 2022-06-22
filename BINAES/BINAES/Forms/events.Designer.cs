@@ -56,7 +56,7 @@ namespace BINAES
             this.txt_title = new System.Windows.Forms.TextBox();
             this.lbl_title = new System.Windows.Forms.Label();
             this.btn_save = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dg_eventsDataTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dg_eventsDataTable)).BeginInit();
             this.pnl_eventsDataTableBar.SuspendLayout();
             this.pnl_eventsDataBar.SuspendLayout();
             this.grp_eventDate.SuspendLayout();
@@ -65,12 +65,12 @@ namespace BINAES
             // 
             // btn_insertRows
             // 
-            this.btn_insertRows.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(109)))), ((int)(((byte)(83)))));
-            this.btn_insertRows.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
-            this.btn_insertRows.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
-            this.btn_insertRows.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_insertRows.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (38)))), ((int) (((byte) (109)))), ((int) (((byte) (83)))));
+            this.btn_insertRows.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_insertRows.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_insertRows.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
             this.btn_insertRows.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_insertRows.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_insertRows.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btn_insertRows.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_insertRows.Location = new System.Drawing.Point(486, 576);
             this.btn_insertRows.Name = "btn_insertRows";
@@ -88,12 +88,12 @@ namespace BINAES
             // 
             // btn_remove
             // 
-            this.btn_remove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(109)))), ((int)(((byte)(83)))));
-            this.btn_remove.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
-            this.btn_remove.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
-            this.btn_remove.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_remove.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (38)))), ((int) (((byte) (109)))), ((int) (((byte) (83)))));
+            this.btn_remove.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_remove.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_remove.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
             this.btn_remove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_remove.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_remove.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btn_remove.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_remove.Location = new System.Drawing.Point(131, 576);
             this.btn_remove.Name = "btn_remove";
@@ -104,7 +104,7 @@ namespace BINAES
             // 
             // pnl_eventsDataTableBar
             // 
-            this.pnl_eventsDataTableBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnl_eventsDataTableBar.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (64)))), ((int) (((byte) (64)))));
             this.pnl_eventsDataTableBar.Controls.Add(this.lbl_eventTableData);
             this.pnl_eventsDataTableBar.Controls.Add(this.btn_insertRows);
             this.pnl_eventsDataTableBar.Controls.Add(this.btn_remove);
@@ -118,8 +118,8 @@ namespace BINAES
             // 
             // lbl_eventTableData
             // 
-            this.lbl_eventTableData.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_eventTableData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(109)))), ((int)(((byte)(83)))));
+            this.lbl_eventTableData.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lbl_eventTableData.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (38)))), ((int) (((byte) (109)))), ((int) (((byte) (83)))));
             this.lbl_eventTableData.Location = new System.Drawing.Point(23, 20);
             this.lbl_eventTableData.Name = "lbl_eventTableData";
             this.lbl_eventTableData.Size = new System.Drawing.Size(277, 23);
@@ -128,12 +128,12 @@ namespace BINAES
             // 
             // btn_edit
             // 
-            this.btn_edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(109)))), ((int)(((byte)(83)))));
-            this.btn_edit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
-            this.btn_edit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
-            this.btn_edit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_edit.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (38)))), ((int) (((byte) (109)))), ((int) (((byte) (83)))));
+            this.btn_edit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_edit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_edit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
             this.btn_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_edit.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_edit.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btn_edit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_edit.Location = new System.Drawing.Point(23, 576);
             this.btn_edit.Name = "btn_edit";
@@ -144,7 +144,7 @@ namespace BINAES
             // 
             // pnl_eventsDataBar
             // 
-            this.pnl_eventsDataBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            this.pnl_eventsDataBar.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (42)))), ((int) (((byte) (42)))));
             this.pnl_eventsDataBar.Controls.Add(this.grp_eventDate);
             this.pnl_eventsDataBar.Controls.Add(this.grp_eventTime);
             this.pnl_eventsDataBar.Controls.Add(this.lbl_addEvent);
@@ -167,7 +167,7 @@ namespace BINAES
             this.grp_eventDate.Controls.Add(this.lbl_endDate);
             this.grp_eventDate.Controls.Add(this.dtp_startDate);
             this.grp_eventDate.Controls.Add(this.lbl_startDate);
-            this.grp_eventDate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grp_eventDate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.grp_eventDate.ForeColor = System.Drawing.Color.White;
             this.grp_eventDate.Location = new System.Drawing.Point(20, 281);
             this.grp_eventDate.Name = "grp_eventDate";
@@ -178,7 +178,7 @@ namespace BINAES
             // 
             // dtp_endDate
             // 
-            this.dtp_endDate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_endDate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.dtp_endDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_endDate.Location = new System.Drawing.Point(204, 41);
             this.dtp_endDate.Name = "dtp_endDate";
@@ -196,7 +196,7 @@ namespace BINAES
             // 
             // dtp_startDate
             // 
-            this.dtp_startDate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_startDate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.dtp_startDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_startDate.Location = new System.Drawing.Point(54, 42);
             this.dtp_startDate.Name = "dtp_startDate";
@@ -218,7 +218,7 @@ namespace BINAES
             this.grp_eventTime.Controls.Add(this.lbl_endTime);
             this.grp_eventTime.Controls.Add(this.dtp_startTime);
             this.grp_eventTime.Controls.Add(this.lbl_startTime);
-            this.grp_eventTime.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grp_eventTime.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.grp_eventTime.ForeColor = System.Drawing.Color.White;
             this.grp_eventTime.Location = new System.Drawing.Point(20, 169);
             this.grp_eventTime.Name = "grp_eventTime";
@@ -229,7 +229,7 @@ namespace BINAES
             // 
             // dtp_endTime
             // 
-            this.dtp_endTime.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_endTime.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.dtp_endTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dtp_endTime.Location = new System.Drawing.Point(204, 40);
             this.dtp_endTime.Name = "dtp_endTime";
@@ -247,7 +247,7 @@ namespace BINAES
             // 
             // dtp_startTime
             // 
-            this.dtp_startTime.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_startTime.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.dtp_startTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dtp_startTime.Location = new System.Drawing.Point(54, 40);
             this.dtp_startTime.Name = "dtp_startTime";
@@ -265,8 +265,8 @@ namespace BINAES
             // 
             // lbl_addEvent
             // 
-            this.lbl_addEvent.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_addEvent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(109)))), ((int)(((byte)(83)))));
+            this.lbl_addEvent.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lbl_addEvent.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (38)))), ((int) (((byte) (109)))), ((int) (((byte) (83)))));
             this.lbl_addEvent.Location = new System.Drawing.Point(20, 20);
             this.lbl_addEvent.Name = "lbl_addEvent";
             this.lbl_addEvent.Size = new System.Drawing.Size(321, 23);
@@ -275,7 +275,7 @@ namespace BINAES
             // 
             // txt_numberAttendees
             // 
-            this.txt_numberAttendees.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_numberAttendees.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txt_numberAttendees.Location = new System.Drawing.Point(125, 114);
             this.txt_numberAttendees.Multiline = true;
             this.txt_numberAttendees.Name = "txt_numberAttendees";
@@ -284,7 +284,7 @@ namespace BINAES
             // 
             // lbl_numberAttendees
             // 
-            this.lbl_numberAttendees.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_numberAttendees.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lbl_numberAttendees.ForeColor = System.Drawing.Color.Transparent;
             this.lbl_numberAttendees.Location = new System.Drawing.Point(24, 108);
             this.lbl_numberAttendees.Name = "lbl_numberAttendees";
@@ -295,7 +295,7 @@ namespace BINAES
             // 
             // txt_objectives
             // 
-            this.txt_objectives.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_objectives.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txt_objectives.Location = new System.Drawing.Point(125, 85);
             this.txt_objectives.Multiline = true;
             this.txt_objectives.Name = "txt_objectives";
@@ -304,7 +304,7 @@ namespace BINAES
             // 
             // lbl_objectives
             // 
-            this.lbl_objectives.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_objectives.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lbl_objectives.ForeColor = System.Drawing.Color.Transparent;
             this.lbl_objectives.Location = new System.Drawing.Point(24, 85);
             this.lbl_objectives.Name = "lbl_objectives";
@@ -315,7 +315,7 @@ namespace BINAES
             // 
             // txt_title
             // 
-            this.txt_title.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_title.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txt_title.Location = new System.Drawing.Point(125, 56);
             this.txt_title.Multiline = true;
             this.txt_title.Name = "txt_title";
@@ -324,7 +324,7 @@ namespace BINAES
             // 
             // lbl_title
             // 
-            this.lbl_title.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lbl_title.ForeColor = System.Drawing.Color.Transparent;
             this.lbl_title.Location = new System.Drawing.Point(24, 56);
             this.lbl_title.Name = "lbl_title";
@@ -335,13 +335,13 @@ namespace BINAES
             // 
             // btn_save
             // 
-            this.btn_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(109)))), ((int)(((byte)(83)))));
+            this.btn_save.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (38)))), ((int) (((byte) (109)))), ((int) (((byte) (83)))));
             this.btn_save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_save.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
-            this.btn_save.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
-            this.btn_save.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_save.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_save.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_save.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
             this.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_save.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_save.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btn_save.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_save.Location = new System.Drawing.Point(20, 393);
             this.btn_save.Name = "btn_save";
@@ -349,6 +349,7 @@ namespace BINAES
             this.btn_save.TabIndex = 1;
             this.btn_save.Text = "Save";
             this.btn_save.UseVisualStyleBackColor = false;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // frm_events
             // 
@@ -361,14 +362,13 @@ namespace BINAES
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(15, 15);
             this.Name = "frm_events";
-            ((System.ComponentModel.ISupportInitialize)(this.dg_eventsDataTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dg_eventsDataTable)).EndInit();
             this.pnl_eventsDataTableBar.ResumeLayout(false);
             this.pnl_eventsDataBar.ResumeLayout(false);
             this.pnl_eventsDataBar.PerformLayout();
             this.grp_eventDate.ResumeLayout(false);
             this.grp_eventTime.ResumeLayout(false);
             this.ResumeLayout(false);
-
         }
 
         private System.Windows.Forms.Label lbl_eventTableData;
