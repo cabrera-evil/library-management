@@ -82,7 +82,7 @@ namespace BINAES
             // 
             // pnl_options
             // 
-            this.pnl_options.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (64)))), ((int) (((byte) (64)))));
+            this.pnl_options.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (8)))), ((int) (((byte) (44)))), ((int) (((byte) (44)))));
             this.pnl_options.Controls.Add(this.btn_celebrations);
             this.pnl_options.Controls.Add(this.btn_users);
             this.pnl_options.Controls.Add(this.btn_collections);

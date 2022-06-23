@@ -251,7 +251,7 @@ namespace BINAES.UserControls
             this.dg_collectionsDataTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dg_collectionsDataTable.Location = new System.Drawing.Point(23, 46);
             this.dg_collectionsDataTable.Name = "dg_collectionsDataTable";
-            this.dg_collectionsDataTable.Size = new System.Drawing.Size(620, 487);
+            this.dg_collectionsDataTable.Size = new System.Drawing.Size(620, 461);
             this.dg_collectionsDataTable.TabIndex = 0;
             // 
             // UC_Collections

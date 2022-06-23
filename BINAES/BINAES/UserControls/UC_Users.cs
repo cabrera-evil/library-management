@@ -4,6 +4,8 @@ using System.Linq;
 using System.Windows.Forms;
 using BINAES.Clases;
 using BINAES.SQL_Server;
+using Microsoft.VisualBasic.ApplicationServices;
+using Org.BouncyCastle.Crypto.Tls;
 
 namespace BINAES.UserControls
 {
@@ -16,8 +18,30 @@ namespace BINAES.UserControls
         public UC_Users()
         {
             InitializeComponent();
+
+            cmb_searchBy.Items.Add("id");
+            cmb_searchBy.Items.Add("username");
+            cmb_searchBy.Items.Add("user_address");
+            cmb_searchBy.Items.Add("phone");
+            cmb_searchBy.Items.Add("email");
         }
 
+        private db_BINAES db = new db_BINAES();
+        private void filter(string criterio, string campo)
+        {
+            dg_usersDataTable.DataSource = db.USER_.SqlQuery("SELECT * FROM USER_ WHERE " + campo + " like '%"+criterio+"%'").ToList();
+        }
+        
+        private void btn_filter_Click(object sender, EventArgs e)
+        {
+            filter(txt_search.Text, cmb_searchBy.Text);
+        }
+        
+        private void btn_reset_Click(object sender, EventArgs e)
+        {
+            dg_usersDataTable.DataSource = db.USER_.ToList();
+        }
+        
         private void UC_Users_Load(object sender, EventArgs e)
         {
             UserDAO user = new UserDAO();
@@ -130,8 +154,8 @@ namespace BINAES.UserControls
                 MessageBox.Show(ex.Message);
             }
         }
-
-
+        
+        
         private void btn_insertRows_Click(object sender, EventArgs e)
         {
             add = true;

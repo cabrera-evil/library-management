@@ -32,6 +32,7 @@ namespace BINAES.UserControls
         private void InitializeComponent()
         {
             this.pnl_userDataBar = new System.Windows.Forms.Panel();
+            this.btn_cancel = new System.Windows.Forms.Button();
             this.cmb_role = new System.Windows.Forms.ComboBox();
             this.lbl_roll = new System.Windows.Forms.Label();
             this.txt_email = new System.Windows.Forms.TextBox();
@@ -50,13 +51,18 @@ namespace BINAES.UserControls
             this.lbl_name = new System.Windows.Forms.Label();
             this.btn_save = new System.Windows.Forms.Button();
             this.lbl_addUser = new System.Windows.Forms.Label();
-            this.pnl_usersDataTableBar = new System.Windows.Forms.Panel();
             this.lbl_usersDataTable = new System.Windows.Forms.Label();
+            this.pnl_usersDataTableBar = new System.Windows.Forms.Panel();
+            this.btn_filter = new System.Windows.Forms.Button();
+            this.btn_reset = new System.Windows.Forms.Button();
+            this.cmb_searchBy = new System.Windows.Forms.ComboBox();
+            this.txt_search = new System.Windows.Forms.TextBox();
+            this.lbl_searchBy = new System.Windows.Forms.Label();
+            this.lbl_search = new System.Windows.Forms.Label();
             this.btn_insertRows = new System.Windows.Forms.Button();
             this.btn_remove = new System.Windows.Forms.Button();
             this.btn_edit = new System.Windows.Forms.Button();
             this.dg_usersDataTable = new System.Windows.Forms.DataGridView();
-            this.btn_cancel = new System.Windows.Forms.Button();
             this.pnl_userDataBar.SuspendLayout();
             this.pnl_usersDataTableBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.dg_usersDataTable)).BeginInit();
@@ -89,6 +95,23 @@ namespace BINAES.UserControls
             this.pnl_userDataBar.Name = "pnl_userDataBar";
             this.pnl_userDataBar.Size = new System.Drawing.Size(355, 611);
             this.pnl_userDataBar.TabIndex = 25;
+            // 
+            // btn_cancel
+            // 
+            this.btn_cancel.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (38)))), ((int) (((byte) (109)))), ((int) (((byte) (83)))));
+            this.btn_cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_cancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_cancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_cancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btn_cancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_cancel.Location = new System.Drawing.Point(24, 358);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(305, 45);
+            this.btn_cancel.TabIndex = 30;
+            this.btn_cancel.Text = "Cancel";
+            this.btn_cancel.UseVisualStyleBackColor = false;
             // 
             // cmb_role
             // 
@@ -290,20 +313,6 @@ namespace BINAES.UserControls
             this.lbl_addUser.TabIndex = 0;
             this.lbl_addUser.Text = "Add user";
             // 
-            // pnl_usersDataTableBar
-            // 
-            this.pnl_usersDataTableBar.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (64)))), ((int) (((byte) (64)))));
-            this.pnl_usersDataTableBar.Controls.Add(this.lbl_usersDataTable);
-            this.pnl_usersDataTableBar.Controls.Add(this.btn_insertRows);
-            this.pnl_usersDataTableBar.Controls.Add(this.btn_remove);
-            this.pnl_usersDataTableBar.Controls.Add(this.btn_edit);
-            this.pnl_usersDataTableBar.Controls.Add(this.dg_usersDataTable);
-            this.pnl_usersDataTableBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnl_usersDataTableBar.Location = new System.Drawing.Point(0, 0);
-            this.pnl_usersDataTableBar.Name = "pnl_usersDataTableBar";
-            this.pnl_usersDataTableBar.Size = new System.Drawing.Size(687, 611);
-            this.pnl_usersDataTableBar.TabIndex = 24;
-            // 
             // lbl_usersDataTable
             // 
             this.lbl_usersDataTable.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
@@ -314,6 +323,95 @@ namespace BINAES.UserControls
             this.lbl_usersDataTable.TabIndex = 5;
             this.lbl_usersDataTable.Text = "Users data table";
             // 
+            // pnl_usersDataTableBar
+            // 
+            this.pnl_usersDataTableBar.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (64)))), ((int) (((byte) (64)))));
+            this.pnl_usersDataTableBar.Controls.Add(this.btn_filter);
+            this.pnl_usersDataTableBar.Controls.Add(this.btn_reset);
+            this.pnl_usersDataTableBar.Controls.Add(this.lbl_usersDataTable);
+            this.pnl_usersDataTableBar.Controls.Add(this.cmb_searchBy);
+            this.pnl_usersDataTableBar.Controls.Add(this.txt_search);
+            this.pnl_usersDataTableBar.Controls.Add(this.lbl_searchBy);
+            this.pnl_usersDataTableBar.Controls.Add(this.lbl_search);
+            this.pnl_usersDataTableBar.Controls.Add(this.btn_insertRows);
+            this.pnl_usersDataTableBar.Controls.Add(this.btn_remove);
+            this.pnl_usersDataTableBar.Controls.Add(this.btn_edit);
+            this.pnl_usersDataTableBar.Controls.Add(this.dg_usersDataTable);
+            this.pnl_usersDataTableBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl_usersDataTableBar.Location = new System.Drawing.Point(0, 0);
+            this.pnl_usersDataTableBar.Name = "pnl_usersDataTableBar";
+            this.pnl_usersDataTableBar.Size = new System.Drawing.Size(687, 611);
+            this.pnl_usersDataTableBar.TabIndex = 24;
+            // 
+            // btn_filter
+            // 
+            this.btn_filter.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (38)))), ((int) (((byte) (109)))), ((int) (((byte) (83)))));
+            this.btn_filter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_filter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_filter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_filter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_filter.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btn_filter.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_filter.Location = new System.Drawing.Point(343, 51);
+            this.btn_filter.Name = "btn_filter";
+            this.btn_filter.Size = new System.Drawing.Size(60, 24);
+            this.btn_filter.TabIndex = 10;
+            this.btn_filter.Text = "Filter";
+            this.btn_filter.UseVisualStyleBackColor = false;
+            this.btn_filter.Click += new System.EventHandler(this.btn_filter_Click);
+            // 
+            // btn_reset
+            // 
+            this.btn_reset.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (38)))), ((int) (((byte) (109)))), ((int) (((byte) (83)))));
+            this.btn_reset.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_reset.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_reset.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_reset.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btn_reset.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_reset.Location = new System.Drawing.Point(409, 51);
+            this.btn_reset.Name = "btn_reset";
+            this.btn_reset.Size = new System.Drawing.Size(57, 24);
+            this.btn_reset.TabIndex = 9;
+            this.btn_reset.Text = "Reset";
+            this.btn_reset.UseVisualStyleBackColor = false;
+            this.btn_reset.Click += new System.EventHandler(this.btn_reset_Click);
+            // 
+            // cmb_searchBy
+            // 
+            this.cmb_searchBy.FormattingEnabled = true;
+            this.cmb_searchBy.Location = new System.Drawing.Point(216, 53);
+            this.cmb_searchBy.Name = "cmb_searchBy";
+            this.cmb_searchBy.Size = new System.Drawing.Size(121, 21);
+            this.cmb_searchBy.TabIndex = 8;
+            // 
+            // txt_search
+            // 
+            this.txt_search.Location = new System.Drawing.Point(79, 54);
+            this.txt_search.Name = "txt_search";
+            this.txt_search.Size = new System.Drawing.Size(100, 20);
+            this.txt_search.TabIndex = 7;
+            // 
+            // lbl_searchBy
+            // 
+            this.lbl_searchBy.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lbl_searchBy.ForeColor = System.Drawing.Color.White;
+            this.lbl_searchBy.Location = new System.Drawing.Point(185, 55);
+            this.lbl_searchBy.Name = "lbl_searchBy";
+            this.lbl_searchBy.Size = new System.Drawing.Size(100, 23);
+            this.lbl_searchBy.TabIndex = 6;
+            this.lbl_searchBy.Text = "By:";
+            // 
+            // lbl_search
+            // 
+            this.lbl_search.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lbl_search.ForeColor = System.Drawing.Color.White;
+            this.lbl_search.Location = new System.Drawing.Point(23, 55);
+            this.lbl_search.Name = "lbl_search";
+            this.lbl_search.Size = new System.Drawing.Size(100, 23);
+            this.lbl_search.TabIndex = 5;
+            this.lbl_search.Text = "Search";
+            // 
             // btn_insertRows
             // 
             this.btn_insertRows.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (38)))), ((int) (((byte) (109)))), ((int) (((byte) (83)))));
@@ -323,7 +421,7 @@ namespace BINAES.UserControls
             this.btn_insertRows.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_insertRows.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btn_insertRows.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_insertRows.Location = new System.Drawing.Point(486, 549);
+            this.btn_insertRows.Location = new System.Drawing.Point(486, 548);
             this.btn_insertRows.Name = "btn_insertRows";
             this.btn_insertRows.Size = new System.Drawing.Size(157, 34);
             this.btn_insertRows.TabIndex = 4;
@@ -340,7 +438,7 @@ namespace BINAES.UserControls
             this.btn_remove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_remove.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btn_remove.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_remove.Location = new System.Drawing.Point(131, 549);
+            this.btn_remove.Location = new System.Drawing.Point(131, 548);
             this.btn_remove.Name = "btn_remove";
             this.btn_remove.Size = new System.Drawing.Size(102, 34);
             this.btn_remove.TabIndex = 3;
@@ -356,7 +454,7 @@ namespace BINAES.UserControls
             this.btn_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_edit.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btn_edit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_edit.Location = new System.Drawing.Point(23, 549);
+            this.btn_edit.Location = new System.Drawing.Point(23, 548);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(102, 34);
             this.btn_edit.TabIndex = 2;
@@ -366,28 +464,11 @@ namespace BINAES.UserControls
             // dg_usersDataTable
             // 
             this.dg_usersDataTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dg_usersDataTable.Location = new System.Drawing.Point(23, 46);
+            this.dg_usersDataTable.Location = new System.Drawing.Point(23, 81);
             this.dg_usersDataTable.Name = "dg_usersDataTable";
             this.dg_usersDataTable.ReadOnly = true;
-            this.dg_usersDataTable.Size = new System.Drawing.Size(620, 487);
+            this.dg_usersDataTable.Size = new System.Drawing.Size(620, 461);
             this.dg_usersDataTable.TabIndex = 0;
-            // 
-            // btn_cancel
-            // 
-            this.btn_cancel.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (38)))), ((int) (((byte) (109)))), ((int) (((byte) (83)))));
-            this.btn_cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_cancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
-            this.btn_cancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
-            this.btn_cancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
-            this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cancel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btn_cancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_cancel.Location = new System.Drawing.Point(24, 358);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(305, 45);
-            this.btn_cancel.TabIndex = 30;
-            this.btn_cancel.Text = "Cancel";
-            this.btn_cancel.UseVisualStyleBackColor = false;
             // 
             // UC_Users
             // 
@@ -402,9 +483,18 @@ namespace BINAES.UserControls
             this.pnl_userDataBar.ResumeLayout(false);
             this.pnl_userDataBar.PerformLayout();
             this.pnl_usersDataTableBar.ResumeLayout(false);
+            this.pnl_usersDataTableBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize) (this.dg_usersDataTable)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Button btn_reset;
+        private System.Windows.Forms.Button btn_filter;
+
+        private System.Windows.Forms.Label lbl_search;
+        private System.Windows.Forms.Label lbl_searchBy;
+        private System.Windows.Forms.TextBox txt_search;
+        private System.Windows.Forms.ComboBox cmb_searchBy;
 
         private System.Windows.Forms.Button btn_cancel;
 
