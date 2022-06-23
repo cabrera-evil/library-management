@@ -94,32 +94,53 @@ namespace BINAES
             // 
             // btn_celebrations
             // 
+            this.btn_celebrations.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (38)))), ((int) (((byte) (109)))), ((int) (((byte) (83)))));
+            this.btn_celebrations.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_celebrations.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_celebrations.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_celebrations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_celebrations.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btn_celebrations.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_celebrations.Location = new System.Drawing.Point(204, 12);
             this.btn_celebrations.Name = "btn_celebrations";
             this.btn_celebrations.Size = new System.Drawing.Size(160, 42);
             this.btn_celebrations.TabIndex = 2;
             this.btn_celebrations.Text = "Celebrations";
-            this.btn_celebrations.UseVisualStyleBackColor = true;
+            this.btn_celebrations.UseVisualStyleBackColor = false;
             this.btn_celebrations.Click += new System.EventHandler(this.btn_collections_Click);
             // 
             // btn_users
             // 
+            this.btn_users.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (38)))), ((int) (((byte) (109)))), ((int) (((byte) (83)))));
+            this.btn_users.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_users.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_users.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_users.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_users.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btn_users.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_users.Location = new System.Drawing.Point(383, 12);
             this.btn_users.Name = "btn_users";
             this.btn_users.Size = new System.Drawing.Size(160, 42);
             this.btn_users.TabIndex = 1;
             this.btn_users.Text = "Users";
-            this.btn_users.UseVisualStyleBackColor = true;
+            this.btn_users.UseVisualStyleBackColor = false;
             this.btn_users.Click += new System.EventHandler(this.btn_users_Click);
             // 
             // btn_collections
             // 
+            this.btn_collections.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (38)))), ((int) (((byte) (109)))), ((int) (((byte) (83)))));
+            this.btn_collections.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_collections.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_collections.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_collections.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_collections.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btn_collections.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_collections.Location = new System.Drawing.Point(28, 12);
             this.btn_collections.Name = "btn_collections";
             this.btn_collections.Size = new System.Drawing.Size(160, 42);
-            this.btn_collections.TabIndex = 0;
+            this.btn_collections.TabIndex = 1;
             this.btn_collections.Text = "Collections";
-            this.btn_collections.UseVisualStyleBackColor = true;
+            this.btn_collections.UseVisualStyleBackColor = false;
             this.btn_collections.Click += new System.EventHandler(this.btn_celebrations_Click);
             // 
             // pnl_container
@@ -128,7 +149,7 @@ namespace BINAES
             this.pnl_container.Location = new System.Drawing.Point(0, 69);
             this.pnl_container.Name = "pnl_container";
             this.pnl_container.Size = new System.Drawing.Size(1040, 611);
-            this.pnl_container.TabIndex = 1;
+            this.pnl_container.TabIndex = 4;
             // 
             // Frm_homeManagement
             // 
@@ -137,6 +158,7 @@ namespace BINAES
             this.Controls.Add(this.pnl_container);
             this.Controls.Add(this.pnl_options);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(15, 15);
             this.Name = "Frm_homeManagement";
             this.pnl_optionsManagement.ResumeLayout(false);
             this.pnl_options.ResumeLayout(false);

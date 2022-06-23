@@ -56,6 +56,7 @@ namespace BINAES.UserControls
             this.btn_remove = new System.Windows.Forms.Button();
             this.btn_edit = new System.Windows.Forms.Button();
             this.dg_usersDataTable = new System.Windows.Forms.DataGridView();
+            this.btn_cancel = new System.Windows.Forms.Button();
             this.pnl_userDataBar.SuspendLayout();
             this.pnl_usersDataTableBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.dg_usersDataTable)).BeginInit();
@@ -64,6 +65,7 @@ namespace BINAES.UserControls
             // pnl_userDataBar
             // 
             this.pnl_userDataBar.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (42)))), ((int) (((byte) (42)))));
+            this.pnl_userDataBar.Controls.Add(this.btn_cancel);
             this.pnl_userDataBar.Controls.Add(this.cmb_role);
             this.pnl_userDataBar.Controls.Add(this.lbl_roll);
             this.pnl_userDataBar.Controls.Add(this.txt_email);
@@ -370,6 +372,23 @@ namespace BINAES.UserControls
             this.dg_usersDataTable.Size = new System.Drawing.Size(620, 487);
             this.dg_usersDataTable.TabIndex = 0;
             // 
+            // btn_cancel
+            // 
+            this.btn_cancel.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (38)))), ((int) (((byte) (109)))), ((int) (((byte) (83)))));
+            this.btn_cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_cancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_cancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_cancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btn_cancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_cancel.Location = new System.Drawing.Point(24, 358);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(305, 45);
+            this.btn_cancel.TabIndex = 30;
+            this.btn_cancel.Text = "Cancel";
+            this.btn_cancel.UseVisualStyleBackColor = false;
+            // 
             // UC_Users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -386,6 +405,8 @@ namespace BINAES.UserControls
             ((System.ComponentModel.ISupportInitialize) (this.dg_usersDataTable)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Button btn_cancel;
 
         private System.Windows.Forms.Panel pnl_userDataBar;
         private System.Windows.Forms.ComboBox cmb_role;

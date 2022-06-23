@@ -32,6 +32,7 @@ namespace BINAES.UserControls
         private void InitializeComponent()
         {
             this.pnl_collectionsDataBar = new System.Windows.Forms.Panel();
+            this.btn_cancel = new System.Windows.Forms.Button();
             this.cmb_type = new System.Windows.Forms.ComboBox();
             this.cmb_gender = new System.Windows.Forms.ComboBox();
             this.lbl_gender = new System.Windows.Forms.Label();
@@ -54,6 +55,7 @@ namespace BINAES.UserControls
             // pnl_collectionsDataBar
             // 
             this.pnl_collectionsDataBar.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (42)))), ((int) (((byte) (42)))));
+            this.pnl_collectionsDataBar.Controls.Add(this.btn_cancel);
             this.pnl_collectionsDataBar.Controls.Add(this.cmb_type);
             this.pnl_collectionsDataBar.Controls.Add(this.cmb_gender);
             this.pnl_collectionsDataBar.Controls.Add(this.lbl_gender);
@@ -67,6 +69,23 @@ namespace BINAES.UserControls
             this.pnl_collectionsDataBar.Name = "pnl_collectionsDataBar";
             this.pnl_collectionsDataBar.Size = new System.Drawing.Size(354, 611);
             this.pnl_collectionsDataBar.TabIndex = 23;
+            // 
+            // btn_cancel
+            // 
+            this.btn_cancel.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (38)))), ((int) (((byte) (109)))), ((int) (((byte) (83)))));
+            this.btn_cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_cancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_cancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_cancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btn_cancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_cancel.Location = new System.Drawing.Point(24, 210);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(305, 45);
+            this.btn_cancel.TabIndex = 23;
+            this.btn_cancel.Text = "Cancel";
+            this.btn_cancel.UseVisualStyleBackColor = false;
             // 
             // cmb_type
             // 
@@ -204,7 +223,7 @@ namespace BINAES.UserControls
             this.btn_remove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_remove.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btn_remove.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_remove.Location = new System.Drawing.Point(142, 549);
+            this.btn_remove.Location = new System.Drawing.Point(131, 549);
             this.btn_remove.Name = "btn_remove";
             this.btn_remove.Size = new System.Drawing.Size(102, 34);
             this.btn_remove.TabIndex = 3;
@@ -249,6 +268,8 @@ namespace BINAES.UserControls
             ((System.ComponentModel.ISupportInitialize) (this.dg_collectionsDataTable)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Button btn_cancel;
 
         private System.Windows.Forms.Panel pnl_collectionsDataBar;
         private System.Windows.Forms.ComboBox cmb_type;
