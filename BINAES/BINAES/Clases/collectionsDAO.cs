@@ -1,6 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
-using System.Windows.Documents;
+using System.Text;
+using System.Threading.Tasks;
 using BINAES.SQL_Server;
 
 namespace BINAES.Clases
