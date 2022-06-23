@@ -213,6 +213,12 @@
     <Compile Include="UserControls\UC_Celebrations.Designer.cs">
       <DependentUpon>UC_Celebrations.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_Users.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Users.Designer.cs">
+      <DependentUpon>UC_Users.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\Advanced_Search.resx">
       <DependentUpon>Advanced_Search.cs</DependentUpon>
     </EmbeddedResource>
@@ -255,6 +261,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Celebrations.resx">
       <DependentUpon>UC_Celebrations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Users.resx">
+      <DependentUpon>UC_Users.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -37,7 +37,7 @@ namespace BINAES
             this.pnl_containerManagement = new System.Windows.Forms.Panel();
             this.pnl_options = new System.Windows.Forms.Panel();
             this.btn_celebrations = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btn_users = new System.Windows.Forms.Button();
             this.btn_collections = new System.Windows.Forms.Button();
             this.pnl_container = new System.Windows.Forms.Panel();
             this.pnl_optionsManagement.SuspendLayout();
@@ -84,7 +84,7 @@ namespace BINAES
             // 
             this.pnl_options.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (64)))), ((int) (((byte) (64)))));
             this.pnl_options.Controls.Add(this.btn_celebrations);
-            this.pnl_options.Controls.Add(this.button4);
+            this.pnl_options.Controls.Add(this.btn_users);
             this.pnl_options.Controls.Add(this.btn_collections);
             this.pnl_options.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_options.Location = new System.Drawing.Point(0, 0);
@@ -102,14 +102,15 @@ namespace BINAES
             this.btn_celebrations.UseVisualStyleBackColor = true;
             this.btn_celebrations.Click += new System.EventHandler(this.btn_collections_Click);
             // 
-            // button4
+            // btn_users
             // 
-            this.button4.Location = new System.Drawing.Point(383, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(160, 42);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_users.Location = new System.Drawing.Point(383, 12);
+            this.btn_users.Name = "btn_users";
+            this.btn_users.Size = new System.Drawing.Size(160, 42);
+            this.btn_users.TabIndex = 1;
+            this.btn_users.Text = "Users";
+            this.btn_users.UseVisualStyleBackColor = true;
+            this.btn_users.Click += new System.EventHandler(this.btn_users_Click);
             // 
             // btn_collections
             // 
@@ -143,7 +144,7 @@ namespace BINAES
         }
 
         private System.Windows.Forms.Button btn_collections;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn_users;
         private System.Windows.Forms.Button btn_celebrations;
 
         private System.Windows.Forms.Panel pnl_options;

@@ -30,5 +30,11 @@ namespace BINAES
             UC_Celebrations uc = new UC_Celebrations();
             addUserControl(uc);
         }
+
+        private void btn_users_Click(object sender, EventArgs e)
+        {
+            UC_Users uc = new UC_Users();
+            addUserControl(uc);
+        }
     }
 }
