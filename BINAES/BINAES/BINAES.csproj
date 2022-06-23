@@ -88,6 +88,12 @@
     <Compile Include="Forms\events.Designer.cs">
       <DependentUpon>events.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Frm_homeManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_homeManagement.Designer.cs">
+      <DependentUpon>Frm_homeManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +201,18 @@
     <Compile Include="SQL Server\WORDS_LIST.cs">
       <DependentUpon>connection.tt</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_Collections.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Collections.Designer.cs">
+      <DependentUpon>UC_Collections.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_Celebrations.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Celebrations.Designer.cs">
+      <DependentUpon>UC_Celebrations.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\Advanced_Search.resx">
       <DependentUpon>Advanced_Search.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\events.resx">
       <DependentUpon>events.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_homeManagement.resx">
+      <DependentUpon>Frm_homeManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\search.resx">
       <DependentUpon>search.cs</DependentUpon>
@@ -228,6 +249,12 @@
     </Compile>
     <EmbeddedResource Include="Forms\welcome.resx">
       <DependentUpon>welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Collections.resx">
+      <DependentUpon>UC_Collections.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Celebrations.resx">
+      <DependentUpon>UC_Celebrations.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

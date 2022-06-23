@@ -72,3 +72,6 @@ C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\bin\Debug\EntityFramework.SqlSe
 C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_advanced_search.resources
 C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_search.resources
 C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_welcome.resources
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.Frm_homeManagement.resources
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Celebrations.resources
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Collections.resources

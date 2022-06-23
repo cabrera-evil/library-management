@@ -106,7 +106,7 @@ namespace BINAES
 
         private void btn_management_Click(object sender, EventArgs e)
         {
-            open_form<frm_events>();
+            open_form<Frm_homeManagement>();
         }
 
         private void btn_logout_Click(object sender, EventArgs e)
