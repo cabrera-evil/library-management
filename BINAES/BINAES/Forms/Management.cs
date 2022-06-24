@@ -4,9 +4,9 @@ using BINAES.UserControls;
 
 namespace BINAES
 {
-    public partial class Management : Form
+    public partial class management : Form
     {
-        public Management()
+        public management()
         {
             InitializeComponent();
 

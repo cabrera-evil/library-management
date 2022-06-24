@@ -83,25 +83,19 @@
     <Compile Include="Clases\celebrationDAO.cs" />
     <Compile Include="Clases\collectionsDAO.cs" />
     <Compile Include="Clases\user_cache.cs" />
-    <Compile Include="Forms\Advanced_Search.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Advanced_Search.Designer.cs">
-      <DependentUpon>Advanced_Search.cs</DependentUpon>
-    </Compile>
     <Compile Include="Clases\Encrypt.cs" />
     <Compile Include="Clases\UserDAO.cs" />
-    <Compile Include="Forms\Management.cs">
+    <Compile Include="Forms\management.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Management.Designer.cs">
-      <DependentUpon>Management.cs</DependentUpon>
+    <Compile Include="Forms\management.Designer.cs">
+      <DependentUpon>management.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_homeSearch.cs">
+    <Compile Include="Forms\search.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_homeSearch.Designer.cs">
-      <DependentUpon>frm_homeSearch.cs</DependentUpon>
+    <Compile Include="Forms\search.Designer.cs">
+      <DependentUpon>search.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\home.cs">
       <SubType>Form</SubType>
@@ -117,12 +111,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Forms\search.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\search.Designer.cs">
-      <DependentUpon>search.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\welcome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,44 +201,38 @@
     <Compile Include="SQL Server\WORDS_LIST.cs">
       <DependentUpon>connection.tt</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UC_Advanced_Search.cs">
+    <Compile Include="Controllers\UC_Advanced_Search.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UC_Advanced_Search.Designer.cs">
+    <Compile Include="Controllers\UC_Advanced_Search.Designer.cs">
       <DependentUpon>UC_Advanced_Search.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UC_Collections.cs">
+    <Compile Include="Controllers\UC_Collections.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UC_Collections.Designer.cs">
+    <Compile Include="Controllers\UC_Collections.Designer.cs">
       <DependentUpon>UC_Collections.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UC_Celebrations.cs">
+    <Compile Include="Controllers\UC_Celebrations.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UC_Celebrations.Designer.cs">
+    <Compile Include="Controllers\UC_Celebrations.Designer.cs">
       <DependentUpon>UC_Celebrations.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UC_Search.cs">
+    <Compile Include="Controllers\UC_Search.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UC_Search.Designer.cs">
+    <Compile Include="Controllers\UC_Search.Designer.cs">
       <DependentUpon>UC_Search.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UC_Users.cs">
+    <Compile Include="Controllers\UC_Users.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UC_Users.Designer.cs">
+    <Compile Include="Controllers\UC_Users.Designer.cs">
       <DependentUpon>UC_Users.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\Advanced_Search.resx">
-      <DependentUpon>Advanced_Search.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Management.resx">
-      <DependentUpon>Management.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_homeSearch.resx">
-      <DependentUpon>frm_homeSearch.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\management.resx">
+      <DependentUpon>management.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\search.resx">
       <DependentUpon>search.cs</DependentUpon>
@@ -274,19 +256,19 @@
     <EmbeddedResource Include="Forms\welcome.resx">
       <DependentUpon>welcome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_Advanced_Search.resx">
+    <EmbeddedResource Include="Controllers\UC_Advanced_Search.resx">
       <DependentUpon>UC_Advanced_Search.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_Collections.resx">
+    <EmbeddedResource Include="Controllers\UC_Collections.resx">
       <DependentUpon>UC_Collections.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_Celebrations.resx">
+    <EmbeddedResource Include="Controllers\UC_Celebrations.resx">
       <DependentUpon>UC_Celebrations.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_Search.resx">
+    <EmbeddedResource Include="Controllers\UC_Search.resx">
       <DependentUpon>UC_Search.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_Users.resx">
+    <EmbeddedResource Include="Controllers\UC_Users.resx">
       <DependentUpon>UC_Users.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -343,9 +325,7 @@
     <None Include="Resources\user %281%29.png" />
     <Content Include="SQL Server\BINAES_POPULATE.sql" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">
       <Visible>False</Visible>

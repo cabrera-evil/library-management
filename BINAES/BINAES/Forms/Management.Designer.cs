@@ -2,7 +2,7 @@
 
 namespace BINAES
 {
-    partial class Management
+    partial class management
     {
         /// <summary>
         /// Required designer variable.

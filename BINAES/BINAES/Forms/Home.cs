@@ -89,7 +89,7 @@ namespace BINAES
 
         private void btn_search_Click(object sender, EventArgs e)
         {
-            open_form<frm_homeSearch>();
+            open_form<search>();
         }
 
         private void btn_loans_Click(object sender, EventArgs e)
@@ -104,7 +104,7 @@ namespace BINAES
 
         private void btn_management_Click(object sender, EventArgs e)
         {
-            open_form<Management>();
+            open_form<management>();
         }
 
         private void btn_logout_Click(object sender, EventArgs e)

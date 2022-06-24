@@ -84,6 +84,7 @@ namespace BINAES.UserControls
                 MessageBox.Show(ex.Message);
             }
             lock_controllers();
+            editable = false;
         }
 
         private void clear_text()
@@ -94,6 +95,7 @@ namespace BINAES.UserControls
             txt_phone.Text = "";
             txt_email.Text = "";
             txt_password.Text = "";
+            pb_picture.Image = null;
         }
 
         private void unlock_controllers()
@@ -287,12 +289,19 @@ namespace BINAES.UserControls
 
         private void btn_edit_Click(object sender, EventArgs e)
         {
-            int search = Convert.ToInt32(txt_search.Text);
-            int type = cmb_searchBy.SelectedIndex;
-            if(type == 0)
+            try
             {
-                editable = true;
-                search_data(search);
+                int search = Convert.ToInt32(txt_search.Text);
+                int type = cmb_searchBy.SelectedIndex;
+                if (type == 0)
+                {
+                    editable = true;
+                    search_data(search);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
