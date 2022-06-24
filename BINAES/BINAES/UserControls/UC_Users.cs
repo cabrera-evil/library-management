@@ -14,6 +14,7 @@ namespace BINAES.UserControls
         
         bool edit = false;
         bool add = false;
+        bool picture_load = false;
         
         public UC_Users()
         {
@@ -68,17 +69,7 @@ namespace BINAES.UserControls
             {
                 using (db_BINAES db = new db_BINAES())
                 {
-                    var Lst =
-                        dg_usersDataTable.DataSource = user.show_user();
-                    dg_usersDataTable.Columns["id"].DisplayIndex = 0;
-                    dg_usersDataTable.Columns["username"].DisplayIndex = 1;
-                    /*dg_usersDataTable.Columns["Address"].DisplayIndex = 2;
-                    dg_usersDataTable.Columns["Phone"].DisplayIndex = 3;
-                    dg_usersDataTable.Columns["Email"].DisplayIndex = 4;
-                    dg_usersDataTable.Columns["Password"].DisplayIndex = 5;
-                    dg_usersDataTable.Columns["Occupation"].DisplayIndex = 6;
-                    dg_usersDataTable.Columns["Institution"].DisplayIndex = 7;
-                    dg_usersDataTable.Columns["Role"].DisplayIndex = 8;*/
+                    dg_usersDataTable.DataSource = user.show_user();
                 }
                 btn_edit.BackColor = Color.FromArgb(38, 109, 83);
                 btn_remove.BackColor = Color.FromArgb(38, 109, 83);
@@ -101,6 +92,9 @@ namespace BINAES.UserControls
             cmb_occupancy.Enabled = true;
             cmb_institution.Enabled = true;
             cmb_role.Enabled = true;
+            btn_cancel.Enabled = true;
+            btn_save.Enabled = true;
+            btn_picture.Enabled = true;
         }
 
         private void lock_controllers()
@@ -113,6 +107,9 @@ namespace BINAES.UserControls
             cmb_occupancy.Enabled = false;
             cmb_institution.Enabled = false;
             cmb_role.Enabled = false;
+            btn_cancel.Enabled = false;
+            btn_save.Enabled = false;
+            btn_picture.Enabled = false;
         }
 
 
@@ -131,6 +128,14 @@ namespace BINAES.UserControls
                     user.id_occupancy = ((OCCUPANCY)cmb_occupancy.SelectedItem).id;
                     user.id_institution = ((INSTITUTION)cmb_institution.SelectedItem).id;
                     user.id_role = ((ROLE_)cmb_role.SelectedItem).id;
+                    var picture = new System.IO.MemoryStream();
+                    if (picture_load)
+                    {
+                        pb_picture.Image.Save(picture, System.Drawing.Imaging.ImageFormat.Jpeg);
+                        user.picture = picture.GetBuffer();
+                    }
+                    else
+                        user.picture = null;
 
                     if (add)
                     {
@@ -163,6 +168,17 @@ namespace BINAES.UserControls
             btn_edit.BackColor = Color.FromArgb(38, 109, 83);
             btn_remove.BackColor = Color.FromArgb(38, 109, 83);
             btn_insertRows.BackColor = Color.FromArgb(38, 109, 83);
+        }
+
+        private void btn_picture_Click(object sender, EventArgs e)
+        {
+            var picture = new OpenFileDialog();
+            var file = picture.ShowDialog();
+            if (file == DialogResult.OK)
+            {
+                pb_picture.Image = Image.FromFile(picture.FileName);
+                picture_load = true;
+            }
         }
     }
 }

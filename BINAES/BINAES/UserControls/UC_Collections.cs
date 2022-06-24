@@ -63,21 +63,11 @@ namespace BINAES.UserControls
             {
                 using (db_BINAES db = new db_BINAES())
                 {
-                    var Lst = 
-                        dg_collectionsDataTable.DataSource = collections.show_collection();
-                    dg_collectionsDataTable.Columns["id"].DisplayIndex = 0;
-                    dg_collectionsDataTable.Columns["username"].DisplayIndex = 1;
-                    /*dg_usersDataTable.Columns["Address"].DisplayIndex = 2;
-                    dg_usersDataTable.Columns["Phone"].DisplayIndex = 3;
-                    dg_usersDataTable.Columns["Email"].DisplayIndex = 4;
-                    dg_usersDataTable.Columns["Password"].DisplayIndex = 5;
-                    dg_usersDataTable.Columns["Occupation"].DisplayIndex = 6;
-                    dg_usersDataTable.Columns["Institution"].DisplayIndex = 7;
-                    dg_usersDataTable.Columns["Role"].DisplayIndex = 8;*/
+                    dg_collectionsDataTable.DataSource = collections.show_collection();
+                    btn_edit.BackColor = Color.FromArgb(38, 109, 83);
+                    btn_remove.BackColor = Color.FromArgb(38, 109, 83);
+                    btn_insertRows.BackColor = Color.FromArgb(38, 109, 83);
                 }
-                btn_edit.BackColor = Color.FromArgb(38, 109, 83);
-                btn_remove.BackColor = Color.FromArgb(38, 109, 83);
-                btn_insertRows.BackColor = Color.FromArgb(38, 109, 83);
             }
             catch (Exception ex)
             {

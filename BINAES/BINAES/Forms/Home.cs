@@ -18,7 +18,6 @@ namespace BINAES
     public partial class frm_home : Form
     {
         private string username;
-        private string password;
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -26,10 +25,9 @@ namespace BINAES
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
-        public frm_home(string username, string password)
+        public frm_home(string username)
         {
             this.username = username;
-            this.password = password;
 
             InitializeComponent();
             open_form<frm_welcome>();
@@ -121,13 +119,12 @@ namespace BINAES
             {
                 var lst = from d in db.USER_
                           where d.username == username
-                          && d.password == password
                           select d;
-                //MessageBox.Show(user.email);
                 if (lst.Count() > 0)
                 {
+                    //USER_ user = lst.First();
                     //lbl_email.Text = ;
-                    //lbl_role.Text = user.id_role.ToString();
+                    //lbl_role.Text = ; 
                 }
             }
         }

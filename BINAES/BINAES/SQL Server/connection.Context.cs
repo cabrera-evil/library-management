@@ -32,11 +32,14 @@ namespace BINAES.SQL_Server
         public virtual DbSet<CELEBRATION> CELEBRATION { get; set; }
         public virtual DbSet<COLLECTION_> COLLECTION_ { get; set; }
         public virtual DbSet<COPY_> COPY_ { get; set; }
+        public virtual DbSet<EDITORIAL> EDITORIAL { get; set; }
+        public virtual DbSet<FLOOR_> FLOOR_ { get; set; }
         public virtual DbSet<FORMAT_> FORMAT_ { get; set; }
         public virtual DbSet<GENRE> GENRE { get; set; }
         public virtual DbSet<GOAL> GOAL { get; set; }
         public virtual DbSet<INSTITUTION> INSTITUTION { get; set; }
         public virtual DbSet<LABEL_> LABEL_ { get; set; }
+        public virtual DbSet<LABEL_TYPE> LABEL_TYPE { get; set; }
         public virtual DbSet<LANGUAGE_> LANGUAGE_ { get; set; }
         public virtual DbSet<LOAN_BOOKING> LOAN_BOOKING { get; set; }
         public virtual DbSet<MANAGER> MANAGER { get; set; }

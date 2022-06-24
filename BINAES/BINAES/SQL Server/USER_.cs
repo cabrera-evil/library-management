@@ -22,10 +22,11 @@ namespace BINAES.SQL_Server
         }
     
         public int id { get; set; }
+        public string user_full_name { get; set; }
         public string username { get; set; }
         public string user_address { get; set; }
         public string phone { get; set; }
-        public string picture { get; set; }
+        public byte[] picture { get; set; }
         public string email { get; set; }
         public string password { get; set; }
         public int id_occupancy { get; set; }

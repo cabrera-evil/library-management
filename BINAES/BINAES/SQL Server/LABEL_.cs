@@ -15,9 +15,11 @@ namespace BINAES.SQL_Server
     public partial class LABEL_
     {
         public int id { get; set; }
-        public string label_name { get; set; }
+        public string label_code { get; set; }
         public int id_copy { get; set; }
+        public int id_label_type { get; set; }
     
         public virtual COPY_ COPY_ { get; set; }
+        public virtual LABEL_TYPE LABEL_TYPE { get; set; }
     }
 }

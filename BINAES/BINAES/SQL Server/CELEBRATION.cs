@@ -23,7 +23,7 @@ namespace BINAES.SQL_Server
     
         public int id { get; set; }
         public string title { get; set; }
-        public string picture { get; set; }
+        public byte[] picture { get; set; }
         public Nullable<int> attendance { get; set; }
         public Nullable<System.DateTime> beginning_hour { get; set; }
         public Nullable<System.DateTime> finishing_hour { get; set; }

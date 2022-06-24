@@ -11,6 +11,7 @@ namespace BINAES
     {
         bool edit = false;
         bool add = false;
+        bool picture_load = false;
         public frm_users()
         {
             InitializeComponent();
@@ -90,17 +91,7 @@ namespace BINAES
             {
                 using (db_BINAES db = new db_BINAES())
                 {
-                    var Lst =
                     dg_usersDataTable.DataSource = user.show_user();
-                    dg_usersDataTable.Columns["id"].DisplayIndex = 0;
-                    dg_usersDataTable.Columns["username"].DisplayIndex = 1;
-                    /*dg_usersDataTable.Columns["Address"].DisplayIndex = 2;
-                    dg_usersDataTable.Columns["Phone"].DisplayIndex = 3;
-                    dg_usersDataTable.Columns["Email"].DisplayIndex = 4;
-                    dg_usersDataTable.Columns["Password"].DisplayIndex = 5;
-                    dg_usersDataTable.Columns["Occupation"].DisplayIndex = 6;
-                    dg_usersDataTable.Columns["Institution"].DisplayIndex = 7;
-                    dg_usersDataTable.Columns["Role"].DisplayIndex = 8;*/
                 }
                 btn_edit.BackColor = Color.FromArgb(38, 109, 83);
                 btn_remove.BackColor = Color.FromArgb(38, 109, 83);
@@ -152,6 +143,14 @@ namespace BINAES
                     user.id_occupancy = ((OCCUPANCY)cmb_occupancy.SelectedItem).id;
                     user.id_institution = ((INSTITUTION)cmb_institution.SelectedItem).id;
                     user.id_role = ((ROLE_)cmb_role.SelectedItem).id;
+                    var picture = new System.IO.MemoryStream();
+                    if (picture_load)
+                    {
+                        //pb_profile.Image.Save(picture, System.Drawing.Imaging.ImageFormat.Jpeg);
+                        user.picture = picture.GetBuffer();
+                    }
+                    else
+                        user.picture = null;
 
                     if (add)
                     {

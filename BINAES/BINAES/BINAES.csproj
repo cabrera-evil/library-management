@@ -162,6 +162,12 @@
     <Compile Include="SQL Server\COPY_.cs">
       <DependentUpon>connection.tt</DependentUpon>
     </Compile>
+    <Compile Include="SQL Server\EDITORIAL.cs">
+      <DependentUpon>connection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SQL Server\FLOOR_.cs">
+      <DependentUpon>connection.tt</DependentUpon>
+    </Compile>
     <Compile Include="SQL Server\FORMAT_.cs">
       <DependentUpon>connection.tt</DependentUpon>
     </Compile>
@@ -175,6 +181,9 @@
       <DependentUpon>connection.tt</DependentUpon>
     </Compile>
     <Compile Include="SQL Server\LABEL_.cs">
+      <DependentUpon>connection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SQL Server\LABEL_TYPE.cs">
       <DependentUpon>connection.tt</DependentUpon>
     </Compile>
     <Compile Include="SQL Server\LANGUAGE_.cs">
@@ -305,8 +314,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\user %281%29.png" />
-    <Content Include="SQL Server\BINAES_POPULATE.sql" />
     <Content Include="SQL Server\BINAES_STRUCT.sql" />
     <Content Include="SQL Server\connection.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -318,6 +325,8 @@
       <DependentUpon>connection.edmx</DependentUpon>
       <LastGenOutput>connection.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\user %281%29.png" />
+    <Content Include="SQL Server\BINAES_POPULATE.sql" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />

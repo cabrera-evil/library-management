@@ -12,24 +12,18 @@ namespace BINAES.SQL_Server
     using System;
     using System.Collections.Generic;
     
-    public partial class AREA
+    public partial class LABEL_TYPE
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public AREA()
+        public LABEL_TYPE()
         {
-            this.ACTIVITY = new HashSet<ACTIVITY>();
+            this.LABEL_ = new HashSet<LABEL_>();
         }
     
         public int id { get; set; }
-        public string area_name { get; set; }
-        public string area_description { get; set; }
-        public string schedule { get; set; }
-        public Nullable<int> id_manager { get; set; }
-        public int id_floor { get; set; }
+        public string label_name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ACTIVITY> ACTIVITY { get; set; }
-        public virtual FLOOR_ FLOOR_ { get; set; }
-        public virtual MANAGER MANAGER { get; set; }
+        public virtual ICollection<LABEL_> LABEL_ { get; set; }
     }
 }

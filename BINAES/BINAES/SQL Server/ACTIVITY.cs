@@ -15,12 +15,8 @@ namespace BINAES.SQL_Server
     public partial class ACTIVITY
     {
         public int id { get; set; }
-        public Nullable<System.DateTime> beginning_hour { get; set; }
-        public Nullable<System.DateTime> finishing_hour { get; set; }
-        public Nullable<System.DateTime> beginning_date { get; set; }
-        public Nullable<System.DateTime> finishing_date { get; set; }
         public int id_area { get; set; }
-        public int id_celebration { get; set; }
+        public Nullable<int> id_celebration { get; set; }
         public int id_attendance { get; set; }
     
         public virtual AREA AREA { get; set; }

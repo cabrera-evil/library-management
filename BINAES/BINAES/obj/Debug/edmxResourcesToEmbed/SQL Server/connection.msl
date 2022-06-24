@@ -5,10 +5,6 @@
       <EntityTypeMapping TypeName="BINAES_Model.ACTIVITY">
         <MappingFragment StoreEntitySet="ACTIVITY">
           <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="beginning_hour" ColumnName="beginning_hour" />
-          <ScalarProperty Name="finishing_hour" ColumnName="finishing_hour" />
-          <ScalarProperty Name="beginning_date" ColumnName="beginning_date" />
-          <ScalarProperty Name="finishing_date" ColumnName="finishing_date" />
           <ScalarProperty Name="id_area" ColumnName="id_area" />
           <ScalarProperty Name="id_celebration" ColumnName="id_celebration" />
           <ScalarProperty Name="id_attendance" ColumnName="id_attendance" />
@@ -23,6 +19,7 @@
           <ScalarProperty Name="area_description" ColumnName="area_description" />
           <ScalarProperty Name="schedule" ColumnName="schedule" />
           <ScalarProperty Name="id_manager" ColumnName="id_manager" />
+          <ScalarProperty Name="id_floor" ColumnName="id_floor" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -81,6 +78,23 @@
           <ScalarProperty Name="id_collection" ColumnName="id_collection" />
           <ScalarProperty Name="id_language" ColumnName="id_language" />
           <ScalarProperty Name="id_format" ColumnName="id_format" />
+          <ScalarProperty Name="id_editorial" ColumnName="id_editorial" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EDITORIAL">
+      <EntityTypeMapping TypeName="BINAES_Model.EDITORIAL">
+        <MappingFragment StoreEntitySet="EDITORIAL">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="editorial_name" ColumnName="editorial_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FLOOR_">
+      <EntityTypeMapping TypeName="BINAES_Model.FLOOR_">
+        <MappingFragment StoreEntitySet="FLOOR_">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="floor_number" ColumnName="floor_number" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -121,8 +135,17 @@
       <EntityTypeMapping TypeName="BINAES_Model.LABEL_">
         <MappingFragment StoreEntitySet="LABEL_">
           <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="label_name" ColumnName="label_name" />
+          <ScalarProperty Name="label_code" ColumnName="label_code" />
           <ScalarProperty Name="id_copy" ColumnName="id_copy" />
+          <ScalarProperty Name="id_label_type" ColumnName="id_label_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LABEL_TYPE">
+      <EntityTypeMapping TypeName="BINAES_Model.LABEL_TYPE">
+        <MappingFragment StoreEntitySet="LABEL_TYPE">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="label_name" ColumnName="label_name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -185,6 +208,7 @@
       <EntityTypeMapping TypeName="BINAES_Model.USER_">
         <MappingFragment StoreEntitySet="USER_">
           <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_full_name" ColumnName="user_full_name" />
           <ScalarProperty Name="username" ColumnName="username" />
           <ScalarProperty Name="user_address" ColumnName="user_address" />
           <ScalarProperty Name="phone" ColumnName="phone" />

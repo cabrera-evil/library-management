@@ -22,8 +22,8 @@ namespace BINAES.SQL_Server
     
         public int id { get; set; }
         public string collection_name { get; set; }
-        public int id_type { get; set; }
-        public int id_genre { get; set; }
+        public Nullable<int> id_type { get; set; }
+        public Nullable<int> id_genre { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<COPY_> COPY_ { get; set; }

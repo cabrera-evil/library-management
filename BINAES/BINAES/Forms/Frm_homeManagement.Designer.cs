@@ -40,6 +40,7 @@ namespace BINAES
             this.btn_users = new System.Windows.Forms.Button();
             this.btn_collections = new System.Windows.Forms.Button();
             this.pnl_container = new System.Windows.Forms.Panel();
+            this.lbl_title = new System.Windows.Forms.Label();
             this.pnl_optionsManagement.SuspendLayout();
             this.pnl_options.SuspendLayout();
             this.SuspendLayout();
@@ -82,7 +83,8 @@ namespace BINAES
             // 
             // pnl_options
             // 
-            this.pnl_options.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (8)))), ((int) (((byte) (44)))), ((int) (((byte) (44)))));
+            this.pnl_options.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.pnl_options.Controls.Add(this.lbl_title);
             this.pnl_options.Controls.Add(this.btn_celebrations);
             this.pnl_options.Controls.Add(this.btn_users);
             this.pnl_options.Controls.Add(this.btn_collections);
@@ -94,10 +96,10 @@ namespace BINAES
             // 
             // btn_celebrations
             // 
-            this.btn_celebrations.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (38)))), ((int) (((byte) (109)))), ((int) (((byte) (83)))));
-            this.btn_celebrations.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
-            this.btn_celebrations.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
-            this.btn_celebrations.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_celebrations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(109)))), ((int)(((byte)(83)))));
+            this.btn_celebrations.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_celebrations.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_celebrations.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
             this.btn_celebrations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_celebrations.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_celebrations.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -111,10 +113,10 @@ namespace BINAES
             // 
             // btn_users
             // 
-            this.btn_users.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (38)))), ((int) (((byte) (109)))), ((int) (((byte) (83)))));
-            this.btn_users.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
-            this.btn_users.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
-            this.btn_users.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_users.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(109)))), ((int)(((byte)(83)))));
+            this.btn_users.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_users.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_users.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
             this.btn_users.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_users.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_users.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -128,12 +130,12 @@ namespace BINAES
             // 
             // btn_collections
             // 
-            this.btn_collections.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (38)))), ((int) (((byte) (109)))), ((int) (((byte) (83)))));
-            this.btn_collections.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
-            this.btn_collections.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
-            this.btn_collections.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_collections.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(109)))), ((int)(((byte)(83)))));
+            this.btn_collections.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_collections.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_collections.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
             this.btn_collections.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_collections.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btn_collections.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_collections.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_collections.Location = new System.Drawing.Point(28, 12);
             this.btn_collections.Name = "btn_collections";
@@ -151,6 +153,16 @@ namespace BINAES
             this.pnl_container.Size = new System.Drawing.Size(1040, 611);
             this.pnl_container.TabIndex = 4;
             // 
+            // lbl_title
+            // 
+            this.lbl_title.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(109)))), ((int)(((byte)(83)))));
+            this.lbl_title.Location = new System.Drawing.Point(707, 23);
+            this.lbl_title.Name = "lbl_title";
+            this.lbl_title.Size = new System.Drawing.Size(321, 23);
+            this.lbl_title.TabIndex = 3;
+            this.lbl_title.Text = "Title";
+            // 
             // Frm_homeManagement
             // 
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -163,6 +175,7 @@ namespace BINAES
             this.pnl_optionsManagement.ResumeLayout(false);
             this.pnl_options.ResumeLayout(false);
             this.ResumeLayout(false);
+
         }
 
         private System.Windows.Forms.Button btn_collections;
@@ -180,5 +193,7 @@ namespace BINAES
         private System.Windows.Forms.Panel pnl_optionsManagement;
 
         #endregion
+
+        private System.Windows.Forms.Label lbl_title;
     }
 }

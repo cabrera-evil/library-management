@@ -10,12 +10,8 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="beginning_hour" Type="datetime" />
-          <Property Name="finishing_hour" Type="datetime" />
-          <Property Name="beginning_date" Type="datetime" />
-          <Property Name="finishing_date" Type="datetime" />
           <Property Name="id_area" Type="int" Nullable="false" />
-          <Property Name="id_celebration" Type="int" Nullable="false" />
+          <Property Name="id_celebration" Type="int" />
           <Property Name="id_attendance" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="AREA">
@@ -24,15 +20,16 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="area_name" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="area_description" Type="varchar" MaxLength="100" />
-          <Property Name="schedule" Type="datetime" Nullable="false" />
-          <Property Name="id_manager" Type="int" Nullable="false" />
+          <Property Name="area_description" Type="varchar" MaxLength="300" />
+          <Property Name="schedule" Type="varchar" MaxLength="30" />
+          <Property Name="id_manager" Type="int" />
+          <Property Name="id_floor" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="ATTENDANCE">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="entrance_date" Type="datetime" />
           <Property Name="exit_date" Type="datetime" />
           <Property Name="entarance_hour" Type="datetime" />
@@ -53,7 +50,7 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="title" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="picture" Type="varchar" MaxLength="1" />
+          <Property Name="picture" Type="varbinary(max)" />
           <Property Name="attendance" Type="int" />
           <Property Name="beginning_hour" Type="datetime" />
           <Property Name="finishing_hour" Type="datetime" />
@@ -65,9 +62,9 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="collection_name" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="id_type" Type="int" Nullable="false" />
-          <Property Name="id_genre" Type="int" Nullable="false" />
+          <Property Name="collection_name" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="id_type" Type="int" />
+          <Property Name="id_genre" Type="int" />
         </EntityType>
         <EntityType Name="COPY_">
           <Key>
@@ -75,11 +72,26 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="copy_name" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="picture" Type="nvarchar" MaxLength="50" />
-          <Property Name="release_date" Type="datetime" Nullable="false" />
+          <Property Name="picture" Type="varbinary(max)" />
+          <Property Name="release_date" Type="datetime" />
           <Property Name="id_collection" Type="int" Nullable="false" />
-          <Property Name="id_language" Type="int" Nullable="false" />
-          <Property Name="id_format" Type="int" Nullable="false" />
+          <Property Name="id_language" Type="int" />
+          <Property Name="id_format" Type="int" />
+          <Property Name="id_editorial" Type="int" />
+        </EntityType>
+        <EntityType Name="EDITORIAL">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="editorial_name" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FLOOR_">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="floor_number" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="FORMAT_">
           <Key>
@@ -100,7 +112,7 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="goal_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="goal_name" Type="varchar" MaxLength="150" Nullable="false" />
           <Property Name="id_celebration" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="INSTITUTION">
@@ -108,15 +120,23 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="institution_name" Type="varchar" MaxLength="100" />
+          <Property Name="institution_name" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="LABEL_">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="label_name" Type="varchar" MaxLength="50" />
+          <Property Name="label_code" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="id_copy" Type="int" Nullable="false" />
+          <Property Name="id_label_type" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LABEL_TYPE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="label_name" Type="varchar" MaxLength="4" Nullable="false" />
         </EntityType>
         <EntityType Name="LANGUAGE_">
           <Key>
@@ -129,7 +149,7 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="booking_date" Type="datetime" />
           <Property Name="booking_hour" Type="datetime" />
           <Property Name="return_date" Type="datetime" />
@@ -172,12 +192,13 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="user_full_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="username" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="user_address" Type="varchar" MaxLength="100" />
           <Property Name="phone" Type="char" MaxLength="13" Nullable="false" />
-          <Property Name="picture" Type="nvarchar" MaxLength="250" />
-          <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="password" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="picture" Type="varbinary(max)" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="password" Type="varchar" MaxLength="256" />
           <Property Name="id_occupancy" Type="int" Nullable="false" />
           <Property Name="id_institution" Type="int" Nullable="false" />
           <Property Name="id_role" Type="int" Nullable="false" />
@@ -218,10 +239,22 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="fk_area_manager">
-          <End Role="MANAGER" Type="Self.MANAGER" Multiplicity="1">
+        <Association Name="fk_area_floor">
+          <End Role="FLOOR_" Type="Self.FLOOR_" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
+          <End Role="AREA" Type="Self.AREA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FLOOR_">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="AREA">
+              <PropertyRef Name="id_floor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_area_manager">
+          <End Role="MANAGER" Type="Self.MANAGER" Multiplicity="0..1" />
           <End Role="AREA" Type="Self.AREA" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="MANAGER">
@@ -246,32 +279,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="fk_celebration_activity">
-          <End Role="CELEBRATION" Type="Self.CELEBRATION" Multiplicity="1" />
-          <End Role="ACTIVITY" Type="Self.ACTIVITY" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="CELEBRATION">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="ACTIVITY">
-              <PropertyRef Name="id_celebration" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="fk_celebration_goal">
-          <End Role="CELEBRATION" Type="Self.CELEBRATION" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="GOAL" Type="Self.GOAL" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="CELEBRATION">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="GOAL">
-              <PropertyRef Name="id_celebration" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="fk_collection_copy">
           <End Role="COLLECTION_" Type="Self.COLLECTION_" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -287,9 +294,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_collection_genre">
-          <End Role="GENRE" Type="Self.GENRE" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="GENRE" Type="Self.GENRE" Multiplicity="0..1" />
           <End Role="COLLECTION_" Type="Self.COLLECTION_" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="GENRE">
@@ -301,9 +306,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_collection_type">
-          <End Role="TYPE_" Type="Self.TYPE_" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="TYPE_" Type="Self.TYPE_" Multiplicity="0..1" />
           <End Role="COLLECTION_" Type="Self.COLLECTION_" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TYPE_">
@@ -315,9 +318,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_copy_author">
-          <End Role="COPY_" Type="Self.COPY_" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="COPY_" Type="Self.COPY_" Multiplicity="1" />
           <End Role="AUTHOR" Type="Self.AUTHOR" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="COPY_">
@@ -328,10 +329,20 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="fk_copy_editorial">
+          <End Role="EDITORIAL" Type="Self.EDITORIAL" Multiplicity="0..1" />
+          <End Role="COPY_" Type="Self.COPY_" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EDITORIAL">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="COPY_">
+              <PropertyRef Name="id_editorial" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="fk_copy_format">
-          <End Role="FORMAT_" Type="Self.FORMAT_" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="FORMAT_" Type="Self.FORMAT_" Multiplicity="0..1" />
           <End Role="COPY_" Type="Self.COPY_" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="FORMAT_">
@@ -357,9 +368,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_copy_language">
-          <End Role="LANGUAGE_" Type="Self.LANGUAGE_" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="LANGUAGE_" Type="Self.LANGUAGE_" Multiplicity="0..1" />
           <End Role="COPY_" Type="Self.COPY_" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="LANGUAGE_">
@@ -396,10 +405,48 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="fk_user_intitution">
-          <End Role="INSTITUTION" Type="Self.INSTITUTION" Multiplicity="1">
+        <Association Name="fk_event_activity">
+          <End Role="CELEBRATION" Type="Self.CELEBRATION" Multiplicity="0..1" />
+          <End Role="ACTIVITY" Type="Self.ACTIVITY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CELEBRATION">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ACTIVITY">
+              <PropertyRef Name="id_celebration" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_goal_event">
+          <End Role="CELEBRATION" Type="Self.CELEBRATION" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
+          <End Role="GOAL" Type="Self.GOAL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CELEBRATION">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="GOAL">
+              <PropertyRef Name="id_celebration" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_type_label">
+          <End Role="LABEL_TYPE" Type="Self.LABEL_TYPE" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="LABEL_" Type="Self.LABEL_" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LABEL_TYPE">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="LABEL_">
+              <PropertyRef Name="id_label_type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_user_intitution">
+          <End Role="INSTITUTION" Type="Self.INSTITUTION" Multiplicity="1" />
           <End Role="USER_" Type="Self.USER_" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="INSTITUTION">
@@ -425,9 +472,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_user_occupancy">
-          <End Role="OCCUPANCY" Type="Self.OCCUPANCY" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="OCCUPANCY" Type="Self.OCCUPANCY" Multiplicity="1" />
           <End Role="USER_" Type="Self.USER_" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="OCCUPANCY">
@@ -460,11 +505,14 @@
           <EntitySet Name="CELEBRATION" EntityType="Self.CELEBRATION" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="COLLECTION_" EntityType="Self.COLLECTION_" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="COPY_" EntityType="Self.COPY_" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EDITORIAL" EntityType="Self.EDITORIAL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FLOOR_" EntityType="Self.FLOOR_" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="FORMAT_" EntityType="Self.FORMAT_" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="GENRE" EntityType="Self.GENRE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="GOAL" EntityType="Self.GOAL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="INSTITUTION" EntityType="Self.INSTITUTION" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LABEL_" EntityType="Self.LABEL_" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LABEL_TYPE" EntityType="Self.LABEL_TYPE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LANGUAGE_" EntityType="Self.LANGUAGE_" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LOAN_BOOKING" EntityType="Self.LOAN_BOOKING" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MANAGER" EntityType="Self.MANAGER" Schema="dbo" store:Type="Tables" />
@@ -481,6 +529,10 @@
             <End Role="ATTENDANCE" EntitySet="ATTENDANCE" />
             <End Role="ACTIVITY" EntitySet="ACTIVITY" />
           </AssociationSet>
+          <AssociationSet Name="fk_area_floor" Association="Self.fk_area_floor">
+            <End Role="FLOOR_" EntitySet="FLOOR_" />
+            <End Role="AREA" EntitySet="AREA" />
+          </AssociationSet>
           <AssociationSet Name="fk_area_manager" Association="Self.fk_area_manager">
             <End Role="MANAGER" EntitySet="MANAGER" />
             <End Role="AREA" EntitySet="AREA" />
@@ -488,14 +540,6 @@
           <AssociationSet Name="fk_attendance_user" Association="Self.fk_attendance_user">
             <End Role="USER_" EntitySet="USER_" />
             <End Role="ATTENDANCE" EntitySet="ATTENDANCE" />
-          </AssociationSet>
-          <AssociationSet Name="fk_celebration_activity" Association="Self.fk_celebration_activity">
-            <End Role="CELEBRATION" EntitySet="CELEBRATION" />
-            <End Role="ACTIVITY" EntitySet="ACTIVITY" />
-          </AssociationSet>
-          <AssociationSet Name="fk_celebration_goal" Association="Self.fk_celebration_goal">
-            <End Role="CELEBRATION" EntitySet="CELEBRATION" />
-            <End Role="GOAL" EntitySet="GOAL" />
           </AssociationSet>
           <AssociationSet Name="fk_collection_copy" Association="Self.fk_collection_copy">
             <End Role="COLLECTION_" EntitySet="COLLECTION_" />
@@ -512,6 +556,10 @@
           <AssociationSet Name="fk_copy_author" Association="Self.fk_copy_author">
             <End Role="COPY_" EntitySet="COPY_" />
             <End Role="AUTHOR" EntitySet="AUTHOR" />
+          </AssociationSet>
+          <AssociationSet Name="fk_copy_editorial" Association="Self.fk_copy_editorial">
+            <End Role="EDITORIAL" EntitySet="EDITORIAL" />
+            <End Role="COPY_" EntitySet="COPY_" />
           </AssociationSet>
           <AssociationSet Name="fk_copy_format" Association="Self.fk_copy_format">
             <End Role="FORMAT_" EntitySet="FORMAT_" />
@@ -532,6 +580,18 @@
           <AssociationSet Name="fk_copy_lxb" Association="Self.fk_copy_lxb">
             <End Role="COPY_" EntitySet="COPY_" />
             <End Role="LOAN_BOOKING" EntitySet="LOAN_BOOKING" />
+          </AssociationSet>
+          <AssociationSet Name="fk_event_activity" Association="Self.fk_event_activity">
+            <End Role="CELEBRATION" EntitySet="CELEBRATION" />
+            <End Role="ACTIVITY" EntitySet="ACTIVITY" />
+          </AssociationSet>
+          <AssociationSet Name="fk_goal_event" Association="Self.fk_goal_event">
+            <End Role="CELEBRATION" EntitySet="CELEBRATION" />
+            <End Role="GOAL" EntitySet="GOAL" />
+          </AssociationSet>
+          <AssociationSet Name="fk_type_label" Association="Self.fk_type_label">
+            <End Role="LABEL_TYPE" EntitySet="LABEL_TYPE" />
+            <End Role="LABEL_" EntitySet="LABEL_" />
           </AssociationSet>
           <AssociationSet Name="fk_user_intitution" Association="Self.fk_user_intitution">
             <End Role="INSTITUTION" EntitySet="INSTITUTION" />
@@ -560,16 +620,12 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="beginning_hour" Type="DateTime" Precision="3" />
-          <Property Name="finishing_hour" Type="DateTime" Precision="3" />
-          <Property Name="beginning_date" Type="DateTime" Precision="3" />
-          <Property Name="finishing_date" Type="DateTime" Precision="3" />
           <Property Name="id_area" Type="Int32" Nullable="false" />
-          <Property Name="id_celebration" Type="Int32" Nullable="false" />
+          <Property Name="id_celebration" Type="Int32" />
           <Property Name="id_attendance" Type="Int32" Nullable="false" />
           <NavigationProperty Name="AREA" Relationship="Self.fk_activity_area" FromRole="ACTIVITY" ToRole="AREA" />
           <NavigationProperty Name="ATTENDANCE" Relationship="Self.fk_activity_attendance" FromRole="ACTIVITY" ToRole="ATTENDANCE" />
-          <NavigationProperty Name="CELEBRATION" Relationship="Self.fk_celebration_activity" FromRole="ACTIVITY" ToRole="CELEBRATION" />
+          <NavigationProperty Name="CELEBRATION" Relationship="Self.fk_event_activity" FromRole="ACTIVITY" ToRole="CELEBRATION" />
         </EntityType>
         <EntityType Name="AREA">
           <Key>
@@ -577,17 +633,19 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="area_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="area_description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="schedule" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="id_manager" Type="Int32" Nullable="false" />
+          <Property Name="area_description" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="schedule" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="id_manager" Type="Int32" />
+          <Property Name="id_floor" Type="Int32" Nullable="false" />
           <NavigationProperty Name="ACTIVITY" Relationship="Self.fk_activity_area" FromRole="AREA" ToRole="ACTIVITY" />
+          <NavigationProperty Name="FLOOR_" Relationship="Self.fk_area_floor" FromRole="AREA" ToRole="FLOOR_" />
           <NavigationProperty Name="MANAGER" Relationship="Self.fk_area_manager" FromRole="AREA" ToRole="MANAGER" />
         </EntityType>
         <EntityType Name="ATTENDANCE">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="entrance_date" Type="DateTime" Precision="3" />
           <Property Name="exit_date" Type="DateTime" Precision="3" />
           <Property Name="entarance_hour" Type="DateTime" Precision="3" />
@@ -611,23 +669,23 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="picture" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="picture" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="attendance" Type="Int32" />
           <Property Name="beginning_hour" Type="DateTime" Precision="3" />
           <Property Name="finishing_hour" Type="DateTime" Precision="3" />
           <Property Name="beginning_date" Type="DateTime" Precision="3" />
           <Property Name="finishing_date" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="ACTIVITY" Relationship="Self.fk_celebration_activity" FromRole="CELEBRATION" ToRole="ACTIVITY" />
-          <NavigationProperty Name="GOAL" Relationship="Self.fk_celebration_goal" FromRole="CELEBRATION" ToRole="GOAL" />
+          <NavigationProperty Name="ACTIVITY" Relationship="Self.fk_event_activity" FromRole="CELEBRATION" ToRole="ACTIVITY" />
+          <NavigationProperty Name="GOAL" Relationship="Self.fk_goal_event" FromRole="CELEBRATION" ToRole="GOAL" />
         </EntityType>
         <EntityType Name="COLLECTION_">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="collection_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="id_type" Type="Int32" Nullable="false" />
-          <Property Name="id_genre" Type="Int32" Nullable="false" />
+          <Property Name="collection_name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_type" Type="Int32" />
+          <Property Name="id_genre" Type="Int32" />
           <NavigationProperty Name="COPY_" Relationship="Self.fk_collection_copy" FromRole="COLLECTION_" ToRole="COPY_" />
           <NavigationProperty Name="GENRE" Relationship="Self.fk_collection_genre" FromRole="COLLECTION_" ToRole="GENRE" />
           <NavigationProperty Name="TYPE_" Relationship="Self.fk_collection_type" FromRole="COLLECTION_" ToRole="TYPE_" />
@@ -638,18 +696,36 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="copy_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="picture" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="release_date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="release_date" Type="DateTime" Precision="3" />
           <Property Name="id_collection" Type="Int32" Nullable="false" />
-          <Property Name="id_language" Type="Int32" Nullable="false" />
-          <Property Name="id_format" Type="Int32" Nullable="false" />
+          <Property Name="id_language" Type="Int32" />
+          <Property Name="id_format" Type="Int32" />
+          <Property Name="id_editorial" Type="Int32" />
           <NavigationProperty Name="AUTHOR" Relationship="Self.fk_copy_author" FromRole="COPY_" ToRole="AUTHOR" />
           <NavigationProperty Name="COLLECTION_" Relationship="Self.fk_collection_copy" FromRole="COPY_" ToRole="COLLECTION_" />
+          <NavigationProperty Name="EDITORIAL" Relationship="Self.fk_copy_editorial" FromRole="COPY_" ToRole="EDITORIAL" />
           <NavigationProperty Name="FORMAT_" Relationship="Self.fk_copy_format" FromRole="COPY_" ToRole="FORMAT_" />
           <NavigationProperty Name="LABEL_" Relationship="Self.fk_copy_label" FromRole="COPY_" ToRole="LABEL_" />
           <NavigationProperty Name="LANGUAGE_" Relationship="Self.fk_copy_language" FromRole="COPY_" ToRole="LANGUAGE_" />
           <NavigationProperty Name="WORDS_LIST" Relationship="Self.fk_copy_list" FromRole="COPY_" ToRole="WORDS_LIST" />
           <NavigationProperty Name="LOAN_BOOKING" Relationship="Self.fk_copy_lxb" FromRole="COPY_" ToRole="LOAN_BOOKING" />
+        </EntityType>
+        <EntityType Name="EDITORIAL">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="editorial_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="COPY_" Relationship="Self.fk_copy_editorial" FromRole="EDITORIAL" ToRole="COPY_" />
+        </EntityType>
+        <EntityType Name="FLOOR_">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="floor_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="AREA" Relationship="Self.fk_area_floor" FromRole="FLOOR_" ToRole="AREA" />
         </EntityType>
         <EntityType Name="FORMAT_">
           <Key>
@@ -672,16 +748,16 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="goal_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="goal_name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="id_celebration" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="CELEBRATION" Relationship="Self.fk_celebration_goal" FromRole="GOAL" ToRole="CELEBRATION" />
+          <NavigationProperty Name="CELEBRATION" Relationship="Self.fk_goal_event" FromRole="GOAL" ToRole="CELEBRATION" />
         </EntityType>
         <EntityType Name="INSTITUTION">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="institution_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="institution_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="USER_" Relationship="Self.fk_user_intitution" FromRole="INSTITUTION" ToRole="USER_" />
         </EntityType>
         <EntityType Name="LABEL_">
@@ -689,9 +765,19 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="label_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="label_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="id_copy" Type="Int32" Nullable="false" />
+          <Property Name="id_label_type" Type="Int32" Nullable="false" />
           <NavigationProperty Name="COPY_" Relationship="Self.fk_copy_label" FromRole="LABEL_" ToRole="COPY_" />
+          <NavigationProperty Name="LABEL_TYPE" Relationship="Self.fk_type_label" FromRole="LABEL_" ToRole="LABEL_TYPE" />
+        </EntityType>
+        <EntityType Name="LABEL_TYPE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="label_name" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="LABEL_" Relationship="Self.fk_type_label" FromRole="LABEL_TYPE" ToRole="LABEL_" />
         </EntityType>
         <EntityType Name="LANGUAGE_">
           <Key>
@@ -705,7 +791,7 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="booking_date" Type="DateTime" Precision="3" />
           <Property Name="booking_hour" Type="DateTime" Precision="3" />
           <Property Name="return_date" Type="DateTime" Precision="3" />
@@ -754,12 +840,13 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="user_full_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="username" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="user_address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="phone" Type="String" MaxLength="13" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="picture" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="password" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
           <Property Name="id_occupancy" Type="Int32" Nullable="false" />
           <Property Name="id_institution" Type="Int32" Nullable="false" />
           <Property Name="id_role" Type="Int32" Nullable="false" />
@@ -806,8 +893,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="fk_celebration_activity">
-          <End Role="CELEBRATION" Type="Self.CELEBRATION" Multiplicity="1" />
+        <Association Name="fk_event_activity">
+          <End Role="CELEBRATION" Type="Self.CELEBRATION" Multiplicity="0..1" />
           <End Role="ACTIVITY" Type="Self.ACTIVITY" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CELEBRATION">
@@ -818,10 +905,22 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="fk_area_manager">
-          <End Role="MANAGER" Type="Self.MANAGER" Multiplicity="1">
+        <Association Name="fk_area_floor">
+          <End Role="FLOOR_" Type="Self.FLOOR_" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
+          <End Role="AREA" Type="Self.AREA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FLOOR_">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="AREA">
+              <PropertyRef Name="id_floor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_area_manager">
+          <End Role="MANAGER" Type="Self.MANAGER" Multiplicity="0..1" />
           <End Role="AREA" Type="Self.AREA" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="MANAGER">
@@ -847,9 +946,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_copy_author">
-          <End Role="COPY_" Type="Self.COPY_" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="COPY_" Type="Self.COPY_" Multiplicity="1" />
           <End Role="AUTHOR" Type="Self.AUTHOR" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="COPY_">
@@ -860,7 +957,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="fk_celebration_goal">
+        <Association Name="fk_goal_event">
           <End Role="CELEBRATION" Type="Self.CELEBRATION" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
@@ -889,9 +986,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_collection_genre">
-          <End Role="GENRE" Type="Self.GENRE" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="GENRE" Type="Self.GENRE" Multiplicity="0..1" />
           <End Role="COLLECTION_" Type="Self.COLLECTION_" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="GENRE">
@@ -903,9 +998,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_collection_type">
-          <End Role="TYPE_" Type="Self.TYPE_" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="TYPE_" Type="Self.TYPE_" Multiplicity="0..1" />
           <End Role="COLLECTION_" Type="Self.COLLECTION_" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TYPE_">
@@ -916,10 +1009,20 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="fk_copy_editorial">
+          <End Role="EDITORIAL" Type="Self.EDITORIAL" Multiplicity="0..1" />
+          <End Role="COPY_" Type="Self.COPY_" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EDITORIAL">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="COPY_">
+              <PropertyRef Name="id_editorial" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="fk_copy_format">
-          <End Role="FORMAT_" Type="Self.FORMAT_" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="FORMAT_" Type="Self.FORMAT_" Multiplicity="0..1" />
           <End Role="COPY_" Type="Self.COPY_" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="FORMAT_">
@@ -945,9 +1048,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_copy_language">
-          <End Role="LANGUAGE_" Type="Self.LANGUAGE_" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="LANGUAGE_" Type="Self.LANGUAGE_" Multiplicity="0..1" />
           <End Role="COPY_" Type="Self.COPY_" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="LANGUAGE_">
@@ -985,9 +1086,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_user_intitution">
-          <End Role="INSTITUTION" Type="Self.INSTITUTION" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="INSTITUTION" Type="Self.INSTITUTION" Multiplicity="1" />
           <End Role="USER_" Type="Self.USER_" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="INSTITUTION">
@@ -995,6 +1094,20 @@
             </Principal>
             <Dependent Role="USER_">
               <PropertyRef Name="id_institution" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_type_label">
+          <End Role="LABEL_TYPE" Type="Self.LABEL_TYPE" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="LABEL_" Type="Self.LABEL_" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LABEL_TYPE">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="LABEL_">
+              <PropertyRef Name="id_label_type" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1013,9 +1126,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_user_occupancy">
-          <End Role="OCCUPANCY" Type="Self.OCCUPANCY" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
+          <End Role="OCCUPANCY" Type="Self.OCCUPANCY" Multiplicity="1" />
           <End Role="USER_" Type="Self.USER_" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="OCCUPANCY">
@@ -1048,11 +1159,14 @@
           <EntitySet Name="CELEBRATION" EntityType="Self.CELEBRATION" />
           <EntitySet Name="COLLECTION_" EntityType="Self.COLLECTION_" />
           <EntitySet Name="COPY_" EntityType="Self.COPY_" />
+          <EntitySet Name="EDITORIAL" EntityType="Self.EDITORIAL" />
+          <EntitySet Name="FLOOR_" EntityType="Self.FLOOR_" />
           <EntitySet Name="FORMAT_" EntityType="Self.FORMAT_" />
           <EntitySet Name="GENRE" EntityType="Self.GENRE" />
           <EntitySet Name="GOAL" EntityType="Self.GOAL" />
           <EntitySet Name="INSTITUTION" EntityType="Self.INSTITUTION" />
           <EntitySet Name="LABEL_" EntityType="Self.LABEL_" />
+          <EntitySet Name="LABEL_TYPE" EntityType="Self.LABEL_TYPE" />
           <EntitySet Name="LANGUAGE_" EntityType="Self.LANGUAGE_" />
           <EntitySet Name="LOAN_BOOKING" EntityType="Self.LOAN_BOOKING" />
           <EntitySet Name="MANAGER" EntityType="Self.MANAGER" />
@@ -1069,9 +1183,13 @@
             <End Role="ATTENDANCE" EntitySet="ATTENDANCE" />
             <End Role="ACTIVITY" EntitySet="ACTIVITY" />
           </AssociationSet>
-          <AssociationSet Name="fk_celebration_activity" Association="Self.fk_celebration_activity">
+          <AssociationSet Name="fk_event_activity" Association="Self.fk_event_activity">
             <End Role="CELEBRATION" EntitySet="CELEBRATION" />
             <End Role="ACTIVITY" EntitySet="ACTIVITY" />
+          </AssociationSet>
+          <AssociationSet Name="fk_area_floor" Association="Self.fk_area_floor">
+            <End Role="FLOOR_" EntitySet="FLOOR_" />
+            <End Role="AREA" EntitySet="AREA" />
           </AssociationSet>
           <AssociationSet Name="fk_area_manager" Association="Self.fk_area_manager">
             <End Role="MANAGER" EntitySet="MANAGER" />
@@ -1085,7 +1203,7 @@
             <End Role="COPY_" EntitySet="COPY_" />
             <End Role="AUTHOR" EntitySet="AUTHOR" />
           </AssociationSet>
-          <AssociationSet Name="fk_celebration_goal" Association="Self.fk_celebration_goal">
+          <AssociationSet Name="fk_goal_event" Association="Self.fk_goal_event">
             <End Role="CELEBRATION" EntitySet="CELEBRATION" />
             <End Role="GOAL" EntitySet="GOAL" />
           </AssociationSet>
@@ -1100,6 +1218,10 @@
           <AssociationSet Name="fk_collection_type" Association="Self.fk_collection_type">
             <End Role="TYPE_" EntitySet="TYPE_" />
             <End Role="COLLECTION_" EntitySet="COLLECTION_" />
+          </AssociationSet>
+          <AssociationSet Name="fk_copy_editorial" Association="Self.fk_copy_editorial">
+            <End Role="EDITORIAL" EntitySet="EDITORIAL" />
+            <End Role="COPY_" EntitySet="COPY_" />
           </AssociationSet>
           <AssociationSet Name="fk_copy_format" Association="Self.fk_copy_format">
             <End Role="FORMAT_" EntitySet="FORMAT_" />
@@ -1125,6 +1247,10 @@
             <End Role="INSTITUTION" EntitySet="INSTITUTION" />
             <End Role="USER_" EntitySet="USER_" />
           </AssociationSet>
+          <AssociationSet Name="fk_type_label" Association="Self.fk_type_label">
+            <End Role="LABEL_TYPE" EntitySet="LABEL_TYPE" />
+            <End Role="LABEL_" EntitySet="LABEL_" />
+          </AssociationSet>
           <AssociationSet Name="fk_user_lxb" Association="Self.fk_user_lxb">
             <End Role="USER_" EntitySet="USER_" />
             <End Role="LOAN_BOOKING" EntitySet="LOAN_BOOKING" />
@@ -1148,10 +1274,6 @@
             <EntityTypeMapping TypeName="BINAES_Model.ACTIVITY">
               <MappingFragment StoreEntitySet="ACTIVITY">
                 <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="beginning_hour" ColumnName="beginning_hour" />
-                <ScalarProperty Name="finishing_hour" ColumnName="finishing_hour" />
-                <ScalarProperty Name="beginning_date" ColumnName="beginning_date" />
-                <ScalarProperty Name="finishing_date" ColumnName="finishing_date" />
                 <ScalarProperty Name="id_area" ColumnName="id_area" />
                 <ScalarProperty Name="id_celebration" ColumnName="id_celebration" />
                 <ScalarProperty Name="id_attendance" ColumnName="id_attendance" />
@@ -1166,6 +1288,7 @@
                 <ScalarProperty Name="area_description" ColumnName="area_description" />
                 <ScalarProperty Name="schedule" ColumnName="schedule" />
                 <ScalarProperty Name="id_manager" ColumnName="id_manager" />
+                <ScalarProperty Name="id_floor" ColumnName="id_floor" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1224,6 +1347,23 @@
                 <ScalarProperty Name="id_collection" ColumnName="id_collection" />
                 <ScalarProperty Name="id_language" ColumnName="id_language" />
                 <ScalarProperty Name="id_format" ColumnName="id_format" />
+                <ScalarProperty Name="id_editorial" ColumnName="id_editorial" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EDITORIAL">
+            <EntityTypeMapping TypeName="BINAES_Model.EDITORIAL">
+              <MappingFragment StoreEntitySet="EDITORIAL">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="editorial_name" ColumnName="editorial_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FLOOR_">
+            <EntityTypeMapping TypeName="BINAES_Model.FLOOR_">
+              <MappingFragment StoreEntitySet="FLOOR_">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="floor_number" ColumnName="floor_number" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1264,8 +1404,17 @@
             <EntityTypeMapping TypeName="BINAES_Model.LABEL_">
               <MappingFragment StoreEntitySet="LABEL_">
                 <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="label_name" ColumnName="label_name" />
+                <ScalarProperty Name="label_code" ColumnName="label_code" />
                 <ScalarProperty Name="id_copy" ColumnName="id_copy" />
+                <ScalarProperty Name="id_label_type" ColumnName="id_label_type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LABEL_TYPE">
+            <EntityTypeMapping TypeName="BINAES_Model.LABEL_TYPE">
+              <MappingFragment StoreEntitySet="LABEL_TYPE">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="label_name" ColumnName="label_name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1328,6 +1477,7 @@
             <EntityTypeMapping TypeName="BINAES_Model.USER_">
               <MappingFragment StoreEntitySet="USER_">
                 <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="user_full_name" ColumnName="user_full_name" />
                 <ScalarProperty Name="username" ColumnName="username" />
                 <ScalarProperty Name="user_address" ColumnName="user_address" />
                 <ScalarProperty Name="phone" ColumnName="phone" />

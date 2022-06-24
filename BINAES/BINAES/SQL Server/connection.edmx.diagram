@@ -4,43 +4,49 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="8c5148bee20b49c3981889cd04a3a503" Name="Diagram1">
-        <EntityTypeShape EntityType="BINAES_Model.ACTIVITY" Width="1.5" PointX="13" PointY="12" IsExpanded="true" />
-        <EntityTypeShape EntityType="BINAES_Model.AREA" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BINAES_Model.ATTENDANCE" Width="1.5" PointX="10.75" PointY="15.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="BINAES_Model.AUTHOR" Width="1.5" PointX="7.5" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="BINAES_Model.CELEBRATION" Width="1.5" PointX="10.75" PointY="12.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="BINAES_Model.COLLECTION_" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="BINAES_Model.COPY_" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="BINAES_Model.FORMAT_" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="BINAES_Model.GENRE" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="BINAES_Model.GOAL" Width="1.5" PointX="13" PointY="16.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="BINAES_Model.INSTITUTION" Width="1.5" PointX="6" PointY="16.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="BINAES_Model.LABEL_" Width="1.5" PointX="7.5" PointY="6.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="BINAES_Model.LANGUAGE_" Width="1.5" PointX="3" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BINAES_Model.LOAN_BOOKING" Width="1.5" PointX="10.5" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BINAES_Model.MANAGER" Width="1.5" PointX="8.5" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="BINAES_Model.OCCUPANCY" Width="1.5" PointX="6" PointY="18.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="BINAES_Model.ROLE_" Width="1.5" PointX="6" PointY="20.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="BINAES_Model.TYPE_" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="BINAES_Model.USER_" Width="1.5" PointX="8.25" PointY="17.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="BINAES_Model.WORDS_LIST" Width="1.5" PointX="7.5" PointY="12.875" IsExpanded="true" />
+      <Diagram DiagramId="371d9ed920c04d8fb69ed6d1e6dd84d8" Name="Diagram1">
+        <EntityTypeShape EntityType="BINAES_Model.ACTIVITY" Width="1.5" PointX="10.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BINAES_Model.AREA" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BINAES_Model.ATTENDANCE" Width="1.5" PointX="8" PointY="24.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BINAES_Model.AUTHOR" Width="1.5" PointX="7.5" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BINAES_Model.CELEBRATION" Width="1.5" PointX="8" PointY="28" IsExpanded="true" />
+        <EntityTypeShape EntityType="BINAES_Model.COLLECTION_" Width="1.5" PointX="3" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BINAES_Model.COPY_" Width="1.5" PointX="5.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BINAES_Model.EDITORIAL" Width="1.5" PointX="3" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BINAES_Model.FLOOR_" Width="1.5" PointX="5.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BINAES_Model.FORMAT_" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BINAES_Model.GENRE" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BINAES_Model.GOAL" Width="1.5" PointX="10.25" PointY="28.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BINAES_Model.INSTITUTION" Width="1.5" PointX="6" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BINAES_Model.LABEL_" Width="1.5" PointX="7.5" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BINAES_Model.LABEL_TYPE" Width="1.5" PointX="5.25" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BINAES_Model.LANGUAGE_" Width="1.5" PointX="3" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BINAES_Model.LOAN_BOOKING" Width="1.5" PointX="10.5" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BINAES_Model.MANAGER" Width="1.5" PointX="5.75" PointY="24.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BINAES_Model.OCCUPANCY" Width="1.5" PointX="6" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BINAES_Model.ROLE_" Width="1.5" PointX="6" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BINAES_Model.TYPE_" Width="1.5" PointX="0.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BINAES_Model.USER_" Width="1.5" PointX="8.25" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BINAES_Model.WORDS_LIST" Width="1.5" PointX="7.5" PointY="14.125" IsExpanded="true" />
         <AssociationConnector Association="BINAES_Model.fk_activity_area" ManuallyRouted="false" />
         <AssociationConnector Association="BINAES_Model.fk_activity_attendance" ManuallyRouted="false" />
-        <AssociationConnector Association="BINAES_Model.fk_celebration_activity" ManuallyRouted="false" />
+        <AssociationConnector Association="BINAES_Model.fk_event_activity" ManuallyRouted="false" />
+        <AssociationConnector Association="BINAES_Model.fk_area_floor" ManuallyRouted="false" />
         <AssociationConnector Association="BINAES_Model.fk_area_manager" ManuallyRouted="false" />
         <AssociationConnector Association="BINAES_Model.fk_attendance_user" ManuallyRouted="false" />
         <AssociationConnector Association="BINAES_Model.fk_copy_author" ManuallyRouted="false" />
-        <AssociationConnector Association="BINAES_Model.fk_celebration_goal" ManuallyRouted="false" />
+        <AssociationConnector Association="BINAES_Model.fk_goal_event" ManuallyRouted="false" />
         <AssociationConnector Association="BINAES_Model.fk_collection_copy" ManuallyRouted="false" />
         <AssociationConnector Association="BINAES_Model.fk_collection_genre" ManuallyRouted="false" />
         <AssociationConnector Association="BINAES_Model.fk_collection_type" ManuallyRouted="false" />
+        <AssociationConnector Association="BINAES_Model.fk_copy_editorial" ManuallyRouted="false" />
         <AssociationConnector Association="BINAES_Model.fk_copy_format" ManuallyRouted="false" />
         <AssociationConnector Association="BINAES_Model.fk_copy_label" ManuallyRouted="false" />
         <AssociationConnector Association="BINAES_Model.fk_copy_language" ManuallyRouted="false" />
         <AssociationConnector Association="BINAES_Model.fk_copy_list" ManuallyRouted="false" />
         <AssociationConnector Association="BINAES_Model.fk_copy_lxb" ManuallyRouted="false" />
         <AssociationConnector Association="BINAES_Model.fk_user_intitution" ManuallyRouted="false" />
+        <AssociationConnector Association="BINAES_Model.fk_type_label" ManuallyRouted="false" />
         <AssociationConnector Association="BINAES_Model.fk_user_lxb" ManuallyRouted="false" />
         <AssociationConnector Association="BINAES_Model.fk_user_occupancy" ManuallyRouted="false" />
         <AssociationConnector Association="BINAES_Model.fk_user_role" ManuallyRouted="false" />

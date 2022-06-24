@@ -76,3 +76,7 @@ C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.Frm_homeManage
 C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Celebrations.resources
 C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Collections.resources
 C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Users.resources
+C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.Frm_homeManagement.resources
+C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Collections.resources
+C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Celebrations.resources
+C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Users.resources

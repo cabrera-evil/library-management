@@ -25,15 +25,17 @@ namespace BINAES.SQL_Server
     
         public int id { get; set; }
         public string copy_name { get; set; }
-        public string picture { get; set; }
-        public System.DateTime release_date { get; set; }
+        public byte[] picture { get; set; }
+        public Nullable<System.DateTime> release_date { get; set; }
         public int id_collection { get; set; }
-        public int id_language { get; set; }
-        public int id_format { get; set; }
+        public Nullable<int> id_language { get; set; }
+        public Nullable<int> id_format { get; set; }
+        public Nullable<int> id_editorial { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AUTHOR> AUTHOR { get; set; }
         public virtual COLLECTION_ COLLECTION_ { get; set; }
+        public virtual EDITORIAL EDITORIAL { get; set; }
         public virtual FORMAT_ FORMAT_ { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LABEL_> LABEL_ { get; set; }
