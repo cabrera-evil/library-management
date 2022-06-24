@@ -1,11 +1,13 @@
-﻿namespace BINAES.Forms
+﻿using System.ComponentModel;
+
+namespace BINAES
 {
     partial class frm_loans
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -29,653 +31,288 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabMenu = new System.Windows.Forms.TabControl();
-            this.tabReservas = new System.Windows.Forms.TabPage();
-            this.btnCancelarReserva = new System.Windows.Forms.Button();
-            this.btnAceptarReserva = new System.Windows.Forms.Button();
-            this.grbFyHReservasDevo = new System.Windows.Forms.GroupBox();
-            this.dtpfechaDevReserva = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.grbFyHReservas = new System.Windows.Forms.GroupBox();
-            this.dtpfechaMaxReserva = new System.Windows.Forms.DateTimePicker();
-            this.lblFechaMaxReserva = new System.Windows.Forms.Label();
-            this.dtpfechareserva = new System.Windows.Forms.DateTimePicker();
-            this.lblhorareserva = new System.Windows.Forms.Label();
-            this.lblfechareserva = new System.Windows.Forms.Label();
-            this.txtUR = new System.Windows.Forms.TextBox();
-            this.lblUR = new System.Windows.Forms.Label();
-            this.txtNombreUR = new System.Windows.Forms.TextBox();
-            this.txtEjemplarReserva = new System.Windows.Forms.TextBox();
-            this.lblNombreUR = new System.Windows.Forms.Label();
-            this.txtCodigoRes = new System.Windows.Forms.TextBox();
-            this.lblCodigoER = new System.Windows.Forms.Label();
-            this.lblTituloER = new System.Windows.Forms.Label();
-            this.lblTituloReservas = new System.Windows.Forms.Label();
-            this.tabPrestamos = new System.Windows.Forms.TabPage();
-            this.btnCancelarPre = new System.Windows.Forms.Button();
-            this.btnAceptarPres = new System.Windows.Forms.Button();
-            this.grbDevolucionPres = new System.Windows.Forms.GroupBox();
-            this.dtpFechaDevo = new System.Windows.Forms.DateTimePicker();
-            this.lblHoraDevolución = new System.Windows.Forms.Label();
-            this.lblFechaDevo = new System.Windows.Forms.Label();
-            this.grbFechas = new System.Windows.Forms.GroupBox();
-            this.dtpFechaLimite = new System.Windows.Forms.DateTimePicker();
-            this.lblFechaLimite = new System.Windows.Forms.Label();
-            this.dtpFechaPrestamo = new System.Windows.Forms.DateTimePicker();
-            this.lblHora = new System.Windows.Forms.Label();
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.txtUser = new System.Windows.Forms.TextBox();
-            this.lblUser = new System.Windows.Forms.Label();
-            this.txtNombreU = new System.Windows.Forms.TextBox();
-            this.txtTituloE = new System.Windows.Forms.TextBox();
-            this.lblNomU = new System.Windows.Forms.Label();
-            this.txtHistorialPres = new System.Windows.Forms.TextBox();
-            this.lblHistorial = new System.Windows.Forms.Label();
-            this.txtCodigoE = new System.Windows.Forms.TextBox();
-            this.lblCodigo = new System.Windows.Forms.Label();
-            this.lblTituloLibro = new System.Windows.Forms.Label();
-            this.lbltituloPrestamos = new System.Windows.Forms.Label();
-            this.tabMenu.SuspendLayout();
-            this.tabReservas.SuspendLayout();
-            this.grbFyHReservasDevo.SuspendLayout();
-            this.grbFyHReservas.SuspendLayout();
-            this.tabPrestamos.SuspendLayout();
-            this.grbDevolucionPres.SuspendLayout();
-            this.grbFechas.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_loans));
+            this.lblregisterLoans = new System.Windows.Forms.Label();
+            this.lblNameLoans = new System.Windows.Forms.Label();
+            this.lblUserLoans = new System.Windows.Forms.Label();
+            this.lblHistoryLoans = new System.Windows.Forms.Label();
+            this.txtHistoryLoans = new System.Windows.Forms.TextBox();
+            this.grbDateTimeLoans = new System.Windows.Forms.GroupBox();
+            this.txtHourLoans = new System.Windows.Forms.TextBox();
+            this.dtpDateTimeLoans = new System.Windows.Forms.DateTimePicker();
+            this.lblHourLoans = new System.Windows.Forms.Label();
+            this.lblDateLoans = new System.Windows.Forms.Label();
+            this.grbReturnLoans = new System.Windows.Forms.GroupBox();
+            this.txtHourReturnLoans = new System.Windows.Forms.TextBox();
+            this.dtpReturnLoans = new System.Windows.Forms.DateTimePicker();
+            this.lblHourReturnLoans = new System.Windows.Forms.Label();
+            this.lblReturnLoans = new System.Windows.Forms.Label();
+            this.btnAcceptLoans = new System.Windows.Forms.Button();
+            this.btnCancelLoans = new System.Windows.Forms.Button();
+            this.txtNameLoans = new System.Windows.Forms.TextBox();
+            this.txtUserLoans = new System.Windows.Forms.TextBox();
+            this.grbDateTimeLoans.SuspendLayout();
+            this.grbReturnLoans.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabMenu
-            // 
-            this.tabMenu.Controls.Add(this.tabReservas);
-            this.tabMenu.Controls.Add(this.tabPrestamos);
-            this.tabMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabMenu.Location = new System.Drawing.Point(0, 0);
-            this.tabMenu.Name = "tabMenu";
-            this.tabMenu.SelectedIndex = 0;
-            this.tabMenu.Size = new System.Drawing.Size(1006, 414);
-            this.tabMenu.TabIndex = 0;
-            // 
-            // tabReservas
-            // 
-            this.tabReservas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tabReservas.Controls.Add(this.btnCancelarReserva);
-            this.tabReservas.Controls.Add(this.btnAceptarReserva);
-            this.tabReservas.Controls.Add(this.grbFyHReservasDevo);
-            this.tabReservas.Controls.Add(this.grbFyHReservas);
-            this.tabReservas.Controls.Add(this.txtUR);
-            this.tabReservas.Controls.Add(this.lblUR);
-            this.tabReservas.Controls.Add(this.txtNombreUR);
-            this.tabReservas.Controls.Add(this.txtEjemplarReserva);
-            this.tabReservas.Controls.Add(this.lblNombreUR);
-            this.tabReservas.Controls.Add(this.txtCodigoRes);
-            this.tabReservas.Controls.Add(this.lblCodigoER);
-            this.tabReservas.Controls.Add(this.lblTituloER);
-            this.tabReservas.Controls.Add(this.lblTituloReservas);
-            this.tabReservas.Location = new System.Drawing.Point(4, 25);
-            this.tabReservas.Name = "tabReservas";
-            this.tabReservas.Padding = new System.Windows.Forms.Padding(3);
-            this.tabReservas.Size = new System.Drawing.Size(998, 385);
-            this.tabReservas.TabIndex = 0;
-            this.tabReservas.Text = "Reservas";
-            // 
-            // btnCancelarReserva
-            // 
-            this.btnCancelarReserva.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnCancelarReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelarReserva.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarReserva.Location = new System.Drawing.Point(880, 328);
-            this.btnCancelarReserva.Name = "btnCancelarReserva";
-            this.btnCancelarReserva.Size = new System.Drawing.Size(95, 31);
-            this.btnCancelarReserva.TabIndex = 35;
-            this.btnCancelarReserva.Text = "Cancel";
-            this.btnCancelarReserva.UseVisualStyleBackColor = false;
-            // 
-            // btnAceptarReserva
-            // 
-            this.btnAceptarReserva.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnAceptarReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAceptarReserva.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptarReserva.Location = new System.Drawing.Point(765, 328);
-            this.btnAceptarReserva.Name = "btnAceptarReserva";
-            this.btnAceptarReserva.Size = new System.Drawing.Size(95, 31);
-            this.btnAceptarReserva.TabIndex = 34;
-            this.btnAceptarReserva.Text = "Accept";
-            this.btnAceptarReserva.UseVisualStyleBackColor = false;
-            // 
-            // grbFyHReservasDevo
-            // 
-            this.grbFyHReservasDevo.Controls.Add(this.dtpfechaDevReserva);
-            this.grbFyHReservasDevo.Controls.Add(this.label3);
-            this.grbFyHReservasDevo.Controls.Add(this.label7);
-            this.grbFyHReservasDevo.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbFyHReservasDevo.ForeColor = System.Drawing.Color.LightGray;
-            this.grbFyHReservasDevo.Location = new System.Drawing.Point(379, 219);
-            this.grbFyHReservasDevo.Name = "grbFyHReservasDevo";
-            this.grbFyHReservasDevo.Size = new System.Drawing.Size(358, 140);
-            this.grbFyHReservasDevo.TabIndex = 33;
-            this.grbFyHReservasDevo.TabStop = false;
-            this.grbFyHReservasDevo.Text = "Return date:";
-            // 
-            // dtpfechaDevReserva
-            // 
-            this.dtpfechaDevReserva.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpfechaDevReserva.CalendarMonthBackground = System.Drawing.Color.LightGray;
-            this.dtpfechaDevReserva.CustomFormat = "";
-            this.dtpfechaDevReserva.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dtpfechaDevReserva.Location = new System.Drawing.Point(66, 51);
-            this.dtpfechaDevReserva.Name = "dtpfechaDevReserva";
-            this.dtpfechaDevReserva.Size = new System.Drawing.Size(278, 23);
-            this.dtpfechaDevReserva.TabIndex = 28;
-            this.dtpfechaDevReserva.Value = new System.DateTime(2022, 6, 23, 7, 33, 50, 0);
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(4, 84);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 26);
-            this.label3.TabIndex = 29;
-            this.label3.Text = "Hour:";
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(4, 51);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 26);
-            this.label7.TabIndex = 27;
-            this.label7.Text = "Date:";
-            // 
-            // grbFyHReservas
-            // 
-            this.grbFyHReservas.Controls.Add(this.dtpfechaMaxReserva);
-            this.grbFyHReservas.Controls.Add(this.lblFechaMaxReserva);
-            this.grbFyHReservas.Controls.Add(this.dtpfechareserva);
-            this.grbFyHReservas.Controls.Add(this.lblhorareserva);
-            this.grbFyHReservas.Controls.Add(this.lblfechareserva);
-            this.grbFyHReservas.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbFyHReservas.ForeColor = System.Drawing.Color.LightGray;
-            this.grbFyHReservas.Location = new System.Drawing.Point(9, 219);
-            this.grbFyHReservas.Name = "grbFyHReservas";
-            this.grbFyHReservas.Size = new System.Drawing.Size(352, 140);
-            this.grbFyHReservas.TabIndex = 32;
-            this.grbFyHReservas.TabStop = false;
-            this.grbFyHReservas.Text = "Date and time:";
-            // 
-            // dtpfechaMaxReserva
-            // 
-            this.dtpfechaMaxReserva.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpfechaMaxReserva.CalendarMonthBackground = System.Drawing.Color.LightGray;
-            this.dtpfechaMaxReserva.CustomFormat = "";
-            this.dtpfechaMaxReserva.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dtpfechaMaxReserva.Location = new System.Drawing.Point(68, 92);
-            this.dtpfechaMaxReserva.Name = "dtpfechaMaxReserva";
-            this.dtpfechaMaxReserva.Size = new System.Drawing.Size(278, 23);
-            this.dtpfechaMaxReserva.TabIndex = 26;
-            this.dtpfechaMaxReserva.Value = new System.DateTime(2022, 6, 23, 7, 33, 50, 0);
-            // 
-            // lblFechaMaxReserva
-            // 
-            this.lblFechaMaxReserva.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaMaxReserva.Location = new System.Drawing.Point(6, 92);
-            this.lblFechaMaxReserva.Name = "lblFechaMaxReserva";
-            this.lblFechaMaxReserva.Size = new System.Drawing.Size(56, 26);
-            this.lblFechaMaxReserva.TabIndex = 25;
-            this.lblFechaMaxReserva.Text = "Date:";
-            // 
-            // dtpfechareserva
-            // 
-            this.dtpfechareserva.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpfechareserva.CalendarMonthBackground = System.Drawing.Color.LightGray;
-            this.dtpfechareserva.CustomFormat = "";
-            this.dtpfechareserva.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dtpfechareserva.Location = new System.Drawing.Point(68, 30);
-            this.dtpfechareserva.Name = "dtpfechareserva";
-            this.dtpfechareserva.Size = new System.Drawing.Size(278, 23);
-            this.dtpfechareserva.TabIndex = 23;
-            this.dtpfechareserva.Value = new System.DateTime(2022, 6, 23, 7, 33, 50, 0);
-            // 
-            // lblhorareserva
-            // 
-            this.lblhorareserva.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblhorareserva.Location = new System.Drawing.Point(6, 63);
-            this.lblhorareserva.Name = "lblhorareserva";
-            this.lblhorareserva.Size = new System.Drawing.Size(56, 26);
-            this.lblhorareserva.TabIndex = 24;
-            this.lblhorareserva.Text = "Time:";
-            // 
-            // lblfechareserva
-            // 
-            this.lblfechareserva.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblfechareserva.Location = new System.Drawing.Point(6, 30);
-            this.lblfechareserva.Name = "lblfechareserva";
-            this.lblfechareserva.Size = new System.Drawing.Size(56, 26);
-            this.lblfechareserva.TabIndex = 23;
-            this.lblfechareserva.Text = "Date:";
-            // 
-            // txtUR
-            // 
-            this.txtUR.BackColor = System.Drawing.Color.Silver;
-            this.txtUR.Location = new System.Drawing.Point(178, 78);
-            this.txtUR.Name = "txtUR";
-            this.txtUR.Size = new System.Drawing.Size(393, 22);
-            this.txtUR.TabIndex = 31;
-            // 
-            // lblUR
-            // 
-            this.lblUR.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUR.ForeColor = System.Drawing.Color.LightGray;
-            this.lblUR.Location = new System.Drawing.Point(9, 74);
-            this.lblUR.Name = "lblUR";
-            this.lblUR.Size = new System.Drawing.Size(209, 26);
-            this.lblUR.TabIndex = 30;
-            this.lblUR.Text = "Username:";
-            // 
-            // txtNombreUR
-            // 
-            this.txtNombreUR.BackColor = System.Drawing.Color.LightGray;
-            this.txtNombreUR.Location = new System.Drawing.Point(178, 44);
-            this.txtNombreUR.Name = "txtNombreUR";
-            this.txtNombreUR.Size = new System.Drawing.Size(393, 22);
-            this.txtNombreUR.TabIndex = 29;
-            // 
-            // txtEjemplarReserva
-            // 
-            this.txtEjemplarReserva.BackColor = System.Drawing.Color.LightGray;
-            this.txtEjemplarReserva.Location = new System.Drawing.Point(179, 111);
-            this.txtEjemplarReserva.Name = "txtEjemplarReserva";
-            this.txtEjemplarReserva.Size = new System.Drawing.Size(393, 22);
-            this.txtEjemplarReserva.TabIndex = 28;
-            // 
-            // lblNombreUR
-            // 
-            this.lblNombreUR.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreUR.ForeColor = System.Drawing.Color.LightGray;
-            this.lblNombreUR.Location = new System.Drawing.Point(9, 41);
-            this.lblNombreUR.Name = "lblNombreUR";
-            this.lblNombreUR.Size = new System.Drawing.Size(209, 26);
-            this.lblNombreUR.TabIndex = 27;
-            this.lblNombreUR.Text = "Full name:";
-            // 
-            // txtCodigoRes
-            // 
-            this.txtCodigoRes.BackColor = System.Drawing.Color.LightGray;
-            this.txtCodigoRes.Location = new System.Drawing.Point(179, 145);
-            this.txtCodigoRes.Name = "txtCodigoRes";
-            this.txtCodigoRes.Size = new System.Drawing.Size(393, 22);
-            this.txtCodigoRes.TabIndex = 24;
-            // 
-            // lblCodigoER
-            // 
-            this.lblCodigoER.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoER.ForeColor = System.Drawing.Color.LightGray;
-            this.lblCodigoER.Location = new System.Drawing.Point(9, 141);
-            this.lblCodigoER.Name = "lblCodigoER";
-            this.lblCodigoER.Size = new System.Drawing.Size(209, 26);
-            this.lblCodigoER.TabIndex = 23;
-            this.lblCodigoER.Text = "Code:";
-            // 
-            // lblTituloER
-            // 
-            this.lblTituloER.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloER.ForeColor = System.Drawing.Color.LightGray;
-            this.lblTituloER.Location = new System.Drawing.Point(9, 107);
-            this.lblTituloER.Name = "lblTituloER";
-            this.lblTituloER.Size = new System.Drawing.Size(209, 26);
-            this.lblTituloER.TabIndex = 22;
-            this.lblTituloER.Text = "Library services´ loan:";
-            // 
-            // lblTituloReservas
-            // 
-            this.lblTituloReservas.Font = new System.Drawing.Font("Perpetua Titling MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloReservas.ForeColor = System.Drawing.Color.LightGray;
-            this.lblTituloReservas.Location = new System.Drawing.Point(328, 13);
-            this.lblTituloReservas.Name = "lblTituloReservas";
-            this.lblTituloReservas.Size = new System.Drawing.Size(441, 28);
-            this.lblTituloReservas.TabIndex = 21;
-            this.lblTituloReservas.Text = "REGISTER OF RESERVATIONS:";
-            // 
-            // tabPrestamos
-            // 
-            this.tabPrestamos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tabPrestamos.Controls.Add(this.btnCancelarPre);
-            this.tabPrestamos.Controls.Add(this.btnAceptarPres);
-            this.tabPrestamos.Controls.Add(this.grbDevolucionPres);
-            this.tabPrestamos.Controls.Add(this.grbFechas);
-            this.tabPrestamos.Controls.Add(this.txtUser);
-            this.tabPrestamos.Controls.Add(this.lblUser);
-            this.tabPrestamos.Controls.Add(this.txtNombreU);
-            this.tabPrestamos.Controls.Add(this.txtTituloE);
-            this.tabPrestamos.Controls.Add(this.lblNomU);
-            this.tabPrestamos.Controls.Add(this.txtHistorialPres);
-            this.tabPrestamos.Controls.Add(this.lblHistorial);
-            this.tabPrestamos.Controls.Add(this.txtCodigoE);
-            this.tabPrestamos.Controls.Add(this.lblCodigo);
-            this.tabPrestamos.Controls.Add(this.lblTituloLibro);
-            this.tabPrestamos.Controls.Add(this.lbltituloPrestamos);
-            this.tabPrestamos.Location = new System.Drawing.Point(4, 25);
-            this.tabPrestamos.Name = "tabPrestamos";
-            this.tabPrestamos.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPrestamos.Size = new System.Drawing.Size(998, 385);
-            this.tabPrestamos.TabIndex = 1;
-            this.tabPrestamos.Text = "Prestamos";
-            // 
-            // btnCancelarPre
-            // 
-            this.btnCancelarPre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnCancelarPre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelarPre.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarPre.Location = new System.Drawing.Point(837, 348);
-            this.btnCancelarPre.Name = "btnCancelarPre";
-            this.btnCancelarPre.Size = new System.Drawing.Size(95, 31);
-            this.btnCancelarPre.TabIndex = 28;
-            this.btnCancelarPre.Text = "Cancel";
-            this.btnCancelarPre.UseVisualStyleBackColor = false;
-            // 
-            // btnAceptarPres
-            // 
-            this.btnAceptarPres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnAceptarPres.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAceptarPres.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptarPres.Location = new System.Drawing.Point(663, 348);
-            this.btnAceptarPres.Name = "btnAceptarPres";
-            this.btnAceptarPres.Size = new System.Drawing.Size(95, 31);
-            this.btnAceptarPres.TabIndex = 27;
-            this.btnAceptarPres.Text = "Accept";
-            this.btnAceptarPres.UseVisualStyleBackColor = false;
-            // 
-            // grbDevolucionPres
-            // 
-            this.grbDevolucionPres.Controls.Add(this.dtpFechaDevo);
-            this.grbDevolucionPres.Controls.Add(this.lblHoraDevolución);
-            this.grbDevolucionPres.Controls.Add(this.lblFechaDevo);
-            this.grbDevolucionPres.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbDevolucionPres.ForeColor = System.Drawing.Color.LightGray;
-            this.grbDevolucionPres.Location = new System.Drawing.Point(618, 191);
-            this.grbDevolucionPres.Name = "grbDevolucionPres";
-            this.grbDevolucionPres.Size = new System.Drawing.Size(350, 153);
-            this.grbDevolucionPres.TabIndex = 22;
-            this.grbDevolucionPres.TabStop = false;
-            this.grbDevolucionPres.Text = "Return date:";
-            // 
-            // dtpFechaDevo
-            // 
-            this.dtpFechaDevo.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaDevo.CustomFormat = "";
-            this.dtpFechaDevo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dtpFechaDevo.Location = new System.Drawing.Point(66, 51);
-            this.dtpFechaDevo.Name = "dtpFechaDevo";
-            this.dtpFechaDevo.Size = new System.Drawing.Size(278, 23);
-            this.dtpFechaDevo.TabIndex = 28;
-            this.dtpFechaDevo.Value = new System.DateTime(2022, 6, 23, 7, 33, 50, 0);
-            // 
-            // lblHoraDevolución
-            // 
-            this.lblHoraDevolución.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHoraDevolución.Location = new System.Drawing.Point(4, 84);
-            this.lblHoraDevolución.Name = "lblHoraDevolución";
-            this.lblHoraDevolución.Size = new System.Drawing.Size(56, 26);
-            this.lblHoraDevolución.TabIndex = 29;
-            this.lblHoraDevolución.Text = "Hour:";
-            // 
-            // lblFechaDevo
-            // 
-            this.lblFechaDevo.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaDevo.Location = new System.Drawing.Point(4, 51);
-            this.lblFechaDevo.Name = "lblFechaDevo";
-            this.lblFechaDevo.Size = new System.Drawing.Size(56, 26);
-            this.lblFechaDevo.TabIndex = 27;
-            this.lblFechaDevo.Text = "Date:";
-            // 
-            // grbFechas
-            // 
-            this.grbFechas.Controls.Add(this.dtpFechaLimite);
-            this.grbFechas.Controls.Add(this.lblFechaLimite);
-            this.grbFechas.Controls.Add(this.dtpFechaPrestamo);
-            this.grbFechas.Controls.Add(this.lblHora);
-            this.grbFechas.Controls.Add(this.lblFecha);
-            this.grbFechas.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbFechas.ForeColor = System.Drawing.Color.LightGray;
-            this.grbFechas.Location = new System.Drawing.Point(616, 45);
-            this.grbFechas.Name = "grbFechas";
-            this.grbFechas.Size = new System.Drawing.Size(352, 140);
-            this.grbFechas.TabIndex = 21;
-            this.grbFechas.TabStop = false;
-            this.grbFechas.Text = "Date and time:";
-            // 
-            // dtpFechaLimite
-            // 
-            this.dtpFechaLimite.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaLimite.CustomFormat = "";
-            this.dtpFechaLimite.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dtpFechaLimite.Location = new System.Drawing.Point(68, 92);
-            this.dtpFechaLimite.Name = "dtpFechaLimite";
-            this.dtpFechaLimite.Size = new System.Drawing.Size(278, 23);
-            this.dtpFechaLimite.TabIndex = 26;
-            this.dtpFechaLimite.Value = new System.DateTime(2022, 6, 23, 7, 33, 50, 0);
-            // 
-            // lblFechaLimite
-            // 
-            this.lblFechaLimite.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaLimite.Location = new System.Drawing.Point(6, 92);
-            this.lblFechaLimite.Name = "lblFechaLimite";
-            this.lblFechaLimite.Size = new System.Drawing.Size(56, 26);
-            this.lblFechaLimite.TabIndex = 25;
-            this.lblFechaLimite.Text = "Date:";
-            // 
-            // dtpFechaPrestamo
-            // 
-            this.dtpFechaPrestamo.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaPrestamo.CustomFormat = "";
-            this.dtpFechaPrestamo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dtpFechaPrestamo.Location = new System.Drawing.Point(68, 30);
-            this.dtpFechaPrestamo.Name = "dtpFechaPrestamo";
-            this.dtpFechaPrestamo.Size = new System.Drawing.Size(278, 23);
-            this.dtpFechaPrestamo.TabIndex = 23;
-            this.dtpFechaPrestamo.Value = new System.DateTime(2022, 6, 23, 7, 33, 50, 0);
-            // 
-            // lblHora
-            // 
-            this.lblHora.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.Location = new System.Drawing.Point(6, 63);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(56, 26);
-            this.lblHora.TabIndex = 24;
-            this.lblHora.Text = "Hour:";
-            // 
-            // lblFecha
-            // 
-            this.lblFecha.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(6, 30);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(56, 26);
-            this.lblFecha.TabIndex = 23;
-            this.lblFecha.Text = "Date:";
-            // 
-            // txtUser
-            // 
-            this.txtUser.BackColor = System.Drawing.Color.LightGray;
-            this.txtUser.Location = new System.Drawing.Point(177, 79);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(393, 22);
-            this.txtUser.TabIndex = 20;
-            // 
-            // lblUser
-            // 
-            this.lblUser.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.ForeColor = System.Drawing.Color.LightGray;
-            this.lblUser.Location = new System.Drawing.Point(8, 75);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(209, 26);
-            this.lblUser.TabIndex = 19;
-            this.lblUser.Text = "Username:";
-            // 
-            // txtNombreU
-            // 
-            this.txtNombreU.BackColor = System.Drawing.Color.LightGray;
-            this.txtNombreU.Location = new System.Drawing.Point(177, 45);
-            this.txtNombreU.Name = "txtNombreU";
-            this.txtNombreU.Size = new System.Drawing.Size(393, 22);
-            this.txtNombreU.TabIndex = 18;
-            // 
-            // txtTituloE
-            // 
-            this.txtTituloE.BackColor = System.Drawing.Color.LightGray;
-            this.txtTituloE.Location = new System.Drawing.Point(178, 112);
-            this.txtTituloE.Name = "txtTituloE";
-            this.txtTituloE.Size = new System.Drawing.Size(393, 22);
-            this.txtTituloE.TabIndex = 16;
-            // 
-            // lblNomU
-            // 
-            this.lblNomU.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomU.ForeColor = System.Drawing.Color.LightGray;
-            this.lblNomU.Location = new System.Drawing.Point(8, 42);
-            this.lblNomU.Name = "lblNomU";
-            this.lblNomU.Size = new System.Drawing.Size(209, 26);
-            this.lblNomU.TabIndex = 15;
-            this.lblNomU.Text = "Full name:";
-            // 
-            // txtHistorialPres
-            // 
-            this.txtHistorialPres.BackColor = System.Drawing.Color.LightGray;
-            this.txtHistorialPres.Location = new System.Drawing.Point(7, 254);
-            this.txtHistorialPres.Multiline = true;
-            this.txtHistorialPres.Name = "txtHistorialPres";
-            this.txtHistorialPres.Size = new System.Drawing.Size(563, 123);
-            this.txtHistorialPres.TabIndex = 14;
-            // 
-            // lblHistorial
-            // 
-            this.lblHistorial.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHistorial.ForeColor = System.Drawing.Color.LightGray;
-            this.lblHistorial.Location = new System.Drawing.Point(8, 225);
-            this.lblHistorial.Name = "lblHistorial";
-            this.lblHistorial.Size = new System.Drawing.Size(209, 26);
-            this.lblHistorial.TabIndex = 13;
-            this.lblHistorial.Text = "Library Loan history:";
-            // 
-            // txtCodigoE
-            // 
-            this.txtCodigoE.BackColor = System.Drawing.Color.LightGray;
-            this.txtCodigoE.Location = new System.Drawing.Point(178, 146);
-            this.txtCodigoE.Name = "txtCodigoE";
-            this.txtCodigoE.Size = new System.Drawing.Size(393, 22);
-            this.txtCodigoE.TabIndex = 11;
-            // 
-            // lblCodigo
-            // 
-            this.lblCodigo.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.ForeColor = System.Drawing.Color.LightGray;
-            this.lblCodigo.Location = new System.Drawing.Point(8, 142);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(209, 26);
-            this.lblCodigo.TabIndex = 10;
-            this.lblCodigo.Text = "Code:";
-            // 
-            // lblTituloLibro
-            // 
-            this.lblTituloLibro.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloLibro.ForeColor = System.Drawing.Color.LightGray;
-            this.lblTituloLibro.Location = new System.Drawing.Point(8, 108);
-            this.lblTituloLibro.Name = "lblTituloLibro";
-            this.lblTituloLibro.Size = new System.Drawing.Size(209, 26);
-            this.lblTituloLibro.TabIndex = 5;
-            this.lblTituloLibro.Text = "Library services´ loan:";
-            // 
-            // lbltituloPrestamos
-            // 
-            this.lbltituloPrestamos.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltituloPrestamos.ForeColor = System.Drawing.Color.LightGray;
-            this.lbltituloPrestamos.Location = new System.Drawing.Point(7, 14);
-            this.lbltituloPrestamos.Name = "lbltituloPrestamos";
-            this.lbltituloPrestamos.Size = new System.Drawing.Size(266, 28);
-            this.lbltituloPrestamos.TabIndex = 0;
-            this.lbltituloPrestamos.Text = "REGISTER OF LOANS:";
-            // 
-            // frmPrestamos
+            // lblregisterLoans
+            // 
+            this.lblregisterLoans.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblregisterLoans.ForeColor = System.Drawing.Color.LightGray;
+            this.lblregisterLoans.Location = new System.Drawing.Point(12, 9);
+            this.lblregisterLoans.Name = "lblregisterLoans";
+            this.lblregisterLoans.Size = new System.Drawing.Size(232, 23);
+            this.lblregisterLoans.TabIndex = 0;
+            this.lblregisterLoans.Text = "REGISTER OF LOANS:";
+            // 
+            // lblNameLoans
+            // 
+            this.lblNameLoans.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameLoans.ForeColor = System.Drawing.Color.LightGray;
+            this.lblNameLoans.Location = new System.Drawing.Point(12, 48);
+            this.lblNameLoans.Name = "lblNameLoans";
+            this.lblNameLoans.Size = new System.Drawing.Size(120, 23);
+            this.lblNameLoans.TabIndex = 1;
+            this.lblNameLoans.Text = "Full name:";
+            // 
+            // lblUserLoans
+            // 
+            this.lblUserLoans.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserLoans.ForeColor = System.Drawing.Color.LightGray;
+            this.lblUserLoans.Location = new System.Drawing.Point(12, 82);
+            this.lblUserLoans.Name = "lblUserLoans";
+            this.lblUserLoans.Size = new System.Drawing.Size(120, 23);
+            this.lblUserLoans.TabIndex = 2;
+            this.lblUserLoans.Text = "Username:";
+            // 
+            // lblHistoryLoans
+            // 
+            this.lblHistoryLoans.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHistoryLoans.ForeColor = System.Drawing.Color.LightGray;
+            this.lblHistoryLoans.Location = new System.Drawing.Point(12, 123);
+            this.lblHistoryLoans.Name = "lblHistoryLoans";
+            this.lblHistoryLoans.Size = new System.Drawing.Size(182, 30);
+            this.lblHistoryLoans.TabIndex = 3;
+            this.lblHistoryLoans.Text = "Library Loan history:";
+            // 
+            // txtHistoryLoans
+            // 
+            this.txtHistoryLoans.BackColor = System.Drawing.Color.LightGray;
+            this.txtHistoryLoans.Location = new System.Drawing.Point(12, 151);
+            this.txtHistoryLoans.Multiline = true;
+            this.txtHistoryLoans.Name = "txtHistoryLoans";
+            this.txtHistoryLoans.Size = new System.Drawing.Size(583, 162);
+            this.txtHistoryLoans.TabIndex = 4;
+            // 
+            // grbDateTimeLoans
+            // 
+            this.grbDateTimeLoans.Controls.Add(this.txtHourLoans);
+            this.grbDateTimeLoans.Controls.Add(this.dtpDateTimeLoans);
+            this.grbDateTimeLoans.Controls.Add(this.lblHourLoans);
+            this.grbDateTimeLoans.Controls.Add(this.lblDateLoans);
+            this.grbDateTimeLoans.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbDateTimeLoans.ForeColor = System.Drawing.Color.LightGray;
+            this.grbDateTimeLoans.Location = new System.Drawing.Point(623, 48);
+            this.grbDateTimeLoans.Name = "grbDateTimeLoans";
+            this.grbDateTimeLoans.Size = new System.Drawing.Size(411, 145);
+            this.grbDateTimeLoans.TabIndex = 5;
+            this.grbDateTimeLoans.TabStop = false;
+            this.grbDateTimeLoans.Text = "Date and time:";
+            // 
+            // txtHourLoans
+            // 
+            this.txtHourLoans.BackColor = System.Drawing.Color.LightGray;
+            this.txtHourLoans.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHourLoans.Location = new System.Drawing.Point(64, 69);
+            this.txtHourLoans.Name = "txtHourLoans";
+            this.txtHourLoans.Size = new System.Drawing.Size(329, 26);
+            this.txtHourLoans.TabIndex = 11;
+            // 
+            // dtpDateTimeLoans
+            // 
+            this.dtpDateTimeLoans.CalendarFont = new System.Drawing.Font("Century Gothic", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDateTimeLoans.Location = new System.Drawing.Point(64, 34);
+            this.dtpDateTimeLoans.Name = "dtpDateTimeLoans";
+            this.dtpDateTimeLoans.Size = new System.Drawing.Size(329, 26);
+            this.dtpDateTimeLoans.TabIndex = 9;
+            // 
+            // lblHourLoans
+            // 
+            this.lblHourLoans.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHourLoans.ForeColor = System.Drawing.Color.LightGray;
+            this.lblHourLoans.Location = new System.Drawing.Point(6, 71);
+            this.lblHourLoans.Name = "lblHourLoans";
+            this.lblHourLoans.Size = new System.Drawing.Size(110, 23);
+            this.lblHourLoans.TabIndex = 8;
+            this.lblHourLoans.Text = "Hour:";
+            // 
+            // lblDateLoans
+            // 
+            this.lblDateLoans.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateLoans.ForeColor = System.Drawing.Color.LightGray;
+            this.lblDateLoans.Location = new System.Drawing.Point(6, 34);
+            this.lblDateLoans.Name = "lblDateLoans";
+            this.lblDateLoans.Size = new System.Drawing.Size(110, 23);
+            this.lblDateLoans.TabIndex = 7;
+            this.lblDateLoans.Text = "Date:";
+            // 
+            // grbReturnLoans
+            // 
+            this.grbReturnLoans.Controls.Add(this.txtHourReturnLoans);
+            this.grbReturnLoans.Controls.Add(this.dtpReturnLoans);
+            this.grbReturnLoans.Controls.Add(this.lblHourReturnLoans);
+            this.grbReturnLoans.Controls.Add(this.lblReturnLoans);
+            this.grbReturnLoans.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbReturnLoans.ForeColor = System.Drawing.Color.LightGray;
+            this.grbReturnLoans.Location = new System.Drawing.Point(623, 222);
+            this.grbReturnLoans.Name = "grbReturnLoans";
+            this.grbReturnLoans.Size = new System.Drawing.Size(411, 140);
+            this.grbReturnLoans.TabIndex = 6;
+            this.grbReturnLoans.TabStop = false;
+            this.grbReturnLoans.Text = "Return date:";
+            // 
+            // txtHourReturnLoans
+            // 
+            this.txtHourReturnLoans.BackColor = System.Drawing.Color.LightGray;
+            this.txtHourReturnLoans.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHourReturnLoans.Location = new System.Drawing.Point(64, 73);
+            this.txtHourReturnLoans.Name = "txtHourReturnLoans";
+            this.txtHourReturnLoans.Size = new System.Drawing.Size(329, 26);
+            this.txtHourReturnLoans.TabIndex = 12;
+            // 
+            // dtpReturnLoans
+            // 
+            this.dtpReturnLoans.CalendarFont = new System.Drawing.Font("Century Gothic", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpReturnLoans.Location = new System.Drawing.Point(64, 33);
+            this.dtpReturnLoans.Name = "dtpReturnLoans";
+            this.dtpReturnLoans.Size = new System.Drawing.Size(329, 26);
+            this.dtpReturnLoans.TabIndex = 10;
+            // 
+            // lblHourReturnLoans
+            // 
+            this.lblHourReturnLoans.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHourReturnLoans.ForeColor = System.Drawing.Color.LightGray;
+            this.lblHourReturnLoans.Location = new System.Drawing.Point(6, 73);
+            this.lblHourReturnLoans.Name = "lblHourReturnLoans";
+            this.lblHourReturnLoans.Size = new System.Drawing.Size(110, 23);
+            this.lblHourReturnLoans.TabIndex = 10;
+            this.lblHourReturnLoans.Text = "Hour:";
+            // 
+            // lblReturnLoans
+            // 
+            this.lblReturnLoans.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReturnLoans.ForeColor = System.Drawing.Color.LightGray;
+            this.lblReturnLoans.Location = new System.Drawing.Point(6, 36);
+            this.lblReturnLoans.Name = "lblReturnLoans";
+            this.lblReturnLoans.Size = new System.Drawing.Size(110, 23);
+            this.lblReturnLoans.TabIndex = 9;
+            this.lblReturnLoans.Text = "Date:";
+            // 
+            // btnAcceptLoans
+            // 
+            this.btnAcceptLoans.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAcceptLoans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAcceptLoans.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAcceptLoans.Location = new System.Drawing.Point(61, 345);
+            this.btnAcceptLoans.Name = "btnAcceptLoans";
+            this.btnAcceptLoans.Size = new System.Drawing.Size(133, 40);
+            this.btnAcceptLoans.TabIndex = 7;
+            this.btnAcceptLoans.Text = "Accept";
+            this.btnAcceptLoans.UseVisualStyleBackColor = false;
+            // 
+            // btnCancelLoans
+            // 
+            this.btnCancelLoans.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnCancelLoans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelLoans.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelLoans.Location = new System.Drawing.Point(282, 345);
+            this.btnCancelLoans.Name = "btnCancelLoans";
+            this.btnCancelLoans.Size = new System.Drawing.Size(133, 40);
+            this.btnCancelLoans.TabIndex = 8;
+            this.btnCancelLoans.Text = "Cancel";
+            this.btnCancelLoans.UseVisualStyleBackColor = false;
+            // 
+            // txtNameLoans
+            // 
+            this.txtNameLoans.BackColor = System.Drawing.Color.LightGray;
+            this.txtNameLoans.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameLoans.Location = new System.Drawing.Point(112, 48);
+            this.txtNameLoans.Name = "txtNameLoans";
+            this.txtNameLoans.Size = new System.Drawing.Size(483, 26);
+            this.txtNameLoans.TabIndex = 9;
+            // 
+            // txtUserLoans
+            // 
+            this.txtUserLoans.BackColor = System.Drawing.Color.LightGray;
+            this.txtUserLoans.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserLoans.Location = new System.Drawing.Point(112, 82);
+            this.txtUserLoans.Name = "txtUserLoans";
+            this.txtUserLoans.Size = new System.Drawing.Size(483, 26);
+            this.txtUserLoans.TabIndex = 10;
+            // 
+            // frm_loans
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1006, 414);
-            this.Controls.Add(this.tabMenu);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ClientSize = new System.Drawing.Size(1046, 414);
+            this.Controls.Add(this.txtUserLoans);
+            this.Controls.Add(this.txtNameLoans);
+            this.Controls.Add(this.btnCancelLoans);
+            this.Controls.Add(this.btnAcceptLoans);
+            this.Controls.Add(this.grbReturnLoans);
+            this.Controls.Add(this.grbDateTimeLoans);
+            this.Controls.Add(this.txtHistoryLoans);
+            this.Controls.Add(this.lblHistoryLoans);
+            this.Controls.Add(this.lblUserLoans);
+            this.Controls.Add(this.lblNameLoans);
+            this.Controls.Add(this.lblregisterLoans);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "frmPrestamos";
-            this.Text = "PrestamosReservas";
-            this.tabMenu.ResumeLayout(false);
-            this.tabReservas.ResumeLayout(false);
-            this.tabReservas.PerformLayout();
-            this.grbFyHReservasDevo.ResumeLayout(false);
-            this.grbFyHReservas.ResumeLayout(false);
-            this.tabPrestamos.ResumeLayout(false);
-            this.tabPrestamos.PerformLayout();
-            this.grbDevolucionPres.ResumeLayout(false);
-            this.grbFechas.ResumeLayout(false);
+            this.Name = "frm_loans";
+            this.Text = "Loans";
+            this.grbDateTimeLoans.ResumeLayout(false);
+            this.grbDateTimeLoans.PerformLayout();
+            this.grbReturnLoans.ResumeLayout(false);
+            this.grbReturnLoans.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
         }
 
-        private System.Windows.Forms.Button btnCancelarReserva;
-        private System.Windows.Forms.Button btnAceptarReserva;
-        private System.Windows.Forms.GroupBox grbFyHReservasDevo;
-        private System.Windows.Forms.DateTimePicker dtpfechaDevReserva;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.GroupBox grbFyHReservas;
-        private System.Windows.Forms.DateTimePicker dtpfechaMaxReserva;
-        private System.Windows.Forms.Label lblFechaMaxReserva;
-        private System.Windows.Forms.DateTimePicker dtpfechareserva;
-        private System.Windows.Forms.Label lblhorareserva;
-        private System.Windows.Forms.Label lblfechareserva;
+        private System.Windows.Forms.TextBox txtHourLoans;
 
-        private System.Windows.Forms.TextBox txtUR;
-        private System.Windows.Forms.Label lblUR;
-        private System.Windows.Forms.TextBox txtNombreUR;
-        private System.Windows.Forms.TextBox txtEjemplarReserva;
-        private System.Windows.Forms.Label lblNombreUR;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtCodigoRes;
-        private System.Windows.Forms.Label lblCodigoER;
-        private System.Windows.Forms.Label lblTituloER;
-        private System.Windows.Forms.Label lblTituloReservas;
+        private System.Windows.Forms.TextBox txtHourReturnLoans;
 
-        private System.Windows.Forms.Button btnCancelarPre;
+        private System.Windows.Forms.DateTimePicker dtpDateTimeLoans;
 
-        private System.Windows.Forms.Button btnAceptarPres;
+        private System.Windows.Forms.DateTimePicker dtpReturnLoans;
 
-        private System.Windows.Forms.DateTimePicker dtpFechaDevo;
-        private System.Windows.Forms.Label lblHoraDevolución;
-        private System.Windows.Forms.Label lblFechaDevo;
+        private System.Windows.Forms.TextBox txtUserLoans;
 
-        private System.Windows.Forms.DateTimePicker dtpFechaLimite;
-        private System.Windows.Forms.Label lblFechaLimite;
+        private System.Windows.Forms.TextBox txtNameLoans;
 
-        private System.Windows.Forms.Label lblFecha;
-        private System.Windows.Forms.DateTimePicker dtpFechaPrestamo;
+        private System.Windows.Forms.Label lblHourReturnLoans;
+        private System.Windows.Forms.Label lblReturnLoans;
 
-        private System.Windows.Forms.Label lblHora;
+        private System.Windows.Forms.Button btnCancelLoans;
 
-        private System.Windows.Forms.GroupBox grbDevolucionPres;
+        private System.Windows.Forms.Button btnAcceptLoans;
 
-        private System.Windows.Forms.GroupBox grbFechas;
+        private System.Windows.Forms.Label lblDateLoans;
+        private System.Windows.Forms.Label lblHourLoans;
 
-        private System.Windows.Forms.Label lblNomU;
-        private System.Windows.Forms.TextBox txtTituloE;
-        private System.Windows.Forms.TextBox txtNombreU;
-        private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.GroupBox grbReturnLoans;
 
-        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.GroupBox grbDateTimeLoans;
 
-        private System.Windows.Forms.TextBox txtCodigoE;
-        private System.Windows.Forms.Label lblCodigo;
-        private System.Windows.Forms.Label lblTituloLibro;
-        private System.Windows.Forms.Label lbltituloPrestamos;
-        private System.Windows.Forms.TextBox txtHistorialPres;
+        private System.Windows.Forms.Label lblHistoryLoans;
+        private System.Windows.Forms.TextBox txtHistoryLoans;
 
-        private System.Windows.Forms.Label lblHistorial;
+        private System.Windows.Forms.Label lblUserLoans;
 
-        private System.Windows.Forms.TabControl tabMenu;
-        private System.Windows.Forms.TabPage tabReservas;
-        private System.Windows.Forms.TabPage tabPrestamos;
+        private System.Windows.Forms.Label lblNameLoans;
+
+        private System.Windows.Forms.Label lblregisterLoans;
 
         #endregion
     }
