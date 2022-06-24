@@ -490,6 +490,7 @@ namespace BINAES.UserControls
             this.btn_remove.TabIndex = 3;
             this.btn_remove.Text = "Remove";
             this.btn_remove.UseVisualStyleBackColor = false;
+            this.btn_remove.Click += new System.EventHandler(this.btn_remove_Click);
             // 
             // btn_edit
             // 
@@ -506,6 +507,7 @@ namespace BINAES.UserControls
             this.btn_edit.TabIndex = 2;
             this.btn_edit.Text = "Edit";
             this.btn_edit.UseVisualStyleBackColor = false;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
             // dg_usersDataTable
             // 

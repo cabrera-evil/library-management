@@ -11,44 +11,13 @@ using BINAES.Clases;
 using BINAES.SQL_Server;
 using BINAES.UserControls;
 
-namespace BINAES
+namespace BINAES.UserControls
 {
-    public partial class frm_search : Form
+    public partial class UC_Search : UserControl
     {
-        public frm_search()
+        public UC_Search()
         {
             InitializeComponent();
-        }
-
-        private void addUserControl(UserControl userControl)
-        {
-            userControl.Dock = DockStyle.Fill;
-            pnl_advanced_search.Controls.Clear(); 
-            pnl_advanced_search.Controls.Add(userControl);
-            userControl.BringToFront();
-        }
-
-        private void btn_advanced_tools_Click_1(object sender, EventArgs e)
-        {
-            UC_Advanced_Search panel = new UC_Advanced_Search();
-            addUserControl(panel);
-            /*
-            using (frm_advanced_search window = new frm_advanced_search())
-            {
-                window.ShowDialog();
-                if (window.DialogResult == DialogResult.OK)
-                {
-                    // Searching by full title
-                    if (window.title.Length > 0 && window.keyWords.Length > 0 && window.author.Length > 0 && window.both == true)
-                    {
-                    }
-                    else if (window.title.Length > 0 && window.keyWords.Length > 0 && window.author.Length > 0 && window.digital == true)
-                    {
-                    }
-                    // Searching by partial title
-
-                }
-            }*/
         }
 
         private void btn_search1_Click(object sender, EventArgs e)
@@ -114,18 +83,6 @@ namespace BINAES
                     }
                 }
             }
-        }
-
-        private void btn_borrow_Click(object sender, EventArgs e)
-        {
-            // si el item seleccionado por el usuario no se ha prestado, entonces será enabled
-            // de lo contrario, solo el botón de reservar estará habilitado
-            // abrir formulario para prestar
-        }
-
-        private void btn_reserve_Click(object sender, EventArgs e)
-        {
-            // abrir formulario para reservar
         }
     }
 }
