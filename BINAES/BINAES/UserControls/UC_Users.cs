@@ -70,6 +70,11 @@ namespace BINAES.UserControls
                 using (db_BINAES db = new db_BINAES())
                 {
                     dg_usersDataTable.DataSource = user.show_user();
+                    dg_usersDataTable.Columns.Remove("ATTENDANCE");
+                    dg_usersDataTable.Columns.Remove("INSTITUTION");
+                    dg_usersDataTable.Columns.Remove("LOAN_BOOKING");
+                    dg_usersDataTable.Columns.Remove("OCCUPANCY");
+                    dg_usersDataTable.Columns.Remove("ROLE_");
                 }
                 btn_edit.BackColor = Color.FromArgb(38, 109, 83);
                 btn_remove.BackColor = Color.FromArgb(38, 109, 83);
@@ -80,6 +85,16 @@ namespace BINAES.UserControls
                 MessageBox.Show(ex.Message);
             }
             lock_controllers();
+        }
+
+        private void clear_text()
+        {
+            txt_full_name.Text = "";
+            txt_user.Text = "";
+            txt_address.Text = "";
+            txt_phone.Text = "";
+            txt_email.Text = "";
+            txt_password.Text = "";
         }
 
         private void unlock_controllers()
@@ -156,10 +171,12 @@ namespace BINAES.UserControls
                     }
                 }
                 load_grid();
+                clear_text();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                //Console.WriteLine(e.InnerException.Message);
             }
         }
 
@@ -187,12 +204,7 @@ namespace BINAES.UserControls
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             lock_controllers();
-            txt_full_name.Text = "";
-            txt_user.Text = "";
-            txt_address.Text = "";
-            txt_phone.Text = "";
-            txt_email.Text = "";
-            txt_password.Text = "";
+            clear_text();
         }
     }
 }
