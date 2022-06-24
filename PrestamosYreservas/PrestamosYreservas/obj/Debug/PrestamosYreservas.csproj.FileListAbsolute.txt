@@ -1,0 +1,11 @@
+C:\Users\diana\Desktop\Prestamos\PrestamosYreservas\PrestamosYreservas\bin\Debug\PrestamosYreservas.exe.config
+C:\Users\diana\Desktop\Prestamos\PrestamosYreservas\PrestamosYreservas\bin\Debug\PrestamosYreservas.exe
+C:\Users\diana\Desktop\Prestamos\PrestamosYreservas\PrestamosYreservas\bin\Debug\PrestamosYreservas.pdb
+C:\Users\diana\Desktop\Prestamos\PrestamosYreservas\PrestamosYreservas\obj\Debug\PrestamosYreservas.csproj.AssemblyReference.cache
+C:\Users\diana\Desktop\Prestamos\PrestamosYreservas\PrestamosYreservas\obj\Debug\PrestamosYreservas.csproj.SuggestedBindingRedirects.cache
+C:\Users\diana\Desktop\Prestamos\PrestamosYreservas\PrestamosYreservas\obj\Debug\PrestamosYreservas.Properties.Resources.resources
+C:\Users\diana\Desktop\Prestamos\PrestamosYreservas\PrestamosYreservas\obj\Debug\PrestamosYreservas.csproj.GenerateResource.cache
+C:\Users\diana\Desktop\Prestamos\PrestamosYreservas\PrestamosYreservas\obj\Debug\PrestamosYreservas.csproj.CoreCompileInputs.cache
+C:\Users\diana\Desktop\Prestamos\PrestamosYreservas\PrestamosYreservas\obj\Debug\PrestamosYreservas.exe
+C:\Users\diana\Desktop\Prestamos\PrestamosYreservas\PrestamosYreservas\obj\Debug\PrestamosYreservas.pdb
+C:\Users\diana\Desktop\Prestamos\PrestamosYreservas\PrestamosYreservas\obj\Debug\PrestamosYreservas.frmPrestamos.resources
