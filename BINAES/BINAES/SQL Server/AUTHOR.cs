@@ -15,7 +15,7 @@ namespace BINAES.SQL_Server
     public partial class AUTHOR
     {
         public int id { get; set; }
-        public string author_name { get; set; }
+        public string name_ { get; set; }
         public int id_copy { get; set; }
     
         public virtual COPY_ COPY_ { get; set; }

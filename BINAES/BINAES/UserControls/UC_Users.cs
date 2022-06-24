@@ -11,11 +11,11 @@ namespace BINAES.UserControls
 {
     public partial class UC_Users : UserControl
     {
-        
+
         bool edit = false;
         bool add = false;
         bool picture_load = false;
-        
+
         public UC_Users()
         {
             InitializeComponent();
@@ -30,38 +30,38 @@ namespace BINAES.UserControls
         private db_BINAES db = new db_BINAES();
         private void filter(string criterio, string campo)
         {
-            dg_usersDataTable.DataSource = db.USER_.SqlQuery("SELECT * FROM USER_ WHERE " + campo + " like '%"+criterio+"%'").ToList();
+            dg_usersDataTable.DataSource = db.USER_.SqlQuery("SELECT * FROM USER_ WHERE " + campo + " like '%" + criterio + "%'").ToList();
         }
-        
+
         private void btn_filter_Click(object sender, EventArgs e)
         {
             filter(txt_search.Text, cmb_searchBy.Text);
         }
-        
+
         private void btn_reset_Click(object sender, EventArgs e)
         {
             dg_usersDataTable.DataSource = db.USER_.ToList();
         }
-        
+
         private void UC_Users_Load(object sender, EventArgs e)
         {
             UserDAO user = new UserDAO();
             //Role
             cmb_role.DataSource = user.set_role();
             cmb_role.ValueMember = "id";
-            cmb_role.DisplayMember = "role_type";
+            cmb_role.DisplayMember = "type_";
             //Occupancy
             cmb_occupancy.DataSource = user.set_occupancy();
             cmb_occupancy.ValueMember = "id";
-            cmb_occupancy.DisplayMember = "occupancy_name";
+            cmb_occupancy.DisplayMember = "name_";
             //Institution
             cmb_institution.DataSource = user.set_institution();
             cmb_institution.ValueMember = "id";
-            cmb_institution.DisplayMember = "institution_name";
+            cmb_institution.DisplayMember = "name_";
             //Users
             load_grid();
         }
-        
+
         private void load_grid()
         {
             UserDAO user = new UserDAO();
@@ -81,10 +81,11 @@ namespace BINAES.UserControls
             }
             lock_controllers();
         }
-        
+
         private void unlock_controllers()
         {
-            txt_name.Enabled = true;
+            txt_full_name.Enabled = true;
+            txt_user.Enabled = true;
             txt_address.Enabled = true;
             txt_phone.Enabled = true;
             txt_email.Enabled = true;
@@ -99,7 +100,8 @@ namespace BINAES.UserControls
 
         private void lock_controllers()
         {
-            txt_name.Enabled = false;
+            txt_full_name.Enabled = false;
+            txt_user.Enabled = false;
             txt_address.Enabled = false;
             txt_phone.Enabled = false;
             txt_email.Enabled = false;
@@ -120,7 +122,8 @@ namespace BINAES.UserControls
                 using (db_BINAES db = new db_BINAES())
                 {
                     USER_ user = new USER_();
-                    user.username = txt_name.Text;
+                    user.full_name = txt_full_name.Text;
+                    user.username = txt_user.Text;
                     user.user_address = txt_address.Text;
                     user.phone = txt_phone.Text;
                     user.email = txt_email.Text;
@@ -159,8 +162,8 @@ namespace BINAES.UserControls
                 MessageBox.Show(ex.Message);
             }
         }
-        
-        
+
+
         private void btn_insertRows_Click(object sender, EventArgs e)
         {
             add = true;
@@ -179,6 +182,17 @@ namespace BINAES.UserControls
                 pb_picture.Image = Image.FromFile(picture.FileName);
                 picture_load = true;
             }
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            lock_controllers();
+            txt_full_name.Text = "";
+            txt_user.Text = "";
+            txt_address.Text = "";
+            txt_phone.Text = "";
+            txt_email.Text = "";
+            txt_password.Text = "";
         }
     }
 }

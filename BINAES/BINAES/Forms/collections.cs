@@ -22,7 +22,7 @@ namespace BINAES
             using (db_BINAES db = new db_BINAES())
             {
                 COLLECTION_ collection = new COLLECTION_();
-                collection.collection_name = txt_name.Text;
+                collection.name_ = txt_name.Text;
                 collection.id_type = ((TYPE_)cmb_type.SelectedItem).id;
                 collection.id_genre = ((GENRE)cmb_gender.SelectedItem).id;
                 

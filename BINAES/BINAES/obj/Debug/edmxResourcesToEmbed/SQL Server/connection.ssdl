@@ -14,7 +14,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="area_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="name_" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="area_description" Type="varchar" MaxLength="300" />
     <Property Name="schedule" Type="varchar" MaxLength="30" />
     <Property Name="id_manager" Type="int" />
@@ -36,7 +36,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="author_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="name_" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="id_copy" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="CELEBRATION">
@@ -57,7 +57,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="collection_name" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="name_" Type="varchar" MaxLength="150" Nullable="false" />
     <Property Name="id_type" Type="int" />
     <Property Name="id_genre" Type="int" />
   </EntityType>
@@ -66,7 +66,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="copy_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="name_" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="picture" Type="varbinary(max)" />
     <Property Name="release_date" Type="datetime" />
     <Property Name="id_collection" Type="int" Nullable="false" />
@@ -79,7 +79,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="editorial_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="name_" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="FLOOR_">
     <Key>
@@ -93,21 +93,21 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="format_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="name_" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="GENRE">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="genre_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="name_" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="GOAL">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="goal_name" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="name_" Type="varchar" MaxLength="150" Nullable="false" />
     <Property Name="id_celebration" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="INSTITUTION">
@@ -115,7 +115,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="institution_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="name_" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="LABEL_">
     <Key>
@@ -131,14 +131,14 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="label_name" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="name_" Type="varchar" MaxLength="4" Nullable="false" />
   </EntityType>
   <EntityType Name="LANGUAGE_">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="language_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="name_" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="LOAN_BOOKING">
     <Key>
@@ -159,35 +159,35 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="manager_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="name_" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="OCCUPANCY">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="occupancy_name" Type="varchar" MaxLength="50" />
+    <Property Name="name_" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="ROLE_">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="role_type" Type="varchar" MaxLength="50" />
+    <Property Name="type_" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="TYPE_">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="type_name_" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="name_" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="USER_">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="user_full_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="full_name" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="username" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="user_address" Type="varchar" MaxLength="100" />
     <Property Name="phone" Type="char" MaxLength="13" Nullable="false" />

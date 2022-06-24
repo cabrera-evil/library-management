@@ -21,7 +21,7 @@ namespace BINAES.SQL_Server
         }
     
         public int id { get; set; }
-        public string role_type { get; set; }
+        public string type_ { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<USER_> USER_ { get; set; }

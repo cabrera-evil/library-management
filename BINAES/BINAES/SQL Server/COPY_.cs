@@ -24,7 +24,7 @@ namespace BINAES.SQL_Server
         }
     
         public int id { get; set; }
-        public string copy_name { get; set; }
+        public string name_ { get; set; }
         public byte[] picture { get; set; }
         public Nullable<System.DateTime> release_date { get; set; }
         public int id_collection { get; set; }

@@ -21,7 +21,7 @@ namespace BINAES.SQL_Server
         }
     
         public int id { get; set; }
-        public string collection_name { get; set; }
+        public string name_ { get; set; }
         public Nullable<int> id_type { get; set; }
         public Nullable<int> id_genre { get; set; }
     

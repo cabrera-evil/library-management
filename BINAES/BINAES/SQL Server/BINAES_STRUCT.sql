@@ -143,7 +143,7 @@ CREATE TABLE COPY_(
     id INT
         IDENTITY(1,1) PRIMARY KEY,
     --ATRIBUTOS
-    copy_name VARCHAR(50) NOT NULL,
+    name_ VARCHAR(50) NOT NULL,
     picture VARBINARY(MAX),
     release_date DATETIME,
     --FK
@@ -214,7 +214,7 @@ GO
 CREATE TABLE COLLECTION_(
     id INT
         IDENTITY(1,1) PRIMARY KEY,
-    collection_name VARCHAR(150) NOT NULL,
+    name_ VARCHAR(150) NOT NULL,
     --FK
     id_type INT,
     id_genre INT

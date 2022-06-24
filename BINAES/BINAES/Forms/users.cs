@@ -71,7 +71,7 @@ namespace BINAES
             //Role
             cmb_role.DataSource = user.set_role();
             cmb_role.ValueMember = "id";
-            cmb_role.DisplayMember = "role_type";
+            cmb_role.DisplayMember = "type_";
             //Occupancy
             cmb_occupancy.DataSource = user.set_occupancy();
             cmb_occupancy.ValueMember = "id";

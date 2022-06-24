@@ -17,7 +17,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="area_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="name_" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="area_description" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
     <Property Name="schedule" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <Property Name="id_manager" Type="Int32" />
@@ -44,7 +44,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="author_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="name_" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="id_copy" Type="Int32" Nullable="false" />
     <NavigationProperty Name="COPY_" Relationship="Self.fk_copy_author" FromRole="AUTHOR" ToRole="COPY_" />
   </EntityType>
@@ -68,7 +68,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="collection_name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="name_" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="id_type" Type="Int32" />
     <Property Name="id_genre" Type="Int32" />
     <NavigationProperty Name="COPY_" Relationship="Self.fk_collection_copy" FromRole="COLLECTION_" ToRole="COPY_" />
@@ -80,7 +80,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="copy_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="name_" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="picture" Type="Binary" MaxLength="Max" FixedLength="false" />
     <Property Name="release_date" Type="DateTime" Precision="3" />
     <Property Name="id_collection" Type="Int32" Nullable="false" />
@@ -101,7 +101,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="editorial_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="name_" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="COPY_" Relationship="Self.fk_copy_editorial" FromRole="EDITORIAL" ToRole="COPY_" />
   </EntityType>
   <EntityType Name="FLOOR_">
@@ -117,7 +117,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="format_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="name_" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="COPY_" Relationship="Self.fk_copy_format" FromRole="FORMAT_" ToRole="COPY_" />
   </EntityType>
   <EntityType Name="GENRE">
@@ -125,7 +125,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="genre_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="name_" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="COLLECTION_" Relationship="Self.fk_collection_genre" FromRole="GENRE" ToRole="COLLECTION_" />
   </EntityType>
   <EntityType Name="GOAL">
@@ -133,7 +133,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="goal_name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="name_" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="id_celebration" Type="Int32" Nullable="false" />
     <NavigationProperty Name="CELEBRATION" Relationship="Self.fk_goal_event" FromRole="GOAL" ToRole="CELEBRATION" />
   </EntityType>
@@ -142,7 +142,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="institution_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="name_" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="USER_" Relationship="Self.fk_user_intitution" FromRole="INSTITUTION" ToRole="USER_" />
   </EntityType>
   <EntityType Name="LABEL_">
@@ -161,7 +161,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="label_name" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="name_" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="LABEL_" Relationship="Self.fk_type_label" FromRole="LABEL_TYPE" ToRole="LABEL_" />
   </EntityType>
   <EntityType Name="LANGUAGE_">
@@ -169,7 +169,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="language_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="name_" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="COPY_" Relationship="Self.fk_copy_language" FromRole="LANGUAGE_" ToRole="COPY_" />
   </EntityType>
   <EntityType Name="LOAN_BOOKING">
@@ -193,7 +193,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="manager_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="name_" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="AREA" Relationship="Self.fk_area_manager" FromRole="MANAGER" ToRole="AREA" />
   </EntityType>
   <EntityType Name="OCCUPANCY">
@@ -201,7 +201,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="occupancy_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name_" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="USER_" Relationship="Self.fk_user_occupancy" FromRole="OCCUPANCY" ToRole="USER_" />
   </EntityType>
   <EntityType Name="ROLE_">
@@ -209,7 +209,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="role_type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="type_" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="USER_" Relationship="Self.fk_user_role" FromRole="ROLE_" ToRole="USER_" />
   </EntityType>
   <EntityType Name="TYPE_">
@@ -217,7 +217,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="type_name_" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="name_" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="COLLECTION_" Relationship="Self.fk_collection_type" FromRole="TYPE_" ToRole="COLLECTION_" />
   </EntityType>
   <EntityType Name="USER_">
@@ -225,7 +225,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="user_full_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="full_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="username" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="user_address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="phone" Type="String" MaxLength="13" FixedLength="true" Unicode="false" Nullable="false" />

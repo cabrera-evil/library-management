@@ -60,7 +60,7 @@ namespace BINAES
                     using (db_BINAES db = new db_BINAES())
                     {
                         var list = from d in db.COPY_
-                                   where d.copy_name == txt_search.Text
+                                   where d.name_ == txt_search.Text
                                    && d.id_format == 1
                                    select d;
                         if (list.Count() > 0)
@@ -76,7 +76,7 @@ namespace BINAES
                     using (db_BINAES db = new db_BINAES())
                     {
                         var list = from d in db.COPY_
-                                   where d.copy_name == txt_search.Text
+                                   where d.name_ == txt_search.Text
                                    && d.id_format == 2
                                    select d;
                         if (list.Count() > 0)
@@ -92,7 +92,7 @@ namespace BINAES
                     using (db_BINAES db = new db_BINAES())
                     {
                         var list = from d in db.COPY_
-                                   where d.copy_name == txt_search.Text
+                                   where d.name_ == txt_search.Text
                                    select d;
                         if (list.Count() > 0)
                         {

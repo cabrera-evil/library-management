@@ -21,7 +21,7 @@ namespace BINAES.SQL_Server
         }
     
         public int id { get; set; }
-        public string area_name { get; set; }
+        public string name_ { get; set; }
         public string area_description { get; set; }
         public string schedule { get; set; }
         public Nullable<int> id_manager { get; set; }
