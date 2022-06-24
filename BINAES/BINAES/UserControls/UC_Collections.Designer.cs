@@ -52,7 +52,6 @@ namespace BINAES.UserControls
             this.txt_name = new System.Windows.Forms.TextBox();
             this.lbl_name = new System.Windows.Forms.Label();
             this.btn_save = new System.Windows.Forms.Button();
-            this.lbl_addCollection = new System.Windows.Forms.Label();
             this.pnl_collectionsDataTableBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.dg_collectionsDataTable)).BeginInit();
             this.pnl_collectionsDataBar.SuspendLayout();
@@ -225,7 +224,6 @@ namespace BINAES.UserControls
             this.pnl_collectionsDataBar.Controls.Add(this.txt_name);
             this.pnl_collectionsDataBar.Controls.Add(this.lbl_name);
             this.pnl_collectionsDataBar.Controls.Add(this.btn_save);
-            this.pnl_collectionsDataBar.Controls.Add(this.lbl_addCollection);
             this.pnl_collectionsDataBar.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnl_collectionsDataBar.Location = new System.Drawing.Point(686, 0);
             this.pnl_collectionsDataBar.Name = "pnl_collectionsDataBar";
@@ -242,12 +240,13 @@ namespace BINAES.UserControls
             this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cancel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btn_cancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_cancel.Location = new System.Drawing.Point(24, 210);
+            this.btn_cancel.Location = new System.Drawing.Point(23, 168);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(305, 45);
             this.btn_cancel.TabIndex = 23;
             this.btn_cancel.Text = "Cancel";
             this.btn_cancel.UseVisualStyleBackColor = false;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // cmb_type
             // 
@@ -255,7 +254,7 @@ namespace BINAES.UserControls
             this.cmb_type.Enabled = false;
             this.cmb_type.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.cmb_type.FormattingEnabled = true;
-            this.cmb_type.Location = new System.Drawing.Point(125, 90);
+            this.cmb_type.Location = new System.Drawing.Point(124, 48);
             this.cmb_type.Name = "cmb_type";
             this.cmb_type.Size = new System.Drawing.Size(204, 25);
             this.cmb_type.TabIndex = 22;
@@ -265,7 +264,7 @@ namespace BINAES.UserControls
             this.cmb_genre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_genre.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.cmb_genre.FormattingEnabled = true;
-            this.cmb_genre.Location = new System.Drawing.Point(125, 119);
+            this.cmb_genre.Location = new System.Drawing.Point(124, 77);
             this.cmb_genre.Name = "cmb_genre";
             this.cmb_genre.Size = new System.Drawing.Size(204, 25);
             this.cmb_genre.TabIndex = 21;
@@ -274,7 +273,7 @@ namespace BINAES.UserControls
             // 
             this.lbl_gender.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lbl_gender.ForeColor = System.Drawing.Color.Transparent;
-            this.lbl_gender.Location = new System.Drawing.Point(24, 119);
+            this.lbl_gender.Location = new System.Drawing.Point(23, 77);
             this.lbl_gender.Name = "lbl_gender";
             this.lbl_gender.Size = new System.Drawing.Size(100, 23);
             this.lbl_gender.TabIndex = 6;
@@ -285,7 +284,7 @@ namespace BINAES.UserControls
             // 
             this.lbl_type.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lbl_type.ForeColor = System.Drawing.Color.Transparent;
-            this.lbl_type.Location = new System.Drawing.Point(24, 90);
+            this.lbl_type.Location = new System.Drawing.Point(23, 48);
             this.lbl_type.Name = "lbl_type";
             this.lbl_type.Size = new System.Drawing.Size(100, 23);
             this.lbl_type.TabIndex = 4;
@@ -295,7 +294,7 @@ namespace BINAES.UserControls
             // txt_name
             // 
             this.txt_name.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.txt_name.Location = new System.Drawing.Point(125, 61);
+            this.txt_name.Location = new System.Drawing.Point(124, 19);
             this.txt_name.Multiline = true;
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(204, 23);
@@ -305,7 +304,7 @@ namespace BINAES.UserControls
             // 
             this.lbl_name.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lbl_name.ForeColor = System.Drawing.Color.Transparent;
-            this.lbl_name.Location = new System.Drawing.Point(24, 61);
+            this.lbl_name.Location = new System.Drawing.Point(23, 19);
             this.lbl_name.Name = "lbl_name";
             this.lbl_name.Size = new System.Drawing.Size(100, 23);
             this.lbl_name.TabIndex = 2;
@@ -322,23 +321,13 @@ namespace BINAES.UserControls
             this.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_save.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btn_save.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_save.Location = new System.Drawing.Point(24, 159);
+            this.btn_save.Location = new System.Drawing.Point(23, 117);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(305, 45);
             this.btn_save.TabIndex = 1;
             this.btn_save.Text = "Save";
             this.btn_save.UseVisualStyleBackColor = false;
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
-            // 
-            // lbl_addCollection
-            // 
-            this.lbl_addCollection.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lbl_addCollection.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (38)))), ((int) (((byte) (109)))), ((int) (((byte) (83)))));
-            this.lbl_addCollection.Location = new System.Drawing.Point(24, 20);
-            this.lbl_addCollection.Name = "lbl_addCollection";
-            this.lbl_addCollection.Size = new System.Drawing.Size(321, 23);
-            this.lbl_addCollection.TabIndex = 0;
-            this.lbl_addCollection.Text = "Add collection";
             // 
             // UC_Collections
             // 
@@ -366,7 +355,6 @@ namespace BINAES.UserControls
         private System.Windows.Forms.TextBox txt_name;
         private System.Windows.Forms.Label lbl_name;
         private System.Windows.Forms.Button btn_save;
-        private System.Windows.Forms.Label lbl_addCollection;
 
         private System.Windows.Forms.Button btn_filter;
         private System.Windows.Forms.Button btn_reset;

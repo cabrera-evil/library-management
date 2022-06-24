@@ -123,7 +123,17 @@ namespace BINAES.UserControls
                 MessageBox.Show(ex.Message);
             }
         }
-
+        
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            lock_controllers();
+            clear_text();
+        }
+        
+        private void clear_text()
+        {
+            txt_name.Text = "";
+        }
 
         private void btn_insertRows_Click(object sender, EventArgs e)
         {
@@ -133,5 +143,8 @@ namespace BINAES.UserControls
             btn_remove.BackColor = Color.FromArgb(38, 109, 83);
             btn_insertRows.BackColor = Color.FromArgb(38, 109, 83);
         }
+
+        
+        
     }
 }

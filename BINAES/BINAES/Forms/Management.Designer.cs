@@ -109,7 +109,7 @@ namespace BINAES
             this.btn_celebrations.TabIndex = 2;
             this.btn_celebrations.Text = "Celebrations";
             this.btn_celebrations.UseVisualStyleBackColor = false;
-            this.btn_celebrations.Click += new System.EventHandler(this.btn_collections_Click);
+            this.btn_celebrations.Click += new System.EventHandler(this.btn_celebrations_Click);
             // 
             // btn_users
             // 
@@ -143,7 +143,7 @@ namespace BINAES
             this.btn_collections.TabIndex = 1;
             this.btn_collections.Text = "Collections";
             this.btn_collections.UseVisualStyleBackColor = false;
-            this.btn_collections.Click += new System.EventHandler(this.btn_celebrations_Click);
+            this.btn_collections.Click += new System.EventHandler(this.btn_collections_Click);
             // 
             // pnl_container
             // 
