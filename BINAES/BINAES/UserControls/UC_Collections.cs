@@ -81,6 +81,8 @@ namespace BINAES.UserControls
             txt_name.Enabled = true;
             cmb_type.Enabled = true;
             cmb_genre.Enabled = true;
+            btn_save.Enabled = true;
+            btn_cancel.Enabled = true;
         }
 
         private void lock_controllers()
@@ -88,6 +90,8 @@ namespace BINAES.UserControls
             txt_name.Enabled = false;
             cmb_type.Enabled = false;
             cmb_genre.Enabled = false;
+            btn_save.Enabled = false;
+            btn_cancel.Enabled = false;
         }
 
         private void btn_save_Click(object sender, EventArgs e)

@@ -27,3 +27,32 @@ C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.csproj.CoreCompileInp
 C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.csproj.CopyComplete
 C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.exe
 C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.pdb
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\bin\Debug\BINAES.exe.config
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\bin\Debug\BINAES.exe
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\bin\Debug\BINAES.pdb
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\bin\Debug\EntityFramework.dll
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\bin\Debug\QRCoder.dll
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\bin\Debug\EntityFramework.xml
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.csproj.AssemblyReference.cache
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.csproj.SuggestedBindingRedirects.cache
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_advanced_search.resources
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.Management.resources
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_homeSearch.resources
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_search.resources
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_home.resources
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_login.resources
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.Properties.Resources.resources
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_welcome.resources
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Advanced_Search.resources
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Collections.resources
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Celebrations.resources
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Search.resources
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Users.resources
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.csproj.GenerateResource.cache
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.csproj.CoreCompileInputs.cache
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.csproj.CopyComplete
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.exe
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.pdb

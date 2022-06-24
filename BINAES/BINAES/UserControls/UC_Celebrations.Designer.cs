@@ -95,7 +95,7 @@ namespace BINAES.UserControls
             this.btn_cancel.Location = new System.Drawing.Point(19, 407);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(305, 45);
-            this.btn_cancel.TabIndex = 14;
+            this.btn_cancel.TabIndex = 96;
             this.btn_cancel.Text = "Cancel";
             this.btn_cancel.UseVisualStyleBackColor = false;
             // 
@@ -110,7 +110,7 @@ namespace BINAES.UserControls
             this.grp_eventDate.Location = new System.Drawing.Point(19, 244);
             this.grp_eventDate.Name = "grp_eventDate";
             this.grp_eventDate.Size = new System.Drawing.Size(309, 97);
-            this.grp_eventDate.TabIndex = 13;
+            this.grp_eventDate.TabIndex = 94;
             this.grp_eventDate.TabStop = false;
             this.grp_eventDate.Text = "Event date";
             // 
@@ -161,7 +161,7 @@ namespace BINAES.UserControls
             this.grp_eventTime.Location = new System.Drawing.Point(19, 132);
             this.grp_eventTime.Name = "grp_eventTime";
             this.grp_eventTime.Size = new System.Drawing.Size(309, 97);
-            this.grp_eventTime.TabIndex = 12;
+            this.grp_eventTime.TabIndex = 93;
             this.grp_eventTime.TabStop = false;
             this.grp_eventTime.Text = "Event time";
             // 
@@ -208,7 +208,7 @@ namespace BINAES.UserControls
             this.txt_numberAttendees.Multiline = true;
             this.txt_numberAttendees.Name = "txt_numberAttendees";
             this.txt_numberAttendees.Size = new System.Drawing.Size(204, 23);
-            this.txt_numberAttendees.TabIndex = 9;
+            this.txt_numberAttendees.TabIndex = 92;
             // 
             // lbl_numberAttendees
             // 
@@ -228,7 +228,7 @@ namespace BINAES.UserControls
             this.txt_objectives.Multiline = true;
             this.txt_objectives.Name = "txt_objectives";
             this.txt_objectives.Size = new System.Drawing.Size(204, 23);
-            this.txt_objectives.TabIndex = 5;
+            this.txt_objectives.TabIndex = 91;
             // 
             // lbl_objectives
             // 
@@ -248,7 +248,7 @@ namespace BINAES.UserControls
             this.txt_title.Multiline = true;
             this.txt_title.Name = "txt_title";
             this.txt_title.Size = new System.Drawing.Size(204, 23);
-            this.txt_title.TabIndex = 3;
+            this.txt_title.TabIndex = 90;
             // 
             // lbl_title
             // 
@@ -274,7 +274,7 @@ namespace BINAES.UserControls
             this.btn_save.Location = new System.Drawing.Point(19, 356);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(305, 45);
-            this.btn_save.TabIndex = 1;
+            this.btn_save.TabIndex = 95;
             this.btn_save.Text = "Save";
             this.btn_save.UseVisualStyleBackColor = false;
             // 

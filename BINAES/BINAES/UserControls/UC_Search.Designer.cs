@@ -129,7 +129,7 @@ namespace BINAES.UserControls
             this.btn_search1.Location = new System.Drawing.Point(874, 45);
             this.btn_search1.Name = "btn_search1";
             this.btn_search1.Size = new System.Drawing.Size(74, 23);
-            this.btn_search1.TabIndex = 31;
+            this.btn_search1.TabIndex = 91;
             this.btn_search1.Text = "Search";
             this.btn_search1.UseVisualStyleBackColor = false;
             this.btn_search1.Click += new System.EventHandler(this.btn_search1_Click);
@@ -165,7 +165,7 @@ namespace BINAES.UserControls
             this.dgv_search_result.Name = "dgv_search_result";
             this.dgv_search_result.RowHeadersWidth = 51;
             this.dgv_search_result.Size = new System.Drawing.Size(873, 389);
-            this.dgv_search_result.TabIndex = 28;
+            this.dgv_search_result.TabIndex = 92;
             // 
             // txt_search
             // 
@@ -174,7 +174,7 @@ namespace BINAES.UserControls
             this.txt_search.Location = new System.Drawing.Point(75, 45);
             this.txt_search.Name = "txt_search";
             this.txt_search.Size = new System.Drawing.Size(793, 23);
-            this.txt_search.TabIndex = 27;
+            this.txt_search.TabIndex = 90;
             // 
             // UC_Search
             // 

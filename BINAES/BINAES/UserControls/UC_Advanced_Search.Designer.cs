@@ -64,7 +64,7 @@ namespace BINAES.UserControls
             this.grp_title.Name = "grp_title";
             this.grp_title.Padding = new System.Windows.Forms.Padding(2);
             this.grp_title.Size = new System.Drawing.Size(442, 67);
-            this.grp_title.TabIndex = 50;
+            this.grp_title.TabIndex = 90;
             this.grp_title.TabStop = false;
             this.grp_title.Text = "Title";
             // 
@@ -104,7 +104,7 @@ namespace BINAES.UserControls
             this.grp_format.Name = "grp_format";
             this.grp_format.Padding = new System.Windows.Forms.Padding(2);
             this.grp_format.Size = new System.Drawing.Size(442, 81);
-            this.grp_format.TabIndex = 47;
+            this.grp_format.TabIndex = 95;
             this.grp_format.TabStop = false;
             this.grp_format.Text = "Format";
             // 
@@ -152,7 +152,7 @@ namespace BINAES.UserControls
             this.txt_author.Margin = new System.Windows.Forms.Padding(2);
             this.txt_author.Name = "txt_author";
             this.txt_author.Size = new System.Drawing.Size(443, 23);
-            this.txt_author.TabIndex = 46;
+            this.txt_author.TabIndex = 94;
             // 
             // label5
             // 
@@ -175,7 +175,7 @@ namespace BINAES.UserControls
             this.txt_key_words.Margin = new System.Windows.Forms.Padding(2);
             this.txt_key_words.Name = "txt_key_words";
             this.txt_key_words.Size = new System.Drawing.Size(443, 23);
-            this.txt_key_words.TabIndex = 44;
+            this.txt_key_words.TabIndex = 93;
             // 
             // label4
             // 
@@ -211,7 +211,7 @@ namespace BINAES.UserControls
             this.txt_title.Margin = new System.Windows.Forms.Padding(2);
             this.txt_title.Name = "txt_title";
             this.txt_title.Size = new System.Drawing.Size(443, 23);
-            this.txt_title.TabIndex = 40;
+            this.txt_title.TabIndex = 91;
             // 
             // label2
             // 
@@ -247,7 +247,7 @@ namespace BINAES.UserControls
             this.btn_search.Location = new System.Drawing.Point(532, 530);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(74, 23);
-            this.btn_search.TabIndex = 48;
+            this.btn_search.TabIndex = 96;
             this.btn_search.Text = "Search";
             this.btn_search.UseVisualStyleBackColor = false;
             this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
@@ -260,7 +260,7 @@ namespace BINAES.UserControls
             this.txt_some_words.Margin = new System.Windows.Forms.Padding(2);
             this.txt_some_words.Name = "txt_some_words";
             this.txt_some_words.Size = new System.Drawing.Size(443, 23);
-            this.txt_some_words.TabIndex = 42;
+            this.txt_some_words.TabIndex = 92;
             // 
             // btn_reset
             // 
@@ -270,7 +270,7 @@ namespace BINAES.UserControls
             this.btn_reset.Location = new System.Drawing.Point(414, 530);
             this.btn_reset.Name = "btn_reset";
             this.btn_reset.Size = new System.Drawing.Size(74, 23);
-            this.btn_reset.TabIndex = 51;
+            this.btn_reset.TabIndex = 97;
             this.btn_reset.Text = "Reset";
             this.btn_reset.UseVisualStyleBackColor = false;
             // 

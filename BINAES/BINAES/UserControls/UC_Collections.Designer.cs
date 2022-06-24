@@ -243,7 +243,7 @@ namespace BINAES.UserControls
             this.btn_cancel.Location = new System.Drawing.Point(23, 168);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(305, 45);
-            this.btn_cancel.TabIndex = 23;
+            this.btn_cancel.TabIndex = 94;
             this.btn_cancel.Text = "Cancel";
             this.btn_cancel.UseVisualStyleBackColor = false;
             this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
@@ -257,7 +257,7 @@ namespace BINAES.UserControls
             this.cmb_type.Location = new System.Drawing.Point(124, 48);
             this.cmb_type.Name = "cmb_type";
             this.cmb_type.Size = new System.Drawing.Size(204, 25);
-            this.cmb_type.TabIndex = 22;
+            this.cmb_type.TabIndex = 91;
             // 
             // cmb_genre
             // 
@@ -267,7 +267,7 @@ namespace BINAES.UserControls
             this.cmb_genre.Location = new System.Drawing.Point(124, 77);
             this.cmb_genre.Name = "cmb_genre";
             this.cmb_genre.Size = new System.Drawing.Size(204, 25);
-            this.cmb_genre.TabIndex = 21;
+            this.cmb_genre.TabIndex = 92;
             // 
             // lbl_gender
             // 
@@ -298,7 +298,7 @@ namespace BINAES.UserControls
             this.txt_name.Multiline = true;
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(204, 23);
-            this.txt_name.TabIndex = 3;
+            this.txt_name.TabIndex = 90;
             // 
             // lbl_name
             // 
@@ -324,7 +324,7 @@ namespace BINAES.UserControls
             this.btn_save.Location = new System.Drawing.Point(23, 117);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(305, 45);
-            this.btn_save.TabIndex = 1;
+            this.btn_save.TabIndex = 93;
             this.btn_save.Text = "Save";
             this.btn_save.UseVisualStyleBackColor = false;
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
