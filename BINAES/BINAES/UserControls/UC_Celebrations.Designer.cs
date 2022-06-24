@@ -32,6 +32,7 @@ namespace BINAES.UserControls
         private void InitializeComponent()
         {
             this.pnl_eventsDataBar = new System.Windows.Forms.Panel();
+            this.btn_cancel = new System.Windows.Forms.Button();
             this.grp_eventDate = new System.Windows.Forms.GroupBox();
             this.dtp_endDate = new System.Windows.Forms.DateTimePicker();
             this.lbl_endDate = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@ namespace BINAES.UserControls
             this.lbl_endTime = new System.Windows.Forms.Label();
             this.dtp_startTime = new System.Windows.Forms.DateTimePicker();
             this.lbl_startTime = new System.Windows.Forms.Label();
-            this.lbl_addEvent = new System.Windows.Forms.Label();
             this.txt_numberAttendees = new System.Windows.Forms.TextBox();
             this.lbl_numberAttendees = new System.Windows.Forms.Label();
             this.txt_objectives = new System.Windows.Forms.TextBox();
@@ -56,7 +56,6 @@ namespace BINAES.UserControls
             this.btn_remove = new System.Windows.Forms.Button();
             this.btn_edit = new System.Windows.Forms.Button();
             this.dg_eventsDataTable = new System.Windows.Forms.DataGridView();
-            this.btn_cancel = new System.Windows.Forms.Button();
             this.pnl_eventsDataBar.SuspendLayout();
             this.grp_eventDate.SuspendLayout();
             this.grp_eventTime.SuspendLayout();
@@ -70,7 +69,6 @@ namespace BINAES.UserControls
             this.pnl_eventsDataBar.Controls.Add(this.btn_cancel);
             this.pnl_eventsDataBar.Controls.Add(this.grp_eventDate);
             this.pnl_eventsDataBar.Controls.Add(this.grp_eventTime);
-            this.pnl_eventsDataBar.Controls.Add(this.lbl_addEvent);
             this.pnl_eventsDataBar.Controls.Add(this.txt_numberAttendees);
             this.pnl_eventsDataBar.Controls.Add(this.lbl_numberAttendees);
             this.pnl_eventsDataBar.Controls.Add(this.txt_objectives);
@@ -84,6 +82,23 @@ namespace BINAES.UserControls
             this.pnl_eventsDataBar.Size = new System.Drawing.Size(353, 611);
             this.pnl_eventsDataBar.TabIndex = 23;
             // 
+            // btn_cancel
+            // 
+            this.btn_cancel.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (38)))), ((int) (((byte) (109)))), ((int) (((byte) (83)))));
+            this.btn_cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_cancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_cancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_cancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btn_cancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_cancel.Location = new System.Drawing.Point(19, 407);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(305, 45);
+            this.btn_cancel.TabIndex = 14;
+            this.btn_cancel.Text = "Cancel";
+            this.btn_cancel.UseVisualStyleBackColor = false;
+            // 
             // grp_eventDate
             // 
             this.grp_eventDate.Controls.Add(this.dtp_endDate);
@@ -92,7 +107,7 @@ namespace BINAES.UserControls
             this.grp_eventDate.Controls.Add(this.lbl_startDate);
             this.grp_eventDate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.grp_eventDate.ForeColor = System.Drawing.Color.White;
-            this.grp_eventDate.Location = new System.Drawing.Point(20, 281);
+            this.grp_eventDate.Location = new System.Drawing.Point(19, 244);
             this.grp_eventDate.Name = "grp_eventDate";
             this.grp_eventDate.Size = new System.Drawing.Size(309, 97);
             this.grp_eventDate.TabIndex = 13;
@@ -143,7 +158,7 @@ namespace BINAES.UserControls
             this.grp_eventTime.Controls.Add(this.lbl_startTime);
             this.grp_eventTime.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.grp_eventTime.ForeColor = System.Drawing.Color.White;
-            this.grp_eventTime.Location = new System.Drawing.Point(20, 169);
+            this.grp_eventTime.Location = new System.Drawing.Point(19, 132);
             this.grp_eventTime.Name = "grp_eventTime";
             this.grp_eventTime.Size = new System.Drawing.Size(309, 97);
             this.grp_eventTime.TabIndex = 12;
@@ -186,20 +201,10 @@ namespace BINAES.UserControls
             this.lbl_startTime.Text = "Start:";
             this.lbl_startTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lbl_addEvent
-            // 
-            this.lbl_addEvent.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lbl_addEvent.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (38)))), ((int) (((byte) (109)))), ((int) (((byte) (83)))));
-            this.lbl_addEvent.Location = new System.Drawing.Point(20, 20);
-            this.lbl_addEvent.Name = "lbl_addEvent";
-            this.lbl_addEvent.Size = new System.Drawing.Size(321, 23);
-            this.lbl_addEvent.TabIndex = 11;
-            this.lbl_addEvent.Text = "Add event";
-            // 
             // txt_numberAttendees
             // 
             this.txt_numberAttendees.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.txt_numberAttendees.Location = new System.Drawing.Point(125, 114);
+            this.txt_numberAttendees.Location = new System.Drawing.Point(124, 77);
             this.txt_numberAttendees.Multiline = true;
             this.txt_numberAttendees.Name = "txt_numberAttendees";
             this.txt_numberAttendees.Size = new System.Drawing.Size(204, 23);
@@ -209,7 +214,7 @@ namespace BINAES.UserControls
             // 
             this.lbl_numberAttendees.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lbl_numberAttendees.ForeColor = System.Drawing.Color.Transparent;
-            this.lbl_numberAttendees.Location = new System.Drawing.Point(24, 108);
+            this.lbl_numberAttendees.Location = new System.Drawing.Point(23, 71);
             this.lbl_numberAttendees.Name = "lbl_numberAttendees";
             this.lbl_numberAttendees.Size = new System.Drawing.Size(100, 35);
             this.lbl_numberAttendees.TabIndex = 6;
@@ -219,7 +224,7 @@ namespace BINAES.UserControls
             // txt_objectives
             // 
             this.txt_objectives.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.txt_objectives.Location = new System.Drawing.Point(125, 85);
+            this.txt_objectives.Location = new System.Drawing.Point(124, 48);
             this.txt_objectives.Multiline = true;
             this.txt_objectives.Name = "txt_objectives";
             this.txt_objectives.Size = new System.Drawing.Size(204, 23);
@@ -229,7 +234,7 @@ namespace BINAES.UserControls
             // 
             this.lbl_objectives.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lbl_objectives.ForeColor = System.Drawing.Color.Transparent;
-            this.lbl_objectives.Location = new System.Drawing.Point(24, 85);
+            this.lbl_objectives.Location = new System.Drawing.Point(23, 48);
             this.lbl_objectives.Name = "lbl_objectives";
             this.lbl_objectives.Size = new System.Drawing.Size(100, 23);
             this.lbl_objectives.TabIndex = 4;
@@ -239,7 +244,7 @@ namespace BINAES.UserControls
             // txt_title
             // 
             this.txt_title.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.txt_title.Location = new System.Drawing.Point(125, 56);
+            this.txt_title.Location = new System.Drawing.Point(124, 19);
             this.txt_title.Multiline = true;
             this.txt_title.Name = "txt_title";
             this.txt_title.Size = new System.Drawing.Size(204, 23);
@@ -249,7 +254,7 @@ namespace BINAES.UserControls
             // 
             this.lbl_title.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lbl_title.ForeColor = System.Drawing.Color.Transparent;
-            this.lbl_title.Location = new System.Drawing.Point(24, 56);
+            this.lbl_title.Location = new System.Drawing.Point(23, 19);
             this.lbl_title.Name = "lbl_title";
             this.lbl_title.Size = new System.Drawing.Size(100, 23);
             this.lbl_title.TabIndex = 2;
@@ -266,7 +271,7 @@ namespace BINAES.UserControls
             this.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_save.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btn_save.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_save.Location = new System.Drawing.Point(20, 393);
+            this.btn_save.Location = new System.Drawing.Point(19, 356);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(305, 45);
             this.btn_save.TabIndex = 1;
@@ -295,7 +300,7 @@ namespace BINAES.UserControls
             this.lbl_eventTableData.Name = "lbl_eventTableData";
             this.lbl_eventTableData.Size = new System.Drawing.Size(277, 23);
             this.lbl_eventTableData.TabIndex = 12;
-            this.lbl_eventTableData.Text = "Events data table";
+            this.lbl_eventTableData.Text = "Celebrations data table";
             // 
             // btn_insertRows
             // 
@@ -352,23 +357,6 @@ namespace BINAES.UserControls
             this.dg_eventsDataTable.Size = new System.Drawing.Size(620, 487);
             this.dg_eventsDataTable.TabIndex = 13;
             // 
-            // btn_cancel
-            // 
-            this.btn_cancel.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (38)))), ((int) (((byte) (109)))), ((int) (((byte) (83)))));
-            this.btn_cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_cancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
-            this.btn_cancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
-            this.btn_cancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
-            this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cancel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btn_cancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_cancel.Location = new System.Drawing.Point(20, 444);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(305, 45);
-            this.btn_cancel.TabIndex = 14;
-            this.btn_cancel.Text = "Cancel";
-            this.btn_cancel.UseVisualStyleBackColor = false;
-            // 
             // UC_Celebrations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -400,7 +388,6 @@ namespace BINAES.UserControls
         private System.Windows.Forms.Label lbl_endTime;
         private System.Windows.Forms.DateTimePicker dtp_startTime;
         private System.Windows.Forms.Label lbl_startTime;
-        private System.Windows.Forms.Label lbl_addEvent;
         private System.Windows.Forms.TextBox txt_numberAttendees;
         private System.Windows.Forms.Label lbl_numberAttendees;
         private System.Windows.Forms.TextBox txt_objectives;
