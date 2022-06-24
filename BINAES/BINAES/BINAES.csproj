@@ -109,6 +109,12 @@
     <Compile Include="Forms\Frm_homeManagement.Designer.cs">
       <DependentUpon>Frm_homeManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frm_homeSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_homeSearch.Designer.cs">
+      <DependentUpon>frm_homeSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,6 +249,12 @@
     <Compile Include="UserControls\UC_Celebrations.Designer.cs">
       <DependentUpon>UC_Celebrations.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_Search.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Search.Designer.cs">
+      <DependentUpon>UC_Search.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_Users.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -260,6 +272,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_homeManagement.resx">
       <DependentUpon>Frm_homeManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_homeSearch.resx">
+      <DependentUpon>frm_homeSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\search.resx">
       <DependentUpon>search.cs</DependentUpon>
@@ -294,6 +309,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Celebrations.resx">
       <DependentUpon>UC_Celebrations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Search.resx">
+      <DependentUpon>UC_Search.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Users.resx">
       <DependentUpon>UC_Users.cs</DependentUpon>

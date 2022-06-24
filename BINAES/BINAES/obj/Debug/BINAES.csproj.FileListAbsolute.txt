@@ -86,3 +86,6 @@ C:\Users\monic\OneDrive\Documentos\UNIVERSIDAD\proyectos\POO-BD\BINAES\BINAES\ob
 C:\Users\monic\OneDrive\Documentos\UNIVERSIDAD\proyectos\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Celebrations.resources
 C:\Users\monic\OneDrive\Documentos\UNIVERSIDAD\proyectos\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Users.resources
 C:\Users\monic\OneDrive\Documentos\UNIVERSIDAD\proyectos\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Advanced_Search.resources
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Advanced_Search.resources
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_homeSearch.resources
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Search.resources
