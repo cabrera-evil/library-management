@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -68,31 +83,19 @@
     <Compile Include="Clases\celebrationDAO.cs" />
     <Compile Include="Clases\collectionsDAO.cs" />
     <Compile Include="Clases\user_cache.cs" />
-    <Compile Include="Forms\Advanced_Search.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Advanced_Search.Designer.cs">
-      <DependentUpon>Advanced_Search.cs</DependentUpon>
-    </Compile>
     <Compile Include="Clases\Encrypt.cs" />
     <Compile Include="Clases\UserDAO.cs" />
-    <Compile Include="Forms\collections.cs">
+    <Compile Include="Forms\management.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\collections.Designer.cs">
-      <DependentUpon>collections.cs</DependentUpon>
+    <Compile Include="Forms\management.Designer.cs">
+      <DependentUpon>management.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\events.cs">
+    <Compile Include="Forms\search.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\events.Designer.cs">
-      <DependentUpon>events.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Frm_homeManagement.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Frm_homeManagement.Designer.cs">
-      <DependentUpon>Frm_homeManagement.cs</DependentUpon>
+    <Compile Include="Forms\search.Designer.cs">
+      <DependentUpon>search.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\home.cs">
       <SubType>Form</SubType>
@@ -120,18 +123,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Forms\search.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\search.Designer.cs">
-      <DependentUpon>search.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\users.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\users.Designer.cs">
-      <DependentUpon>users.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\welcome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,35 +213,38 @@
     <Compile Include="SQL Server\WORDS_LIST.cs">
       <DependentUpon>connection.tt</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UC_Collections.cs">
+    <Compile Include="Controllers\UC_Advanced_Search.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UC_Collections.Designer.cs">
+    <Compile Include="Controllers\UC_Advanced_Search.Designer.cs">
+      <DependentUpon>UC_Advanced_Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\UC_Collections.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controllers\UC_Collections.Designer.cs">
       <DependentUpon>UC_Collections.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UC_Celebrations.cs">
+    <Compile Include="Controllers\UC_Celebrations.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UC_Celebrations.Designer.cs">
+    <Compile Include="Controllers\UC_Celebrations.Designer.cs">
       <DependentUpon>UC_Celebrations.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UC_Users.cs">
+    <Compile Include="Controllers\UC_Search.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UC_Users.Designer.cs">
+    <Compile Include="Controllers\UC_Search.Designer.cs">
+      <DependentUpon>UC_Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\UC_Users.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controllers\UC_Users.Designer.cs">
       <DependentUpon>UC_Users.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\Advanced_Search.resx">
-      <DependentUpon>Advanced_Search.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\collections.resx">
-      <DependentUpon>collections.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\events.resx">
-      <DependentUpon>events.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_homeManagement.resx">
-      <DependentUpon>Frm_homeManagement.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\management.resx">
+      <DependentUpon>management.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\loans.resx">
       <DependentUpon>loans.cs</DependentUpon>
@@ -260,9 +254,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\search.resx">
       <DependentUpon>search.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\users.resx">
-      <DependentUpon>users.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\home.resx">
       <DependentUpon>home.cs</DependentUpon>
@@ -283,13 +274,19 @@
     <EmbeddedResource Include="Forms\welcome.resx">
       <DependentUpon>welcome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_Collections.resx">
+    <EmbeddedResource Include="Controllers\UC_Advanced_Search.resx">
+      <DependentUpon>UC_Advanced_Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\UC_Collections.resx">
       <DependentUpon>UC_Collections.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_Celebrations.resx">
+    <EmbeddedResource Include="Controllers\UC_Celebrations.resx">
       <DependentUpon>UC_Celebrations.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_Users.resx">
+    <EmbeddedResource Include="Controllers\UC_Search.resx">
+      <DependentUpon>UC_Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\UC_Users.resx">
       <DependentUpon>UC_Users.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -346,8 +343,18 @@
     <None Include="Resources\user %281%29.png" />
     <Content Include="SQL Server\BINAES_POPULATE.sql" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

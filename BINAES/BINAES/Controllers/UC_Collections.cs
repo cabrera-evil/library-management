@@ -19,16 +19,16 @@ namespace BINAES.UserControls
         {
             InitializeComponent();
 
-            cmb_searchBy.Items.Add("collection_name");
+            cmb_searchBy.Items.Add("name_");
             cmb_searchBy.Items.Add("id_type");
             cmb_searchBy.Items.Add("id_genre");
         }
 
         private db_BINAES db = new db_BINAES();
 
-        private void filter(string criterio, string campo)
+        private void filter(string find, string field)
         {
-            dg_collectionsDataTable.DataSource = db.COLLECTION_.SqlQuery("SELECT * FROM COLLECTION_ WHERE " + campo + " like '%"+criterio+"%'").ToList();
+            dg_collectionsDataTable.DataSource = db.COLLECTION_.SqlQuery("SELECT * FROM COLLECTION_ WHERE " + field + " like '%"+find+"%'").ToList();
         }
         
         private void btn_filter_Click(object sender, EventArgs e)
@@ -38,7 +38,7 @@ namespace BINAES.UserControls
         
         private void btn_reset_Click(object sender, EventArgs e)
         {
-            dg_collectionsDataTable.DataSource = db.COLLECTION_.ToList();
+            load_grid();
         }
         
         private void UC_Collections_Load(object sender, EventArgs e)
@@ -97,7 +97,7 @@ namespace BINAES.UserControls
                 using (db_BINAES db = new db_BINAES())
                 {
                     COLLECTION_ collection = new COLLECTION_();
-                    collection.collection_name = txt_name.Text;
+                    collection.name_ = txt_name.Text;
                     collection.id_type = ((TYPE_)cmb_type.SelectedItem).id;
                     collection.id_genre = ((GENRE)cmb_genre.SelectedItem).id;
 
@@ -123,7 +123,17 @@ namespace BINAES.UserControls
                 MessageBox.Show(ex.Message);
             }
         }
-
+        
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            lock_controllers();
+            clear_text();
+        }
+        
+        private void clear_text()
+        {
+            txt_name.Text = "";
+        }
 
         private void btn_insertRows_Click(object sender, EventArgs e)
         {
@@ -133,5 +143,8 @@ namespace BINAES.UserControls
             btn_remove.BackColor = Color.FromArgb(38, 109, 83);
             btn_insertRows.BackColor = Color.FromArgb(38, 109, 83);
         }
+
+        
+        
     }
 }

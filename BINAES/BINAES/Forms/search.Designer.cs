@@ -1,11 +1,13 @@
-﻿namespace BINAES
+﻿using System.ComponentModel;
+
+namespace BINAES
 {
-    partial class frm_search
+    partial class search
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -17,6 +19,7 @@
             {
                 components.Dispose();
             }
+
             base.Dispose(disposing);
         }
 
@@ -28,213 +31,127 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.rdb_both = new System.Windows.Forms.RadioButton();
-            this.rdb_physical = new System.Windows.Forms.RadioButton();
-            this.rdb_digital = new System.Windows.Forms.RadioButton();
-            this.btn_advanced_tools = new System.Windows.Forms.Button();
-            this.lbl_warning = new System.Windows.Forms.Label();
-            this.btn_search1 = new System.Windows.Forms.Button();
-            this.lbl_counter = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dgv_search_result = new System.Windows.Forms.DataGridView();
-            this.txt_search = new System.Windows.Forms.TextBox();
-            this.btn_reserve = new System.Windows.Forms.Button();
+            this.pnl_options = new System.Windows.Forms.Panel();
             this.btn_borrow = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_search_result)).BeginInit();
+            this.btn_search = new System.Windows.Forms.Button();
+            this.btn_reserve = new System.Windows.Forms.Button();
+            this.btn_advancedSearch = new System.Windows.Forms.Button();
+            this.pnl_container = new System.Windows.Forms.Panel();
+            this.pnl_options.SuspendLayout();
             this.SuspendLayout();
             // 
-            // rdb_both
+            // pnl_options
             // 
-            this.rdb_both.AutoSize = true;
-            this.rdb_both.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.rdb_both.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdb_both.ForeColor = System.Drawing.Color.LightGray;
-            this.rdb_both.Location = new System.Drawing.Point(557, 89);
-            this.rdb_both.Margin = new System.Windows.Forms.Padding(2);
-            this.rdb_both.Name = "rdb_both";
-            this.rdb_both.Size = new System.Drawing.Size(49, 20);
-            this.rdb_both.TabIndex = 23;
-            this.rdb_both.TabStop = true;
-            this.rdb_both.Text = "Both";
-            this.rdb_both.UseVisualStyleBackColor = true;
-            // 
-            // rdb_physical
-            // 
-            this.rdb_physical.AutoSize = true;
-            this.rdb_physical.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.rdb_physical.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdb_physical.ForeColor = System.Drawing.Color.LightGray;
-            this.rdb_physical.Location = new System.Drawing.Point(462, 89);
-            this.rdb_physical.Margin = new System.Windows.Forms.Padding(2);
-            this.rdb_physical.Name = "rdb_physical";
-            this.rdb_physical.Size = new System.Drawing.Size(93, 20);
-            this.rdb_physical.TabIndex = 22;
-            this.rdb_physical.TabStop = true;
-            this.rdb_physical.Text = "Physical only";
-            this.rdb_physical.UseVisualStyleBackColor = true;
-            // 
-            // rdb_digital
-            // 
-            this.rdb_digital.AutoSize = true;
-            this.rdb_digital.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.rdb_digital.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdb_digital.ForeColor = System.Drawing.Color.LightGray;
-            this.rdb_digital.Location = new System.Drawing.Point(372, 89);
-            this.rdb_digital.Margin = new System.Windows.Forms.Padding(2);
-            this.rdb_digital.Name = "rdb_digital";
-            this.rdb_digital.Size = new System.Drawing.Size(83, 20);
-            this.rdb_digital.TabIndex = 21;
-            this.rdb_digital.TabStop = true;
-            this.rdb_digital.Text = "Digital only";
-            this.rdb_digital.UseVisualStyleBackColor = true;
-            // 
-            // btn_advanced_tools
-            // 
-            this.btn_advanced_tools.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btn_advanced_tools.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_advanced_tools.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.btn_advanced_tools.Location = new System.Drawing.Point(68, 52);
-            this.btn_advanced_tools.Name = "btn_advanced_tools";
-            this.btn_advanced_tools.Size = new System.Drawing.Size(154, 23);
-            this.btn_advanced_tools.TabIndex = 20;
-            this.btn_advanced_tools.Text = "Advanced Tools";
-            this.btn_advanced_tools.UseVisualStyleBackColor = false;
-            this.btn_advanced_tools.Click += new System.EventHandler(this.btn_advanced_tools_Click);
-            // 
-            // lbl_warning
-            // 
-            this.lbl_warning.AutoSize = true;
-            this.lbl_warning.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_warning.ForeColor = System.Drawing.Color.LightGray;
-            this.lbl_warning.Location = new System.Drawing.Point(424, 130);
-            this.lbl_warning.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_warning.Name = "lbl_warning";
-            this.lbl_warning.Size = new System.Drawing.Size(173, 17);
-            this.lbl_warning.TabIndex = 19;
-            this.lbl_warning.Text = "Type a sentence to search...";
-            this.lbl_warning.Visible = false;
-            // 
-            // btn_search1
-            // 
-            this.btn_search1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btn_search1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_search1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.btn_search1.Location = new System.Drawing.Point(866, 53);
-            this.btn_search1.Name = "btn_search1";
-            this.btn_search1.Size = new System.Drawing.Size(74, 23);
-            this.btn_search1.TabIndex = 18;
-            this.btn_search1.Text = "Search";
-            this.btn_search1.UseVisualStyleBackColor = false;
-            this.btn_search1.Click += new System.EventHandler(this.btn_search1_Click);
-            // 
-            // lbl_counter
-            // 
-            this.lbl_counter.AutoSize = true;
-            this.lbl_counter.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_counter.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_counter.Location = new System.Drawing.Point(567, 109);
-            this.lbl_counter.Name = "lbl_counter";
-            this.lbl_counter.Size = new System.Drawing.Size(15, 17);
-            this.lbl_counter.TabIndex = 17;
-            this.lbl_counter.Text = "0";
-            this.lbl_counter.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(424, 109);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 17);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Total de resultados: ";
-            this.label1.Visible = false;
-            // 
-            // dgv_search_result
-            // 
-            this.dgv_search_result.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_search_result.Location = new System.Drawing.Point(68, 164);
-            this.dgv_search_result.Name = "dgv_search_result";
-            this.dgv_search_result.RowHeadersWidth = 51;
-            this.dgv_search_result.Size = new System.Drawing.Size(873, 389);
-            this.dgv_search_result.TabIndex = 15;
-            // 
-            // txt_search
-            // 
-            this.txt_search.BackColor = System.Drawing.Color.LightGray;
-            this.txt_search.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txt_search.Location = new System.Drawing.Point(227, 53);
-            this.txt_search.Name = "txt_search";
-            this.txt_search.Size = new System.Drawing.Size(634, 23);
-            this.txt_search.TabIndex = 14;
-            // 
-            // btn_reserve
-            // 
-            this.btn_reserve.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btn_reserve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_reserve.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.btn_reserve.Location = new System.Drawing.Point(339, 582);
-            this.btn_reserve.Name = "btn_reserve";
-            this.btn_reserve.Size = new System.Drawing.Size(125, 23);
-            this.btn_reserve.TabIndex = 25;
-            this.btn_reserve.Text = "Reserve";
-            this.btn_reserve.UseVisualStyleBackColor = false;
-            this.btn_reserve.Click += new System.EventHandler(this.btn_reserve_Click);
+            this.pnl_options.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (8)))), ((int) (((byte) (44)))), ((int) (((byte) (44)))));
+            this.pnl_options.Controls.Add(this.btn_borrow);
+            this.pnl_options.Controls.Add(this.btn_search);
+            this.pnl_options.Controls.Add(this.btn_reserve);
+            this.pnl_options.Controls.Add(this.btn_advancedSearch);
+            this.pnl_options.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_options.Location = new System.Drawing.Point(0, 0);
+            this.pnl_options.Name = "pnl_options";
+            this.pnl_options.Size = new System.Drawing.Size(1040, 69);
+            this.pnl_options.TabIndex = 0;
             // 
             // btn_borrow
             // 
-            this.btn_borrow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btn_borrow.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (38)))), ((int) (((byte) (109)))), ((int) (((byte) (83)))));
+            this.btn_borrow.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_borrow.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_borrow.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
             this.btn_borrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_borrow.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.btn_borrow.Location = new System.Drawing.Point(557, 582);
+            this.btn_borrow.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btn_borrow.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_borrow.Location = new System.Drawing.Point(553, 12);
             this.btn_borrow.Name = "btn_borrow";
-            this.btn_borrow.Size = new System.Drawing.Size(125, 23);
-            this.btn_borrow.TabIndex = 26;
+            this.btn_borrow.Size = new System.Drawing.Size(160, 42);
+            this.btn_borrow.TabIndex = 5;
             this.btn_borrow.Text = "Borrow";
             this.btn_borrow.UseVisualStyleBackColor = false;
-            this.btn_borrow.Click += new System.EventHandler(this.btn_borrow_Click);
             // 
-            // frm_search
+            // btn_search
+            // 
+            this.btn_search.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (38)))), ((int) (((byte) (109)))), ((int) (((byte) (83)))));
+            this.btn_search.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_search.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_search.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_search.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btn_search.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_search.Location = new System.Drawing.Point(28, 12);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(160, 42);
+            this.btn_search.TabIndex = 2;
+            this.btn_search.Text = "Search";
+            this.btn_search.UseVisualStyleBackColor = false;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
+            // 
+            // btn_reserve
+            // 
+            this.btn_reserve.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (38)))), ((int) (((byte) (109)))), ((int) (((byte) (83)))));
+            this.btn_reserve.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_reserve.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_reserve.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_reserve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_reserve.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btn_reserve.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_reserve.Location = new System.Drawing.Point(378, 12);
+            this.btn_reserve.Name = "btn_reserve";
+            this.btn_reserve.Size = new System.Drawing.Size(160, 42);
+            this.btn_reserve.TabIndex = 4;
+            this.btn_reserve.Text = "Reserve";
+            this.btn_reserve.UseVisualStyleBackColor = false;
+            // 
+            // btn_advancedSearch
+            // 
+            this.btn_advancedSearch.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (38)))), ((int) (((byte) (109)))), ((int) (((byte) (83)))));
+            this.btn_advancedSearch.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_advancedSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_advancedSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_advancedSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_advancedSearch.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btn_advancedSearch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_advancedSearch.Location = new System.Drawing.Point(203, 12);
+            this.btn_advancedSearch.Name = "btn_advancedSearch";
+            this.btn_advancedSearch.Size = new System.Drawing.Size(160, 42);
+            this.btn_advancedSearch.TabIndex = 3;
+            this.btn_advancedSearch.Text = "Advanced search";
+            this.btn_advancedSearch.UseVisualStyleBackColor = false;
+            this.btn_advancedSearch.Click += new System.EventHandler(this.btn_advancedSearch_Click);
+            // 
+            // pnl_container
+            // 
+            this.pnl_container.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_container.Location = new System.Drawing.Point(0, 69);
+            this.pnl_container.Name = "pnl_container";
+            this.pnl_container.Size = new System.Drawing.Size(1040, 611);
+            this.pnl_container.TabIndex = 1;
+            // 
+            // frm_homeSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1024, 641);
-            this.Controls.Add(this.btn_borrow);
-            this.Controls.Add(this.btn_reserve);
-            this.Controls.Add(this.rdb_both);
-            this.Controls.Add(this.rdb_physical);
-            this.Controls.Add(this.rdb_digital);
-            this.Controls.Add(this.btn_advanced_tools);
-            this.Controls.Add(this.lbl_warning);
-            this.Controls.Add(this.btn_search1);
-            this.Controls.Add(this.lbl_counter);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgv_search_result);
-            this.Controls.Add(this.txt_search);
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(1040, 680);
+            this.Controls.Add(this.pnl_container);
+            this.Controls.Add(this.pnl_options);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frm_search";
-            this.Text = "search";
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_search_result)).EndInit();
+            this.Name = "frm_homeSearch";
+            this.Text = "frm_homeSearch";
+            this.pnl_options.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
-
         }
 
-        #endregion
+        private System.Windows.Forms.Panel pnl_container;
 
-        private System.Windows.Forms.RadioButton rdb_both;
-        private System.Windows.Forms.RadioButton rdb_physical;
-        private System.Windows.Forms.RadioButton rdb_digital;
-        private System.Windows.Forms.Button btn_advanced_tools;
-        private System.Windows.Forms.Label lbl_warning;
-        private System.Windows.Forms.Button btn_search1;
-        private System.Windows.Forms.Label lbl_counter;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgv_search_result;
-        private System.Windows.Forms.TextBox txt_search;
+        private System.Windows.Forms.Button btn_advancedSearch;
         private System.Windows.Forms.Button btn_reserve;
         private System.Windows.Forms.Button btn_borrow;
+
+        private System.Windows.Forms.Button btn_search;
+
+        private System.Windows.Forms.Panel pnl_options;
+
+        #endregion
     }
 }

@@ -24,14 +24,14 @@ GO
 CREATE TABLE FLOOR_(
     id INT
         IDENTITY(1,1) PRIMARY KEY,
-    floor_number VARCHAR(50) NOT NULL
+    number_ VARCHAR(50) NOT NULL
 );
 GO
 
 CREATE TABLE GOAL(
     id INT
         IDENTITY(1,1) PRIMARY KEY,
-    goal_name VARCHAR(150) NOT NULL, 
+    name_ VARCHAR(150) NOT NULL, 
     --FK
     id_celebration INT NOT NULL
 );
@@ -51,7 +51,7 @@ CREATE TABLE AREA(
     id INT
         IDENTITY(1,1) PRIMARY KEY,
     --ATRIBUTOS
-    area_name VARCHAR(50) NOT NULL,
+    name_ VARCHAR(50) NOT NULL,
     area_description VARCHAR(300),
     schedule VARCHAR(30),
     --FK
@@ -63,7 +63,7 @@ GO
 CREATE TABLE MANAGER(
     id INT
         IDENTITY(1,1) PRIMARY KEY,
-    manager_name VARCHAR(50) NOT NULL
+    name_ VARCHAR(50) NOT NULL
 );
 GO
 
@@ -71,7 +71,7 @@ CREATE TABLE USER_(
     id INT 
         IDENTITY(1,1) PRIMARY KEY,
     --ATRIBUTOS
-	user_full_name VARCHAR (50) NOT NULL,
+	full_name VARCHAR (50) NOT NULL,
     username VARCHAR(20) NOT NULL UNIQUE,
     user_address VARCHAR(100) NULL
         DEFAULT 'No defined',
@@ -92,21 +92,21 @@ GO
 CREATE TABLE OCCUPANCY(
     id INT
         IDENTITY(1,1) PRIMARY KEY,
-    occupancy_name VARCHAR(50) -- NOT NULL UNIQUE
+    name_ VARCHAR(50) -- NOT NULL UNIQUE
 );
 GO
 
 CREATE TABLE ROLE_(
     id INT
         IDENTITY(1,1) PRIMARY KEY,
-    role_type VARCHAR(50)
+    type_ VARCHAR(50)
 );
 GO
 
 CREATE TABLE INSTITUTION(
     id INT
         IDENTITY(1,1) PRIMARY KEY,
-    institution_name VARCHAR(50) NOT NULL
+    name_ VARCHAR(50) NOT NULL
 );
 GO
 
@@ -143,7 +143,7 @@ CREATE TABLE COPY_(
     id INT
         IDENTITY(1,1) PRIMARY KEY,
     --ATRIBUTOS
-    copy_name VARCHAR(50) NOT NULL,
+    name_ VARCHAR(50) NOT NULL,
     picture VARBINARY(MAX),
     release_date DATETIME,
     --FK
@@ -157,28 +157,28 @@ GO
 CREATE TABLE EDITORIAL(
     id INT
         IDENTITY(1,1) PRIMARY KEY,
-    editorial_name VARCHAR(50) NOT NULL
+    name_ VARCHAR(50) NOT NULL
 );
 GO
 
 CREATE TABLE LANGUAGE_(
     id INT
         IDENTITY(1,1) PRIMARY KEY,
-    language_name VARCHAR(50) NOT NULL
+    name_ VARCHAR(50) NOT NULL
 );
 GO
 
 CREATE TABLE FORMAT_(
     id INT
         IDENTITY(1,1) PRIMARY KEY,
-    format_name VARCHAR(50) NOT NULL
+    name_ VARCHAR(50) NOT NULL
 );
 GO
 
 CREATE TABLE AUTHOR(
     id INT
         IDENTITY(1,1) PRIMARY KEY,
-    author_name VARCHAR(50) NOT NULL,
+    name_ VARCHAR(50) NOT NULL,
     --FK
     id_copy INT NOT NULL
 );
@@ -206,7 +206,7 @@ GO
 CREATE TABLE LABEL_TYPE(
     id INT
         IDENTITY(1,1) PRIMARY KEY,
-    label_name VARCHAR(4) NOT NULL
+    name_ VARCHAR(4) NOT NULL
 );
 GO
 
@@ -214,7 +214,7 @@ GO
 CREATE TABLE COLLECTION_(
     id INT
         IDENTITY(1,1) PRIMARY KEY,
-    collection_name VARCHAR(150) NOT NULL,
+    name_ VARCHAR(150) NOT NULL,
     --FK
     id_type INT,
     id_genre INT
@@ -224,14 +224,14 @@ GO
 CREATE TABLE TYPE_(
     id INT
         IDENTITY(1,1) PRIMARY KEY,
-    type_name_ VARCHAR(50) NOT NULL
+    name_ VARCHAR(50) NOT NULL
 );
 GO
 
 CREATE TABLE GENRE(
     id INT
         IDENTITY(1,1) PRIMARY KEY,
-    genre_name VARCHAR(50) NOT NULL
+    name_ VARCHAR(50) NOT NULL
 );
 GO
 --******************************************************* FOREIGN KEYS CREATION ******************************************************

@@ -15,7 +15,7 @@ namespace BINAES.SQL_Server
     public partial class GOAL
     {
         public int id { get; set; }
-        public string goal_name { get; set; }
+        public string name_ { get; set; }
         public int id_celebration { get; set; }
     
         public virtual CELEBRATION CELEBRATION { get; set; }
