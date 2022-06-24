@@ -26,9 +26,9 @@ namespace BINAES.UserControls
 
         private db_BINAES db = new db_BINAES();
 
-        private void filter(string criterio, string campo)
+        private void filter(string find, string field)
         {
-            dg_collectionsDataTable.DataSource = db.COLLECTION_.SqlQuery("SELECT * FROM COLLECTION_ WHERE " + campo + " like '%"+criterio+"%'").ToList();
+            dg_collectionsDataTable.DataSource = db.COLLECTION_.SqlQuery("SELECT * FROM COLLECTION_ WHERE " + field + " like '%"+find+"%'").ToList();
         }
         
         private void btn_filter_Click(object sender, EventArgs e)
@@ -38,7 +38,7 @@ namespace BINAES.UserControls
         
         private void btn_reset_Click(object sender, EventArgs e)
         {
-            dg_collectionsDataTable.DataSource = db.COLLECTION_.ToList();
+            load_grid();
         }
         
         private void UC_Collections_Load(object sender, EventArgs e)
