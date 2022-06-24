@@ -2,9 +2,9 @@
 
 namespace BINAES
 {
-    public partial class frm_loans : Form
+    public partial class loans : Form
     {
-        public frm_loans()
+        public loans()
         {
             InitializeComponent();
         }

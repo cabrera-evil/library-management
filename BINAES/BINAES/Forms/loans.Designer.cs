@@ -2,7 +2,7 @@
 
 namespace BINAES
 {
-    partial class frm_loans
+    partial class loans
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@ namespace BINAES
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_loans));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loans));
             this.lblregisterLoans = new System.Windows.Forms.Label();
             this.lblNameLoans = new System.Windows.Forms.Label();
             this.lblUserLoans = new System.Windows.Forms.Label();
@@ -59,9 +59,10 @@ namespace BINAES
             // 
             this.lblregisterLoans.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblregisterLoans.ForeColor = System.Drawing.Color.LightGray;
-            this.lblregisterLoans.Location = new System.Drawing.Point(12, 9);
+            this.lblregisterLoans.Location = new System.Drawing.Point(9, 7);
+            this.lblregisterLoans.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblregisterLoans.Name = "lblregisterLoans";
-            this.lblregisterLoans.Size = new System.Drawing.Size(232, 23);
+            this.lblregisterLoans.Size = new System.Drawing.Size(174, 19);
             this.lblregisterLoans.TabIndex = 0;
             this.lblregisterLoans.Text = "REGISTER OF LOANS:";
             // 
@@ -69,9 +70,10 @@ namespace BINAES
             // 
             this.lblNameLoans.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNameLoans.ForeColor = System.Drawing.Color.LightGray;
-            this.lblNameLoans.Location = new System.Drawing.Point(12, 48);
+            this.lblNameLoans.Location = new System.Drawing.Point(9, 39);
+            this.lblNameLoans.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNameLoans.Name = "lblNameLoans";
-            this.lblNameLoans.Size = new System.Drawing.Size(120, 23);
+            this.lblNameLoans.Size = new System.Drawing.Size(90, 19);
             this.lblNameLoans.TabIndex = 1;
             this.lblNameLoans.Text = "Full name:";
             // 
@@ -79,9 +81,10 @@ namespace BINAES
             // 
             this.lblUserLoans.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserLoans.ForeColor = System.Drawing.Color.LightGray;
-            this.lblUserLoans.Location = new System.Drawing.Point(12, 82);
+            this.lblUserLoans.Location = new System.Drawing.Point(9, 67);
+            this.lblUserLoans.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUserLoans.Name = "lblUserLoans";
-            this.lblUserLoans.Size = new System.Drawing.Size(120, 23);
+            this.lblUserLoans.Size = new System.Drawing.Size(90, 19);
             this.lblUserLoans.TabIndex = 2;
             this.lblUserLoans.Text = "Username:";
             // 
@@ -89,19 +92,21 @@ namespace BINAES
             // 
             this.lblHistoryLoans.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHistoryLoans.ForeColor = System.Drawing.Color.LightGray;
-            this.lblHistoryLoans.Location = new System.Drawing.Point(12, 123);
+            this.lblHistoryLoans.Location = new System.Drawing.Point(9, 100);
+            this.lblHistoryLoans.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHistoryLoans.Name = "lblHistoryLoans";
-            this.lblHistoryLoans.Size = new System.Drawing.Size(182, 30);
+            this.lblHistoryLoans.Size = new System.Drawing.Size(136, 24);
             this.lblHistoryLoans.TabIndex = 3;
             this.lblHistoryLoans.Text = "Library Loan history:";
             // 
             // txtHistoryLoans
             // 
             this.txtHistoryLoans.BackColor = System.Drawing.Color.LightGray;
-            this.txtHistoryLoans.Location = new System.Drawing.Point(12, 151);
+            this.txtHistoryLoans.Location = new System.Drawing.Point(9, 123);
+            this.txtHistoryLoans.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtHistoryLoans.Multiline = true;
             this.txtHistoryLoans.Name = "txtHistoryLoans";
-            this.txtHistoryLoans.Size = new System.Drawing.Size(583, 162);
+            this.txtHistoryLoans.Size = new System.Drawing.Size(438, 132);
             this.txtHistoryLoans.TabIndex = 4;
             // 
             // grbDateTimeLoans
@@ -112,9 +117,11 @@ namespace BINAES
             this.grbDateTimeLoans.Controls.Add(this.lblDateLoans);
             this.grbDateTimeLoans.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbDateTimeLoans.ForeColor = System.Drawing.Color.LightGray;
-            this.grbDateTimeLoans.Location = new System.Drawing.Point(623, 48);
+            this.grbDateTimeLoans.Location = new System.Drawing.Point(467, 39);
+            this.grbDateTimeLoans.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grbDateTimeLoans.Name = "grbDateTimeLoans";
-            this.grbDateTimeLoans.Size = new System.Drawing.Size(411, 145);
+            this.grbDateTimeLoans.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grbDateTimeLoans.Size = new System.Drawing.Size(308, 118);
             this.grbDateTimeLoans.TabIndex = 5;
             this.grbDateTimeLoans.TabStop = false;
             this.grbDateTimeLoans.Text = "Date and time:";
@@ -123,26 +130,29 @@ namespace BINAES
             // 
             this.txtHourLoans.BackColor = System.Drawing.Color.LightGray;
             this.txtHourLoans.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHourLoans.Location = new System.Drawing.Point(64, 69);
+            this.txtHourLoans.Location = new System.Drawing.Point(48, 56);
+            this.txtHourLoans.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtHourLoans.Name = "txtHourLoans";
-            this.txtHourLoans.Size = new System.Drawing.Size(329, 26);
+            this.txtHourLoans.Size = new System.Drawing.Size(248, 22);
             this.txtHourLoans.TabIndex = 11;
             // 
             // dtpDateTimeLoans
             // 
             this.dtpDateTimeLoans.CalendarFont = new System.Drawing.Font("Century Gothic", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDateTimeLoans.Location = new System.Drawing.Point(64, 34);
+            this.dtpDateTimeLoans.Location = new System.Drawing.Point(48, 28);
+            this.dtpDateTimeLoans.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpDateTimeLoans.Name = "dtpDateTimeLoans";
-            this.dtpDateTimeLoans.Size = new System.Drawing.Size(329, 26);
+            this.dtpDateTimeLoans.Size = new System.Drawing.Size(248, 22);
             this.dtpDateTimeLoans.TabIndex = 9;
             // 
             // lblHourLoans
             // 
             this.lblHourLoans.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHourLoans.ForeColor = System.Drawing.Color.LightGray;
-            this.lblHourLoans.Location = new System.Drawing.Point(6, 71);
+            this.lblHourLoans.Location = new System.Drawing.Point(4, 58);
+            this.lblHourLoans.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHourLoans.Name = "lblHourLoans";
-            this.lblHourLoans.Size = new System.Drawing.Size(110, 23);
+            this.lblHourLoans.Size = new System.Drawing.Size(82, 19);
             this.lblHourLoans.TabIndex = 8;
             this.lblHourLoans.Text = "Hour:";
             // 
@@ -150,9 +160,10 @@ namespace BINAES
             // 
             this.lblDateLoans.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDateLoans.ForeColor = System.Drawing.Color.LightGray;
-            this.lblDateLoans.Location = new System.Drawing.Point(6, 34);
+            this.lblDateLoans.Location = new System.Drawing.Point(4, 28);
+            this.lblDateLoans.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDateLoans.Name = "lblDateLoans";
-            this.lblDateLoans.Size = new System.Drawing.Size(110, 23);
+            this.lblDateLoans.Size = new System.Drawing.Size(82, 19);
             this.lblDateLoans.TabIndex = 7;
             this.lblDateLoans.Text = "Date:";
             // 
@@ -164,9 +175,11 @@ namespace BINAES
             this.grbReturnLoans.Controls.Add(this.lblReturnLoans);
             this.grbReturnLoans.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbReturnLoans.ForeColor = System.Drawing.Color.LightGray;
-            this.grbReturnLoans.Location = new System.Drawing.Point(623, 222);
+            this.grbReturnLoans.Location = new System.Drawing.Point(467, 180);
+            this.grbReturnLoans.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grbReturnLoans.Name = "grbReturnLoans";
-            this.grbReturnLoans.Size = new System.Drawing.Size(411, 140);
+            this.grbReturnLoans.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grbReturnLoans.Size = new System.Drawing.Size(308, 114);
             this.grbReturnLoans.TabIndex = 6;
             this.grbReturnLoans.TabStop = false;
             this.grbReturnLoans.Text = "Return date:";
@@ -175,26 +188,29 @@ namespace BINAES
             // 
             this.txtHourReturnLoans.BackColor = System.Drawing.Color.LightGray;
             this.txtHourReturnLoans.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHourReturnLoans.Location = new System.Drawing.Point(64, 73);
+            this.txtHourReturnLoans.Location = new System.Drawing.Point(48, 59);
+            this.txtHourReturnLoans.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtHourReturnLoans.Name = "txtHourReturnLoans";
-            this.txtHourReturnLoans.Size = new System.Drawing.Size(329, 26);
+            this.txtHourReturnLoans.Size = new System.Drawing.Size(248, 22);
             this.txtHourReturnLoans.TabIndex = 12;
             // 
             // dtpReturnLoans
             // 
             this.dtpReturnLoans.CalendarFont = new System.Drawing.Font("Century Gothic", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpReturnLoans.Location = new System.Drawing.Point(64, 33);
+            this.dtpReturnLoans.Location = new System.Drawing.Point(48, 27);
+            this.dtpReturnLoans.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpReturnLoans.Name = "dtpReturnLoans";
-            this.dtpReturnLoans.Size = new System.Drawing.Size(329, 26);
+            this.dtpReturnLoans.Size = new System.Drawing.Size(248, 22);
             this.dtpReturnLoans.TabIndex = 10;
             // 
             // lblHourReturnLoans
             // 
             this.lblHourReturnLoans.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHourReturnLoans.ForeColor = System.Drawing.Color.LightGray;
-            this.lblHourReturnLoans.Location = new System.Drawing.Point(6, 73);
+            this.lblHourReturnLoans.Location = new System.Drawing.Point(4, 59);
+            this.lblHourReturnLoans.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHourReturnLoans.Name = "lblHourReturnLoans";
-            this.lblHourReturnLoans.Size = new System.Drawing.Size(110, 23);
+            this.lblHourReturnLoans.Size = new System.Drawing.Size(82, 19);
             this.lblHourReturnLoans.TabIndex = 10;
             this.lblHourReturnLoans.Text = "Hour:";
             // 
@@ -202,9 +218,10 @@ namespace BINAES
             // 
             this.lblReturnLoans.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReturnLoans.ForeColor = System.Drawing.Color.LightGray;
-            this.lblReturnLoans.Location = new System.Drawing.Point(6, 36);
+            this.lblReturnLoans.Location = new System.Drawing.Point(4, 29);
+            this.lblReturnLoans.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblReturnLoans.Name = "lblReturnLoans";
-            this.lblReturnLoans.Size = new System.Drawing.Size(110, 23);
+            this.lblReturnLoans.Size = new System.Drawing.Size(82, 19);
             this.lblReturnLoans.TabIndex = 9;
             this.lblReturnLoans.Text = "Date:";
             // 
@@ -213,9 +230,10 @@ namespace BINAES
             this.btnAcceptLoans.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnAcceptLoans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAcceptLoans.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAcceptLoans.Location = new System.Drawing.Point(61, 345);
+            this.btnAcceptLoans.Location = new System.Drawing.Point(46, 280);
+            this.btnAcceptLoans.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAcceptLoans.Name = "btnAcceptLoans";
-            this.btnAcceptLoans.Size = new System.Drawing.Size(133, 40);
+            this.btnAcceptLoans.Size = new System.Drawing.Size(100, 32);
             this.btnAcceptLoans.TabIndex = 7;
             this.btnAcceptLoans.Text = "Accept";
             this.btnAcceptLoans.UseVisualStyleBackColor = false;
@@ -225,9 +243,10 @@ namespace BINAES
             this.btnCancelLoans.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnCancelLoans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelLoans.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelLoans.Location = new System.Drawing.Point(282, 345);
+            this.btnCancelLoans.Location = new System.Drawing.Point(212, 280);
+            this.btnCancelLoans.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancelLoans.Name = "btnCancelLoans";
-            this.btnCancelLoans.Size = new System.Drawing.Size(133, 40);
+            this.btnCancelLoans.Size = new System.Drawing.Size(100, 32);
             this.btnCancelLoans.TabIndex = 8;
             this.btnCancelLoans.Text = "Cancel";
             this.btnCancelLoans.UseVisualStyleBackColor = false;
@@ -236,26 +255,28 @@ namespace BINAES
             // 
             this.txtNameLoans.BackColor = System.Drawing.Color.LightGray;
             this.txtNameLoans.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameLoans.Location = new System.Drawing.Point(112, 48);
+            this.txtNameLoans.Location = new System.Drawing.Point(103, 39);
+            this.txtNameLoans.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNameLoans.Name = "txtNameLoans";
-            this.txtNameLoans.Size = new System.Drawing.Size(483, 26);
+            this.txtNameLoans.Size = new System.Drawing.Size(344, 22);
             this.txtNameLoans.TabIndex = 9;
             // 
             // txtUserLoans
             // 
             this.txtUserLoans.BackColor = System.Drawing.Color.LightGray;
             this.txtUserLoans.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserLoans.Location = new System.Drawing.Point(112, 82);
+            this.txtUserLoans.Location = new System.Drawing.Point(103, 67);
+            this.txtUserLoans.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtUserLoans.Name = "txtUserLoans";
-            this.txtUserLoans.Size = new System.Drawing.Size(483, 26);
+            this.txtUserLoans.Size = new System.Drawing.Size(344, 22);
             this.txtUserLoans.TabIndex = 10;
             // 
             // frm_loans
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1046, 414);
+            this.ClientSize = new System.Drawing.Size(784, 336);
             this.Controls.Add(this.txtUserLoans);
             this.Controls.Add(this.txtNameLoans);
             this.Controls.Add(this.btnCancelLoans);
@@ -267,7 +288,9 @@ namespace BINAES
             this.Controls.Add(this.lblUserLoans);
             this.Controls.Add(this.lblNameLoans);
             this.Controls.Add(this.lblregisterLoans);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "frm_loans";
             this.Text = "Loans";
@@ -277,6 +300,7 @@ namespace BINAES
             this.grbReturnLoans.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         private System.Windows.Forms.TextBox txtHourLoans;

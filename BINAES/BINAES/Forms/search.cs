@@ -41,14 +41,14 @@ namespace BINAES
         private void btn_borrow_Click(object sender, EventArgs e)
         {
             // abrir formulario para prestar
-            Form loans = new frm_loans();
+            Form loans = new loans();
             loans.Show();
         }
 
         private void btn_reserve_Click(object sender, EventArgs e)
         {
             // abrir formulario para reservar
-            Form reservations = new frm_reservations();
+            Form reservations = new reservations();
             reservations.Show();
         }
     }
