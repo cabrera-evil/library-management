@@ -94,17 +94,17 @@ namespace BINAES
 
         private void btn_loans_Click(object sender, EventArgs e)
         {
-           open_form<frm_users>();
+           //open_form<frm_users>();
         }
 
         private void btn_booking_Click(object sender, EventArgs e)
         {
-            open_form<frm_collections>();
+            //open_form<frm_collections>();
         }
 
         private void btn_management_Click(object sender, EventArgs e)
         {
-            open_form<Frm_homeManagement>();
+            open_form<Management>();
         }
 
         private void btn_logout_Click(object sender, EventArgs e)

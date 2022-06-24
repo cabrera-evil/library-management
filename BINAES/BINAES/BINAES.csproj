@@ -91,23 +91,11 @@
     </Compile>
     <Compile Include="Clases\Encrypt.cs" />
     <Compile Include="Clases\UserDAO.cs" />
-    <Compile Include="Forms\collections.cs">
+    <Compile Include="Forms\Management.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\collections.Designer.cs">
-      <DependentUpon>collections.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\events.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\events.Designer.cs">
-      <DependentUpon>events.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Frm_homeManagement.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Frm_homeManagement.Designer.cs">
-      <DependentUpon>Frm_homeManagement.cs</DependentUpon>
+    <Compile Include="Forms\Management.Designer.cs">
+      <DependentUpon>Management.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\home.cs">
       <SubType>Form</SubType>
@@ -128,12 +116,6 @@
     </Compile>
     <Compile Include="Forms\search.Designer.cs">
       <DependentUpon>search.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\users.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\users.Designer.cs">
-      <DependentUpon>users.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\welcome.cs">
       <SubType>Form</SubType>
@@ -246,20 +228,11 @@
     <EmbeddedResource Include="Forms\Advanced_Search.resx">
       <DependentUpon>Advanced_Search.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\collections.resx">
-      <DependentUpon>collections.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\events.resx">
-      <DependentUpon>events.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_homeManagement.resx">
-      <DependentUpon>Frm_homeManagement.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Management.resx">
+      <DependentUpon>Management.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\search.resx">
       <DependentUpon>search.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\users.resx">
-      <DependentUpon>users.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\home.resx">
       <DependentUpon>home.cs</DependentUpon>
