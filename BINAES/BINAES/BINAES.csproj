@@ -225,6 +225,12 @@
     <Compile Include="SQL Server\WORDS_LIST.cs">
       <DependentUpon>connection.tt</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_Advanced_Search.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Advanced_Search.Designer.cs">
+      <DependentUpon>UC_Advanced_Search.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_Collections.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -279,6 +285,9 @@
     </Compile>
     <EmbeddedResource Include="Forms\welcome.resx">
       <DependentUpon>welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Advanced_Search.resx">
+      <DependentUpon>UC_Advanced_Search.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Collections.resx">
       <DependentUpon>UC_Collections.cs</DependentUpon>

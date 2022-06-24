@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BINAES.Clases;
 using BINAES.SQL_Server;
+using BINAES.UserControls;
 
 namespace BINAES
 {
@@ -19,8 +20,19 @@ namespace BINAES
             InitializeComponent();
         }
 
-        private void btn_advanced_tools_Click(object sender, EventArgs e)
+        private void addUserControl(UserControl userControl)
         {
+            userControl.Dock = DockStyle.Fill;
+            pnl_advanced_search.Controls.Clear(); 
+            pnl_advanced_search.Controls.Add(userControl);
+            userControl.BringToFront();
+        }
+
+        private void btn_advanced_tools_Click_1(object sender, EventArgs e)
+        {
+            UC_Advanced_Search panel = new UC_Advanced_Search();
+            addUserControl(panel);
+            /*
             using (frm_advanced_search window = new frm_advanced_search())
             {
                 window.ShowDialog();
@@ -35,9 +47,8 @@ namespace BINAES
                     }
                     // Searching by partial title
 
-
                 }
-            }
+            }*/
         }
 
         private void btn_search1_Click(object sender, EventArgs e)
