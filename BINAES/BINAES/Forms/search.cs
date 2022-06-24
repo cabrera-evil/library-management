@@ -40,14 +40,12 @@ namespace BINAES
 
         private void btn_borrow_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("We are looking wether your selection is available or not"); 
-            // Search in the Data Base whther it is available or not
-            // If so, open the Borrowing module. If not, tell the user
+            // abrir formulario para prestar
         }
 
         private void btn_reserve_Click(object sender, EventArgs e)
         {
-            // Open module for booking
+            // abrir formulario para reservar
         }
     }
 }
