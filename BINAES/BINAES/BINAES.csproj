@@ -103,11 +103,23 @@
     <Compile Include="Forms\home.Designer.cs">
       <DependentUpon>home.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\loans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\loans.Designer.cs">
+      <DependentUpon>loans.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\reservations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\reservations.Designer.cs">
+      <DependentUpon>reservations.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -233,6 +245,12 @@
     </Compile>
     <EmbeddedResource Include="Forms\management.resx">
       <DependentUpon>management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\loans.resx">
+      <DependentUpon>loans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\reservations.resx">
+      <DependentUpon>reservations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\search.resx">
       <DependentUpon>search.cs</DependentUpon>
