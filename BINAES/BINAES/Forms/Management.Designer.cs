@@ -2,7 +2,7 @@
 
 namespace BINAES
 {
-    partial class Frm_homeManagement
+    partial class Management
     {
         /// <summary>
         /// Required designer variable.

@@ -28,12 +28,9 @@ C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.csproj.CoreCom
 C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.csproj.CopyComplete
 C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.exe
 C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.pdb
-C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_collections.resources
 C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_collections.resources
 C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_events.resources
 C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_users.resources
-C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_events.resources
-C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_users.resources
 C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_welcome.resources
 C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_advanced_search.resources
 C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_search.resources
@@ -73,7 +70,6 @@ C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.Frm_homeManage
 C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Celebrations.resources
 C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Collections.resources
 C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Users.resources
-C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.Frm_homeManagement.resources
 C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Collections.resources
 C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Celebrations.resources
 C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Users.resources
@@ -85,7 +81,11 @@ C:\Users\monic\OneDrive\Documentos\UNIVERSIDAD\proyectos\POO-BD\BINAES\BINAES\ob
 C:\Users\monic\OneDrive\Documentos\UNIVERSIDAD\proyectos\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Collections.resources
 C:\Users\monic\OneDrive\Documentos\UNIVERSIDAD\proyectos\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Celebrations.resources
 C:\Users\monic\OneDrive\Documentos\UNIVERSIDAD\proyectos\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Users.resources
+<<<<<<< HEAD
 C:\Users\monic\OneDrive\Documentos\UNIVERSIDAD\proyectos\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Advanced_Search.resources
 C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Advanced_Search.resources
 C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_homeSearch.resources
 C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Search.resources
+=======
+C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.Management.resources
+>>>>>>> 16cc2a38c39cb36b972d648624b3ae757cd5dc9f

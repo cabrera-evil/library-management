@@ -32,22 +32,6 @@ namespace BINAES.UserControls
         private void InitializeComponent()
         {
             this.pnl_userDataBar = new System.Windows.Forms.Panel();
-            this.pb_picture = new System.Windows.Forms.PictureBox();
-            this.btn_picture = new System.Windows.Forms.Button();
-            this.btn_cancel = new System.Windows.Forms.Button();
-            this.btn_save = new System.Windows.Forms.Button();
-            this.lbl_usersDataTable = new System.Windows.Forms.Label();
-            this.pnl_usersDataTableBar = new System.Windows.Forms.Panel();
-            this.btn_filter = new System.Windows.Forms.Button();
-            this.btn_reset = new System.Windows.Forms.Button();
-            this.cmb_searchBy = new System.Windows.Forms.ComboBox();
-            this.txt_search = new System.Windows.Forms.TextBox();
-            this.lbl_searchBy = new System.Windows.Forms.Label();
-            this.lbl_search = new System.Windows.Forms.Label();
-            this.btn_insertRows = new System.Windows.Forms.Button();
-            this.btn_remove = new System.Windows.Forms.Button();
-            this.btn_edit = new System.Windows.Forms.Button();
-            this.dg_usersDataTable = new System.Windows.Forms.DataGridView();
             this.txt_full_name = new System.Windows.Forms.TextBox();
             this.lbl_full_name = new System.Windows.Forms.Label();
             this.cmb_role = new System.Windows.Forms.ComboBox();
@@ -66,6 +50,22 @@ namespace BINAES.UserControls
             this.lbl_occupation = new System.Windows.Forms.Label();
             this.txt_user = new System.Windows.Forms.TextBox();
             this.lbl_user = new System.Windows.Forms.Label();
+            this.pb_picture = new System.Windows.Forms.PictureBox();
+            this.btn_picture = new System.Windows.Forms.Button();
+            this.btn_cancel = new System.Windows.Forms.Button();
+            this.btn_save = new System.Windows.Forms.Button();
+            this.lbl_usersDataTable = new System.Windows.Forms.Label();
+            this.pnl_usersDataTableBar = new System.Windows.Forms.Panel();
+            this.btn_filter = new System.Windows.Forms.Button();
+            this.btn_reset = new System.Windows.Forms.Button();
+            this.cmb_searchBy = new System.Windows.Forms.ComboBox();
+            this.txt_search = new System.Windows.Forms.TextBox();
+            this.lbl_searchBy = new System.Windows.Forms.Label();
+            this.lbl_search = new System.Windows.Forms.Label();
+            this.btn_insertRows = new System.Windows.Forms.Button();
+            this.btn_remove = new System.Windows.Forms.Button();
+            this.btn_edit = new System.Windows.Forms.Button();
+            this.dg_usersDataTable = new System.Windows.Forms.DataGridView();
             this.pnl_userDataBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_picture)).BeginInit();
             this.pnl_usersDataTableBar.SuspendLayout();
@@ -102,225 +102,6 @@ namespace BINAES.UserControls
             this.pnl_userDataBar.Name = "pnl_userDataBar";
             this.pnl_userDataBar.Size = new System.Drawing.Size(355, 611);
             this.pnl_userDataBar.TabIndex = 25;
-            // 
-            // pb_picture
-            // 
-            this.pb_picture.Location = new System.Drawing.Point(27, 299);
-            this.pb_picture.Name = "pb_picture";
-            this.pb_picture.Size = new System.Drawing.Size(305, 141);
-            this.pb_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_picture.TabIndex = 32;
-            this.pb_picture.TabStop = false;
-            // 
-            // btn_picture
-            // 
-            this.btn_picture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(109)))), ((int)(((byte)(83)))));
-            this.btn_picture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_picture.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
-            this.btn_picture.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
-            this.btn_picture.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
-            this.btn_picture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_picture.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_picture.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_picture.Location = new System.Drawing.Point(27, 446);
-            this.btn_picture.Name = "btn_picture";
-            this.btn_picture.Size = new System.Drawing.Size(305, 45);
-            this.btn_picture.TabIndex = 31;
-            this.btn_picture.Text = "Select Picture";
-            this.btn_picture.UseVisualStyleBackColor = false;
-            this.btn_picture.Click += new System.EventHandler(this.btn_picture_Click);
-            // 
-            // btn_cancel
-            // 
-            this.btn_cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(109)))), ((int)(((byte)(83)))));
-            this.btn_cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_cancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
-            this.btn_cancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
-            this.btn_cancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
-            this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cancel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_cancel.Location = new System.Drawing.Point(27, 548);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(305, 45);
-            this.btn_cancel.TabIndex = 30;
-            this.btn_cancel.Text = "Cancel";
-            this.btn_cancel.UseVisualStyleBackColor = false;
-            // 
-            // btn_save
-            // 
-            this.btn_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(109)))), ((int)(((byte)(83)))));
-            this.btn_save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_save.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
-            this.btn_save.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
-            this.btn_save.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
-            this.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_save.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_save.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_save.Location = new System.Drawing.Point(27, 497);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(305, 45);
-            this.btn_save.TabIndex = 8;
-            this.btn_save.Text = "Save";
-            this.btn_save.UseVisualStyleBackColor = false;
-            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
-            // 
-            // lbl_usersDataTable
-            // 
-            this.lbl_usersDataTable.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_usersDataTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(109)))), ((int)(((byte)(83)))));
-            this.lbl_usersDataTable.Location = new System.Drawing.Point(23, 20);
-            this.lbl_usersDataTable.Name = "lbl_usersDataTable";
-            this.lbl_usersDataTable.Size = new System.Drawing.Size(234, 23);
-            this.lbl_usersDataTable.TabIndex = 5;
-            this.lbl_usersDataTable.Text = "Users data table";
-            // 
-            // pnl_usersDataTableBar
-            // 
-            this.pnl_usersDataTableBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pnl_usersDataTableBar.Controls.Add(this.btn_filter);
-            this.pnl_usersDataTableBar.Controls.Add(this.btn_reset);
-            this.pnl_usersDataTableBar.Controls.Add(this.lbl_usersDataTable);
-            this.pnl_usersDataTableBar.Controls.Add(this.cmb_searchBy);
-            this.pnl_usersDataTableBar.Controls.Add(this.txt_search);
-            this.pnl_usersDataTableBar.Controls.Add(this.lbl_searchBy);
-            this.pnl_usersDataTableBar.Controls.Add(this.lbl_search);
-            this.pnl_usersDataTableBar.Controls.Add(this.btn_insertRows);
-            this.pnl_usersDataTableBar.Controls.Add(this.btn_remove);
-            this.pnl_usersDataTableBar.Controls.Add(this.btn_edit);
-            this.pnl_usersDataTableBar.Controls.Add(this.dg_usersDataTable);
-            this.pnl_usersDataTableBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnl_usersDataTableBar.Location = new System.Drawing.Point(0, 0);
-            this.pnl_usersDataTableBar.Name = "pnl_usersDataTableBar";
-            this.pnl_usersDataTableBar.Size = new System.Drawing.Size(687, 611);
-            this.pnl_usersDataTableBar.TabIndex = 24;
-            // 
-            // btn_filter
-            // 
-            this.btn_filter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(109)))), ((int)(((byte)(83)))));
-            this.btn_filter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
-            this.btn_filter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
-            this.btn_filter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
-            this.btn_filter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_filter.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_filter.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_filter.Location = new System.Drawing.Point(343, 51);
-            this.btn_filter.Name = "btn_filter";
-            this.btn_filter.Size = new System.Drawing.Size(60, 24);
-            this.btn_filter.TabIndex = 10;
-            this.btn_filter.Text = "Filter";
-            this.btn_filter.UseVisualStyleBackColor = false;
-            this.btn_filter.Click += new System.EventHandler(this.btn_filter_Click);
-            // 
-            // btn_reset
-            // 
-            this.btn_reset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(109)))), ((int)(((byte)(83)))));
-            this.btn_reset.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
-            this.btn_reset.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
-            this.btn_reset.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
-            this.btn_reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_reset.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_reset.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_reset.Location = new System.Drawing.Point(409, 51);
-            this.btn_reset.Name = "btn_reset";
-            this.btn_reset.Size = new System.Drawing.Size(57, 24);
-            this.btn_reset.TabIndex = 9;
-            this.btn_reset.Text = "Reset";
-            this.btn_reset.UseVisualStyleBackColor = false;
-            this.btn_reset.Click += new System.EventHandler(this.btn_reset_Click);
-            // 
-            // cmb_searchBy
-            // 
-            this.cmb_searchBy.FormattingEnabled = true;
-            this.cmb_searchBy.Location = new System.Drawing.Point(216, 53);
-            this.cmb_searchBy.Name = "cmb_searchBy";
-            this.cmb_searchBy.Size = new System.Drawing.Size(121, 21);
-            this.cmb_searchBy.TabIndex = 8;
-            // 
-            // txt_search
-            // 
-            this.txt_search.Location = new System.Drawing.Point(79, 54);
-            this.txt_search.Name = "txt_search";
-            this.txt_search.Size = new System.Drawing.Size(100, 20);
-            this.txt_search.TabIndex = 7;
-            // 
-            // lbl_searchBy
-            // 
-            this.lbl_searchBy.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_searchBy.ForeColor = System.Drawing.Color.White;
-            this.lbl_searchBy.Location = new System.Drawing.Point(185, 55);
-            this.lbl_searchBy.Name = "lbl_searchBy";
-            this.lbl_searchBy.Size = new System.Drawing.Size(100, 23);
-            this.lbl_searchBy.TabIndex = 6;
-            this.lbl_searchBy.Text = "By:";
-            // 
-            // lbl_search
-            // 
-            this.lbl_search.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_search.ForeColor = System.Drawing.Color.White;
-            this.lbl_search.Location = new System.Drawing.Point(23, 55);
-            this.lbl_search.Name = "lbl_search";
-            this.lbl_search.Size = new System.Drawing.Size(100, 23);
-            this.lbl_search.TabIndex = 5;
-            this.lbl_search.Text = "Search";
-            // 
-            // btn_insertRows
-            // 
-            this.btn_insertRows.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(109)))), ((int)(((byte)(83)))));
-            this.btn_insertRows.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
-            this.btn_insertRows.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
-            this.btn_insertRows.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
-            this.btn_insertRows.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_insertRows.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_insertRows.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_insertRows.Location = new System.Drawing.Point(486, 548);
-            this.btn_insertRows.Name = "btn_insertRows";
-            this.btn_insertRows.Size = new System.Drawing.Size(157, 34);
-            this.btn_insertRows.TabIndex = 4;
-            this.btn_insertRows.Text = "Insert rows";
-            this.btn_insertRows.UseVisualStyleBackColor = false;
-            this.btn_insertRows.Click += new System.EventHandler(this.btn_insertRows_Click);
-            // 
-            // btn_remove
-            // 
-            this.btn_remove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(109)))), ((int)(((byte)(83)))));
-            this.btn_remove.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
-            this.btn_remove.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
-            this.btn_remove.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
-            this.btn_remove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_remove.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_remove.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_remove.Location = new System.Drawing.Point(131, 548);
-            this.btn_remove.Name = "btn_remove";
-            this.btn_remove.Size = new System.Drawing.Size(102, 34);
-            this.btn_remove.TabIndex = 3;
-            this.btn_remove.Text = "Remove";
-            this.btn_remove.UseVisualStyleBackColor = false;
-            // 
-            // btn_edit
-            // 
-            this.btn_edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(109)))), ((int)(((byte)(83)))));
-            this.btn_edit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
-            this.btn_edit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
-            this.btn_edit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
-            this.btn_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_edit.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_edit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_edit.Location = new System.Drawing.Point(23, 548);
-            this.btn_edit.Name = "btn_edit";
-            this.btn_edit.Size = new System.Drawing.Size(102, 34);
-            this.btn_edit.TabIndex = 2;
-            this.btn_edit.Text = "Edit";
-            this.btn_edit.UseVisualStyleBackColor = false;
-            // 
-            // dg_usersDataTable
-            // 
-            this.dg_usersDataTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dg_usersDataTable.Location = new System.Drawing.Point(23, 81);
-            this.dg_usersDataTable.Name = "dg_usersDataTable";
-            this.dg_usersDataTable.ReadOnly = true;
-            this.dg_usersDataTable.Size = new System.Drawing.Size(620, 461);
-            this.dg_usersDataTable.TabIndex = 0;
             // 
             // txt_full_name
             // 
@@ -514,6 +295,228 @@ namespace BINAES.UserControls
             this.lbl_user.TabIndex = 38;
             this.lbl_user.Text = "User Name";
             this.lbl_user.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pb_picture
+            // 
+            this.pb_picture.Location = new System.Drawing.Point(27, 299);
+            this.pb_picture.Name = "pb_picture";
+            this.pb_picture.Size = new System.Drawing.Size(305, 141);
+            this.pb_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_picture.TabIndex = 32;
+            this.pb_picture.TabStop = false;
+            // 
+            // btn_picture
+            // 
+            this.btn_picture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(109)))), ((int)(((byte)(83)))));
+            this.btn_picture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_picture.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_picture.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_picture.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_picture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_picture.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_picture.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_picture.Location = new System.Drawing.Point(27, 446);
+            this.btn_picture.Name = "btn_picture";
+            this.btn_picture.Size = new System.Drawing.Size(305, 45);
+            this.btn_picture.TabIndex = 31;
+            this.btn_picture.Text = "Select Picture";
+            this.btn_picture.UseVisualStyleBackColor = false;
+            this.btn_picture.Click += new System.EventHandler(this.btn_picture_Click);
+            // 
+            // btn_cancel
+            // 
+            this.btn_cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(109)))), ((int)(((byte)(83)))));
+            this.btn_cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_cancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_cancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_cancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_cancel.Location = new System.Drawing.Point(27, 548);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(305, 45);
+            this.btn_cancel.TabIndex = 30;
+            this.btn_cancel.Text = "Cancel";
+            this.btn_cancel.UseVisualStyleBackColor = false;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
+            // 
+            // btn_save
+            // 
+            this.btn_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(109)))), ((int)(((byte)(83)))));
+            this.btn_save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_save.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_save.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_save.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_save.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_save.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_save.Location = new System.Drawing.Point(27, 497);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(305, 45);
+            this.btn_save.TabIndex = 8;
+            this.btn_save.Text = "Save";
+            this.btn_save.UseVisualStyleBackColor = false;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            // 
+            // lbl_usersDataTable
+            // 
+            this.lbl_usersDataTable.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_usersDataTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(109)))), ((int)(((byte)(83)))));
+            this.lbl_usersDataTable.Location = new System.Drawing.Point(23, 20);
+            this.lbl_usersDataTable.Name = "lbl_usersDataTable";
+            this.lbl_usersDataTable.Size = new System.Drawing.Size(234, 23);
+            this.lbl_usersDataTable.TabIndex = 5;
+            this.lbl_usersDataTable.Text = "Users data table";
+            // 
+            // pnl_usersDataTableBar
+            // 
+            this.pnl_usersDataTableBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnl_usersDataTableBar.Controls.Add(this.btn_filter);
+            this.pnl_usersDataTableBar.Controls.Add(this.btn_reset);
+            this.pnl_usersDataTableBar.Controls.Add(this.lbl_usersDataTable);
+            this.pnl_usersDataTableBar.Controls.Add(this.cmb_searchBy);
+            this.pnl_usersDataTableBar.Controls.Add(this.txt_search);
+            this.pnl_usersDataTableBar.Controls.Add(this.lbl_searchBy);
+            this.pnl_usersDataTableBar.Controls.Add(this.lbl_search);
+            this.pnl_usersDataTableBar.Controls.Add(this.btn_insertRows);
+            this.pnl_usersDataTableBar.Controls.Add(this.btn_remove);
+            this.pnl_usersDataTableBar.Controls.Add(this.btn_edit);
+            this.pnl_usersDataTableBar.Controls.Add(this.dg_usersDataTable);
+            this.pnl_usersDataTableBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl_usersDataTableBar.Location = new System.Drawing.Point(0, 0);
+            this.pnl_usersDataTableBar.Name = "pnl_usersDataTableBar";
+            this.pnl_usersDataTableBar.Size = new System.Drawing.Size(687, 611);
+            this.pnl_usersDataTableBar.TabIndex = 24;
+            // 
+            // btn_filter
+            // 
+            this.btn_filter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(109)))), ((int)(((byte)(83)))));
+            this.btn_filter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_filter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_filter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_filter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_filter.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_filter.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_filter.Location = new System.Drawing.Point(343, 51);
+            this.btn_filter.Name = "btn_filter";
+            this.btn_filter.Size = new System.Drawing.Size(60, 24);
+            this.btn_filter.TabIndex = 10;
+            this.btn_filter.Text = "Filter";
+            this.btn_filter.UseVisualStyleBackColor = false;
+            this.btn_filter.Click += new System.EventHandler(this.btn_filter_Click);
+            // 
+            // btn_reset
+            // 
+            this.btn_reset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(109)))), ((int)(((byte)(83)))));
+            this.btn_reset.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_reset.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_reset.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_reset.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_reset.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_reset.Location = new System.Drawing.Point(409, 51);
+            this.btn_reset.Name = "btn_reset";
+            this.btn_reset.Size = new System.Drawing.Size(57, 24);
+            this.btn_reset.TabIndex = 9;
+            this.btn_reset.Text = "Reset";
+            this.btn_reset.UseVisualStyleBackColor = false;
+            this.btn_reset.Click += new System.EventHandler(this.btn_reset_Click);
+            // 
+            // cmb_searchBy
+            // 
+            this.cmb_searchBy.FormattingEnabled = true;
+            this.cmb_searchBy.Location = new System.Drawing.Point(216, 53);
+            this.cmb_searchBy.Name = "cmb_searchBy";
+            this.cmb_searchBy.Size = new System.Drawing.Size(121, 21);
+            this.cmb_searchBy.TabIndex = 8;
+            // 
+            // txt_search
+            // 
+            this.txt_search.Location = new System.Drawing.Point(79, 54);
+            this.txt_search.Name = "txt_search";
+            this.txt_search.Size = new System.Drawing.Size(100, 20);
+            this.txt_search.TabIndex = 7;
+            // 
+            // lbl_searchBy
+            // 
+            this.lbl_searchBy.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_searchBy.ForeColor = System.Drawing.Color.White;
+            this.lbl_searchBy.Location = new System.Drawing.Point(185, 55);
+            this.lbl_searchBy.Name = "lbl_searchBy";
+            this.lbl_searchBy.Size = new System.Drawing.Size(100, 23);
+            this.lbl_searchBy.TabIndex = 6;
+            this.lbl_searchBy.Text = "By:";
+            // 
+            // lbl_search
+            // 
+            this.lbl_search.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_search.ForeColor = System.Drawing.Color.White;
+            this.lbl_search.Location = new System.Drawing.Point(23, 55);
+            this.lbl_search.Name = "lbl_search";
+            this.lbl_search.Size = new System.Drawing.Size(100, 23);
+            this.lbl_search.TabIndex = 5;
+            this.lbl_search.Text = "Search";
+            // 
+            // btn_insertRows
+            // 
+            this.btn_insertRows.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(109)))), ((int)(((byte)(83)))));
+            this.btn_insertRows.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_insertRows.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_insertRows.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_insertRows.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_insertRows.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_insertRows.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_insertRows.Location = new System.Drawing.Point(486, 548);
+            this.btn_insertRows.Name = "btn_insertRows";
+            this.btn_insertRows.Size = new System.Drawing.Size(157, 34);
+            this.btn_insertRows.TabIndex = 4;
+            this.btn_insertRows.Text = "Insert rows";
+            this.btn_insertRows.UseVisualStyleBackColor = false;
+            this.btn_insertRows.Click += new System.EventHandler(this.btn_insertRows_Click);
+            // 
+            // btn_remove
+            // 
+            this.btn_remove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(109)))), ((int)(((byte)(83)))));
+            this.btn_remove.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_remove.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_remove.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_remove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_remove.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_remove.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_remove.Location = new System.Drawing.Point(131, 548);
+            this.btn_remove.Name = "btn_remove";
+            this.btn_remove.Size = new System.Drawing.Size(102, 34);
+            this.btn_remove.TabIndex = 3;
+            this.btn_remove.Text = "Remove";
+            this.btn_remove.UseVisualStyleBackColor = false;
+            this.btn_remove.Click += new System.EventHandler(this.btn_remove_Click);
+            // 
+            // btn_edit
+            // 
+            this.btn_edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(109)))), ((int)(((byte)(83)))));
+            this.btn_edit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_edit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_edit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(154)))), ((int)(((byte)(140)))));
+            this.btn_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_edit.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_edit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_edit.Location = new System.Drawing.Point(23, 548);
+            this.btn_edit.Name = "btn_edit";
+            this.btn_edit.Size = new System.Drawing.Size(102, 34);
+            this.btn_edit.TabIndex = 2;
+            this.btn_edit.Text = "Edit";
+            this.btn_edit.UseVisualStyleBackColor = false;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
+            // 
+            // dg_usersDataTable
+            // 
+            this.dg_usersDataTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dg_usersDataTable.Location = new System.Drawing.Point(23, 81);
+            this.dg_usersDataTable.Name = "dg_usersDataTable";
+            this.dg_usersDataTable.ReadOnly = true;
+            this.dg_usersDataTable.Size = new System.Drawing.Size(620, 461);
+            this.dg_usersDataTable.TabIndex = 0;
             // 
             // UC_Users
             // 

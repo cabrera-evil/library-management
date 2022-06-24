@@ -12,8 +12,7 @@ namespace BINAES.UserControls
     public partial class UC_Users : UserControl
     {
 
-        bool edit = false;
-        bool add = false;
+        bool editable = false;
         bool picture_load = false;
 
         public UC_Users()
@@ -28,9 +27,9 @@ namespace BINAES.UserControls
         }
 
         private db_BINAES db = new db_BINAES();
-        private void filter(string criterio, string campo)
+        private void filter(string find, string field)
         {
-            dg_usersDataTable.DataSource = db.USER_.SqlQuery("SELECT * FROM USER_ WHERE " + campo + " like '%" + criterio + "%'").ToList();
+            dg_usersDataTable.DataSource = db.USER_.SqlQuery("SELECT * FROM USER_ WHERE " + field + " like '%" + find + "%'").ToList();
         }
 
         private void btn_filter_Click(object sender, EventArgs e)
@@ -70,6 +69,11 @@ namespace BINAES.UserControls
                 using (db_BINAES db = new db_BINAES())
                 {
                     dg_usersDataTable.DataSource = user.show_user();
+                    dg_usersDataTable.Columns.Remove("ATTENDANCE");
+                    dg_usersDataTable.Columns.Remove("INSTITUTION");
+                    dg_usersDataTable.Columns.Remove("LOAN_BOOKING");
+                    dg_usersDataTable.Columns.Remove("OCCUPANCY");
+                    dg_usersDataTable.Columns.Remove("ROLE_");
                 }
                 btn_edit.BackColor = Color.FromArgb(38, 109, 83);
                 btn_remove.BackColor = Color.FromArgb(38, 109, 83);
@@ -80,6 +84,16 @@ namespace BINAES.UserControls
                 MessageBox.Show(ex.Message);
             }
             lock_controllers();
+        }
+
+        private void clear_text()
+        {
+            txt_full_name.Text = "";
+            txt_user.Text = "";
+            txt_address.Text = "";
+            txt_phone.Text = "";
+            txt_email.Text = "";
+            txt_password.Text = "";
         }
 
         private void unlock_controllers()
@@ -121,41 +135,66 @@ namespace BINAES.UserControls
             {
                 using (db_BINAES db = new db_BINAES())
                 {
-                    USER_ user = new USER_();
-                    user.full_name = txt_full_name.Text;
-                    user.username = txt_user.Text;
-                    user.user_address = txt_address.Text;
-                    user.phone = txt_phone.Text;
-                    user.email = txt_email.Text;
-                    user.password = Encrypt.GetSHA256(txt_password.Text.Trim());
-                    user.id_occupancy = ((OCCUPANCY)cmb_occupancy.SelectedItem).id;
-                    user.id_institution = ((INSTITUTION)cmb_institution.SelectedItem).id;
-                    user.id_role = ((ROLE_)cmb_role.SelectedItem).id;
-                    var picture = new System.IO.MemoryStream();
-                    if (picture_load)
-                    {
-                        pb_picture.Image.Save(picture, System.Drawing.Imaging.ImageFormat.Jpeg);
-                        user.picture = picture.GetBuffer();
-                    }
-                    else
-                        user.picture = null;
-
-                    if (add)
+                   
+                    if (!editable)
                     {
                         //ADD NEW DATA
+                        USER_ user = new USER_();
+                        user.full_name = txt_full_name.Text;
+                        user.username = txt_user.Text;
+                        user.user_address = txt_address.Text;
+                        user.phone = txt_phone.Text;
+                        user.email = txt_email.Text;
+                        user.password = Encrypt.GetSHA256(txt_password.Text.Trim());
+                        user.id_occupancy = ((OCCUPANCY)cmb_occupancy.SelectedItem).id;
+                        user.id_institution = ((INSTITUTION)cmb_institution.SelectedItem).id;
+                        user.id_role = ((ROLE_)cmb_role.SelectedItem).id;
+                        var picture = new System.IO.MemoryStream();
+                        if (picture_load)
+                        {
+                            pb_picture.Image.Save(picture, System.Drawing.Imaging.ImageFormat.Jpeg);
+                            user.picture = picture.GetBuffer();
+                        }
+                        else
+                            user.picture = null;
+
                         db.USER_.Add(user);
                         db.SaveChanges();
                         MessageBox.Show("Data saved successfully");
                     }
-                    if (edit)
+                    else
                     {
                         //SAVE EDITED DATA
-                        db.Entry(user).State = System.Data.Entity.EntityState.Modified;
-                        db.SaveChanges();
-                        MessageBox.Show("Data modified successfully");
+                        int id = Convert.ToInt32(txt_search.Text);
+                        USER_ edit = db.USER_.Find(id);
+                        edit.full_name = txt_full_name.Text;
+                        edit.username = txt_user.Text;
+                        edit.user_address = txt_address.Text;
+                        edit.phone = txt_phone.Text;
+                        edit.email = txt_email.Text;
+                        edit.password = Encrypt.GetSHA256(txt_password.Text.Trim());
+                        edit.id_occupancy = ((OCCUPANCY)cmb_occupancy.SelectedItem).id;
+                        edit.id_institution = ((INSTITUTION)cmb_institution.SelectedItem).id;
+                        edit.id_role = ((ROLE_)cmb_role.SelectedItem).id;
+                        var picture = new System.IO.MemoryStream();
+                        if (picture_load)
+                        {
+                            pb_picture.Image.Save(picture, System.Drawing.Imaging.ImageFormat.Jpeg);
+                            edit.picture = picture.GetBuffer();
+                        }
+                        else
+                            edit.picture = null;
+
+                        if (edit != null)
+                        {
+                            db.Entry(edit).State = System.Data.Entity.EntityState.Modified;
+                            db.SaveChanges();
+                            MessageBox.Show("Data modified successfully");
+                        }
                     }
                 }
                 load_grid();
+                clear_text();
             }
             catch (Exception ex)
             {
@@ -163,10 +202,66 @@ namespace BINAES.UserControls
             }
         }
 
+        private void search_data(int id)
+        {
+            unlock_controllers();
+            try
+            {
+                using (db_BINAES db = new db_BINAES())
+                {
+                    var lst = db.USER_.Where(p => p.id == id).ToList();
+                    if (lst.Count > 0)
+                    {
+                        foreach (USER_ user in lst)
+                        {
+                            txt_full_name.Text = user.full_name.ToString();
+                            txt_user.Text = user.username.ToString();
+                            txt_address.Text = user.user_address;
+                            txt_phone.Text = user.phone;
+                            txt_email.Text = user.email;
+                            txt_password.Text = user.password;
+                            ((OCCUPANCY)cmb_occupancy.SelectedItem).id = user.id_occupancy;
+                            ((INSTITUTION)cmb_institution.SelectedItem).id = user.id_institution;
+                            ((ROLE_)cmb_role.SelectedItem).id = user.id_role;
+                            var picture = new System.IO.MemoryStream();
+                            if (picture_load)
+                            {
+                                pb_picture.Image.Save(picture, System.Drawing.Imaging.ImageFormat.Jpeg);
+                                user.picture = picture.GetBuffer();
+                            }
+                            else
+                                user.picture = null;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void remove_data(int id)
+        {
+            unlock_controllers();
+            try
+            {
+                using (db_BINAES db = new db_BINAES())
+                {
+                    db.USER_.Remove(db.USER_.Single(p => p.id == id));
+                    db.SaveChanges();
+                    MessageBox.Show("Data deleted successfully");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            load_grid();
+        }
 
         private void btn_insertRows_Click(object sender, EventArgs e)
         {
-            add = true;
             unlock_controllers();
             btn_edit.BackColor = Color.FromArgb(38, 109, 83);
             btn_remove.BackColor = Color.FromArgb(38, 109, 83);
@@ -187,12 +282,28 @@ namespace BINAES.UserControls
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             lock_controllers();
-            txt_full_name.Text = "";
-            txt_user.Text = "";
-            txt_address.Text = "";
-            txt_phone.Text = "";
-            txt_email.Text = "";
-            txt_password.Text = "";
+            clear_text();
+        }
+
+        private void btn_edit_Click(object sender, EventArgs e)
+        {
+            int search = Convert.ToInt32(txt_search.Text);
+            int type = cmb_searchBy.SelectedIndex;
+            if(type == 0)
+            {
+                editable = true;
+                search_data(search);
+            }
+        }
+
+        private void btn_remove_Click(object sender, EventArgs e)
+        {
+            int search = Convert.ToInt32(txt_search.Text);
+            int type = cmb_searchBy.SelectedIndex;
+            if (type == 0)
+            {
+                remove_data(search);
+            }
         }
     }
 }

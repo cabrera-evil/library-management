@@ -4,9 +4,9 @@ using BINAES.UserControls;
 
 namespace BINAES
 {
-    public partial class Frm_homeManagement : Form
+    public partial class Management : Form
     {
-        public Frm_homeManagement()
+        public Management()
         {
             InitializeComponent();
         }
