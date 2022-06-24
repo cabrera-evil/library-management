@@ -12,6 +12,7 @@ namespace BINAES
 {
     public partial class frm_advanced_search : Form
     {
+        public bool full; 
         public string title;
         public string someWords;
         public string keyWords;
@@ -31,6 +32,7 @@ namespace BINAES
 
         private void btn_search_Click(object sender, EventArgs e)
         {
+            this.full = rdb_full.Checked; 
             this.title = txt_title.Text;
             this.someWords = txt_some_words.Text;
             this.keyWords = txt_key_words.Text;

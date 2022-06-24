@@ -94,6 +94,12 @@
     <Compile Include="Forms\Frm_homeManagement.Designer.cs">
       <DependentUpon>Frm_homeManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frm_loans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_loans.Designer.cs">
+      <DependentUpon>frm_loans.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\home.cs">
       <SubType>Form</SubType>
     </Compile>
