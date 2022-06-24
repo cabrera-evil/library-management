@@ -81,4 +81,11 @@ C:\Users\monic\OneDrive\Documentos\UNIVERSIDAD\proyectos\POO-BD\BINAES\BINAES\ob
 C:\Users\monic\OneDrive\Documentos\UNIVERSIDAD\proyectos\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Collections.resources
 C:\Users\monic\OneDrive\Documentos\UNIVERSIDAD\proyectos\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Celebrations.resources
 C:\Users\monic\OneDrive\Documentos\UNIVERSIDAD\proyectos\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Users.resources
+<<<<<<< HEAD
+C:\Users\monic\OneDrive\Documentos\UNIVERSIDAD\proyectos\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Advanced_Search.resources
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Advanced_Search.resources
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.frm_homeSearch.resources
+C:\Users\KEN MASTER\Desktop\POO-BD\BINAES\BINAES\obj\Debug\BINAES.UserControls.UC_Search.resources
+=======
 C:\Users\Douglas\git\POO-BD\BINAES\BINAES\obj\Debug\BINAES.Management.resources
+>>>>>>> 16cc2a38c39cb36b972d648624b3ae757cd5dc9f
