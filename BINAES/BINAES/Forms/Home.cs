@@ -94,12 +94,12 @@ namespace BINAES
 
         private void btn_loans_Click(object sender, EventArgs e)
         {
-           //open_form<frm_users>();
+           
         }
 
         private void btn_booking_Click(object sender, EventArgs e)
         {
-            //open_form<frm_collections>();
+            open_form<booking>();
         }
 
         private void btn_management_Click(object sender, EventArgs e)
@@ -114,17 +114,32 @@ namespace BINAES
 
         private void frm_home_Load(object sender, EventArgs e)
         {
-            lbl_name.Text = username;
+            lbl_name.Text = "User: " + username;
             using(db_BINAES db = new db_BINAES())
             {
-                var lst = from d in db.USER_
-                          where d.username == username
-                          select d;
-                if (lst.Count() > 0)
+                var lst = db.USER_.Where(p => p.username == username).ToList();
+                if (lst.Count > 0)
                 {
-                    //USER_ user = lst.First();
-                    //lbl_email.Text = ;
-                    //lbl_role.Text = ; 
+                    foreach (USER_ user in lst)
+                    {
+                        lbl_email.Text = "Email: " + user.email;
+                        if(user.id_role == 1)
+                        {
+                            lbl_role.Text = "Role: Admin";
+                        }
+                        else
+                        {
+                            lbl_role.Text = "Role: Client";
+                            btn_booking.Hide();
+                            btn_management.Hide();
+                        }
+                        
+                        if (user.picture != null)
+                        {
+                            System.IO.MemoryStream picture = new System.IO.MemoryStream(user.picture);
+                            pct_user.Image = System.Drawing.Image.FromStream(picture);
+                        }
+                    }
                 }
             }
         }

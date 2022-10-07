@@ -28,9 +28,6 @@
         <MappingFragment StoreEntitySet="ATTENDANCE">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="entrance_date" ColumnName="entrance_date" />
-          <ScalarProperty Name="exit_date" ColumnName="exit_date" />
-          <ScalarProperty Name="entarance_hour" ColumnName="entarance_hour" />
-          <ScalarProperty Name="exit_hour" ColumnName="exit_hour" />
           <ScalarProperty Name="id_user" ColumnName="id_user" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -51,8 +48,6 @@
           <ScalarProperty Name="title" ColumnName="title" />
           <ScalarProperty Name="picture" ColumnName="picture" />
           <ScalarProperty Name="attendance" ColumnName="attendance" />
-          <ScalarProperty Name="beginning_hour" ColumnName="beginning_hour" />
-          <ScalarProperty Name="finishing_hour" ColumnName="finishing_hour" />
           <ScalarProperty Name="beginning_date" ColumnName="beginning_date" />
           <ScalarProperty Name="finishing_date" ColumnName="finishing_date" />
         </MappingFragment>
@@ -94,7 +89,7 @@
       <EntityTypeMapping TypeName="BINAES_Model.FLOOR_">
         <MappingFragment StoreEntitySet="FLOOR_">
           <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="floor_number" ColumnName="floor_number" />
+          <ScalarProperty Name="number_" ColumnName="number_" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -161,12 +156,11 @@
       <EntityTypeMapping TypeName="BINAES_Model.LOAN_BOOKING">
         <MappingFragment StoreEntitySet="LOAN_BOOKING">
           <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="booking_date" ColumnName="booking_date" />
-          <ScalarProperty Name="booking_hour" ColumnName="booking_hour" />
-          <ScalarProperty Name="return_date" ColumnName="return_date" />
-          <ScalarProperty Name="return_hour" ColumnName="return_hour" />
-          <ScalarProperty Name="loan_date" ColumnName="loan_date" />
-          <ScalarProperty Name="loan_hour" ColumnName="loan_hour" />
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+          <ScalarProperty Name="expected_loan_timestamp" ColumnName="expected_loan_timestamp" />
+          <ScalarProperty Name="expected_return_timestamp" ColumnName="expected_return_timestamp" />
+          <ScalarProperty Name="loan_timestamp" ColumnName="loan_timestamp" />
+          <ScalarProperty Name="return_timestamp" ColumnName="return_timestamp" />
           <ScalarProperty Name="id_user" ColumnName="id_user" />
           <ScalarProperty Name="id_copy" ColumnName="id_copy" />
         </MappingFragment>
@@ -192,7 +186,7 @@
       <EntityTypeMapping TypeName="BINAES_Model.ROLE_">
         <MappingFragment StoreEntitySet="ROLE_">
           <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="type_" ColumnName="type_" />
+          <ScalarProperty Name="name_" ColumnName="name_" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -210,7 +204,7 @@
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="full_name" ColumnName="full_name" />
           <ScalarProperty Name="username" ColumnName="username" />
-          <ScalarProperty Name="user_address" ColumnName="user_address" />
+          <ScalarProperty Name="address_" ColumnName="address_" />
           <ScalarProperty Name="phone" ColumnName="phone" />
           <ScalarProperty Name="picture" ColumnName="picture" />
           <ScalarProperty Name="email" ColumnName="email" />

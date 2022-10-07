@@ -22,30 +22,26 @@ namespace BINAES
 
         private void btn_search_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            /*
-            // abrir formulario para prestar
-            Form loans = new loans();
-            loans.Show();
-            */
-=======
             UC_Search UC = new UC_Search();
             addUserControl(UC);
->>>>>>> cbfaf574a902eaa0ec23ac1a68c2cc1726f3ccaa
         }
 
         private void btn_advancedSearch_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            /*
-            // abrir formulario para reservar
-            Form reservations = new reservations();
-            reservations.Show();
-            */
-=======
             UC_Advanced_Search uc = new UC_Advanced_Search();
             addUserControl(uc);
->>>>>>> cbfaf574a902eaa0ec23ac1a68c2cc1726f3ccaa
+        }
+
+        private void btn_reserve_Click(object sender, EventArgs e)
+        {
+            UC_Reserve uc = new UC_Reserve();
+            addUserControl(uc);
+        }
+
+        private void btn_borrow_Click(object sender, EventArgs e)
+        {
+            UC_Borrow uc = new UC_Borrow();
+            addUserControl(uc);
         }
     }
 }

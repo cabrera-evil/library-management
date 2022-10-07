@@ -10,7 +10,7 @@ namespace BINAES.Clases
 {
     public class collectionsDAO
     {
-        public List<COLLECTION_> show_collection()
+       public List<COLLECTION_> show_collection()
         {
             using (db_BINAES db = new db_BINAES())
             {

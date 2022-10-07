@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Douglas\git\POO-BD\BINAES\BINAES\SQL Server\connection.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Douglas\git\proyectofinalbdpoo-los-foraneos\BINAES\BINAES\SQL Server\connection.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

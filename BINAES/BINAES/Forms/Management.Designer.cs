@@ -36,6 +36,7 @@ namespace BINAES
             this.button2 = new System.Windows.Forms.Button();
             this.pnl_containerManagement = new System.Windows.Forms.Panel();
             this.pnl_options = new System.Windows.Forms.Panel();
+            this.btn_attendance = new System.Windows.Forms.Button();
             this.lbl_title = new System.Windows.Forms.Label();
             this.btn_celebrations = new System.Windows.Forms.Button();
             this.btn_users = new System.Windows.Forms.Button();
@@ -84,6 +85,7 @@ namespace BINAES
             // pnl_options
             // 
             this.pnl_options.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (8)))), ((int) (((byte) (44)))), ((int) (((byte) (44)))));
+            this.pnl_options.Controls.Add(this.btn_attendance);
             this.pnl_options.Controls.Add(this.lbl_title);
             this.pnl_options.Controls.Add(this.btn_celebrations);
             this.pnl_options.Controls.Add(this.btn_users);
@@ -94,11 +96,28 @@ namespace BINAES
             this.pnl_options.Size = new System.Drawing.Size(1040, 69);
             this.pnl_options.TabIndex = 0;
             // 
+            // btn_attendance
+            // 
+            this.btn_attendance.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (38)))), ((int) (((byte) (109)))), ((int) (((byte) (83)))));
+            this.btn_attendance.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_attendance.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_attendance.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (154)))), ((int) (((byte) (140)))));
+            this.btn_attendance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_attendance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btn_attendance.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_attendance.Location = new System.Drawing.Point(519, 12);
+            this.btn_attendance.Name = "btn_attendance";
+            this.btn_attendance.Size = new System.Drawing.Size(160, 42);
+            this.btn_attendance.TabIndex = 4;
+            this.btn_attendance.Text = "Attendance";
+            this.btn_attendance.UseVisualStyleBackColor = false;
+            this.btn_attendance.Click += new System.EventHandler(this.btn_attendance_Click);
+            // 
             // lbl_title
             // 
             this.lbl_title.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lbl_title.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (38)))), ((int) (((byte) (109)))), ((int) (((byte) (83)))));
-            this.lbl_title.Location = new System.Drawing.Point(707, 23);
+            this.lbl_title.Location = new System.Drawing.Point(716, 23);
             this.lbl_title.Name = "lbl_title";
             this.lbl_title.Size = new System.Drawing.Size(321, 23);
             this.lbl_title.TabIndex = 3;
@@ -113,7 +132,7 @@ namespace BINAES
             this.btn_celebrations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_celebrations.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_celebrations.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_celebrations.Location = new System.Drawing.Point(204, 12);
+            this.btn_celebrations.Location = new System.Drawing.Point(178, 12);
             this.btn_celebrations.Name = "btn_celebrations";
             this.btn_celebrations.Size = new System.Drawing.Size(160, 42);
             this.btn_celebrations.TabIndex = 2;
@@ -130,7 +149,7 @@ namespace BINAES
             this.btn_users.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_users.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_users.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_users.Location = new System.Drawing.Point(383, 12);
+            this.btn_users.Location = new System.Drawing.Point(353, 12);
             this.btn_users.Name = "btn_users";
             this.btn_users.Size = new System.Drawing.Size(160, 42);
             this.btn_users.TabIndex = 1;
@@ -147,7 +166,7 @@ namespace BINAES
             this.btn_collections.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_collections.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btn_collections.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_collections.Location = new System.Drawing.Point(28, 12);
+            this.btn_collections.Location = new System.Drawing.Point(3, 12);
             this.btn_collections.Name = "btn_collections";
             this.btn_collections.Size = new System.Drawing.Size(160, 42);
             this.btn_collections.TabIndex = 1;
@@ -157,13 +176,14 @@ namespace BINAES
             // 
             // pnl_container
             // 
+            this.pnl_container.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (8)))), ((int) (((byte) (44)))), ((int) (((byte) (44)))));
             this.pnl_container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_container.Location = new System.Drawing.Point(0, 69);
             this.pnl_container.Name = "pnl_container";
             this.pnl_container.Size = new System.Drawing.Size(1040, 611);
             this.pnl_container.TabIndex = 4;
             // 
-            // Frm_homeManagement
+            // management
             // 
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1040, 680);
@@ -171,11 +191,13 @@ namespace BINAES
             this.Controls.Add(this.pnl_options);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(15, 15);
-            this.Name = "Frm_homeManagement";
+            this.Name = "management";
             this.pnl_optionsManagement.ResumeLayout(false);
             this.pnl_options.ResumeLayout(false);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Button btn_attendance;
 
         private System.Windows.Forms.Button btn_collections;
         private System.Windows.Forms.Button btn_users;

@@ -25,8 +25,6 @@ namespace BINAES.SQL_Server
         public string title { get; set; }
         public byte[] picture { get; set; }
         public Nullable<int> attendance { get; set; }
-        public Nullable<System.DateTime> beginning_hour { get; set; }
-        public Nullable<System.DateTime> finishing_hour { get; set; }
         public Nullable<System.DateTime> beginning_date { get; set; }
         public Nullable<System.DateTime> finishing_date { get; set; }
     

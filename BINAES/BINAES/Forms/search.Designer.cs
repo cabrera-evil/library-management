@@ -68,6 +68,7 @@ namespace BINAES
             this.btn_borrow.TabIndex = 5;
             this.btn_borrow.Text = "Borrow";
             this.btn_borrow.UseVisualStyleBackColor = false;
+            this.btn_borrow.Click += new System.EventHandler(this.btn_borrow_Click);
             // 
             // btn_search
             // 
@@ -101,6 +102,7 @@ namespace BINAES
             this.btn_reserve.TabIndex = 4;
             this.btn_reserve.Text = "Reserve";
             this.btn_reserve.UseVisualStyleBackColor = false;
+            this.btn_reserve.Click += new System.EventHandler(this.btn_reserve_Click);
             // 
             // btn_advancedSearch
             // 
@@ -121,13 +123,14 @@ namespace BINAES
             // 
             // pnl_container
             // 
+            this.pnl_container.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (8)))), ((int) (((byte) (44)))), ((int) (((byte) (44)))));
             this.pnl_container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_container.Location = new System.Drawing.Point(0, 69);
             this.pnl_container.Name = "pnl_container";
             this.pnl_container.Size = new System.Drawing.Size(1040, 611);
             this.pnl_container.TabIndex = 1;
             // 
-            // frm_homeSearch
+            // search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -136,7 +139,7 @@ namespace BINAES
             this.Controls.Add(this.pnl_container);
             this.Controls.Add(this.pnl_options);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frm_homeSearch";
+            this.Name = "search";
             this.Text = "frm_homeSearch";
             this.pnl_options.ResumeLayout(false);
             this.ResumeLayout(false);

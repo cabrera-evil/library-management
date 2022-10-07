@@ -22,9 +22,6 @@ namespace BINAES.SQL_Server
     
         public int id { get; set; }
         public Nullable<System.DateTime> entrance_date { get; set; }
-        public Nullable<System.DateTime> exit_date { get; set; }
-        public Nullable<System.DateTime> entarance_hour { get; set; }
-        public Nullable<System.DateTime> exit_hour { get; set; }
         public int id_user { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

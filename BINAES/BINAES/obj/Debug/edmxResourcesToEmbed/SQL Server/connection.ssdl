@@ -26,9 +26,6 @@
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="entrance_date" Type="datetime" />
-    <Property Name="exit_date" Type="datetime" />
-    <Property Name="entarance_hour" Type="datetime" />
-    <Property Name="exit_hour" Type="datetime" />
     <Property Name="id_user" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="AUTHOR">
@@ -44,11 +41,9 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="title" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="150" Nullable="false" />
     <Property Name="picture" Type="varbinary(max)" />
     <Property Name="attendance" Type="int" />
-    <Property Name="beginning_hour" Type="datetime" />
-    <Property Name="finishing_hour" Type="datetime" />
     <Property Name="beginning_date" Type="datetime" />
     <Property Name="finishing_date" Type="datetime" />
   </EntityType>
@@ -66,7 +61,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="name_" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="name_" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="picture" Type="varbinary(max)" />
     <Property Name="release_date" Type="datetime" />
     <Property Name="id_collection" Type="int" Nullable="false" />
@@ -86,7 +81,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="floor_number" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="number_" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="FORMAT_">
     <Key>
@@ -145,12 +140,11 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="booking_date" Type="datetime" />
-    <Property Name="booking_hour" Type="datetime" />
-    <Property Name="return_date" Type="datetime" />
-    <Property Name="return_hour" Type="datetime" />
-    <Property Name="loan_date" Type="datetime" />
-    <Property Name="loan_hour" Type="datetime" />
+    <Property Name="timestamp" Type="datetime" />
+    <Property Name="expected_loan_timestamp" Type="datetime" />
+    <Property Name="expected_return_timestamp" Type="datetime" />
+    <Property Name="loan_timestamp" Type="datetime" />
+    <Property Name="return_timestamp" Type="datetime" />
     <Property Name="id_user" Type="int" Nullable="false" />
     <Property Name="id_copy" Type="int" Nullable="false" />
   </EntityType>
@@ -173,7 +167,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="type_" Type="varchar" MaxLength="50" />
+    <Property Name="name_" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="TYPE_">
     <Key>
@@ -189,7 +183,7 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="full_name" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="username" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="user_address" Type="varchar" MaxLength="100" />
+    <Property Name="address_" Type="varchar" MaxLength="100" />
     <Property Name="phone" Type="char" MaxLength="13" Nullable="false" />
     <Property Name="picture" Type="varbinary(max)" />
     <Property Name="email" Type="varchar" MaxLength="50" />

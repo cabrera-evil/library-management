@@ -15,12 +15,11 @@ namespace BINAES.SQL_Server
     public partial class LOAN_BOOKING
     {
         public int id { get; set; }
-        public Nullable<System.DateTime> booking_date { get; set; }
-        public Nullable<System.DateTime> booking_hour { get; set; }
-        public Nullable<System.DateTime> return_date { get; set; }
-        public Nullable<System.DateTime> return_hour { get; set; }
-        public Nullable<System.DateTime> loan_date { get; set; }
-        public Nullable<System.DateTime> loan_hour { get; set; }
+        public Nullable<System.DateTime> timestamp { get; set; }
+        public Nullable<System.DateTime> expected_loan_timestamp { get; set; }
+        public Nullable<System.DateTime> expected_return_timestamp { get; set; }
+        public Nullable<System.DateTime> loan_timestamp { get; set; }
+        public Nullable<System.DateTime> return_timestamp { get; set; }
         public int id_user { get; set; }
         public int id_copy { get; set; }
     

@@ -32,9 +32,6 @@
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="entrance_date" Type="DateTime" Precision="3" />
-    <Property Name="exit_date" Type="DateTime" Precision="3" />
-    <Property Name="entarance_hour" Type="DateTime" Precision="3" />
-    <Property Name="exit_hour" Type="DateTime" Precision="3" />
     <Property Name="id_user" Type="Int32" Nullable="false" />
     <NavigationProperty Name="ACTIVITY" Relationship="Self.fk_activity_attendance" FromRole="ATTENDANCE" ToRole="ACTIVITY" />
     <NavigationProperty Name="USER_" Relationship="Self.fk_attendance_user" FromRole="ATTENDANCE" ToRole="USER_" />
@@ -53,11 +50,9 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="title" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="picture" Type="Binary" MaxLength="Max" FixedLength="false" />
     <Property Name="attendance" Type="Int32" />
-    <Property Name="beginning_hour" Type="DateTime" Precision="3" />
-    <Property Name="finishing_hour" Type="DateTime" Precision="3" />
     <Property Name="beginning_date" Type="DateTime" Precision="3" />
     <Property Name="finishing_date" Type="DateTime" Precision="3" />
     <NavigationProperty Name="ACTIVITY" Relationship="Self.fk_event_activity" FromRole="CELEBRATION" ToRole="ACTIVITY" />
@@ -80,7 +75,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="name_" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="name_" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="picture" Type="Binary" MaxLength="Max" FixedLength="false" />
     <Property Name="release_date" Type="DateTime" Precision="3" />
     <Property Name="id_collection" Type="Int32" Nullable="false" />
@@ -109,7 +104,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="floor_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="number_" Type="Int32" Nullable="false" />
     <NavigationProperty Name="AREA" Relationship="Self.fk_area_floor" FromRole="FLOOR_" ToRole="AREA" />
   </EntityType>
   <EntityType Name="FORMAT_">
@@ -177,12 +172,11 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="booking_date" Type="DateTime" Precision="3" />
-    <Property Name="booking_hour" Type="DateTime" Precision="3" />
-    <Property Name="return_date" Type="DateTime" Precision="3" />
-    <Property Name="return_hour" Type="DateTime" Precision="3" />
-    <Property Name="loan_date" Type="DateTime" Precision="3" />
-    <Property Name="loan_hour" Type="DateTime" Precision="3" />
+    <Property Name="timestamp" Type="DateTime" Precision="3" />
+    <Property Name="expected_loan_timestamp" Type="DateTime" Precision="3" />
+    <Property Name="expected_return_timestamp" Type="DateTime" Precision="3" />
+    <Property Name="loan_timestamp" Type="DateTime" Precision="3" />
+    <Property Name="return_timestamp" Type="DateTime" Precision="3" />
     <Property Name="id_user" Type="Int32" Nullable="false" />
     <Property Name="id_copy" Type="Int32" Nullable="false" />
     <NavigationProperty Name="COPY_" Relationship="Self.fk_copy_lxb" FromRole="LOAN_BOOKING" ToRole="COPY_" />
@@ -209,7 +203,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="type_" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name_" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="USER_" Relationship="Self.fk_user_role" FromRole="ROLE_" ToRole="USER_" />
   </EntityType>
   <EntityType Name="TYPE_">
@@ -227,7 +221,7 @@
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="full_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="username" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="user_address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="address_" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="phone" Type="String" MaxLength="13" FixedLength="true" Unicode="false" Nullable="false" />
     <Property Name="picture" Type="Binary" MaxLength="Max" FixedLength="false" />
     <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />

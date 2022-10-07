@@ -31,9 +31,6 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="entrance_date" Type="datetime" />
-          <Property Name="exit_date" Type="datetime" />
-          <Property Name="entarance_hour" Type="datetime" />
-          <Property Name="exit_hour" Type="datetime" />
           <Property Name="id_user" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="AUTHOR">
@@ -49,11 +46,9 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="title" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="title" Type="varchar" MaxLength="150" Nullable="false" />
           <Property Name="picture" Type="varbinary(max)" />
           <Property Name="attendance" Type="int" />
-          <Property Name="beginning_hour" Type="datetime" />
-          <Property Name="finishing_hour" Type="datetime" />
           <Property Name="beginning_date" Type="datetime" />
           <Property Name="finishing_date" Type="datetime" />
         </EntityType>
@@ -71,7 +66,7 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="name_" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="name_" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="picture" Type="varbinary(max)" />
           <Property Name="release_date" Type="datetime" />
           <Property Name="id_collection" Type="int" Nullable="false" />
@@ -91,7 +86,7 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="floor_number" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="number_" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="FORMAT_">
           <Key>
@@ -150,12 +145,11 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="booking_date" Type="datetime" />
-          <Property Name="booking_hour" Type="datetime" />
-          <Property Name="return_date" Type="datetime" />
-          <Property Name="return_hour" Type="datetime" />
-          <Property Name="loan_date" Type="datetime" />
-          <Property Name="loan_hour" Type="datetime" />
+          <Property Name="timestamp" Type="datetime" />
+          <Property Name="expected_loan_timestamp" Type="datetime" />
+          <Property Name="expected_return_timestamp" Type="datetime" />
+          <Property Name="loan_timestamp" Type="datetime" />
+          <Property Name="return_timestamp" Type="datetime" />
           <Property Name="id_user" Type="int" Nullable="false" />
           <Property Name="id_copy" Type="int" Nullable="false" />
         </EntityType>
@@ -178,7 +172,7 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="type_" Type="varchar" MaxLength="50" />
+          <Property Name="name_" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="TYPE_">
           <Key>
@@ -194,7 +188,7 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="full_name" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="username" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="user_address" Type="varchar" MaxLength="100" />
+          <Property Name="address_" Type="varchar" MaxLength="100" />
           <Property Name="phone" Type="char" MaxLength="13" Nullable="false" />
           <Property Name="picture" Type="varbinary(max)" />
           <Property Name="email" Type="varchar" MaxLength="50" />
@@ -647,9 +641,6 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="entrance_date" Type="DateTime" Precision="3" />
-          <Property Name="exit_date" Type="DateTime" Precision="3" />
-          <Property Name="entarance_hour" Type="DateTime" Precision="3" />
-          <Property Name="exit_hour" Type="DateTime" Precision="3" />
           <Property Name="id_user" Type="Int32" Nullable="false" />
           <NavigationProperty Name="ACTIVITY" Relationship="Self.fk_activity_attendance" FromRole="ATTENDANCE" ToRole="ACTIVITY" />
           <NavigationProperty Name="USER_" Relationship="Self.fk_attendance_user" FromRole="ATTENDANCE" ToRole="USER_" />
@@ -668,11 +659,9 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="title" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="picture" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="attendance" Type="Int32" />
-          <Property Name="beginning_hour" Type="DateTime" Precision="3" />
-          <Property Name="finishing_hour" Type="DateTime" Precision="3" />
           <Property Name="beginning_date" Type="DateTime" Precision="3" />
           <Property Name="finishing_date" Type="DateTime" Precision="3" />
           <NavigationProperty Name="ACTIVITY" Relationship="Self.fk_event_activity" FromRole="CELEBRATION" ToRole="ACTIVITY" />
@@ -695,7 +684,7 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="name_" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="name_" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="picture" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="release_date" Type="DateTime" Precision="3" />
           <Property Name="id_collection" Type="Int32" Nullable="false" />
@@ -724,7 +713,7 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="floor_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="number_" Type="Int32" Nullable="false" />
           <NavigationProperty Name="AREA" Relationship="Self.fk_area_floor" FromRole="FLOOR_" ToRole="AREA" />
         </EntityType>
         <EntityType Name="FORMAT_">
@@ -792,12 +781,11 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="booking_date" Type="DateTime" Precision="3" />
-          <Property Name="booking_hour" Type="DateTime" Precision="3" />
-          <Property Name="return_date" Type="DateTime" Precision="3" />
-          <Property Name="return_hour" Type="DateTime" Precision="3" />
-          <Property Name="loan_date" Type="DateTime" Precision="3" />
-          <Property Name="loan_hour" Type="DateTime" Precision="3" />
+          <Property Name="timestamp" Type="DateTime" Precision="3" />
+          <Property Name="expected_loan_timestamp" Type="DateTime" Precision="3" />
+          <Property Name="expected_return_timestamp" Type="DateTime" Precision="3" />
+          <Property Name="loan_timestamp" Type="DateTime" Precision="3" />
+          <Property Name="return_timestamp" Type="DateTime" Precision="3" />
           <Property Name="id_user" Type="Int32" Nullable="false" />
           <Property Name="id_copy" Type="Int32" Nullable="false" />
           <NavigationProperty Name="COPY_" Relationship="Self.fk_copy_lxb" FromRole="LOAN_BOOKING" ToRole="COPY_" />
@@ -824,7 +812,7 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="type_" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="name_" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="USER_" Relationship="Self.fk_user_role" FromRole="ROLE_" ToRole="USER_" />
         </EntityType>
         <EntityType Name="TYPE_">
@@ -842,7 +830,7 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="full_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="username" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="user_address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="address_" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="phone" Type="String" MaxLength="13" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="picture" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -1297,9 +1285,6 @@
               <MappingFragment StoreEntitySet="ATTENDANCE">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="entrance_date" ColumnName="entrance_date" />
-                <ScalarProperty Name="exit_date" ColumnName="exit_date" />
-                <ScalarProperty Name="entarance_hour" ColumnName="entarance_hour" />
-                <ScalarProperty Name="exit_hour" ColumnName="exit_hour" />
                 <ScalarProperty Name="id_user" ColumnName="id_user" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -1320,8 +1305,6 @@
                 <ScalarProperty Name="title" ColumnName="title" />
                 <ScalarProperty Name="picture" ColumnName="picture" />
                 <ScalarProperty Name="attendance" ColumnName="attendance" />
-                <ScalarProperty Name="beginning_hour" ColumnName="beginning_hour" />
-                <ScalarProperty Name="finishing_hour" ColumnName="finishing_hour" />
                 <ScalarProperty Name="beginning_date" ColumnName="beginning_date" />
                 <ScalarProperty Name="finishing_date" ColumnName="finishing_date" />
               </MappingFragment>
@@ -1363,7 +1346,7 @@
             <EntityTypeMapping TypeName="BINAES_Model.FLOOR_">
               <MappingFragment StoreEntitySet="FLOOR_">
                 <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="floor_number" ColumnName="floor_number" />
+                <ScalarProperty Name="number_" ColumnName="number_" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1430,12 +1413,11 @@
             <EntityTypeMapping TypeName="BINAES_Model.LOAN_BOOKING">
               <MappingFragment StoreEntitySet="LOAN_BOOKING">
                 <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="booking_date" ColumnName="booking_date" />
-                <ScalarProperty Name="booking_hour" ColumnName="booking_hour" />
-                <ScalarProperty Name="return_date" ColumnName="return_date" />
-                <ScalarProperty Name="return_hour" ColumnName="return_hour" />
-                <ScalarProperty Name="loan_date" ColumnName="loan_date" />
-                <ScalarProperty Name="loan_hour" ColumnName="loan_hour" />
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="expected_loan_timestamp" ColumnName="expected_loan_timestamp" />
+                <ScalarProperty Name="expected_return_timestamp" ColumnName="expected_return_timestamp" />
+                <ScalarProperty Name="loan_timestamp" ColumnName="loan_timestamp" />
+                <ScalarProperty Name="return_timestamp" ColumnName="return_timestamp" />
                 <ScalarProperty Name="id_user" ColumnName="id_user" />
                 <ScalarProperty Name="id_copy" ColumnName="id_copy" />
               </MappingFragment>
@@ -1461,7 +1443,7 @@
             <EntityTypeMapping TypeName="BINAES_Model.ROLE_">
               <MappingFragment StoreEntitySet="ROLE_">
                 <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="type_" ColumnName="type_" />
+                <ScalarProperty Name="name_" ColumnName="name_" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1479,7 +1461,7 @@
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="full_name" ColumnName="full_name" />
                 <ScalarProperty Name="username" ColumnName="username" />
-                <ScalarProperty Name="user_address" ColumnName="user_address" />
+                <ScalarProperty Name="address_" ColumnName="address_" />
                 <ScalarProperty Name="phone" ColumnName="phone" />
                 <ScalarProperty Name="picture" ColumnName="picture" />
                 <ScalarProperty Name="email" ColumnName="email" />

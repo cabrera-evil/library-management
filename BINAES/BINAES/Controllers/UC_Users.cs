@@ -12,16 +12,19 @@ namespace BINAES.UserControls
     public partial class UC_Users : UserControl
     {
 
-        bool editable = false;
-        bool picture_load = false;
+        private bool editable = false;
+        private bool picture_load = false;
+        private int selection = 0;
+
 
         public UC_Users()
         {
             InitializeComponent();
 
             cmb_searchBy.Items.Add("id");
+            cmb_searchBy.Items.Add("full_name");
             cmb_searchBy.Items.Add("username");
-            cmb_searchBy.Items.Add("user_address");
+            cmb_searchBy.Items.Add("address_");
             cmb_searchBy.Items.Add("phone");
             cmb_searchBy.Items.Add("email");
         }
@@ -66,15 +69,12 @@ namespace BINAES.UserControls
             UserDAO user = new UserDAO();
             try
             {
-                using (db_BINAES db = new db_BINAES())
-                {
-                    dg_usersDataTable.DataSource = user.show_user();
-                    dg_usersDataTable.Columns.Remove("ATTENDANCE");
-                    dg_usersDataTable.Columns.Remove("INSTITUTION");
-                    dg_usersDataTable.Columns.Remove("LOAN_BOOKING");
-                    dg_usersDataTable.Columns.Remove("OCCUPANCY");
-                    dg_usersDataTable.Columns.Remove("ROLE_");
-                }
+                dg_usersDataTable.DataSource = user.show_user();
+                dg_usersDataTable.Columns["ATTENDANCE"].Visible = false;
+                dg_usersDataTable.Columns["INSTITUTION"].Visible = false;
+                dg_usersDataTable.Columns["LOAN_BOOKING"].Visible = false;
+                dg_usersDataTable.Columns["OCCUPANCY"].Visible = false;
+                dg_usersDataTable.Columns["ROLE_"].Visible = false;
                 btn_edit.BackColor = Color.FromArgb(38, 109, 83);
                 btn_remove.BackColor = Color.FromArgb(38, 109, 83);
                 btn_insertRows.BackColor = Color.FromArgb(38, 109, 83);
@@ -130,81 +130,7 @@ namespace BINAES.UserControls
             btn_picture.Enabled = false;
         }
 
-
-        private void btn_save_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                using (db_BINAES db = new db_BINAES())
-                {
-                   
-                    if (!editable)
-                    {
-                        //ADD NEW DATA
-                        USER_ user = new USER_();
-                        user.full_name = txt_full_name.Text;
-                        user.username = txt_user.Text;
-                        user.user_address = txt_address.Text;
-                        user.phone = txt_phone.Text;
-                        user.email = txt_email.Text;
-                        user.password = Encrypt.GetSHA256(txt_password.Text.Trim());
-                        user.id_occupancy = ((OCCUPANCY)cmb_occupancy.SelectedItem).id;
-                        user.id_institution = ((INSTITUTION)cmb_institution.SelectedItem).id;
-                        user.id_role = ((ROLE_)cmb_role.SelectedItem).id;
-                        var picture = new System.IO.MemoryStream();
-                        if (picture_load)
-                        {
-                            pb_picture.Image.Save(picture, System.Drawing.Imaging.ImageFormat.Jpeg);
-                            user.picture = picture.GetBuffer();
-                        }
-                        else
-                            user.picture = null;
-
-                        db.USER_.Add(user);
-                        db.SaveChanges();
-                        MessageBox.Show("Data saved successfully");
-                    }
-                    else
-                    {
-                        //SAVE EDITED DATA
-                        int id = Convert.ToInt32(txt_search.Text);
-                        USER_ edit = db.USER_.Find(id);
-                        edit.full_name = txt_full_name.Text;
-                        edit.username = txt_user.Text;
-                        edit.user_address = txt_address.Text;
-                        edit.phone = txt_phone.Text;
-                        edit.email = txt_email.Text;
-                        edit.password = Encrypt.GetSHA256(txt_password.Text.Trim());
-                        edit.id_occupancy = ((OCCUPANCY)cmb_occupancy.SelectedItem).id;
-                        edit.id_institution = ((INSTITUTION)cmb_institution.SelectedItem).id;
-                        edit.id_role = ((ROLE_)cmb_role.SelectedItem).id;
-                        var picture = new System.IO.MemoryStream();
-                        if (picture_load)
-                        {
-                            pb_picture.Image.Save(picture, System.Drawing.Imaging.ImageFormat.Jpeg);
-                            edit.picture = picture.GetBuffer();
-                        }
-                        else
-                            edit.picture = null;
-
-                        if (edit != null)
-                        {
-                            db.Entry(edit).State = System.Data.Entity.EntityState.Modified;
-                            db.SaveChanges();
-                            MessageBox.Show("Data modified successfully");
-                        }
-                    }
-                }
-                load_grid();
-                clear_text();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void search_data(int id)
+        private void edit_data(int id)
         {
             unlock_controllers();
             try
@@ -218,21 +144,19 @@ namespace BINAES.UserControls
                         {
                             txt_full_name.Text = user.full_name.ToString();
                             txt_user.Text = user.username.ToString();
-                            txt_address.Text = user.user_address;
+                            txt_address.Text = user.address_;
                             txt_phone.Text = user.phone;
                             txt_email.Text = user.email;
                             txt_password.Text = user.password;
                             ((OCCUPANCY)cmb_occupancy.SelectedItem).id = user.id_occupancy;
                             ((INSTITUTION)cmb_institution.SelectedItem).id = user.id_institution;
                             ((ROLE_)cmb_role.SelectedItem).id = user.id_role;
-                            var picture = new System.IO.MemoryStream();
-                            if (picture_load)
+                            //GET PICTURE
+                            if (user.picture != null)
                             {
-                                pb_picture.Image.Save(picture, System.Drawing.Imaging.ImageFormat.Jpeg);
-                                user.picture = picture.GetBuffer();
+                                System.IO.MemoryStream picture = new System.IO.MemoryStream(user.picture);
+                                pb_picture.Image = System.Drawing.Image.FromStream(picture);
                             }
-                            else
-                                user.picture = null;
                         }
                     }
                 }
@@ -281,6 +205,78 @@ namespace BINAES.UserControls
             }
         }
 
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (db_BINAES db = new db_BINAES())
+                {
+
+                    if (!editable)
+                    {
+                        //ADD NEW DATA
+                        USER_ user = new USER_();
+                        user.full_name = txt_full_name.Text;
+                        user.username = txt_user.Text;
+                        user.address_ = txt_address.Text;
+                        user.phone = txt_phone.Text;
+                        user.email = txt_email.Text;
+                        user.password = Encrypt.GetSHA256(txt_password.Text.Trim());
+                        user.id_occupancy = ((OCCUPANCY)cmb_occupancy.SelectedItem).id;
+                        user.id_institution = ((INSTITUTION)cmb_institution.SelectedItem).id;
+                        user.id_role = ((ROLE_)cmb_role.SelectedItem).id;
+                        var picture = new System.IO.MemoryStream();
+                        if (picture_load)
+                        {
+                            pb_picture.Image.Save(picture, System.Drawing.Imaging.ImageFormat.Jpeg);
+                            user.picture = picture.GetBuffer();
+                        }
+                        else
+                            user.picture = null;
+
+                        db.USER_.Add(user);
+                        db.SaveChanges();
+                        MessageBox.Show("Data saved successfully");
+                    }
+                    else
+                    {
+                        //SAVE EDITED DATA
+                        USER_ edit = db.USER_.Find(selection);
+                        edit.full_name = txt_full_name.Text;
+                        edit.username = txt_user.Text;
+                        edit.address_ = txt_address.Text;
+                        edit.phone = txt_phone.Text;
+                        edit.email = txt_email.Text;
+                        edit.password = Encrypt.GetSHA256(txt_password.Text.Trim());
+                        edit.id_occupancy = ((OCCUPANCY)cmb_occupancy.SelectedItem).id;
+                        edit.id_institution = ((INSTITUTION)cmb_institution.SelectedItem).id;
+                        edit.id_role = ((ROLE_)cmb_role.SelectedItem).id;
+                        var picture = new System.IO.MemoryStream();
+                        if (picture_load)
+                        {
+                            pb_picture.Image.Save(picture, System.Drawing.Imaging.ImageFormat.Jpeg);
+                            edit.picture = picture.GetBuffer();
+                        }
+                        else
+                            edit.picture = null;
+
+                        if (edit != null)
+                        {
+                            db.Entry(edit).State = System.Data.Entity.EntityState.Modified;
+                            db.SaveChanges();
+                            MessageBox.Show("Data modified successfully");
+                        }
+                    }
+                }
+                load_grid();
+                clear_text();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             lock_controllers();
@@ -291,13 +287,8 @@ namespace BINAES.UserControls
         {
             try
             {
-                int search = Convert.ToInt32(txt_search.Text);
-                int type = cmb_searchBy.SelectedIndex;
-                if (type == 0)
-                {
-                    editable = true;
-                    search_data(search);
-                }
+                editable = true;
+                edit_data(selection);
             }
             catch(Exception ex)
             {
@@ -307,11 +298,21 @@ namespace BINAES.UserControls
 
         private void btn_remove_Click(object sender, EventArgs e)
         {
-            int search = Convert.ToInt32(txt_search.Text);
-            int type = cmb_searchBy.SelectedIndex;
-            if (type == 0)
+            try
             {
-                remove_data(search);
+                remove_data(selection);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void dg_usersDataTable_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dg_usersDataTable.Columns[e.ColumnIndex].Name == "id")
+            {
+                selection = Convert.ToInt32(dg_usersDataTable.CurrentRow.Cells["id"].Value.ToString());
             }
         }
     }

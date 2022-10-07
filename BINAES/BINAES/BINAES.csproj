@@ -82,9 +82,34 @@
   <ItemGroup>
     <Compile Include="Clases\celebrationDAO.cs" />
     <Compile Include="Clases\collectionsDAO.cs" />
-    <Compile Include="Clases\user_cache.cs" />
+    <Compile Include="Clases\copyDAO.cs" />
     <Compile Include="Clases\Encrypt.cs" />
+    <Compile Include="Clases\loan_bookingDAO.cs" />
     <Compile Include="Clases\UserDAO.cs" />
+    <Compile Include="Controllers\UC_Attendance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controllers\UC_Attendance.Designer.cs">
+      <DependentUpon>UC_Attendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\UC_Borrow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controllers\UC_Borrow.Designer.cs">
+      <DependentUpon>UC_Borrow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\UC_Reserve.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controllers\UC_Reserve.Designer.cs">
+      <DependentUpon>UC_Reserve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\booking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\booking.Designer.cs">
+      <DependentUpon>booking.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\management.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,23 +128,11 @@
     <Compile Include="Forms\home.Designer.cs">
       <DependentUpon>home.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\loans.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\loans.Designer.cs">
-      <DependentUpon>loans.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\reservations.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\reservations.Designer.cs">
-      <DependentUpon>reservations.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -128,6 +141,36 @@
     </Compile>
     <Compile Include="Forms\welcome.Designer.cs">
       <DependentUpon>welcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\UC_Advanced_Search.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controllers\UC_Advanced_Search.Designer.cs">
+      <DependentUpon>UC_Advanced_Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\UC_Collections.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controllers\UC_Collections.Designer.cs">
+      <DependentUpon>UC_Collections.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\UC_Celebrations.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controllers\UC_Celebrations.Designer.cs">
+      <DependentUpon>UC_Celebrations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\UC_Search.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controllers\UC_Search.Designer.cs">
+      <DependentUpon>UC_Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\UC_Users.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controllers\UC_Users.Designer.cs">
+      <DependentUpon>UC_Users.cs</DependentUpon>
     </Compile>
     <Compile Include="SQL Server\ACTIVITY.cs">
       <DependentUpon>connection.tt</DependentUpon>
@@ -213,44 +256,20 @@
     <Compile Include="SQL Server\WORDS_LIST.cs">
       <DependentUpon>connection.tt</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\UC_Advanced_Search.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controllers\UC_Advanced_Search.Designer.cs">
-      <DependentUpon>UC_Advanced_Search.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\UC_Collections.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controllers\UC_Collections.Designer.cs">
-      <DependentUpon>UC_Collections.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\UC_Celebrations.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controllers\UC_Celebrations.Designer.cs">
-      <DependentUpon>UC_Celebrations.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\UC_Search.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controllers\UC_Search.Designer.cs">
-      <DependentUpon>UC_Search.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\UC_Users.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controllers\UC_Users.Designer.cs">
-      <DependentUpon>UC_Users.cs</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="Controllers\UC_Attendance.resx">
+      <DependentUpon>UC_Attendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\UC_Borrow.resx">
+      <DependentUpon>UC_Borrow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\UC_Reserve.resx">
+      <DependentUpon>UC_Reserve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\booking.resx">
+      <DependentUpon>booking.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\management.resx">
       <DependentUpon>management.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\loans.resx">
-      <DependentUpon>loans.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\reservations.resx">
-      <DependentUpon>reservations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\search.resx">
       <DependentUpon>search.cs</DependentUpon>
@@ -340,8 +359,8 @@
       <DependentUpon>connection.edmx</DependentUpon>
       <LastGenOutput>connection.cs</LastGenOutput>
     </Content>
+    <Content Include="SQL Server\Populate\insert_command.sql" />
     <None Include="Resources\user %281%29.png" />
-    <Content Include="SQL Server\BINAES_POPULATE.sql" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

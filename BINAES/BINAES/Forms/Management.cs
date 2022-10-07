@@ -41,5 +41,12 @@ namespace BINAES
             lbl_title.Text = "Add user";
             addUserControl(uc);
         }
+
+        private void btn_attendance_Click(object sender, EventArgs e)
+        {
+            UC_Attendance uc = new UC_Attendance();
+            lbl_title.Text = "";
+            addUserControl(uc);
+        }
     }
 }
